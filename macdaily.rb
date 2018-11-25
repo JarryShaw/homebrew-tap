@@ -7,10 +7,10 @@ class Macdaily < Formula
   sha256 "2eefe8fd381f9ec8559293ae16dc4fa782a56c607c46e1807fdce384d24fc862"
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "release"
 
-  bottle do
-    cellar :any_skip_relocation
-    sha256 "2eefe8fd381f9ec8559293ae16dc4fa782a56c607c46e1807fdce384d24fc862" => :mojave
-  end
+  # bottle do
+  #   cellar :any_skip_relocation
+  #   sha256 "2eefe8fd381f9ec8559293ae16dc4fa782a56c607c46e1807fdce384d24fc862" => :mojave
+  # end
 
   # devel do
   #   url "https://github.com/JarryShaw/MacDaily.git"
