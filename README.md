@@ -4,9 +4,10 @@
 
 Use the following commands to add this tap to your local Homebrew installation.
 
-```shell
+```bash
 $ brew tap jarryshaw/tap
 $ brew tap-pin jarryshaw/tap
+# to install MacDaily
 $ brew install macdaily
 ```
 
@@ -16,7 +17,7 @@ formulae take precedence over duplicates in other taps.
 
 You can review the repos you have tapped and pinned using the following commands.
 
-```shell
+```bash
 $ brew tap
 caskroom/cask
 jarryshaw/tap
@@ -26,10 +27,14 @@ jarryshaw/tap
 
 If you want to switch back to the core mas formula, you can unpin this tap.
 
-```shell
+```bash
 $ brew tap-unpin jarryshaw/tap
 ```
 
-## License
+## License
 
 This repo is licensed under the MIT License. See the [LICENSE](LICENSE) file for rights and limitations.
+
+## Acknowledgement
+
+This [README](README.md) file used [README.md](https://github.com/mas-cli/homebrew-tap/blob/master/README.md) of [`mas-cli/homebrew-tap`](https://github.com/mas-cli/homebrew-tap) for reference.
