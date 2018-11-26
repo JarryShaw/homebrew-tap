@@ -3,19 +3,23 @@ class Macdaily < Formula
 
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
-  url "https://files.pythonhosted.org/packages/53/41/7ef5c147f99f0f7acee244e2d44922020c24e90e8613c85ddcb231e6e65e/macdaily-2018.11.25.post1.tar.gz"
-  sha256 "2eefe8fd381f9ec8559293ae16dc4fa782a56c607c46e1807fdce384d24fc862"
+  url "https://files.pythonhosted.org/packages/51/39/24e3852917c249f8aca1cd75589d604c1ec14ffd06dafadbd05be4771d54/macdaily-2018.11.25.post2.tar.gz"
+  sha256 "4436233eaf4c85c7f8201852e307cbdfea6e95d037c7fd62bea8f2724a11716b"
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "release"
+
+  bottle :unneeded
 
   # bottle do
   #   cellar :any_skip_relocation
-  #   sha256 "2eefe8fd381f9ec8559293ae16dc4fa782a56c607c46e1807fdce384d24fc862" => :mojave
+  #   sha256 "" => :mojave
+  #   sha256 "" => :high_sierra
+  #   sha256 "" => :sierra
   # end
 
-  # devel do
-  #   url "https://github.com/JarryShaw/MacDaily.git"
-  #   sha256 "85cc828a96735bdafcf29eb6291ca91bac846579bcef7308536e0c875d6c81d7"
-  # end
+  devel do
+    url "https://codeload.github.com/JarryShaw/MacDaily/tar.gz/v2018.11.25.post2"
+    sha256 "d2e86b04e03707b2c1657569b2fae4e1e97b481394288ed1a652b01f8995f7d0"
+  end
 
   depends_on "python"
 
@@ -43,11 +47,14 @@ class Macdaily < Formula
 
   def install
     virtualenv_install_with_resources
-    man1.install "macdaily/man/macdaily.1"
+    man_path = Pathname.glob(libexec/"lib/python?.?/site-packages/macdaily/man/*.1")
+    man_path.each_child do |f|
+      man1.install f
+    end
   end
 
   def post_install
-    system bin/"macdaily" "launch" "--all"
+    system bin/"macdaily", "launch", "--all"
   end
 
   def caveats
