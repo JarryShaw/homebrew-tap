@@ -1,10 +1,11 @@
 class Macdaily < Formula
   include Language::Python::Virtualenv
 
+  version "2018.11.26"
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
-  url "https://files.pythonhosted.org/packages/51/39/24e3852917c249f8aca1cd75589d604c1ec14ffd06dafadbd05be4771d54/macdaily-2018.11.25.post2.tar.gz"
-  sha256 "4436233eaf4c85c7f8201852e307cbdfea6e95d037c7fd62bea8f2724a11716b"
+  url "https://files.pythonhosted.org/packages/94/16/a54bc9b6ca178041aa01fb85747632ecbf2264a64b2fac6444357d6cdb9e/macdaily-2018.11.26.tar.gz"
+  sha256 "72bc71cc06cc8934801512c580579860dc2d6ab172e89b026db5126b3d91b665"
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "release"
 
   bottle :unneeded
@@ -17,13 +18,13 @@ class Macdaily < Formula
   # end
 
   devel do
-    url "https://codeload.github.com/JarryShaw/MacDaily/tar.gz/v2018.11.25.post2"
-    sha256 "d2e86b04e03707b2c1657569b2fae4e1e97b481394288ed1a652b01f8995f7d0"
+    url "https://codeload.github.com/JarryShaw/MacDaily/tar.gz/v2018.11.26"
+    sha256 "2328828f7fff0860c091ba0d6bd22163a8ab658febdc223481b581edb3e9827b"
   end
 
   depends_on "python"
-
   depends_on "expect" => :recommended
+  depends_on "theseal/ssh-askpass/ssh-askpass" => :optional
 
   resource "configupdater" do
     url "https://files.pythonhosted.org/packages/54/b8/1aa82f89b77045c897c35d3f2f28c7559282fd422018c0377efc362f56d1/ConfigUpdater-0.3.2.tar.gz"
@@ -35,27 +36,46 @@ class Macdaily < Formula
     sha256 "96d4d0910662d8e21e2c1900bb5438dbb2562e680bda34be2d9cf1434e8b0416"
   end
 
-  resource "psutil" do
-    url "https://files.pythonhosted.org/packages/e3/58/0eae6e4466e5abf779d7e2b71fac7fba5f59e00ea36ddb3ed690419ccb0f/psutil-5.4.8.tar.gz"
-    sha256 "6e265c8f3da00b015d24b842bfeb111f856b13d24f2c57036582568dc650d6c3"
-  end
-
   resource "ptyng" do
     url "https://files.pythonhosted.org/packages/02/4b/2d6c1543657cddf4a061aa9fb86e20b354706e37868a76d9691740d1fd16/ptyng-0.2.1.post1.tar.gz"
     sha256 "a199c0a60eaf3d9e10aad97d858f0feb032e87ccdefe80592146cc95b65362fd"
   end
 
+  resource "psutil" do
+    url "https://files.pythonhosted.org/packages/e3/58/0eae6e4466e5abf779d7e2b71fac7fba5f59e00ea36ddb3ed690419ccb0f/psutil-5.4.8.tar.gz"
+    sha256 "6e265c8f3da00b015d24b842bfeb111f856b13d24f2c57036582568dc650d6c3"
+  end
+
+  resource "pathlib2" do
+    url "https://files.pythonhosted.org/packages/db/a8/7d6439c1aec525ed70810abee5b7d7f3aa35347f59bc28343e8f62019aa2/pathlib2-2.3.2.tar.gz"
+    sha256 "8eb170f8d0d61825e09a95b38be068299ddeda82f35e96c3301a8a5e7604cb83"
+  end
+
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/16/d8/bc6316cf98419719bd59c91742194c111b6f2e85abac88e496adefaf7afe/six-1.11.0.tar.gz"
+    sha256 "70e8a77beed4562e7f14fe23a786b54f6296e34344c23bc42f07b15018ff98e9"
+  end
+
+  resource "subprocess32" do
+    url "https://files.pythonhosted.org/packages/be/2b/beeba583e9877e64db10b52a96915afc0feabf7144dcbf2a0d0ea68bf73d/subprocess32-3.5.3.tar.gz"
+    sha256 "6bc82992316eef3ccff319b5033809801c0c3372709c5f6985299c88ac7225c3"
+  end
+
   def install
     virtualenv_install_with_resources
     man_path = Pathname.glob(libexec/"lib/python?.?/site-packages/macdaily/man/*.1")
-    man_path.each_child do |f|
+    man_path.each do |f|
       man1.install f
     end
   end
 
-  def post_install
-    system bin/"macdaily", "launch", "--all"
-  end
+  # def post_install
+  #   text = <<~EOS
+  #     To run postinstall process, please directly call
+  #       `macdaily launch askpass confirm`
+  #   EOS
+  #   puts text
+  # end
 
   def caveats
     text = <<~EOS
@@ -72,6 +92,9 @@ class Macdaily < Formula
 
       For more information, check out `macdaily help` command. Online
       documentations available at GitHub repository.
+
+      To run postinstall process, please directly call
+        `macdaily launch askpass confirm`
 
       See: https://github.com/JarryShaw/MacDaily#generals
     EOS
