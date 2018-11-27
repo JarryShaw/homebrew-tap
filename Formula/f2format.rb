@@ -1,18 +1,18 @@
 class Macdaily < Formula
   include Language::Python::Virtualenv
 
-  version "0.2.3"
+  version "0.2.3.post1"
   desc "Back-port compiler for Python 3.6 f-string literals."
   homepage "https://github.com/JarryShaw/f2format#f2format"
-  url "https://files.pythonhosted.org/packages/e7/df/82f0dd6fd59d115bd432875c6041c3b9c42ab412b51d95247698412bbd19/f2format-0.2.3.tar.gz"
-  sha256 "ea1515be17572a831db6fa1b999533340988504a36c0f36b1f0b4bdc2e167fe0"
+  url "https://files.pythonhosted.org/packages/be/7d/470b33fb8d28054c594d570da5ce33a00cad4f9d2a8a40418b441d133401/f2format-0.2.3.post1.tar.gz"
+  sha256 "6eaf026f83bffce71df2183ec9eae18de9dd33f52ed45f58e3f290487ea8e5ef"
   head "https://github.com/JarryShaw/f2format.git", :branch => "master"
 
   bottle :unneeded
 
   devel do
-    url "https://codeload.github.com/JarryShaw/f2format/tar.gz/v0.2.3"
-    sha256 "395408a3dc9c3db2b5c200b8722a13a60898c861633b99e6e250186adffd1370"
+    url "https://codeload.github.com/JarryShaw/f2format/tar.gz/v0.2.3.post1"
+    sha256 "2d64754b88e4e3db15a298caac91ef4bc49b393bca8e2b87226b5281efc2bc11"
   end
 
   depends_on "python"
