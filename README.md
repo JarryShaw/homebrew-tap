@@ -31,6 +31,11 @@ If you want to switch back to the core mas formula, you can unpin this tap.
 $ brew tap-unpin jarryshaw/tap
 ```
 
+## Formula
+
+- [`MacDaily`](https://github.com/JarryShaw/MacDaily#macdaily)
+- [`f2format`](https://github.com/JarryShaw/f2format#f2format)
+
 ## License
 
 This repo is licensed under the MIT License. See the [LICENSE](LICENSE) file for rights and limitations.
