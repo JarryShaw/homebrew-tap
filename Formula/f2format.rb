@@ -12,7 +12,7 @@ class F2format < Formula
 
   devel do
     url "https://codeload.github.com/JarryShaw/f2format/tar.gz/v0.3.1"
-    sha256 "395408a3dc9c3db2b5c200b8722a13a60898c861633b99e6e250186adffd1370"
+    sha256 "009066e09e65825a95f3fff4428677e358b5cbed95764174632c7f2cb7e95b9b"
   end
 
   depends_on "python"
