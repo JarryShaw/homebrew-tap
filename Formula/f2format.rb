@@ -1,18 +1,18 @@
 class F2format < Formula
   include Language::Python::Virtualenv
 
-  version "0.3.0"
+  version "0.3.1"
   desc "Back-port compiler for Python 3.6 f-string literals."
   homepage "https://github.com/JarryShaw/f2format#f2format"
-  url "https://files.pythonhosted.org/packages/25/12/4d2ce5717aa488e3ef0bb66d137943fdbfd7d6c0c709266b0b7f4eadcec1/f2format-0.3.0.tar.gz"
-  sha256 "cc403a0d022e082766b376610828ad358a2afcc54e9f50ff050e2f5bfb30b77b"
+  url "https://files.pythonhosted.org/packages/49/dd/a0667274c48f89579a9107836c6be4a8c6d6bed38ef5108f342184335c1f/f2format-0.3.1.tar.gz"
+  sha256 "0b06bb9f631a6c26ea0ba4747ba244fdf8098a9c0ca97ccf538a6fed89181562"
   head "https://github.com/JarryShaw/f2format.git", :branch => "master"
 
   bottle :unneeded
 
   devel do
-    url "https://codeload.github.com/JarryShaw/f2format/tar.gz/v0.3.0"
-    sha256 "162b372a22e373163690b9eec4d9269b60eea97f4e272d3debe56863a3c844bd"
+    url "https://codeload.github.com/JarryShaw/f2format/tar.gz/v0.3.1"
+    sha256 "395408a3dc9c3db2b5c200b8722a13a60898c861633b99e6e250186adffd1370"
   end
 
   depends_on "python"
