@@ -1,11 +1,11 @@
 class Macdaily < Formula
   include Language::Python::Virtualenv
 
-  version "2018.12.08.post1"
+  version "2018.12.10"
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
-  url "https://files.pythonhosted.org/packages/ed/a5/523c5d997b89a3d187b9a53e5a0e4a618489af2b94316ee2676bb491930e/macdaily-2018.12.8.post1.tar.gz"
-  sha256 "5924f192640f3ec4a101f373ba809f6ef48e3cdfed9ae115101bf4af4f787ff7"
+  url "https://files.pythonhosted.org/packages/fc/05/fba662a59eebb4959238b58106e9e73403d592051aae75b65bf36377f618/macdaily-2018.12.10.tar.gz"
+  sha256 "be2a66b1035f2c6d42be268a19372890b14e434f3273eeceec8c9df0e9ff3876"
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "release"
 
   bottle :unneeded
@@ -18,8 +18,8 @@ class Macdaily < Formula
   # end
 
   devel do
-    url "https://codeload.github.com/JarryShaw/MacDaily/tar.gz/v2018.12.08.post1"
-    sha256 "26017966f0dc28cacd1448ced17affc00b050dffa56869a06c4a46afdde95e60"
+    url "https://codeload.github.com/JarryShaw/MacDaily/tar.gz/v2018.12.10"
+    sha256 "5091476cf7d8bb5b1f3396dd6de1c1a9bad22237c1c0fb771a3e08f541432918"
   end
 
   depends_on "python"
@@ -27,18 +27,18 @@ class Macdaily < Formula
   depends_on "theseal/ssh-askpass/ssh-askpass" => :optional
 
   resource "configupdater" do
-    url "https://files.pythonhosted.org/packages/54/b8/1aa82f89b77045c897c35d3f2f28c7559282fd422018c0377efc362f56d1/ConfigUpdater-0.3.2.tar.gz"
-    sha256 "f8e832a1a40faca6aa9abdc3069cc0fb9021580dcef96cbe1aad055bc08ab865"
+    url "https://files.pythonhosted.org/packages/aa/af/069c7db438b9382a05fdaa6c90a2b44595dd7acdb1707848a0b8f2cbe1c1/ConfigUpdater-1.0.tar.gz"
+    sha256 "a86d97bcb3f1012e10f13dc25a3b99019aa27abec414a047b6392255b2bbf4ca"
   end
 
   resource "dictdumper" do
-    url "https://files.pythonhosted.org/packages/e7/f7/fa8b1c68cb02270e58852c178d4d4eea099e2806e0da9ca7fcc7920b4463/dictdumper-0.6.5.post2.tar.gz"
-    sha256 "96d4d0910662d8e21e2c1900bb5438dbb2562e680bda34be2d9cf1434e8b0416"
+    url "https://files.pythonhosted.org/packages/e3/a9/41c93d7108131852f39a094367114f83246d12020a8d1a246137e6277e04/dictdumper-0.7.0.tar.gz"
+    sha256 "ea728ce02920a3aed052c1a8676c7098359701e298918efbc62c0eba846f807f"
   end
 
   resource "ptyng" do
-    url "https://files.pythonhosted.org/packages/02/4b/2d6c1543657cddf4a061aa9fb86e20b354706e37868a76d9691740d1fd16/ptyng-0.2.1.post1.tar.gz"
-    sha256 "a199c0a60eaf3d9e10aad97d858f0feb032e87ccdefe80592146cc95b65362fd"
+    url "https://files.pythonhosted.org/packages/ad/59/293b9f3ba95ce2ca10ac0bcab99d41b3507bc4bbbbd636e6dff05576205a/ptyng-0.3.0.post1.tar.gz"
+    sha256 "298e1dc6eb15ccff219f1a05139b3b407ec22226d4a445966474345a1e9048d0"
   end
 
   resource "psutil" do
@@ -47,13 +47,13 @@ class Macdaily < Formula
   end
 
   resource "pathlib2" do
-    url "https://files.pythonhosted.org/packages/db/a8/7d6439c1aec525ed70810abee5b7d7f3aa35347f59bc28343e8f62019aa2/pathlib2-2.3.2.tar.gz"
-    sha256 "8eb170f8d0d61825e09a95b38be068299ddeda82f35e96c3301a8a5e7604cb83"
+    url "https://files.pythonhosted.org/packages/bf/d7/a2568f4596b75d2c6e2b4094a7e64f620decc7887f69a1f2811931ea15b9/pathlib2-2.3.3.tar.gz"
+    sha256 "25199318e8cc3c25dcb45cbe084cc061051336d5a9ea2a12448d3d8cb748f742"
   end
 
   resource "six" do
-    url "https://files.pythonhosted.org/packages/16/d8/bc6316cf98419719bd59c91742194c111b6f2e85abac88e496adefaf7afe/six-1.11.0.tar.gz"
-    sha256 "70e8a77beed4562e7f14fe23a786b54f6296e34344c23bc42f07b15018ff98e9"
+    url "https://files.pythonhosted.org/packages/dd/bf/4138e7bfb757de47d1f4b6994648ec67a51efe58fa907c1e11e350cddfca/six-1.12.0.tar.gz"
+    sha256 "d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73"
   end
 
   resource "subprocess32" do
