@@ -66,6 +66,7 @@ class Macdaily < Formula
   end
 
   def install
+    # virtualenv_install_with_resources
     venv = virtualenv_create(libexec, "python3")
     if build.with?("config")
       venv.pip_install resource("configupdater")
