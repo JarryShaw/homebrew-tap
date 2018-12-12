@@ -1,11 +1,11 @@
 class Macdaily < Formula
   include Language::Python::Virtualenv
 
-  version "2018.12.11"
+  version "2018.12.12"
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
-  url "https://files.pythonhosted.org/packages/15/6d/b7201ca59c5070b0bba5a1e75953b68b05fcf284c1eeadc8de4ab4bdebbf/macdaily-2018.12.11.tar.gz"
-  sha256 "3b036db2bf3eaa761497cc871df7bee337fd163eea1ca640e7d951d3a67eaf94"
+  url "https://files.pythonhosted.org/packages/56/4a/4a2a69f2a5e67d2251082a239d457c5d880f0f1ffe30ad9c61231d4ff059/macdaily-2018.12.12.tar.gz"
+  sha256 "1ef13a3049fdbca59b2a5f3192b5e2e8132dccf43004db02ae63ff3a45ccbccd"
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "release"
 
   bottle :unneeded
@@ -18,13 +18,17 @@ class Macdaily < Formula
   # end
 
   devel do
-    url "https://codeload.github.com/JarryShaw/MacDaily/tar.gz/v2018.12.11"
-    sha256 "8655ec8db134f951563cc019fc4cfcc45536b9f8b0e98524674926dfa625b114"
+    url "https://codeload.github.com/JarryShaw/MacDaily/tar.gz/v2018.12.12"
+    sha256 "5caed8775d0916401fe0029fcd6b0195473163d2d1bacbf37ab895764b04577f"
   end
 
   depends_on "python"
   depends_on "expect" => :recommended
   depends_on "theseal/ssh-askpass/ssh-askpass" => :optional
+
+  option "without-config", "build without config modification support"
+  option "without-tree", "build without tree format support"
+  option "without-ptyng", "build without alternative PTY support"
 
   resource "configupdater" do
     url "https://files.pythonhosted.org/packages/aa/af/069c7db438b9382a05fdaa6c90a2b44595dd7acdb1707848a0b8f2cbe1c1/ConfigUpdater-1.0.tar.gz"
@@ -62,10 +66,40 @@ class Macdaily < Formula
   end
 
   def install
-    virtualenv_install_with_resources
+    venv = virtualenv_create(libexec, "python3")
+    if build.with?("config")
+      venv.pip_install resource("configupdater")
+    end
+
+    if build.with?("tree")
+      venv.pip_install resource("dictdumper")
+    end
+
+    if build.with?("ptyng")
+      venv.pip_install resource("ptyng")
+
+      exitcode = `#{libexec}/"bin/python" -c "print(__import__('os').system('ps axo pid=,stat= > /dev/null 2>&1'))"`
+      if !( exitcode =~ /0/ )
+        venv.pip_install resource("psutil")
+      end
+    end
+
+    version = `#{libexec}/"bin/python" -c "print('%s.%s' % __import__('sys').version_info[:2])"`
+    if ( version =~ /3.4/ )
+      %w[pathlib2 six subprocess32].each do |r|
+        venv.pip_install resource(r)
+      end
+    end
+    venv.pip_install_and_link buildpath
+
     man_path = Pathname.glob(libexec/"lib/python?.?/site-packages/macdaily/man/*.1")
+    dir_name = File.dirname man_path[0]
+    dest = File.join(dir_name, "temp.1")
+
     man_path.each do |f|
+      FileUtils.cp f, dest
       man1.install f
+      FileUtils.mv dest, f
     end
   end
 
