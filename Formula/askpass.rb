@@ -2,7 +2,7 @@ class Askpass < Formula
   desc "AskPass utility for macOS"
   homepage "https://github.com/JarrySaw/askpass#askpass"
   url "https://github.com/JarryShaw/askpass/archive/v2018.12.15.tar.gz"
-  sha256 "285e52794db4d1e5d230b115db138cc9b5fcd5e0171c41e3b540e41c540bf357"
+  sha256 "0b994fcea968693f7b34513c3d74c21bc73c1aa3ad4f34c5a14d9f9f431aac1d"
 
   # conflicts_with "theseal/ssh-askpass/ssh-askpass", :because => "jarryshaw/tap/askpass also ships a askpass binary"
 

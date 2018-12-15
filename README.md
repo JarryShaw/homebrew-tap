@@ -37,7 +37,6 @@ $ brew tap-unpin jarryshaw/tap
 - [`f2format`](https://github.com/JarryShaw/f2format#f2format)
 - [`AskPass`](https://github.com/JarryShaw/askpass#askpass)
 - [`Confirm`](https://github.com/JarryShaw/confirm#confirm)
-- [`MacDaily-ToolKit`](https://github.com/JarryShaw/MacDaily/blob/master/doc/launch.rst#programs)
 
 ## License
 

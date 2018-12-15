@@ -2,7 +2,7 @@ class Confirm < Formula
   desc "Confirm utility for macOS"
   homepage "https://github.com/JarrySaw/confirm#confirm"
   url "https://github.com/JarryShaw/confirm/archive/v2018.12.15.tar.gz"
-  sha256 "285e52794db4d1e5d230b115db138cc9b5fcd5e0171c41e3b540e41c540bf357"
+  sha256 "b3d2070d7f1d5a6c459985da5ef7e530ab48865f59f76b27b690481303edc1f9"
 
   def install
     bin.install "confirm"
