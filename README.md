@@ -15,7 +15,7 @@ The [`tap-pin` command](https://docs.brew.sh/Taps#formula-duplicate-names)
 is necessary since mas is already included in the core tap of Homebrew. A pinned tap's
 formulae take precedence over duplicates in other taps.
 
-You can review the repos you have tapped and pinned using the following commands.
+You can review the repositories you have tapped and pinned using the following commands.
 
 ```bash
 $ brew tap
@@ -35,6 +35,9 @@ $ brew tap-unpin jarryshaw/tap
 
 - [`MacDaily`](https://github.com/JarryShaw/MacDaily#macdaily)
 - [`f2format`](https://github.com/JarryShaw/f2format#f2format)
+- [`AskPass`](https://github.com/JarryShaw/askpass#askpass)
+- [`Confirm`](https://github.com/JarryShaw/confirm#confirm)
+- [`MacDaily-ToolKit`](https://github.com/JarryShaw/MacDaily/blob/master/doc/launch.rst#programs)
 
 ## License
 

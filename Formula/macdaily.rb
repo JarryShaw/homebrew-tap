@@ -24,6 +24,7 @@ class Macdaily < Formula
 
   depends_on "python"
   depends_on "expect" => :recommended
+  depends_on "jarryshaw/tap/macdaily-toolkit" => :optional
   depends_on "theseal/ssh-askpass/ssh-askpass" => :optional
 
   option "without-config", "build without config modification support"
