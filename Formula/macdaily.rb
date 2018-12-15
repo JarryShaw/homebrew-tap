@@ -1,12 +1,12 @@
 class Macdaily < Formula
   include Language::Python::Virtualenv
 
-  version "2018.12.12.post1"
+  version "2018.12.15"
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
-  url "https://files.pythonhosted.org/packages/f6/fa/59ae69d62b0e819f92fc41a7030920ee62f566b86611173af0db5041f663/macdaily-2018.12.12.post1.tar.gz"
-  sha256 "717a90a1e11d638c4fb4abceb42dbba0f21003a64669cdf2a577b28f0dd9ddae"
-  head "https://github.com/JarryShaw/MacDaily.git", :branch => "release"
+  url "https://files.pythonhosted.org/packages/35/1c/a87f8a4283413c9726f606f11544868c60b580a0eee1fd8a82ca85461e77/macdaily-2018.12.15.tar.gz"
+  sha256 "929c2ab64d2e7cbb7b511c3cad40f3956c56e5bbcd303f9182bb0c8999c66541"
+  head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
   bottle :unneeded
 
@@ -18,8 +18,8 @@ class Macdaily < Formula
   # end
 
   devel do
-    url "https://codeload.github.com/JarryShaw/MacDaily/tar.gz/v2018.12.12.post1"
-    sha256 "c7e3f7ee9d5dae09598d07f3d3c5fa7e653ec49948a6327e6d505c6ff2a58584"
+    url "https://codeload.github.com/JarryShaw/MacDaily/tar.gz/v2018.12.15.devel"
+    sha256 "a2924cbe6f8eebd9ebc3c28be50c8ae13f24608ab7adcef6a4594fa48973c1ce"
   end
 
   depends_on "python"
@@ -36,13 +36,13 @@ class Macdaily < Formula
   end
 
   resource "dictdumper" do
-    url "https://files.pythonhosted.org/packages/e3/a9/41c93d7108131852f39a094367114f83246d12020a8d1a246137e6277e04/dictdumper-0.7.0.tar.gz"
-    sha256 "ea728ce02920a3aed052c1a8676c7098359701e298918efbc62c0eba846f807f"
+    url "https://files.pythonhosted.org/packages/35/2f/f183561a516643a0fc0117a18f2d921ef9f3a0cb4604a72f0d1e8089028c/dictdumper-0.7.0.post1.tar.gz"
+    sha256 "33812e46a142215fef2cc1eb788af532828ccfd29bfe0c623d4616110108f720"
   end
 
   resource "ptyng" do
-    url "https://files.pythonhosted.org/packages/ad/59/293b9f3ba95ce2ca10ac0bcab99d41b3507bc4bbbbd636e6dff05576205a/ptyng-0.3.0.post1.tar.gz"
-    sha256 "298e1dc6eb15ccff219f1a05139b3b407ec22226d4a445966474345a1e9048d0"
+    url "https://files.pythonhosted.org/packages/9a/b5/8a7bd1e4c363797cfa785f61813652aa67971efad4c72ee47ec70140cc68/ptyng-0.3.0.post2.tar.gz"
+    sha256 "1bab0e1223bc52e563abbdaf18f73b9b7bf8fc6048da8c2f3f6dfe3d9c29a802"
   end
 
   resource "psutil" do
