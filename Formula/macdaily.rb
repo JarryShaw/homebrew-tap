@@ -1,11 +1,11 @@
 class Macdaily < Formula
   include Language::Python::Virtualenv
 
-  version "2018.12.15"
+  version "2018.12.16"
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
-  url "https://files.pythonhosted.org/packages/35/1c/a87f8a4283413c9726f606f11544868c60b580a0eee1fd8a82ca85461e77/macdaily-2018.12.15.tar.gz"
-  sha256 "929c2ab64d2e7cbb7b511c3cad40f3956c56e5bbcd303f9182bb0c8999c66541"
+  url "https://files.pythonhosted.org/packages/45/bc/f4f62349af585f010d7f1aefdb9f139550590a2d2cafbfa0764d947dfeef/macdaily-2018.12.16.tar.gz"
+  sha256 "1e38f6259b3d3889982185952f3761daefa0741823b297dc3951afa44057b06e"
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
   bottle :unneeded
@@ -18,8 +18,8 @@ class Macdaily < Formula
   # end
 
   devel do
-    url "https://codeload.github.com/JarryShaw/MacDaily/tar.gz/v2018.12.15.devel"
-    sha256 "a2924cbe6f8eebd9ebc3c28be50c8ae13f24608ab7adcef6a4594fa48973c1ce"
+    url "https://codeload.github.com/JarryShaw/MacDaily/tar.gz/v2018.12.16.devel"
+    sha256 "e00f2239f22687dcd39dc1ecdf5240283e3c3d0e21827d722c4853cec66d75c6"
   end
 
   depends_on "python"
