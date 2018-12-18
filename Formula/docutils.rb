@@ -7,6 +7,8 @@ class Docutils < Formula
   sha256 "51e64ef2ebfb29cae1faa133b3710143496eca21c530f3f71424d77687764274"
   revision 1
 
+  conflicts_with "docutils", :because => "this is a port of docutils from homebrew-core"
+
   bottle do
     cellar :any_skip_relocation
     sha256 "71bc62531fd234add02633a69b12c2f1f43d6799d5ab1615ab6c9b22064803cc" => :mojave
