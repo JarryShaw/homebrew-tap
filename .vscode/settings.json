@@ -1,0 +1,8 @@
+{
+    "cSpell.words": [
+        "Pygments",
+        "docutils",
+        "lxml"
+    ],
+    "restructuredtext.confPath": "${workspaceFolder}/docs/conf.py"
+}
