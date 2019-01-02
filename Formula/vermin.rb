@@ -14,6 +14,7 @@ class Vermin < Formula
   end
 
   test do
-    system bin/"vermin", "--help"
+    path = Pathname.glob(libexec/"lib/python?.?/site-packages/vermin")[0]
+    assert_match "Minimum required versions: 2.7, 3.0", shell_output("#{bin}/vermin -q #{path}")
   end
 end

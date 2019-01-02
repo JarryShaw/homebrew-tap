@@ -76,10 +76,16 @@ Collections
 
   This formula is not included in Homebrew core repository yet.
 
+- |sloc|_: sloc is a simple tool to count SLOC (source lines of code)
+
+  This formula is not included in Homebrew core repository yet.
+
 .. |docutils| replace:: ``docutils``
 .. _docutils: http://docutils.sourceforge.net
 .. |vermin| replace:: ``vermin``
 .. _vermin: https://github.com/netromdk/vermin
+.. |sloc| replace:: ``sloc``
+.. _sloc: https://github.com/flosse/sloc#readme
 
 -------
 License

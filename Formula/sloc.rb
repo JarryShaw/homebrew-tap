@@ -15,6 +15,18 @@ class Sloc < Formula
   end
 
   test do
-    system "sloc", "--help"
+    (testpath/"test.c").write <<~EOS
+      #include <stdio.h>
+      int main(void) {
+        return 0;
+      }
+    EOS
+
+    std_output = <<~EOS
+    Path,Physical,Source,Comment,Single-line comment,Block comment,Mixed,Empty block comment,Empty,To Do
+    Total,4,4,0,0,0,0,0,0,0
+    EOS
+
+    assert_match std_output, shell_output("#{bin}/sloc --format=csv .")
   end
 end
