@@ -72,8 +72,14 @@ Collections
   are integrated. For more information, see this
   `Pull Request <https://github.com/Homebrew/homebrew-core/pull/35209>`__.
 
+- |vermin|_: Concurrently detect the minimum Python versions needed to run code
+
+  This formula is not included in Homebrew core repository yet.
+
 .. |docutils| replace:: ``docutils``
 .. _docutils: http://docutils.sourceforge.net
+.. |vermin| replace:: ``vermin``
+.. _vermin: https://github.com/netromdk/vermin
 
 -------
 License
