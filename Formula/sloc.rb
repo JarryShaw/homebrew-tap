@@ -1,10 +1,9 @@
 require "language/node"
 
 class Sloc < Formula
-  desc "sloc is a simple tool to count SLOC (source lines of code)"
+  desc "A simple tool to count source lines of code."
   homepage "https://github.com/flosse/sloc#readme"
   url "https://registry.npmjs.org/sloc/-/sloc-0.2.1.tgz"
-  version "0.2.1"
   sha256 "fb56f1763b7dadfd0566f819665efc0725ba8dfbec13c75da3839edf309596e6"
 
   depends_on "node"
@@ -23,8 +22,8 @@ class Sloc < Formula
     EOS
 
     std_output = <<~EOS
-    Path,Physical,Source,Comment,Single-line comment,Block comment,Mixed,Empty block comment,Empty,To Do
-    Total,4,4,0,0,0,0,0,0,0
+      Path,Physical,Source,Comment,Single-line comment,Block comment,Mixed,Empty block comment,Empty,To Do
+      Total,4,4,0,0,0,0,0,0,0
     EOS
 
     assert_match std_output, shell_output("#{bin}/sloc --format=csv .")

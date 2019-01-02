@@ -74,11 +74,13 @@ Collections
 
 - |vermin|_: Concurrently detect the minimum Python versions needed to run code
 
-  This formula is not included in Homebrew core repository yet.
+  This formula is not included in Homebrew core repository yet. See this
+  `Pull Request <https://github.com/Homebrew/homebrew-core/pull/35633>`__.
 
 - |sloc|_: sloc is a simple tool to count SLOC (source lines of code)
 
-  This formula is not included in Homebrew core repository yet.
+  This formula is not included in Homebrew core repository yet. See this
+  `Pull Request <https://github.com/Homebrew/homebrew-core/pull/35632>`__.
 
 .. |docutils| replace:: ``docutils``
 .. _docutils: http://docutils.sourceforge.net
