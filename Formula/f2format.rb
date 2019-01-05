@@ -2,18 +2,14 @@ class F2format < Formula
   include Language::Python::Virtualenv
 
   version "0.4.0.post2"
-  desc "Back-port compiler for Python 3.6 f-string literals."
+  desc "Back-port compiler for Python 3.6 f-string literals"
   homepage "https://github.com/JarryShaw/f2format#f2format"
   url "https://files.pythonhosted.org/packages/44/5d/46ad0cc7d327dfbdc3f6aeb82b242e09dd19606585c0196ebc7ac01a53a3/f2format-0.4.0.post2.tar.gz"
   sha256 "96f06428b29e415a162ced5e446b72bd5910842f6f02055f4b02578f644e2250"
+
   head "https://github.com/JarryShaw/f2format.git", :branch => "master"
 
   bottle :unneeded
-
-  devel do
-    url "https://codeload.github.com/JarryShaw/f2format/tar.gz/v0.4.0.post2"
-    sha256 "0191822ffc688df4e24ebeeb6f6734f209bbf3922a489f9b50500a1731419b92"
-  end
 
   depends_on "python"
 
@@ -37,13 +33,13 @@ class F2format < Formula
     venv = virtualenv_create(libexec, "python3")
 
     version = `#{libexec}/"bin/python" -c "print('%s.%s' % __import__('sys').version_info[:2])"`
-    if ( version =~ /3.[34]/ )
+    if version =~ /3.[34]/
       %w[pathlib2 six].each do |r|
         venv.pip_install resource(r)
       end
     end
 
-    if ( version =~ /3.[345]/ )
+    if version =~ /3.[345]/
       venv.pip_install resource("typed-ast")
     end
     venv.pip_install_and_link buildpath

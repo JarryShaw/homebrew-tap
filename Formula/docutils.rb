@@ -7,8 +7,6 @@ class Docutils < Formula
   sha256 "51e64ef2ebfb29cae1faa133b3710143496eca21c530f3f71424d77687764274"
   revision 1
 
-  conflicts_with "docutils", :because => "this is a port of docutils from homebrew-core"
-
   bottle do
     cellar :any_skip_relocation
     sha256 "71bc62531fd234add02633a69b12c2f1f43d6799d5ab1615ab6c9b22064803cc" => :mojave
@@ -16,11 +14,13 @@ class Docutils < Formula
     sha256 "a91be71816c677dac34fe253695440bebaf54d634652622ca1e797f5cebecbee" => :sierra
   end
 
-  depends_on "python@2"
-
   option "without-lxml", "build without XML processing support"
   option "without-pillow", "build without Python Image Library support"
   option "without-pygments", "build without code syntax highlighting support"
+
+  depends_on "python@2"
+
+  conflicts_with "docutils", :because => "this is a port of docutils from homebrew-core"
 
   resource "lxml" do
     url "https://files.pythonhosted.org/packages/4b/20/ddf5eb3bd5c57582d2b4652b4bbcf8da301bdfe5d805cb94e805f4d7464d/lxml-4.2.5.tar.gz"

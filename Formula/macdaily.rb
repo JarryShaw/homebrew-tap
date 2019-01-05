@@ -1,36 +1,29 @@
 class Macdaily < Formula
   include Language::Python::Virtualenv
 
-  version "2018.12.17"
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
   url "https://files.pythonhosted.org/packages/a8/9f/2ba9ed1a65777de8c8098f85c406aa0140f3d9154fa83f2dc7ffe5990db3/macdaily-2018.12.17.tar.gz"
   sha256 "2277b54d99f4ce286b3b919c40e8e3b1107cc53183e8cec054c5f593bae94d45"
+
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
+
+  devel do
+    url "https://github.com/JarryShaw/MacDaily/archive/v2018.12.17.devel.tar.gz"
+    sha256 "eb66b27a621d2da04e2a202e4569f40d710ef2f4b1a7b6465b32b696a62339b8"
+  end
 
   bottle :unneeded
 
-  # bottle do
-  #   cellar :any_skip_relocation
-  #   sha256 "" => :mojave
-  #   sha256 "" => :high_sierra
-  #   sha256 "" => :sierra
-  # end
-
-  devel do
-    url "https://codeload.github.com/JarryShaw/MacDaily/tar.gz/v2018.12.17.devel"
-    sha256 "eb66b27a621d2da04e2a202e4569f40d710ef2f4b1a7b6465b32b696a62339b8"
-  end
+  option "without-config", "build without config modification support"
+  option "without-tree", "build without tree format support"
+  option "without-ptyng", "build without alternative PTY support"
 
   depends_on "python"
   depends_on "expect" => :recommended
   depends_on "jarryshaw/tap/askpass" => :optional
   depends_on "jarryshaw/tap/confirm" => :optional
   depends_on "theseal/ssh-askpass/ssh-askpass" => :optional
-
-  option "without-config", "build without config modification support"
-  option "without-tree", "build without tree format support"
-  option "without-ptyng", "build without alternative PTY support"
 
   resource "configupdater" do
     url "https://files.pythonhosted.org/packages/aa/af/069c7db438b9382a05fdaa6c90a2b44595dd7acdb1707848a0b8f2cbe1c1/ConfigUpdater-1.0.tar.gz"
@@ -42,14 +35,14 @@ class Macdaily < Formula
     sha256 "33812e46a142215fef2cc1eb788af532828ccfd29bfe0c623d4616110108f720"
   end
 
-  resource "ptyng" do
-    url "https://files.pythonhosted.org/packages/9a/b5/8a7bd1e4c363797cfa785f61813652aa67971efad4c72ee47ec70140cc68/ptyng-0.3.0.post2.tar.gz"
-    sha256 "1bab0e1223bc52e563abbdaf18f73b9b7bf8fc6048da8c2f3f6dfe3d9c29a802"
-  end
-
   resource "psutil" do
     url "https://files.pythonhosted.org/packages/e3/58/0eae6e4466e5abf779d7e2b71fac7fba5f59e00ea36ddb3ed690419ccb0f/psutil-5.4.8.tar.gz"
     sha256 "6e265c8f3da00b015d24b842bfeb111f856b13d24f2c57036582568dc650d6c3"
+  end
+
+  resource "ptyng" do
+    url "https://files.pythonhosted.org/packages/b0/a3/526c59a881b37faa45596bafd23b34e3c65bcd55746bd26678fb161522d3/ptyng-0.3.1.post1.tar.gz"
+    sha256 "206450e6f10e53c20fae47e4abbd6154eae9db9dfe11337a00f42720271c89e7"
   end
 
   resource "pathlib2" do
@@ -82,13 +75,13 @@ class Macdaily < Formula
       venv.pip_install resource("ptyng")
 
       exitcode = `#{libexec}/"bin/python" -c "print(__import__('os').system('ps axo pid=,stat= > /dev/null 2>&1'))"`
-      if !( exitcode =~ /0/ )
+      if exitcode !~ /0/
         venv.pip_install resource("psutil")
       end
     end
 
     version = `#{libexec}/"bin/python" -c "print('%s.%s' % __import__('sys').version_info[:2])"`
-    if ( version =~ /3.4/ )
+    if version =~ /3.4/
       %w[pathlib2 six subprocess32].each do |r|
         venv.pip_install resource(r)
       end
@@ -100,9 +93,9 @@ class Macdaily < Formula
     dest = File.join(dir_name, "temp.1")
 
     man_path.each do |f|
-      FileUtils.cp f, dest
+      cp f, dest
       man1.install f
-      FileUtils.mv dest, f
+      mv dest, f
     end
   end
 
