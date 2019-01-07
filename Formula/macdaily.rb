@@ -3,14 +3,14 @@ class Macdaily < Formula
 
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
-  url "https://files.pythonhosted.org/packages/a8/9f/2ba9ed1a65777de8c8098f85c406aa0140f3d9154fa83f2dc7ffe5990db3/macdaily-2018.12.17.tar.gz"
-  sha256 "2277b54d99f4ce286b3b919c40e8e3b1107cc53183e8cec054c5f593bae94d45"
+  url "https://files.pythonhosted.org/packages/ce/a8/397412f692d45d3d53c01a74db26162b82c3ec29f86e9a67c477ec115ce0/macdaily-2019.1.7.tar.gz"
+  sha256 "36e54bfb6226d1582be25dee19470c914297237e32f97b86f90d421955cfd2d0"
 
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
   devel do
-    url "https://github.com/JarryShaw/MacDaily/archive/v2018.12.17.devel.tar.gz"
-    sha256 "eb66b27a621d2da04e2a202e4569f40d710ef2f4b1a7b6465b32b696a62339b8"
+    url "https://github.com/JarryShaw/MacDaily/archive/v2019.01.07.devel.tar.gz"
+    sha256 "395408a3dc9c3db2b5c200b8722a13a60898c861633b99e6e250186adffd1370"
   end
 
   bottle :unneeded
@@ -41,8 +41,8 @@ class Macdaily < Formula
   end
 
   resource "ptyng" do
-    url "https://files.pythonhosted.org/packages/b0/a3/526c59a881b37faa45596bafd23b34e3c65bcd55746bd26678fb161522d3/ptyng-0.3.1.post1.tar.gz"
-    sha256 "206450e6f10e53c20fae47e4abbd6154eae9db9dfe11337a00f42720271c89e7"
+    url "https://files.pythonhosted.org/packages/9a/b5/8a7bd1e4c363797cfa785f61813652aa67971efad4c72ee47ec70140cc68/ptyng-0.3.0.post2.tar.gz"
+    sha256 "1bab0e1223bc52e563abbdaf18f73b9b7bf8fc6048da8c2f3f6dfe3d9c29a802"
   end
 
   resource "pathlib2" do
