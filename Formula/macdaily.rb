@@ -3,14 +3,14 @@ class Macdaily < Formula
 
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
-  url "https://files.pythonhosted.org/packages/ce/a8/397412f692d45d3d53c01a74db26162b82c3ec29f86e9a67c477ec115ce0/macdaily-2019.1.7.tar.gz"
-  sha256 "36e54bfb6226d1582be25dee19470c914297237e32f97b86f90d421955cfd2d0"
+  url "https://files.pythonhosted.org/packages/8e/93/52e8dc2e11749bc8a5c223a73ad865d548b06b6d414d0387a54b563af2ee/macdaily-2019.1.8.tar.gz"
+  sha256 "6caf62c49cc35c158fca5669ded3c214fa24c967de6deeae228a03d56b42a373"
 
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
   devel do
-    url "https://github.com/JarryShaw/MacDaily/archive/v2019.01.07.devel.tar.gz"
-    sha256 "395408a3dc9c3db2b5c200b8722a13a60898c861633b99e6e250186adffd1370"
+    url "https://github.com/JarryShaw/MacDaily/archive/v2019.01.08.devel.tar.gz"
+    sha256 "83f92d1c20c7f6dab9fcc71678531017850c21359525986612197208b94294b4"
   end
 
   bottle :unneeded
