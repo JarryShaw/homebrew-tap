@@ -1,11 +1,11 @@
 class F2format < Formula
   include Language::Python::Virtualenv
 
-  version "0.4.1"
+  version "0.4.2"
   desc "Back-port compiler for Python 3.6 f-string literals"
   homepage "https://github.com/JarryShaw/f2format#f2format"
-  url "https://files.pythonhosted.org/packages/a1/e0/1a07cbc387dc4af5307b829696d06e0308d1f42935ec40c71a7f3978c852/f2format-0.4.1.tar.gz"
-  sha256 "99bbfe031d5e4b5f3733ea94586fc6baea96d3b1823c58c88ab6d01b6e96a49e"
+  url "https://files.pythonhosted.org/packages/3e/a9/68646c00871407f5d57e6c8e4e88c34168644695b28537c604466109f04a/f2format-0.4.2.tar.gz"
+  sha256 "56571acb42ac072969648c190fc820b01d0164272b305c6a64e0803de81210e3"
 
   head "https://github.com/JarryShaw/f2format.git", :branch => "master"
 
