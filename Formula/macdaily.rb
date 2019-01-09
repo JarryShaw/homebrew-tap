@@ -41,8 +41,8 @@ class Macdaily < Formula
   end
 
   resource "ptyng" do
-    url "https://files.pythonhosted.org/packages/9a/b5/8a7bd1e4c363797cfa785f61813652aa67971efad4c72ee47ec70140cc68/ptyng-0.3.0.post2.tar.gz"
-    sha256 "1bab0e1223bc52e563abbdaf18f73b9b7bf8fc6048da8c2f3f6dfe3d9c29a802"
+    url "https://files.pythonhosted.org/packages/f7/66/249b152cf8dc7b93e361d1f2b333c028fc45eb5813747cd8a049e2750f52/ptyng-0.3.3.tar.gz"
+    sha256 "dbdcbd4967b6928dc4bb58c7809d400b670d366ea24992ec8c6fd5e6c5608a2b"
   end
 
   resource "pathlib2" do
