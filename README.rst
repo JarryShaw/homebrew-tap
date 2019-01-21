@@ -65,23 +65,28 @@ Productions
 Collections
 -----------
 
-- |docutils|_: Documentation Utilities
+- |docutils|_: text processing system for ``reStructuredText``
 
   This formula is included in Homebrew core repository. However,
   no dependencies, such as ``lxml``, ``Pillow`` and ``Pygments``
   are integrated. For more information, see this
   `Pull Request <https://github.com/Homebrew/homebrew-core/pull/35209>`__.
 
-- |vermin|_: Concurrently detect the minimum Python versions needed to run code
+- |vermin|_: concurrently detect the minimum Python versions needed to run code
 
   This formula is not notable enough to be included in Homebrew
   core repository yet. See this
   `Pull Request <https://github.com/Homebrew/homebrew-core/pull/35633>`__.
 
-- |sloc|_: sloc is a simple tool to count SLOC (source lines of code)
+- |sloc|_: simple tool to count source lines of code
 
   This formula is now included in Homebrew core repository. See this
   `Pull Request <https://github.com/Homebrew/homebrew-core/pull/35632>`__.
+
+- |pkt2flow|_ : simple utility to classify packets into flows
+
+  This formula is not notable enough to be included in Homebrew
+  core repository yet.
 
 .. |docutils| replace:: ``docutils``
 .. _docutils: http://docutils.sourceforge.net
@@ -89,6 +94,8 @@ Collections
 .. _vermin: https://github.com/netromdk/vermin
 .. |sloc| replace:: ``sloc``
 .. _sloc: https://github.com/flosse/sloc#readme
+.. |pkt2flow| replace:: ``pk2flow``
+.. _pkt2flow: https://github.com/caesar0301/pkt2flow#pkt2flow
 
 -------
 License
