@@ -86,7 +86,22 @@ Collections
 - |pkt2flow|_ : simple utility to classify packets into flows
 
   This formula is not notable enough to be included in Homebrew
-  core repository yet.
+  core repository yet (<30 forks, <30 watchers and <75 stars).
+
+- |bpython|_ : fancy curses interface to the Python interactive interpreter
+
+  For Python 3 interpreter, the formula is ``bpython``;
+  for Python 2 interpreter, the formula is ``bpython@2``.
+
+- |ptpython|_ : better Python REPL
+
+  For Python 3 interpreter, the formula is ``ptpython``;
+  for Python 2 interpreter, the formula is ``ptpython@2``.
+
+- |poet|_ : generates Homebrew resource stanzas for Python packages
+
+  This formula is not notable enough to be included in Homebrew
+  core repository yet (<30 forks, <30 watchers and <75 stars).
 
 .. |docutils| replace:: ``docutils``
 .. _docutils: http://docutils.sourceforge.net
@@ -96,6 +111,12 @@ Collections
 .. _sloc: https://github.com/flosse/sloc#readme
 .. |pkt2flow| replace:: ``pk2flow``
 .. _pkt2flow: https://github.com/caesar0301/pkt2flow#pkt2flow
+.. |bpython| replace:: ``bpython``
+.. _bpython: https://bpython-interpreter.org
+.. |ptpython| replace:: ``ptpython``
+.. _ptpython: https://github.com/prompt-toolkit/ptpython
+.. |poet| replace:: ``poet``
+.. _poet: https://github.com/tdsmith/homebrew-pypi-poet
 
 -------
 License
