@@ -8,11 +8,6 @@ class Bpython < Formula
 
   head "https://github.com/bpython/bpython.git", :branch => "master"
 
-  devel do
-    url "https://github.com/bpython/bpython/archive/0.17-dev.tar.gz"
-    sha256 "797a86d7dca38938ed1b3e6a0ca64f0910e7ab8024ad309fe9a1b7dc71115aff"
-  end
-
   option "without-urwid", "build without console user interface support"
   option "without-watch", "build without filesystem events monitoring support"
   option "without-jedi", "build without static analysis support"
@@ -118,7 +113,7 @@ class Bpython < Formula
     # virtualenv_install_with_resources
     venv = virtualenv_create(libexec, "python3")
 
-    %w[blessings certifi chardet curtsies greenlet idna "Pygments" requests six typing urllib3 wcwidth].each do |r|
+    %w[blessings certifi chardet curtsies greenlet idna Pygments requests six typing urllib3 wcwidth].each do |r|
       venv.pip_install resource(r)
     end
 
@@ -127,7 +122,7 @@ class Bpython < Formula
     end
 
     if build.with?("watch")
-      %w[argh pathtools "PyYAML" watchdog].each do |r|
+      %w[argh pathtools PyYAML watchdog].each do |r|
         venv.pip_install resource(r)
       end
     end

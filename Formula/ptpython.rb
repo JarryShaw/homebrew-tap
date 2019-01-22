@@ -8,9 +8,12 @@ class Ptpython < Formula
 
   head "https://github.com/bpython/bpython.git", :branch => "master"
 
-  option "without-ptipython", "build without IPython support"
+  option "with-ptipython", "build with IPython support"
 
   depends_on "python"
+  if build.with?("ptipython")
+    depends_on "zeromq"
+  end
 
   resource "Pygments" do
     url "https://files.pythonhosted.org/packages/64/69/413708eaf3a64a6abb8972644e0f20891a55e621c6759e2c3f3891e05d63/Pygments-2.3.1.tar.gz"
@@ -94,11 +97,58 @@ class Ptpython < Formula
 
   def install
     if build.with?("ptipython")
-      virtualenv_install_with_resources
+      xy = Language::Python.major_minor_version "python3"
+      ENV.prepend_create_path "PYTHONPATH", libexec/"vendor/lib/python#{xy}/site-packages"
+
+      # install other resources
+      ipython = resource("ipython")
+      ptpython = resource("ptpython")
+      ipykernel = resource("ipykernel")
+      (resources - [ipython, ptpython, ipykernel]).each do |r|
+        r.stage do
+          system "python3", *Language::Python.setup_install_args(libexec/"vendor")
+        end
+      end
+
+      # install and link IPython
+      ipython.stage do
+        ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python#{xy}/site-packages"
+        system "python3", *Language::Python.setup_install_args(libexec)
+        bin.install libexec/"bin/ipython"
+        bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
+      end
+
+      # install IPython man page
+      man1.install libexec/"share/man/man1/ipython.1"
+
+      # install IPyKernel
+      ipykernel.stage do
+        system "python3", *Language::Python.setup_install_args(libexec/"vendor")
+      end
+
+      # install kernel
+      kernel_dir = Dir.mktmpdir
+      system libexec/"bin/ipython", "kernel", "install", "--prefix", kernel_dir
+      (share/"jupyter/kernels/python3").install Dir["#{kernel_dir}/share/jupyter/kernels/python3/*"]
+      inreplace share/"jupyter/kernels/python3/kernel.json", "]", <<~EOS
+        ],
+        "env": {
+          "PYTHONPATH": "#{ENV["PYTHONPATH"]}"
+        }
+      EOS
+
+      # install and link ptPython
+      ptython.stage do
+        ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python#{xy}/site-packages"
+        system "python3", *Language::Python.setup_install_args(libexec)
+        bin.install Dir[libexec/"bin/ptpython*"]
+        bin.install Dir[libexec/"bin/ptipython*"]
+        bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
+      end
     else
       venv = virtualenv_create(libexec, "python3")
 
-      %w[docopt jedi parso prompt_toolkit "Pygments" six wcwidth].each do |r|
+      %w[docopt jedi parso prompt_toolkit Pygments six wcwidth].each do |r|
         venv.pip_install resource(r)
       end
 
@@ -106,7 +156,21 @@ class Ptpython < Formula
     end
   end
 
+  def post_install
+    if build.with?("ptipython")
+      rm_rf etc/"jupyter/kernels/python3"
+      (etc/"jupyter/kernels/python3").install Dir[share/"jupyter/kernels/python3/*"]
+    end
+  end
+
   test do
+    if build.with?("ptipython")
+      assert_equal "4", shell_output("#{bin}/ipython -c 'print(2+2)'").chomp
+
+      system bin/"ipython", "kernel", "install", "--prefix", testpath
+      assert_predicate testpath/"share/jupyter/kernels/python3/kernel.json", :exist?, "Failed to install kernel"
+    end
+
     version = `#{libexec}/"bin/python" -c "print('%s.%s' % __import__('sys').version_info[:2])"`
     system bin/"ptpython#{version}", "--help"
   end

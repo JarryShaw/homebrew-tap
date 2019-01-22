@@ -8,10 +8,7 @@ class BpythonAT2 < Formula
 
   head "https://github.com/bpython/bpython.git", :branch => "master"
 
-  devel do
-    url "https://github.com/bpython/bpython/archive/0.17-dev.tar.gz"
-    sha256 "797a86d7dca38938ed1b3e6a0ca64f0910e7ab8024ad309fe9a1b7dc71115aff"
-  end
+  keg_only :versioned_formula
 
   option "without-urwid", "build without console user interface support"
   option "without-watch", "build without filesystem events monitoring support"
@@ -153,7 +150,7 @@ class BpythonAT2 < Formula
     # virtualenv_install_with_resources
     venv = virtualenv_create(libexec, "python")
 
-    %w[blessings certifi chardet curtsies greenlet idna "Pygments" requests six typing urllib3 wcwidth].each do |r|
+    %w[blessings certifi chardet curtsies greenlet idna Pygments requests six typing urllib3 wcwidth].each do |r|
       venv.pip_install resource(r)
     end
 
@@ -162,7 +159,7 @@ class BpythonAT2 < Formula
     end
 
     if build.with?("watch")
-      %w[argh pathtools "PyYAML" watchdog].each do |r|
+      %w[argh pathtools PyYAML watchdog].each do |r|
         venv.pip_install resource(r)
       end
     end
@@ -175,7 +172,7 @@ class BpythonAT2 < Formula
 
     version = `#{libexec}/"bin/python" -c "print('%s.%s.%s' % __import__('sys').version_info[:3])"`
     if version =~ /2.7.[0123456]/
-      %w[asn1crypto cffi cryptography idna pycparser pyOpenSSL pyasn1 "ndg-httpsclient"].each do |r|
+      %w[asn1crypto cffi cryptography idna pycparser pyOpenSSL pyasn1 ndg-httpsclient].each do |r|
         venv.pip_install resource(r)
       end
     end

@@ -102,6 +102,8 @@ Collections
 
   This formula is not notable enough to be included in Homebrew
   core repository yet (<30 forks, <30 watchers and <75 stars).
+  For Python 3 interpreter, the formula is ``poet``;
+  for Python 2 interpreter, the formula is ``poet@2``.
 
 .. |docutils| replace:: ``docutils``
 .. _docutils: http://docutils.sourceforge.net
