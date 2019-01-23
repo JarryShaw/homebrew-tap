@@ -3,14 +3,14 @@ class Macdaily < Formula
 
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
-  url "https://files.pythonhosted.org/packages/d9/fc/c3a3f66ff08c31bf141c484dc075f7717c4f34856e1bbe8d1f6caf505447/macdaily-2019.1.22.tar.gz"
-  sha256 "7e498f9e5c87bfafef838179258234b8cec8716322e839e0a82b1dc7bde859f0"
+  url "https://files.pythonhosted.org/packages/e8/55/732786340f7863bacf92cd29f1f7ad3b5f517acff7a75fd1a97e2d9e295c/macdaily-2019.1.23.tar.gz"
+  sha256 "0eed91173a73a5d6157dbbb69f4d5e78ccf27568d9fa938354d5fcb40523478c"
 
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
   devel do
-    url "https://github.com/JarryShaw/MacDaily/archive/v2019.01.22.devel.tar.gz"
-    sha256 "7989361392027e07c357d56fbc01f8d625a4ed333eef4193a3d4dfa01c98ddf7"
+    url "https://github.com/JarryShaw/MacDaily/archive/v2019.01.23.devel.tar.gz"
+    sha256 "fb76b1f0173370d0c56cafef9d898a5521497102b399ac63974930f36e7c822c"
   end
 
   bottle :unneeded
@@ -60,9 +60,15 @@ class Macdaily < Formula
     sha256 "6bc82992316eef3ccff319b5033809801c0c3372709c5f6985299c88ac7225c3"
   end
 
+  resource "tbtrim" do
+    url "https://files.pythonhosted.org/packages/68/e5/36ec02870b46e919f8f807964aa4771204766f14bfbc1e29f2b409b6f48e/tbtrim-0.1.0.post2.tar.gz"
+    sha256 "58f5f06daa93b67112f551e5eef34a7d86e7f89af9296f552c5b653ddfbab9ed"
+  end
+
   def install
-    # virtualenv_install_with_resources
     venv = virtualenv_create(libexec, "python3")
+    venv.pip_install resource("tbtrim")
+
     if build.with?("config")
       venv.pip_install resource("configupdater")
     end
