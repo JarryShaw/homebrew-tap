@@ -1,11 +1,11 @@
 class F2format < Formula
   include Language::Python::Virtualenv
 
-  version "0.4.2"
+  version "0.4.3"
   desc "Back-port compiler for Python 3.6 f-string literals"
   homepage "https://github.com/JarryShaw/f2format#f2format"
-  url "https://files.pythonhosted.org/packages/3e/a9/68646c00871407f5d57e6c8e4e88c34168644695b28537c604466109f04a/f2format-0.4.2.tar.gz"
-  sha256 "56571acb42ac072969648c190fc820b01d0164272b305c6a64e0803de81210e3"
+  url "https://files.pythonhosted.org/packages/52/93/bb5984cc8cb711d49eefada6405ad4044da50b3c347056997453d52a86e0/f2format-0.4.3.tar.gz"
+  sha256 "ec05c3499d0948c9692d875c9e19e58ccde61ed1138b6b3e5743e193bf8bbc82"
 
   head "https://github.com/JarryShaw/f2format.git", :branch => "master"
 
@@ -24,8 +24,8 @@ class F2format < Formula
   end
 
   resource "typed-ast" do
-    url "https://files.pythonhosted.org/packages/9d/f8/78010480255fc6a1e545d1e74389128c1a4f11905b9ab16a7ef6c956c704/typed-ast-1.1.1.tar.gz"
-    sha256 "6cb25dc95078931ecbd6cbcc4178d1b8ae8f2b513ae9c3bd0b7f81c2191db4c6"
+    url "https://files.pythonhosted.org/packages/00/be/c3769a5d6a179c42eba04186dc7efeb165edf92f7b1582ccfe81cb17d7f9/typed-ast-1.2.0.tar.gz"
+    sha256 "b4726339a4c180a8b6ad9d8b50d2b6dc247e1b79b38fe2290549c98e82e4fd15"
   end
 
   def install
