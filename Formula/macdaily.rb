@@ -3,14 +3,14 @@ class Macdaily < Formula
 
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
-  url "https://files.pythonhosted.org/packages/e8/55/732786340f7863bacf92cd29f1f7ad3b5f517acff7a75fd1a97e2d9e295c/macdaily-2019.1.23.tar.gz"
-  sha256 "0eed91173a73a5d6157dbbb69f4d5e78ccf27568d9fa938354d5fcb40523478c"
+  url "https://files.pythonhosted.org/packages/7c/f2/71c8faf50ebe478f0ff8e18fa012b2801ec6fc6a72237f0f9faddb4b3ccd/macdaily-2019.1.24.tar.gz"
+  sha256 "302b11f601652b916704fda98cbca9a89e0e40b93f87df2604a390cea2beb398"
 
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
   devel do
-    url "https://github.com/JarryShaw/MacDaily/archive/v2019.01.23.devel.tar.gz"
-    sha256 "fb76b1f0173370d0c56cafef9d898a5521497102b399ac63974930f36e7c822c"
+    url "https://github.com/JarryShaw/MacDaily/archive/v2019.01.24.devel.tar.gz"
+    sha256 "487425cf0a43c61c00cd8f4747507adb6e41edc0f24292f1f012e0f930f7238d"
   end
 
   bottle :unneeded
@@ -36,8 +36,8 @@ class Macdaily < Formula
   end
 
   resource "psutil" do
-    url "https://files.pythonhosted.org/packages/e3/58/0eae6e4466e5abf779d7e2b71fac7fba5f59e00ea36ddb3ed690419ccb0f/psutil-5.4.8.tar.gz"
-    sha256 "6e265c8f3da00b015d24b842bfeb111f856b13d24f2c57036582568dc650d6c3"
+    url "https://files.pythonhosted.org/packages/6e/a0/833bcbcede5141cc5615e50c7cc5b960ce93d9c9b885fbe3b7d36e48a2d4/psutil-5.5.0.tar.gz"
+    sha256 "1aba93430050270750d046a179c5f3d6e1f5f8b96c20399ba38c596b28fc4d37"
   end
 
   resource "ptyng" do
@@ -61,8 +61,8 @@ class Macdaily < Formula
   end
 
   resource "tbtrim" do
-    url "https://files.pythonhosted.org/packages/68/e5/36ec02870b46e919f8f807964aa4771204766f14bfbc1e29f2b409b6f48e/tbtrim-0.1.0.post2.tar.gz"
-    sha256 "58f5f06daa93b67112f551e5eef34a7d86e7f89af9296f552c5b653ddfbab9ed"
+    url "https://files.pythonhosted.org/packages/34/71/6c8f16a0773497d9bf601b8839b6ddac4e0a9af8ef4394110ecb80d5b648/tbtrim-0.2.0.tar.gz"
+    sha256 "78115ce0499b87ac2315e377ba076ec464ef2fa479c2243e5be1bf7a5a4c2db1"
   end
 
   def install
