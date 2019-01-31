@@ -3,14 +3,14 @@ class Macdaily < Formula
 
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
-  url "https://files.pythonhosted.org/packages/a6/fd/7281a9beacbbd8f725a4b29fdfa177af8ef51c133a87cc274959da734907/macdaily-2019.1.30.tar.gz"
-  sha256 "321082a2e6bf6ce7e97733972a85d8d39e2c5509deee1aae2181486793c3be6a"
+  url "https://files.pythonhosted.org/packages/0e/96/0f836364ba679a00b122e4c6cff2398bcbec1dedb4af8027a88450499ecf/macdaily-2019.1.31.tar.gz"
+  sha256 "a1ae22bfb97e95f6275e4ca972a94533235d88ca49ec70f3ec57ff3320b839ee"
 
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
   devel do
-    url "https://github.com/JarryShaw/MacDaily/archive/v2019.01.30.devel.tar.gz"
-    sha256 "3e68079c000d8713e9c28cc11e61419d84830fe1d882e22e224e8ea154638568"
+    url "https://github.com/JarryShaw/MacDaily/archive/v2019.01.31.devel.tar.gz"
+    sha256 "ab32fb3fb0da96257f77649e306efa157b905dfa9c4c7f96cf8b78bc0122f021"
   end
 
   bottle :unneeded
@@ -105,13 +105,10 @@ class Macdaily < Formula
     end
   end
 
-  # def post_install
-  #   text = <<~EOS
-  #     To run postinstall process, please directly call
-  #       `macdaily launch askpass confirm`
-  #   EOS
-  #   puts text
-  # end
+  def post_install
+    ENV["MACDAILY_LOGDIR"] = "/private/tmp/macdaily"
+    system bin/"macdaily", "launch", "askpass", "confirm", "--no-cleanup", "--quiet"
+  end
 
   def caveats
     text = <<~EOS
@@ -128,9 +125,6 @@ class Macdaily < Formula
 
       For more information, check out `macdaily help` command. Online
       documentations available at GitHub repository.
-
-      To run postinstall process, please directly call
-        `macdaily launch askpass confirm`
 
       See: https://github.com/JarryShaw/MacDaily#generals
     EOS
