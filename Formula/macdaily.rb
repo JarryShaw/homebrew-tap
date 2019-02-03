@@ -3,14 +3,14 @@ class Macdaily < Formula
 
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
-  url "https://files.pythonhosted.org/packages/9f/a3/1aaa46c6fa0ec241fbdce4484c39fcd78a5fd912c95194a0d0ecccb7eebc/macdaily-2019.2.1.tar.gz"
-  sha256 "d7fea3a699e7626658365bcfd1c6639c3a2510d59f6e6365c210580ca84a3eae"
+  url "https://files.pythonhosted.org/packages/f6/d0/80902791caec70298e834c8e678f375a8ddec65087932995d9dcaa12ca7c/macdaily-2019.2.3.tar.gz"
+  sha256 "6cbf770873e794e1143168092c15945dc799fb9878d9d90ffaf3ee8714d150c8"
 
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
   devel do
-    url "https://github.com/JarryShaw/MacDaily/archive/v2019.02.01.devel.tar.gz"
-    sha256 "ef427c490d8d1cf81018aefe2cdc9f4c07e7203f0ed1f6672613cf91970ea01a"
+    url "https://github.com/JarryShaw/MacDaily/archive/v2019.02.03.devel.tar.gz"
+    sha256 "59f3be3426e5b45dd32b5e4c40f32e3a7a838668343480fb08a08d5b98d35818"
   end
 
   bottle :unneeded
@@ -93,6 +93,13 @@ class Macdaily < Formula
       end
     end
     venv.pip_install_and_link buildpath
+
+    comp_path = Pathname.glob(libexec/"lib/python?.?/site-packages/macdaily/comp/macdaily.bash-completion")[0]
+    comp_base = File.dirname comp_path[0]
+    bash_comp = File.join(comp_base, "macdaily")
+
+    cp comp_path, bash_comp
+    bash_completion.install bash_comp
 
     man_path = Pathname.glob(libexec/"lib/python?.?/site-packages/macdaily/man/*.1")
     dir_name = File.dirname man_path[0]
