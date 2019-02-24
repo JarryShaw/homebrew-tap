@@ -83,7 +83,7 @@ args.extend(sorted(set(_deps_list)))
 SPHINX = subprocess.check_output(args).decode().strip()
 
 FORMULA = f'''\
-class SphinxDoc < Formula
+class Sphinx < Formula
   include Language::Python::Virtualenv
 
   desc "Tool to create intelligent and beautiful documentation"
