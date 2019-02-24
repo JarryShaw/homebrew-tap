@@ -1,0 +1,20 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+sphinx = "*"
+sphinx-autobuild = "*"
+
+[packages]
+homebrew-pypi-poet = "*"
+bs4 = "*"
+html5lib = "*"
+requests = "*"
+pep8 = "*"
+autopep8 = "*"
+doc8 = "*"
+
+[requires]
+python_version = "3.7"
