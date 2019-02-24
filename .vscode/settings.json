@@ -1,11 +1,19 @@
 {
     "cSpell.words": [
+        "Porject",
         "Pygments",
+        "Virtualenv",
         "bpython",
+        "deps",
         "docutils",
         "lxml",
+        "noob",
+        "pkgs",
         "ptpython",
-        "sloc"
+        "sloc",
+        "snowballstemmer",
+        "stdio"
     ],
-    "restructuredtext.confPath": "${workspaceFolder}/docs/conf.py"
+    "restructuredtext.confPath": "${workspaceFolder}/docs/conf.py",
+    "python.pythonPath": "/Users/jarryshaw/.virtualenvs/Generator-BPJIB_wc/bin/python"
 }

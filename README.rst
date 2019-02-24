@@ -105,6 +105,21 @@ Collections
   For Python 3 interpreter, the formula is ``poet``;
   for Python 2 interpreter, the formula is ``poet@2``.
 
+- |uti|_ : CLI tool for interacting with File Type Identifiers on Mac
+
+  This formula is not notable enough to be included in Homebrew
+  core repository yet (<30 forks, <30 watchers and <75 stars).
+
+- |ssh-askpass|_ : SSH-Askpass util for MacOS
+
+  This formula is not notable enough to be included in Homebrew
+  core repository yet (<30 forks, <30 watchers and <75 stars).
+
+- |noob|_ : generate Homebrew formulae for npm packages
+
+  This formula is not notable enough to be included in Homebrew
+  core repository yet (<30 forks, <30 watchers and <75 stars).
+
 .. |docutils| replace:: ``docutils``
 .. _docutils: http://docutils.sourceforge.net
 .. |vermin| replace:: ``vermin``
@@ -119,6 +134,12 @@ Collections
 .. _ptpython: https://github.com/prompt-toolkit/ptpython
 .. |poet| replace:: ``poet``
 .. _poet: https://github.com/tdsmith/homebrew-pypi-poet
+.. |uti| replace:: ``uti``
+.. _uti: https://github.com/alexaubry/uti
+.. |ssh-askpass| replace:: ``ssh-askpass``
+.. _ssh-askpass: https://github.com/theseal/ssh-askpass
+.. |noob| replace:: ``homebrew-npm-noob``
+.. _noob: https://github.com/zmwangx/homebrew-npm-noob
 
 -------
 License
