@@ -1,9 +1,13 @@
-.PHONY: all brew pipenv
+.PHONY: all brew fetch style pipenv formula
 
-all: brew pipenv all-formula
-brew: brew-update
+all: brew pipenv formula style
 pipenv: pipenv-update
-all-formula: sloc sphinx ssh-askpass uti vermin
+
+brew: brew-update
+style: brew-style
+
+fetch: noob ssh-askpass uti
+formula: sloc sphinx vermin
 
 brew-update:
 	brew update
@@ -14,6 +18,26 @@ brew-upgrade:
 brew-cleanup:
 	brew cleanup
 
+brew-audit: brew-audit-formula
+
+brew-audit-tap:
+	for file in $$( ls ../Formula/*.rb ) ; do \
+		formula=$$( basename -s ".rb" $${file} ) ; \
+		echo "+ brew audit --fix --new-formula jarryshaw/tap/$${formula}" ; \
+		brew audit --fix --new-formula jarryshaw/tap/$${formula} ; \
+	done
+
+brew-audit-formula:
+	brew audit --fix --new-formula jarryshaw/tap/$(FORMULA)
+
+brew-style:	brew-style-formula
+
+brew-style-tap:
+	brew style --fix jarryshaw/tap
+
+brew-style-formula:
+	brew style --fix jarryshaw/tap/$(FORMULA)
+
 pipenv-update:
 	pipenv update
 	pipenv install --dev
@@ -22,26 +46,29 @@ pipenv-update:
 pipenv-remove:
 	pipenv --rm
 
-.ONESHELL:
 noob:
-	cd ../Formula
-	wget https://raw.githubusercontent.com/zmwangx/homebrew-npm-noob/master/Formula/noob.rb
+	curl --output ../Formula/noob.rb \
+		https://raw.githubusercontent.com/zmwangx/homebrew-npm-noob/master/Formula/noob.rb
+	FORMULA="noob" $(MAKE) brew-audit
 
 sloc:
 	pipenv run python sloc.py
+	FORMULA="sloc" $(MAKE) brew-audit
 
 sphinx:
 	pipenv run python sphinx.py
+	FORMULA="sphinx" $(MAKE) brew-audit
 
-.ONESHELL:
 ssh-askpass:
-	cd ../Formula
-	wget https://raw.githubusercontent.com/theseal/homebrew-ssh-askpass/master/Formula/ssh-askpass.rb
+	curl --output ../Formula/ssh-askpass.rb \
+		https://raw.githubusercontent.com/theseal/homebrew-ssh-askpass/master/Formula/ssh-askpass.rb
+	FORMULA="ssh-askpass" $(MAKE) brew-audit
 
-.ONESHELL:
 uti:
-	cd ../Formula
-	wget https://raw.githubusercontent.com/alexaubry/homebrew-formulas/master/Formula/uti.rb
+	curl --output ../Formula/uti.rb \
+		https://raw.githubusercontent.com/alexaubry/homebrew-formulas/master/Formula/uti.rb
+	FORMULA="uti" $(MAKE) brew-audit
 
 vermin:
 	pipenv run python vermin.py
+	FORMULA="vermin" $(MAKE) brew-audit

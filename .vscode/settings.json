@@ -12,7 +12,8 @@
         "ptpython",
         "sloc",
         "snowballstemmer",
-        "stdio"
+        "stdio",
+        "tbody"
     ],
     "restructuredtext.confPath": "${workspaceFolder}/docs/conf.py",
     "python.pythonPath": "/Users/jarryshaw/.virtualenvs/Generator-BPJIB_wc/bin/python"

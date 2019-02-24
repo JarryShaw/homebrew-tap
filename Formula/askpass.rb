@@ -1,6 +1,6 @@
 class Askpass < Formula
   desc "Popup AskPass utility for macOS"
-  homepage "https://github.com/JarrySaw/askpass#askpass"
+  homepage "https://github.com/JarryShaw/askpass#askpass"
   url "https://github.com/JarryShaw/askpass/archive/v2018.12.15.tar.gz"
   sha256 "0b994fcea968693f7b34513c3d74c21bc73c1aa3ad4f34c5a14d9f9f431aac1d"
 

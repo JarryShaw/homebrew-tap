@@ -15,7 +15,7 @@ class SshAskpass < Formula
     text
   end
 
-  plist_options :startup => "true"
+  plist_options :startup => "true", :manual => "launch ssh-askpass"
 
   def plist
     file = <<~EOS
