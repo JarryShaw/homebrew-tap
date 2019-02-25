@@ -120,6 +120,11 @@ Collections
   This formula is not notable enough to be included in Homebrew
   core repository yet (<30 forks, <30 watchers and <75 stars).
 
+- |bro-pkg|_ : package manager for Zeek
+
+  This formula is not notable enough to be included in Homebrew
+  core repository yet (<30 forks, <30 watchers and <75 stars).
+
 .. |docutils| replace:: ``docutils``
 .. _docutils: http://docutils.sourceforge.net
 .. |vermin| replace:: ``vermin``
@@ -140,6 +145,8 @@ Collections
 .. _ssh-askpass: https://github.com/theseal/ssh-askpass
 .. |noob| replace:: ``homebrew-npm-noob``
 .. _noob: https://github.com/zmwangx/homebrew-npm-noob
+.. |bro-pkg| replace:: ``bro-pkg``
+.. _bro-pkg: https://docs.zeek.org/projects/package-manager
 
 -------
 License

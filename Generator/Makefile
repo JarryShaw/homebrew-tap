@@ -1,6 +1,7 @@
 .PHONY: all brew fetch style pipenv formula
 
 all: brew pipenv formula style
+check: brew-style-tap brew-audit-tap
 pipenv: pipenv-update
 
 brew: brew-update
@@ -45,6 +46,10 @@ pipenv-update:
 
 pipenv-remove:
 	pipenv --rm
+
+bro-pkg:
+	pipenv run python bro-pkg.py
+	FORMULA="bro-pkg" $(MAKE) brew-audit
 
 noob:
 	curl --output ../Formula/noob.rb \
