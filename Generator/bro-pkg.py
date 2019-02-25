@@ -76,8 +76,28 @@ class BroPkg < Formula
     virtualenv_install_with_resources
   end
 
-  def post_install
-    system bin/"bro-pkg", "autoconfig"
+  # def post_install
+  #   system bin/"bro-pkg", "autoconfig"
+  # end
+
+  def caveats
+    text = <<~EOS
+      bro-pkg has been installed as
+        #{{HOMEBREW_PREFIX}}/bin/bro-pkg
+
+      To perform postinstall process, please directly call the
+      following command: `bro-pkg autoconfig`.
+
+      Configuration file locates at ~/.bro-pkg/config, please
+      run `bro-pkg config` command to set up your runtime
+      specifications.
+
+      For more information, check out `bro-pkg --help` command.
+      Online documentations available at GitHub repository.
+
+      See: https://docs.zeek.org/projects/package-manager
+    EOS
+    text
   end
 
   test do
