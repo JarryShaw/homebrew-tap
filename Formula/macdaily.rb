@@ -5,6 +5,7 @@ class Macdaily < Formula
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
   url "https://files.pythonhosted.org/packages/50/de/ed040b863357605568e4bb0151c84094c3d33d51aa22e49562bf98b9d993/macdaily-2019.3.1.tar.gz"
   sha256 "14898a70861d0f63811074cbcb8623d4978673d57a05499d7c173953b0d9050e"
+  revision 1
 
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
@@ -21,9 +22,6 @@ class Macdaily < Formula
 
   depends_on "python"
   depends_on "expect" => :recommended
-  depends_on "jarryshaw/tap/askpass" => :optional
-  depends_on "jarryshaw/tap/confirm" => :optional
-  depends_on "theseal/ssh-askpass/ssh-askpass" => :optional
 
   resource "configupdater" do
     url "https://files.pythonhosted.org/packages/aa/af/069c7db438b9382a05fdaa6c90a2b44595dd7acdb1707848a0b8f2cbe1c1/ConfigUpdater-1.0.tar.gz"
@@ -61,8 +59,8 @@ class Macdaily < Formula
   end
 
   resource "tbtrim" do
-    url "https://files.pythonhosted.org/packages/34/71/6c8f16a0773497d9bf601b8839b6ddac4e0a9af8ef4394110ecb80d5b648/tbtrim-0.2.0.tar.gz"
-    sha256 "78115ce0499b87ac2315e377ba076ec464ef2fa479c2243e5be1bf7a5a4c2db1"
+    url "https://files.pythonhosted.org/packages/5d/79/617749a3e689dbb741da15cf3134fd52a47e3227d878a48573ece71df043/tbtrim-0.2.1.tar.gz"
+    sha256 "b0810edfb5dcf94c5fe3335a8a8e18ae38a411f6ff6afca188c66ac72444218f"
   end
 
   def install
@@ -113,7 +111,7 @@ class Macdaily < Formula
   end
 
   def post_install
-    f = File.new("/private/tmp/macdaily/launch.py", "w")
+    f = File.new("/private/tmp/macdaily-launch.py", "w")
     f.write <<~EOS
       # -*- coding: utf-8 -*-
 
@@ -124,7 +122,7 @@ class Macdaily < Formula
     EOS
     f.close
 
-    system libexec/"bin/python", "/private/tmp/macdaily/launch.py"
+    system libexec/"bin/python", "/private/tmp/macdaily-launch.py"
   end
 
   def caveats
