@@ -3,15 +3,14 @@ class Macdaily < Formula
 
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
-  url "https://files.pythonhosted.org/packages/50/de/ed040b863357605568e4bb0151c84094c3d33d51aa22e49562bf98b9d993/macdaily-2019.3.1.tar.gz"
-  sha256 "14898a70861d0f63811074cbcb8623d4978673d57a05499d7c173953b0d9050e"
-  revision 1
+  url "https://files.pythonhosted.org/packages/be/72/93e83817747d2df1f71c0ec67754c3f29e255cd8909b6e93f1dea7aa5cca/macdaily-2019.3.2.tar.gz"
+  sha256 "8d8f4f1a2be0eec5b640d9d5b71da8cb66c9a6b97897f37a46cac83f36e63f90"
 
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
   devel do
-    url "https://github.com/JarryShaw/MacDaily/archive/v2019.03.01.devel.tar.gz"
-    sha256 "ad26e59cc9ebaef7fdb92203cecccbc19f22fe52abc261f950be76ad5578ec65"
+    url "https://github.com/JarryShaw/MacDaily/archive/v2019.03.02.devel.tar.gz"
+    sha256 "42194d85e318501bf3e9965adfba1881066b6dfa08d49e34b90a7c0e228efa97"
   end
 
   bottle :unneeded
@@ -59,8 +58,8 @@ class Macdaily < Formula
   end
 
   resource "tbtrim" do
-    url "https://files.pythonhosted.org/packages/5d/79/617749a3e689dbb741da15cf3134fd52a47e3227d878a48573ece71df043/tbtrim-0.2.1.tar.gz"
-    sha256 "b0810edfb5dcf94c5fe3335a8a8e18ae38a411f6ff6afca188c66ac72444218f"
+    url "https://files.pythonhosted.org/packages/34/71/6c8f16a0773497d9bf601b8839b6ddac4e0a9af8ef4394110ecb80d5b648/tbtrim-0.2.0.tar.gz"
+    sha256 "78115ce0499b87ac2315e377ba076ec464ef2fa479c2243e5be1bf7a5a4c2db1"
   end
 
   def install
