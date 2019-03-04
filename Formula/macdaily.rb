@@ -5,6 +5,7 @@ class Macdaily < Formula
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
   url "https://files.pythonhosted.org/packages/f2/3a/f2e52c31c05d69f4a4a2a6b29c2ebaf7717eaf595fdb28c7db2337257d2e/macdaily-2019.3.3.tar.gz"
   sha256 "784c4b1f2ea28ea6df1a9c82236ab52854ac38ce501ae76c8152d4da884f6ffb"
+  revision 1
 
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
@@ -28,8 +29,8 @@ class Macdaily < Formula
   end
 
   resource "dictdumper" do
-    url "https://files.pythonhosted.org/packages/35/2f/f183561a516643a0fc0117a18f2d921ef9f3a0cb4604a72f0d1e8089028c/dictdumper-0.7.0.post1.tar.gz"
-    sha256 "33812e46a142215fef2cc1eb788af532828ccfd29bfe0c623d4616110108f720"
+    url "https://files.pythonhosted.org/packages/76/27/8b859ac191f351c7612e4abed73dbcf55cf17e88fd36d65a75d2d4c519d4/dictdumper-0.7.0.post2.tar.gz"
+    sha256 "dd7575db24e6f1a2b9278389df000a6db8fba4c45a92398c7e6d3e5fa575a3ab"
   end
 
   resource "psutil" do
@@ -38,8 +39,8 @@ class Macdaily < Formula
   end
 
   resource "ptyng" do
-    url "https://files.pythonhosted.org/packages/f7/66/249b152cf8dc7b93e361d1f2b333c028fc45eb5813747cd8a049e2750f52/ptyng-0.3.3.tar.gz"
-    sha256 "dbdcbd4967b6928dc4bb58c7809d400b670d366ea24992ec8c6fd5e6c5608a2b"
+    url "https://files.pythonhosted.org/packages/b0/b8/833bfdf31657ee22484f8c672fd110678da40ff4a7c1c1404c276cbb56e0/ptyng-0.3.3.post1.tar.gz"
+    sha256 "d55097f75605ce0c2026336ad198f9b76b0dfa71f765a0f84c3ab56a6bf0aed5"
   end
 
   resource "pathlib2" do
@@ -58,8 +59,8 @@ class Macdaily < Formula
   end
 
   resource "tbtrim" do
-    url "https://files.pythonhosted.org/packages/34/71/6c8f16a0773497d9bf601b8839b6ddac4e0a9af8ef4394110ecb80d5b648/tbtrim-0.2.0.tar.gz"
-    sha256 "78115ce0499b87ac2315e377ba076ec464ef2fa479c2243e5be1bf7a5a4c2db1"
+    url "https://files.pythonhosted.org/packages/5d/79/617749a3e689dbb741da15cf3134fd52a47e3227d878a48573ece71df043/tbtrim-0.2.1.tar.gz"
+    sha256 "b0810edfb5dcf94c5fe3335a8a8e18ae38a411f6ff6afca188c66ac72444218f"
   end
 
   def install
