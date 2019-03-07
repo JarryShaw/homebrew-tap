@@ -12,7 +12,7 @@ class Macdaily < Formula
 
   devel do
     url "https://github.com/JarryShaw/MacDaily/archive/v2019.3.7.post1.5fe174-devel.tar.gz"
-    version "2019.3.7.5fe174-devel"
+    version "2019.3.7_1.5fe174-devel"
     sha256 "ffd55ae5d0d362be2c05fd67ed682368d2478c14052cf70405957ac67c0dd5ed"
   end
 
@@ -31,18 +31,18 @@ class Macdaily < Formula
   end
 
   resource "dictdumper" do
-    url "https://files.pythonhosted.org/packages/76/27/8b859ac191f351c7612e4abed73dbcf55cf17e88fd36d65a75d2d4c519d4/dictdumper-0.7.0.post2.tar.gz"
-    sha256 "dd7575db24e6f1a2b9278389df000a6db8fba4c45a92398c7e6d3e5fa575a3ab"
+    url "https://files.pythonhosted.org/packages/35/2f/f183561a516643a0fc0117a18f2d921ef9f3a0cb4604a72f0d1e8089028c/dictdumper-0.7.0.post1.tar.gz"
+    sha256 "33812e46a142215fef2cc1eb788af532828ccfd29bfe0c623d4616110108f720"
   end
 
   resource "psutil" do
-    url "https://files.pythonhosted.org/packages/79/e6/a4e3c92fe19d386dcc6149dbf0b76f1c93c5491ae9d9ecf866f6769b45a4/psutil-5.6.0.tar.gz"
-    sha256 "dca71c08335fbfc6929438fe3a502f169ba96dd20e50b3544053d6be5cb19d82"
+    url "https://files.pythonhosted.org/packages/c7/01/7c30b247cdc5ba29623faa5c8cf1f1bbf7e041783c340414b0ed7e067c64/psutil-5.5.1.tar.gz"
+    sha256 "72cebfaa422b7978a1d3632b65ff734a34c6b34f4578b68a5c204d633756b810"
   end
 
   resource "ptyng" do
-    url "https://files.pythonhosted.org/packages/b0/b8/833bfdf31657ee22484f8c672fd110678da40ff4a7c1c1404c276cbb56e0/ptyng-0.3.3.post1.tar.gz"
-    sha256 "d55097f75605ce0c2026336ad198f9b76b0dfa71f765a0f84c3ab56a6bf0aed5"
+    url "https://files.pythonhosted.org/packages/f7/66/249b152cf8dc7b93e361d1f2b333c028fc45eb5813747cd8a049e2750f52/ptyng-0.3.3.tar.gz"
+    sha256 "dbdcbd4967b6928dc4bb58c7809d400b670d366ea24992ec8c6fd5e6c5608a2b"
   end
 
   resource "pathlib2" do
