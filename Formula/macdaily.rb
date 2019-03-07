@@ -3,15 +3,14 @@ class Macdaily < Formula
 
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
-  url "https://files.pythonhosted.org/packages/f2/3a/f2e52c31c05d69f4a4a2a6b29c2ebaf7717eaf595fdb28c7db2337257d2e/macdaily-2019.3.3.tar.gz"
-  sha256 "784c4b1f2ea28ea6df1a9c82236ab52854ac38ce501ae76c8152d4da884f6ffb"
-  revision 1
+  url "https://files.pythonhosted.org/packages/26/9e/a69e4fca29ad4a811f9da1d94736c136fe9e20f11edb27e7f7fc2405f26d/macdaily-2019.3.7.tar.gz"
+  sha256 "9e7c331137948aadedac15ed5013e3cd7a579a7758344f1a06209c4915a9b253"
 
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
   devel do
-    url "https://github.com/JarryShaw/MacDaily/archive/v2019.03.03.devel.tar.gz"
-    sha256 "52774d186c437d4282c8148367763c1143c9c1acb446f8e35d612a7fa0d1bcda"
+    url "https://github.com/JarryShaw/MacDaily/archive/v2019.03.07.e3b0c44298fc-devel.tar.gz"
+    sha256 "395408a3dc9c3db2b5c200b8722a13a60898c861633b99e6e250186adffd1370"
   end
 
   bottle :unneeded
@@ -34,8 +33,8 @@ class Macdaily < Formula
   end
 
   resource "psutil" do
-    url "https://files.pythonhosted.org/packages/c7/01/7c30b247cdc5ba29623faa5c8cf1f1bbf7e041783c340414b0ed7e067c64/psutil-5.5.1.tar.gz"
-    sha256 "72cebfaa422b7978a1d3632b65ff734a34c6b34f4578b68a5c204d633756b810"
+    url "https://files.pythonhosted.org/packages/79/e6/a4e3c92fe19d386dcc6149dbf0b76f1c93c5491ae9d9ecf866f6769b45a4/psutil-5.6.0.tar.gz"
+    sha256 "dca71c08335fbfc6929438fe3a502f169ba96dd20e50b3544053d6be5cb19d82"
   end
 
   resource "ptyng" do
