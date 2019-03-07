@@ -4,12 +4,15 @@ class Macdaily < Formula
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
   url "https://files.pythonhosted.org/packages/5f/8c/1b87d2706cc38fb175dc2f6399d54736448d225b8fcb566535c2f154ed72/macdaily-2019.3.7.post1.tar.gz"
+  version "2019.3.7"
   sha256 "7fa95fa09862ba6b077b6397000abc713a91582f743cfcac77a1562727a472bf"
+  revision 1
 
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
   devel do
     url "https://github.com/JarryShaw/MacDaily/archive/v2019.3.7.post1.5fe174-devel.tar.gz"
+    version "2019.3.7.5fe174-devel"
     sha256 "ffd55ae5d0d362be2c05fd67ed682368d2478c14052cf70405957ac67c0dd5ed"
   end
 
