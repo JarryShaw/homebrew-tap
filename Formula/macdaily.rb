@@ -10,7 +10,7 @@ class Macdaily < Formula
 
   devel do
     url "https://github.com/JarryShaw/MacDaily/archive/v2019.3.7.post1.5fe174-devel.tar.gz"
-    sha256 "395408a3dc9c3db2b5c200b8722a13a60898c861633b99e6e250186adffd1370"
+    sha256 "ffd55ae5d0d362be2c05fd67ed682368d2478c14052cf70405957ac67c0dd5ed"
   end
 
   bottle :unneeded
