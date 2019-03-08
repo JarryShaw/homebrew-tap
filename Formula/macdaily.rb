@@ -3,17 +3,14 @@ class Macdaily < Formula
 
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
-  url "https://files.pythonhosted.org/packages/04/be/bd2dc8926cdb49f3211ec5e2313dbcbc01e2717bb7b642094e5d64105a23/macdaily-2019.3.7.post2.tar.gz"
-  version "2019.3.7"
-  sha256 "aad34a2899e48efdc70f0b7c2a64455382fe6a13d6e2749b21100bcf6a67a545"
-  revision 2
+  url "https://files.pythonhosted.org/packages/a3/17/0e2fa98f3ae7725407c40c624828bd6a39f7123e402d0120c50530a9efb7/macdaily-2019.3.8.tar.gz"
+  sha256 "1fa0cf49e59d06db9309ea3d6d3287182c18910d6f285fe9139e84d4aaf6c082"
 
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
   devel do
-    url "https://github.com/JarryShaw/MacDaily/archive/v2019.3.7.post2.f7ef5d-devel.tar.gz"
-    version "2019.3.7_2.f7ef5d-devel"
-    sha256 "b3d634498f4fd2417678a61383cbf9c3fe0f2970bc6ff599750b2425b2acef5e"
+    url "https://github.com/JarryShaw/MacDaily/archive/v2019.3.8.51d2a0-devel.tar.gz"
+    sha256 "395408a3dc9c3db2b5c200b8722a13a60898c861633b99e6e250186adffd1370"
   end
 
   bottle :unneeded
@@ -24,6 +21,9 @@ class Macdaily < Formula
 
   depends_on "python"
   depends_on "expect" => :recommended
+  depends_on "cowsay" => :optional
+  depends_on "fortune" => :optional
+  depends_on "lolcat" => :optional
 
   resource "configupdater" do
     url "https://files.pythonhosted.org/packages/aa/af/069c7db438b9382a05fdaa6c90a2b44595dd7acdb1707848a0b8f2cbe1c1/ConfigUpdater-1.0.tar.gz"
