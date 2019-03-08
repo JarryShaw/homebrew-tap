@@ -3,21 +3,24 @@ class Macdaily < Formula
 
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
-  url "https://files.pythonhosted.org/packages/a3/17/0e2fa98f3ae7725407c40c624828bd6a39f7123e402d0120c50530a9efb7/macdaily-2019.3.8.tar.gz"
-  sha256 "1fa0cf49e59d06db9309ea3d6d3287182c18910d6f285fe9139e84d4aaf6c082"
+  url "https://files.pythonhosted.org/packages/92/7c/1230f8c37c9ef780948e97b71cf18f520dccb740931162b247f204d043d1/macdaily-2019.3.8.post1.tar.gz"
+  version "2019.3.8"
+  sha256 "cc8726d3278187c8d0cba68aa169a3a12f3741438089532bd5101a62829416b8"
+  revision 1
 
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
   devel do
-    url "https://github.com/JarryShaw/MacDaily/archive/v2019.3.8.51d2a0-devel.tar.gz"
-    sha256 "395408a3dc9c3db2b5c200b8722a13a60898c861633b99e6e250186adffd1370"
+    url "https://github.com/JarryShaw/MacDaily/archive/v2019.3.8.post1.ca00e0-devel.tar.gz"
+    version "2019.3.8_1.ca00e0"
+    sha256 "68c75be0bd70ceb9653e5b35f9752630c4c7ec13f9fd6f113b40183ada704dab"
   end
 
   bottle :unneeded
 
-  option "without-config", "build without config modification support"
-  option "without-tree", "build without tree format support"
-  option "without-ptyng", "build without alternative PTY support"
+  option "without-config", "Build without config modification support"
+  option "without-tree", "Build without tree format support"
+  option "without-ptyng", "Build without alternative PTY support"
 
   depends_on "python"
   depends_on "expect" => :recommended
