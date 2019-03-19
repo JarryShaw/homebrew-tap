@@ -1,5 +1,7 @@
 .PHONY: all brew fetch style pipenv formula
 
+export PIPENV_VENV_IN_PROJECT=1
+
 all: brew pipenv formula style
 check: brew-style-tap brew-audit-tap
 pipenv: pipenv-update
