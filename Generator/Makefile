@@ -10,7 +10,7 @@ brew: brew-update
 style: brew-style
 
 fetch: noob ssh-askpass uti
-formula: sloc sphinx vermin
+formula: pyinstaller sloc sphinx vermin
 
 brew-update:
 	brew update
@@ -57,6 +57,10 @@ noob:
 	curl --output ../Formula/noob.rb \
 		https://raw.githubusercontent.com/zmwangx/homebrew-npm-noob/master/Formula/noob.rb
 	FORMULA="noob" $(MAKE) brew-audit
+
+pyinstaller:
+	pipenv run python pyinstaller.py
+	FORMULA="pyinstaller" $(MAKE) brew-audit
 
 sloc:
 	pipenv run python sloc.py

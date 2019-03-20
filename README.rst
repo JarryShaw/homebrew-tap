@@ -125,6 +125,15 @@ Collections
   This formula is not notable enough to be included in Homebrew
   core repository yet (<30 forks, <30 watchers and <75 stars).
 
+- |sphinx|_ : Tool to create intelligent and beautiful documentation
+
+  This formula is a port of ``sphinx-doc`` from Homebrew core repository,
+  which integrates ``sphinx`` and ``sphinx-autobuild`` along.
+
+- |pyinstaller|_ : bundle a Python application and all its dependencies
+
+  This formula is not included in Homebrew core repository yet.
+
 .. |docutils| replace:: ``docutils``
 .. _docutils: http://docutils.sourceforge.net
 .. |vermin| replace:: ``vermin``
@@ -147,6 +156,10 @@ Collections
 .. _noob: https://github.com/zmwangx/homebrew-npm-noob
 .. |bro-pkg| replace:: ``bro-pkg``
 .. _bro-pkg: https://docs.zeek.org/projects/package-manager
+.. |sphinx| replace:: ``Sphinx``
+.. _sphinx: https://www.sphinx-doc.org
+.. |pyinstaller| replace:: ``PyInstaller``
+.. _pyinstaller: http://www.pyinstaller.org
 
 -------
 License

@@ -8,6 +8,7 @@ sphinx = "*"
 sphinx-autobuild = "*"
 vermin = "*"
 bro-pkg = "*"
+pyinstaller = "*"
 
 [packages]
 homebrew-pypi-poet = "*"
