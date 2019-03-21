@@ -69,19 +69,19 @@ Collections
 
   This formula is included in Homebrew core repository. However,
   no dependencies, such as ``lxml``, ``Pillow`` and ``Pygments``
-  are integrated. For more information, see this
-  `Pull Request <https://github.com/Homebrew/homebrew-core/pull/35209>`__.
+  are integrated. See 
+  `Homebrew/homebrew-core#35209 <https://github.com/Homebrew/homebrew-core/pull/35209>`__.
 
 - |vermin|_: concurrently detect the minimum Python versions needed to run code
 
   This formula is not notable enough to be included in Homebrew
-  core repository yet. See this
-  `Pull Request <https://github.com/Homebrew/homebrew-core/pull/35633>`__.
+  core repository yet. See
+  `Homebrew/homebrew-core#35633 <https://github.com/Homebrew/homebrew-core/pull/35633>`__.
 
 - |sloc|_: simple tool to count source lines of code
 
-  This formula is now included in Homebrew core repository. See this
-  `Pull Request <https://github.com/Homebrew/homebrew-core/pull/35632>`__.
+  This formula is now included in Homebrew core repository. See
+  `Homebrew/homebrew-core#35632 <https://github.com/Homebrew/homebrew-core/pull/35632>`__.
 
 - |pkt2flow|_ : simple utility to classify packets into flows
 
@@ -132,7 +132,8 @@ Collections
 
 - |pyinstaller|_ : bundle a Python application and all its dependencies
 
-  This formula is not included in Homebrew core repository yet.
+  This formula is not included in Homebrew core repository yet. See:
+  `Homebrew/homebrew-core#38092 <https://github.com/Homebrew/homebrew-core/pull/38092>`__
 
 .. |docutils| replace:: ``docutils``
 .. _docutils: http://docutils.sourceforge.net
