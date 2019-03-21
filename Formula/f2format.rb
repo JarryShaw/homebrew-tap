@@ -5,6 +5,7 @@ class F2format < Formula
   homepage "https://github.com/JarryShaw/f2format#f2format"
   url "https://files.pythonhosted.org/packages/52/93/bb5984cc8cb711d49eefada6405ad4044da50b3c347056997453d52a86e0/f2format-0.4.3.tar.gz"
   sha256 "ec05c3499d0948c9692d875c9e19e58ccde61ed1138b6b3e5743e193bf8bbc82"
+  revision 1
 
   head "https://github.com/JarryShaw/f2format.git", :branch => "master"
 
