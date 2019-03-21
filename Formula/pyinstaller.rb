@@ -5,10 +5,9 @@ class Pyinstaller < Formula
   homepage "https://www.pyinstaller.org"
   url "https://files.pythonhosted.org/packages/03/32/0e0de593f129bf1d1e77eed562496d154ef4460fd5cecfd78612ef39a0cc/PyInstaller-3.4.tar.gz"
   sha256 "a5a6e04a66abfcf8761e89a2ebad937919c6be33a7b8963e1a961b55cb35986b"
+  revision 1
 
   head "https://github.com/pyinstaller/pyinstaller.git", :branch => "develop"
-
-  bottle :unneeded
 
   depends_on "python"
 
@@ -42,6 +41,8 @@ class Pyinstaller < Formula
   end
 
   test do
-    system bin/"pyinstaller", "--help"
+    xy = Language::Python.major_minor_version "python3"
+    system bin/"pyinstaller", "-F", "--distpath=#{testpath}/dist", "--workpath=#{testpath}/build", libexec/"lib/python#{xy}/site-packages/easy_install.py"
+    assert_predicate testpath/"dist/easy_install", :exist?
   end
 end

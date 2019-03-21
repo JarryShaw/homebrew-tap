@@ -41,8 +41,6 @@ class Pyinstaller < Formula
 
   head "https://github.com/pyinstaller/pyinstaller.git", :branch => "develop"
 
-  bottle :unneeded
-
   depends_on "python"
 
   {ALTGRAPH}
@@ -56,7 +54,9 @@ class Pyinstaller < Formula
   end
 
   test do
-    system bin/"pyinstaller", "--help"
+    xy = Language::Python.major_minor_version "python3"
+    system bin/"pyinstaller", "-F", "--distpath=#{{testpath}}/dist", "--workpath=#{{testpath}}/build", libexec/"lib/python#{{xy}}/site-packages/easy_install.py"
+    assert_predicate testpath/"dist/easy_install", :exist?
   end
 end
 '''

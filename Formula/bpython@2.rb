@@ -170,7 +170,7 @@ class BpythonAT2 < Formula
       end
     end
 
-    version = `#{libexec}/"bin/python" -c "print('%s.%s.%s' % __import__('sys').version_info[:3])"`
+    version = Language::Python.major_minor_version "python"
     if version =~ /2.7.[0123456]/
       %w[asn1crypto cffi cryptography idna pycparser pyOpenSSL pyasn1 ndg-httpsclient].each do |r|
         venv.pip_install resource(r)

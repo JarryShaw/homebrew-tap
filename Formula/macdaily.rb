@@ -5,6 +5,7 @@ class Macdaily < Formula
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
   url "https://files.pythonhosted.org/packages/93/8c/e9e1a5c9bcb710694b5a0328d2d100e204d0c4fdb1e2719f60b33664f365/macdaily-2019.3.12.tar.gz"
   sha256 "4be6d74c322d3067458760d70c56073ab4ab9e78daa2170aa05b236a7e282369"
+  revision 1
 
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
@@ -13,8 +14,6 @@ class Macdaily < Formula
     version "2019.3.12.899c64"
     sha256 "efe985c3572989dd56198620886d6c3d218c366e085968b6b07bf73543ba6ff6"
   end
-
-  bottle :unneeded
 
   option "without-config", "Build without config modification support"
   option "without-tree", "Build without tree format support"
@@ -87,7 +86,7 @@ class Macdaily < Formula
       end
     end
 
-    version = `#{libexec}/"bin/python" -c "print('%s.%s' % __import__('sys').version_info[:2])"`
+    version = Language::Python.major_minor_version "python3"
     if version =~ /3.4/
       %w[pathlib2 six subprocess32].each do |r|
         venv.pip_install resource(r)
@@ -102,7 +101,7 @@ class Macdaily < Formula
     cp comp_path, bash_comp
     bash_completion.install bash_comp
 
-    man_path = Pathname.glob(libexec/"lib/python?.?/site-packages/macdaily/man/*.1")
+    man_path = Pathname.glob(libexec/"lib/python#{version}/site-packages/macdaily/man/*.1")
     dir_name = File.dirname man_path[0]
     dest = File.join(dir_name, "temp.1")
 
