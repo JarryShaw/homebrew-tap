@@ -1,3 +1,15 @@
-[submodule "core"]
-	path = core
+[submodule "Submodules/theseal-ssh-askpass"]
+	path = Submodules/theseal-ssh-askpass
+	url = https://github.com/theseal/homebrew-ssh-askpass.git
+[submodule "Submodules/zmwangx-npm-noob"]
+	path = Submodules/zmwangx-npm-noob
+	url = https://github.com/zmwangx/homebrew-npm-noob.git
+[submodule "Submodules/alexaubry-formulas"]
+	path = Submodules/alexaubry-formulas
+	url = https://github.com/alexaubry/homebrew-formulas.git
+[submodule "Submodules/nlohmann-json"]
+	path = Submodules/nlohmann-json
+	url = https://github.com/nlohmann/homebrew-json.git
+[submodule "Submodules/jarryshaw-core"]
+	path = Submodules/jarryshaw-core
 	url = https://github.com/JarryShaw/homebrew-core.git

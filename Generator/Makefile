@@ -9,7 +9,7 @@ pipenv: pipenv-update
 brew: brew-update
 style: brew-style
 
-fetch: noob ssh-askpass uti
+fetch: nlohmann_json noob ssh-askpass uti
 formula: pyinstaller sloc sphinx vermin
 
 brew-update:
@@ -52,6 +52,11 @@ pipenv-remove:
 bro-pkg:
 	pipenv run python bro-pkg.py
 	FORMULA="bro-pkg" $(MAKE) brew-audit
+
+nlohmann_json:
+	curl --output ../Formula/nlohmann_json.rb \
+	    https://raw.githubusercontent.com/nlohmann/homebrew-json/master/nlohmann_json.rb
+	FORMULA="nlohmann_json" $(MAKE) brew-audit
 
 noob:
 	curl --output ../Formula/noob.rb \

@@ -69,7 +69,7 @@ Collections
 
   This formula is included in Homebrew core repository. However,
   no dependencies, such as ``lxml``, ``Pillow`` and ``Pygments``
-  are integrated. See 
+  are integrated. See
   `Homebrew/homebrew-core#35209 <https://github.com/Homebrew/homebrew-core/pull/35209>`__.
 
 - |vermin|_: concurrently detect the minimum Python versions needed to run code
@@ -132,8 +132,12 @@ Collections
 
 - |pyinstaller|_ : bundle a Python application and all its dependencies
 
-  This formula is not included in Homebrew core repository yet. See:
+  This formula is now included in Homebrew core repository. See:
   `Homebrew/homebrew-core#38092 <https://github.com/Homebrew/homebrew-core/pull/38092>`__
+
+- |nlohmann_json|_ : JSON for Modern C++
+
+  This formula is not included in Homebrew core repository yet.
 
 .. |docutils| replace:: ``docutils``
 .. _docutils: http://docutils.sourceforge.net
@@ -161,12 +165,14 @@ Collections
 .. _sphinx: https://www.sphinx-doc.org
 .. |pyinstaller| replace:: ``PyInstaller``
 .. _pyinstaller: http://www.pyinstaller.org
+.. |nlohmann_json| replace:: ``nlohmann/json``
+.. _nlohmann_json: https://github.com/nlohmann/json
 
 -------
 License
 -------
 
-This repo is licensed under the MIT License. See the
+This repo is licensed under the BSD 2-Clause "Simplified" License. See the
 `LICENSE <https://github.com/JarryShaw/homebrew-tap/blob/master/LICENSE>`__
 file for rights and limitations.
 
