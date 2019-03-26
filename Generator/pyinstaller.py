@@ -43,6 +43,8 @@ class Pyinstaller < Formula
 
   depends_on "python"
 
+  conflicts_with "pyinstaller", :because => "it is now integrated with homebrew-core"
+
   {ALTGRAPH}
 
   {MACHOLIB}

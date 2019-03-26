@@ -137,7 +137,8 @@ Collections
 
 - |nlohmann_json|_ : JSON for Modern C++
 
-  This formula is not included in Homebrew core repository yet.
+  This formula is not included in Homebrew core repository yet. See:
+  `Homebrew/homebrew-core#38257 <https://github.com/Homebrew/homebrew-core/pull/38257>`__
 
 .. |docutils| replace:: ``docutils``
 .. _docutils: http://docutils.sourceforge.net
@@ -165,7 +166,7 @@ Collections
 .. _sphinx: https://www.sphinx-doc.org
 .. |pyinstaller| replace:: ``PyInstaller``
 .. _pyinstaller: http://www.pyinstaller.org
-.. |nlohmann_json| replace:: ``nlohmann/json``
+.. |nlohmann_json| replace:: ``nlohmann::json``
 .. _nlohmann_json: https://github.com/nlohmann/json
 
 -------

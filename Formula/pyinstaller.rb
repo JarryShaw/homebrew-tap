@@ -5,11 +5,13 @@ class Pyinstaller < Formula
   homepage "https://www.pyinstaller.org"
   url "https://files.pythonhosted.org/packages/03/32/0e0de593f129bf1d1e77eed562496d154ef4460fd5cecfd78612ef39a0cc/PyInstaller-3.4.tar.gz"
   sha256 "a5a6e04a66abfcf8761e89a2ebad937919c6be33a7b8963e1a961b55cb35986b"
-  revision 1
+  revision 2
 
   head "https://github.com/pyinstaller/pyinstaller.git", :branch => "develop"
 
   depends_on "python"
+
+  conflicts_with "pyinstaller", :because => "it is now integrated with homebrew-core"
 
   resource "altgraph" do
     url "https://files.pythonhosted.org/packages/da/a4/6c508ac94d7a65859a7a47e6fbde4aa6b81d0f0863aa45861241e782391c/altgraph-0.16.1.tar.gz"

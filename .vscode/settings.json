@@ -20,5 +20,5 @@
         "tbody"
     ],
     "restructuredtext.confPath": "${workspaceFolder}/docs/conf.py",
-    "python.pythonPath": "/Users/jarryshaw/.virtualenvs/Generator-BPJIB_wc/bin/python"
+    "python.pythonPath": "/usr/local/Homebrew/Library/Taps/jarryshaw/homebrew-tap/Generator/.venv/bin/python"
 }
