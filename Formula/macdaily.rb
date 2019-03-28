@@ -3,15 +3,17 @@ class Macdaily < Formula
 
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
-  url "https://files.pythonhosted.org/packages/b1/7f/cec6925814bf7c59c682a2faafd43f4eacfb9552cfa8ff903c014f12aa10/macdaily-2019.3.28.tar.gz"
-  sha256 "7997d4022191639a9cb3a4b0ab3630d0c463d649c3807772857bc18fb1d971ee"
+  url "https://files.pythonhosted.org/packages/dc/a0/d98d2bf58b0ffb689e62baeed6804517a6c54aacd72a4913055c4c190245/macdaily-2019.3.28.post1.tar.gz"
+  version "2019.3.28"
+  sha256 "0fbdda657330f3cf5165e7962d47d2ed57e61085cfea71f174d25d43cee9e1b6"
+  revision 1
 
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
   devel do
-    url "https://github.com/JarryShaw/MacDaily/archive/v2019.3.28.edfd7e-devel.tar.gz"
-    version "2019.3.28.edfd7e"
-    sha256 "ec4eccabf0030f2a5cf258dfad71fd7d6fac2978c309e63d3f10790823ffdfdb"
+    url "https://github.com/JarryShaw/MacDaily/archive/v2019.3.28.post1.1baf18-devel.tar.gz"
+    version "2019.3.28_1.1baf18"
+    sha256 "c068df59aeae02acac90d4eaf2b39d2c6624d121cca62ed127314f3cd7272622"
   end
 
   option "without-config", "Build without config modification support"
