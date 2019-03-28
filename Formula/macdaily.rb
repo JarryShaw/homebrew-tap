@@ -3,16 +3,15 @@ class Macdaily < Formula
 
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
-  url "https://files.pythonhosted.org/packages/93/8c/e9e1a5c9bcb710694b5a0328d2d100e204d0c4fdb1e2719f60b33664f365/macdaily-2019.3.12.tar.gz"
-  sha256 "4be6d74c322d3067458760d70c56073ab4ab9e78daa2170aa05b236a7e282369"
-  revision 1
+  url "https://files.pythonhosted.org/packages/b1/7f/cec6925814bf7c59c682a2faafd43f4eacfb9552cfa8ff903c014f12aa10/macdaily-2019.3.28.tar.gz"
+  sha256 "7997d4022191639a9cb3a4b0ab3630d0c463d649c3807772857bc18fb1d971ee"
 
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
   devel do
-    url "https://github.com/JarryShaw/MacDaily/archive/v2019.3.12.899c64-devel.tar.gz"
-    version "2019.3.12.899c64"
-    sha256 "efe985c3572989dd56198620886d6c3d218c366e085968b6b07bf73543ba6ff6"
+    url "https://github.com/JarryShaw/MacDaily/archive/v2019.3.28.edfd7e-devel.tar.gz"
+    version "2019.3.28.edfd7e"
+    sha256 "ec4eccabf0030f2a5cf258dfad71fd7d6fac2978c309e63d3f10790823ffdfdb"
   end
 
   option "without-config", "Build without config modification support"
@@ -36,8 +35,8 @@ class Macdaily < Formula
   end
 
   resource "psutil" do
-    url "https://files.pythonhosted.org/packages/79/e6/a4e3c92fe19d386dcc6149dbf0b76f1c93c5491ae9d9ecf866f6769b45a4/psutil-5.6.0.tar.gz"
-    sha256 "dca71c08335fbfc6929438fe3a502f169ba96dd20e50b3544053d6be5cb19d82"
+    url "https://files.pythonhosted.org/packages/2f/b8/11ec5006d2ec2998cb68349b8d1317c24c284cf918ecd6729739388e4c56/psutil-5.6.1.tar.gz"
+    sha256 "fa0a570e0a30b9dd618bffbece590ae15726b47f9f1eaf7518dfb35f4d7dcd21"
   end
 
   resource "ptyng" do
@@ -117,10 +116,14 @@ class Macdaily < Formula
     f.write <<~EOS
       # -*- coding: utf-8 -*-
 
-      from macdaily.cmd.launch import launch_askpass, launch_confirm
+      from macdaily.cmd.config import parse_config
+      from macdaily.cmd.launch import launch_askpass, launch_confirm, launch_daemons
 
-      launch_askpass(quiet=True, verbose=True)
-      launch_confirm(quiet=True, verbose=True)
+      launch_askpass(quiet=True, verbose=False)
+      launch_confirm(quiet=True, verbose=False)
+
+      config = parse_config(quiet=True, verbose=False)
+      launch_daemons(config, 'null', quiet=True, verbose=False)
     EOS
     f.close
 
