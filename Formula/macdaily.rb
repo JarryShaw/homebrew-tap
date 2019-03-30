@@ -3,17 +3,15 @@ class Macdaily < Formula
 
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
-  url "https://files.pythonhosted.org/packages/dc/a0/d98d2bf58b0ffb689e62baeed6804517a6c54aacd72a4913055c4c190245/macdaily-2019.3.28.post1.tar.gz"
-  version "2019.3.28"
-  sha256 "0fbdda657330f3cf5165e7962d47d2ed57e61085cfea71f174d25d43cee9e1b6"
-  revision 1
+  url "https://files.pythonhosted.org/packages/24/9a/acc43f06527840433c4f54f1a5185f2488bab886d6e262dd88b30af19a79/macdaily-2019.3.30.tar.gz"
+  sha256 "f2a01dd3ac1f84d51dee56abf9301fe9f856ac2d414d3921f76551b29991e35c"
 
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
   devel do
-    url "https://github.com/JarryShaw/MacDaily/archive/v2019.3.28.post1.1baf18-devel.tar.gz"
-    version "2019.3.28_1.1baf18"
-    sha256 "c068df59aeae02acac90d4eaf2b39d2c6624d121cca62ed127314f3cd7272622"
+    url "https://github.com/JarryShaw/MacDaily/archive/v2019.3.30.e89c90-devel.tar.gz"
+    version "2019.3.30.e89c90"
+    sha256 "395408a3dc9c3db2b5c200b8722a13a60898c861633b99e6e250186adffd1370"
   end
 
   option "without-config", "Build without config modification support"
@@ -114,22 +112,12 @@ class Macdaily < Formula
   end
 
   def post_install
-    f = File.new("/private/tmp/macdaily-launch.py", "w")
-    f.write <<~EOS
-      # -*- coding: utf-8 -*-
+    # set environment variables
+    ENV["NULL_PASSWORD"] = 1
+    ENV["MACDAILY_NO_CONFIG"] = 1
 
-      from macdaily.cmd.config import parse_config
-      from macdaily.cmd.launch import launch_askpass, launch_confirm, launch_daemons
-
-      launch_askpass(quiet=True, verbose=False)
-      launch_confirm(quiet=True, verbose=False)
-
-      config = parse_config(quiet=True, verbose=False)
-      launch_daemons(config, 'null', quiet=True, verbose=False)
-    EOS
-    f.close
-
-    system libexec/"bin/python", "/private/tmp/macdaily-launch.py"
+    # relaunch askpass & confirm utilities
+    system bin/"macdaily", "launch", "askpass", "confirm"
   end
 
   def caveats
