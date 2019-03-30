@@ -3,15 +3,15 @@ class Macdaily < Formula
 
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
-  url "https://files.pythonhosted.org/packages/24/9a/acc43f06527840433c4f54f1a5185f2488bab886d6e262dd88b30af19a79/macdaily-2019.3.30.tar.gz"
-  sha256 "f2a01dd3ac1f84d51dee56abf9301fe9f856ac2d414d3921f76551b29991e35c"
+  url "https://files.pythonhosted.org/packages/5d/9b/aab2d7b624cecdbb4253941f872b868595bc5eaf0108c63697d61079c7d9/macdaily-2019.3.31.tar.gz"
+  sha256 "ca65b6c6a1dfaa21683a91c833ae302fced1466ac88e94a01f85f3b9643a22ef"
 
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
   devel do
-    url "https://github.com/JarryShaw/MacDaily/archive/v2019.3.30.e89c90-devel.tar.gz"
-    version "2019.3.30.e89c90"
-    sha256 "395408a3dc9c3db2b5c200b8722a13a60898c861633b99e6e250186adffd1370"
+    url "https://github.com/JarryShaw/MacDaily/archive/v2019.3.31.1b8496-devel.tar.gz"
+    version "2019.3.31.1b8496"
+    sha256 "ae614933f293f40ae628227d72b935af04debde80c7b5e221c89891dae7c5658"
   end
 
   option "without-config", "Build without config modification support"
@@ -132,6 +132,10 @@ class Macdaily < Formula
       Configuration file locates at ~/.dailyrc, please directly run
       `macdaily config --interactive` command to set up your runtime
       specifications.
+
+      Due to restrictions of Homebrew, please manually run
+      `macdaily launch daemons` command to relaunch your scheduled
+      tasks of MacDaily.
 
       For more information, check out `macdaily help` command. Online
       documentations available at GitHub repository.
