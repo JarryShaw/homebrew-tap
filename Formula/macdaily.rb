@@ -3,15 +3,17 @@ class Macdaily < Formula
 
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
-  url "https://files.pythonhosted.org/packages/5d/9b/aab2d7b624cecdbb4253941f872b868595bc5eaf0108c63697d61079c7d9/macdaily-2019.3.31.tar.gz"
-  sha256 "ca65b6c6a1dfaa21683a91c833ae302fced1466ac88e94a01f85f3b9643a22ef"
+  url "https://files.pythonhosted.org/packages/9f/d4/fb7bca953e79a3cc9a6c55fd7359a2f6326798fdf3fd3e4a83e5a2229171/macdaily-2019.3.31.post1.tar.gz"
+  version "2019.3.31"
+  sha256 "d93a8682d5c89486cefdc9e16c0f9a611976164a609484f93a51931fdd957487"
+  revision 1
 
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
   devel do
-    url "https://github.com/JarryShaw/MacDaily/archive/v2019.3.31.1b8496-devel.tar.gz"
-    version "2019.3.31.1b8496"
-    sha256 "ae614933f293f40ae628227d72b935af04debde80c7b5e221c89891dae7c5658"
+    url "https://github.com/JarryShaw/MacDaily/archive/v2019.3.31.post1.b8242a-devel.tar.gz"
+    version "2019.3.31_1.b8242a"
+    sha256 "395408a3dc9c3db2b5c200b8722a13a60898c861633b99e6e250186adffd1370"
   end
 
   option "without-config", "Build without config modification support"
@@ -113,8 +115,9 @@ class Macdaily < Formula
 
   def post_install
     # set environment variables
-    ENV["NULL_PASSWORD"] = 1
-    ENV["MACDAILY_NO_CONFIG"] = 1
+    ENV["NULL_PASSWORD"] = "true"
+    ENV["MACDAILY_LOGDIR"] = "/tmp"
+    ENV["MACDAILY_NO_CONFIG"] = "true"
 
     # relaunch askpass & confirm utilities
     system bin/"macdaily", "launch", "askpass", "confirm"
