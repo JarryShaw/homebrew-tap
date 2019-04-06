@@ -3,13 +3,17 @@ class F2format < Formula
 
   desc "Back-port compiler for Python 3.6 f-string literals"
   homepage "https://github.com/JarryShaw/f2format#f2format"
-  url "https://files.pythonhosted.org/packages/52/93/bb5984cc8cb711d49eefada6405ad4044da50b3c347056997453d52a86e0/f2format-0.4.3.tar.gz"
-  sha256 "ec05c3499d0948c9692d875c9e19e58ccde61ed1138b6b3e5743e193bf8bbc82"
-  revision 1
+  url "https://files.pythonhosted.org/packages/04/be/11b4d122638900491e2d15463c4e264f81a1719acf1f475b23a0ced13710/f2format-0.5.0.tar.gz"
+  sha256 "6365a297d37a1f038e181ee8bceb3a28ddb55974b8bcf5ea955af368eeb4aa95"
 
   head "https://github.com/JarryShaw/f2format.git", :branch => "master"
 
   depends_on "python"
+
+  resource "parso" do
+    url "https://files.pythonhosted.org/packages/79/52/70d0bb8a1f4b1475a603b4b1484bb351edda30846996fc93fe1976948fef/parso-0.4.0.tar.gz"
+    sha256 "2e9574cb12e7112a87253e14e2c380ce312060269d04bd018478a3c92ea9a376"
+  end
 
   resource "pathlib2" do
     url "https://files.pythonhosted.org/packages/bf/d7/a2568f4596b75d2c6e2b4094a7e64f620decc7887f69a1f2811931ea15b9/pathlib2-2.3.3.tar.gz"
@@ -21,25 +25,16 @@ class F2format < Formula
     sha256 "d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73"
   end
 
-  resource "typed-ast" do
-    url "https://files.pythonhosted.org/packages/00/be/c3769a5d6a179c42eba04186dc7efeb165edf92f7b1582ccfe81cb17d7f9/typed-ast-1.2.0.tar.gz"
-    sha256 "b4726339a4c180a8b6ad9d8b50d2b6dc247e1b79b38fe2290549c98e82e4fd15"
-  end
-
   def install
     # virtualenv_install_with_resources
     venv = virtualenv_create(libexec, "python3")
+    venv.pip_install resource("parso")
 
     version = Language::Python.major_minor_version "python3"
     if version =~ /3.[34]/
       %w[pathlib2 six].each do |r|
         venv.pip_install resource(r)
       end
-    end
-
-    # venv.pip_install resource("typed-ast")
-    if version =~ /3.[345]/
-      venv.pip_install resource("typed-ast")
     end
     venv.pip_install_and_link buildpath
   end
