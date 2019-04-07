@@ -5,6 +5,7 @@ class F2format < Formula
   homepage "https://github.com/JarryShaw/f2format#f2format"
   url "https://github.com/JarryShaw/f2format/archive/v0.5.1.tar.gz"
   sha256 "1114d8b67f905d9fa962739475a98b5ae7088576627e02c7cf8cb978d0b46d33"
+  revision 1
 
   head "https://github.com/JarryShaw/f2format.git", :branch => "master"
 
@@ -25,10 +26,18 @@ class F2format < Formula
     sha256 "d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73"
   end
 
+  resource "tbtrim" do
+    url "https://files.pythonhosted.org/packages/5d/79/617749a3e689dbb741da15cf3134fd52a47e3227d878a48573ece71df043/tbtrim-0.2.1.tar.gz"
+    sha256 "b0810edfb5dcf94c5fe3335a8a8e18ae38a411f6ff6afca188c66ac72444218f"
+  end
+
   def install
     # virtualenv_install_with_resources
     venv = virtualenv_create(libexec, "python3")
-    venv.pip_install resource("parso")
+
+    %w[parso tbtrim].each do |r|
+      venv.pip_install resource(r)
+    end
 
     version = Language::Python.major_minor_version "python3"
     if version =~ /3.[34]/
