@@ -3,8 +3,8 @@ class F2format < Formula
 
   desc "Back-port compiler for Python 3.6 f-string literals"
   homepage "https://github.com/JarryShaw/f2format#f2format"
-  url "https://files.pythonhosted.org/packages/04/be/11b4d122638900491e2d15463c4e264f81a1719acf1f475b23a0ced13710/f2format-0.5.0.tar.gz"
-  sha256 "6365a297d37a1f038e181ee8bceb3a28ddb55974b8bcf5ea955af368eeb4aa95"
+  url "https://github.com/JarryShaw/f2format/archive/v0.5.1.tar.gz"
+  sha256 "1114d8b67f905d9fa962739475a98b5ae7088576627e02c7cf8cb978d0b46d33"
 
   head "https://github.com/JarryShaw/f2format.git", :branch => "master"
 
@@ -37,6 +37,9 @@ class F2format < Formula
       end
     end
     venv.pip_install_and_link buildpath
+
+    man1.install "man/f2format.1"
+    bash_completion.install "comp/f2format.bash-completion"
   end
 
   test do
