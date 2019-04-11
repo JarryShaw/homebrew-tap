@@ -6,7 +6,7 @@ class Macdaily < Formula
   url "https://files.pythonhosted.org/packages/6a/63/57485b6c8bfd0dde324155dfad7155252b91149f3412c9a3c199552edf87/macdaily-2019.4.7.post1.tar.gz"
   version "2019.4.7"
   sha256 "4b8c5a792f8e73563be44f3161ec37775d61a1283d2acab34f94b52ba3172dc2"
-  revision 1
+  revision 2
 
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
@@ -102,13 +102,13 @@ class Macdaily < Formula
     cp comp_path, bash_comp
     bash_completion.install bash_comp
 
-    man_path = Pathname.glob(libexec/"lib/python#{version}/site-packages/macdaily/man/*.1")
+    man_path = Pathname.glob(libexec/"lib/python#{version}/site-packages/macdaily/man/*.8")
     dir_name = File.dirname man_path[0]
-    dest = File.join(dir_name, "temp.1")
+    dest = File.join(dir_name, "temp.8")
 
     man_path.each do |f|
       cp f, dest
-      man1.install f
+      man8.install f
       mv dest, f
     end
   end
