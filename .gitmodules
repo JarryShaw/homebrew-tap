@@ -13,3 +13,6 @@
 [submodule "Submodules/jarryshaw-core"]
 	path = Submodules/jarryshaw-core
 	url = https://github.com/JarryShaw/homebrew-core.git
+[submodule "Submodules/cosmin-git-hg"]
+	path = Submodules/cosmin-git-hg
+	url = https://github.com/cosmin/git-hg.git
