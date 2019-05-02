@@ -1,12 +1,16 @@
 {
     "cSpell.words": [
+        "ALTGRAPH",
         "BROPKG",
+        "PEFILE",
         "Porject",
         "Pygments",
         "Virtualenv",
         "Zeek",
         "bpython",
+        "cmake",
         "deps",
+        "distpath",
         "docutils",
         "lxml",
         "nlohmann",

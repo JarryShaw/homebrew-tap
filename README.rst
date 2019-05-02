@@ -137,7 +137,7 @@ Collections
 
 - |nlohmann_json|_ : JSON for Modern C++
 
-  This formula is not included in Homebrew core repository yet. See:
+  This formula is now included in Homebrew core repository. See:
   `Homebrew/homebrew-core#38257 <https://github.com/Homebrew/homebrew-core/pull/38257>`__
 
 .. |docutils| replace:: ``docutils``

@@ -42,6 +42,8 @@ with open(formula) as file:
             bottle_flag = True
 BOTTLE = ''.join(bottle).strip()
 
+_data_pkgs = dict()
+
 
 def _fetch_dependency(package):
     dependencies = _data_pkgs.get(package)
@@ -73,7 +75,6 @@ def _list_dependency(dependencies):
     return _list_pkgs
 
 
-_data_pkgs = dict()
 _deps_list = ['sphinx-autobuild']
 _deps_list.extend(_list_dependency(_fetch_dependency('Sphinx')))
 _deps_list.extend(_list_dependency(_fetch_dependency('sphinx-autobuild')))

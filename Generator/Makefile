@@ -9,7 +9,8 @@ pipenv: pipenv-update
 brew: brew-update
 style: brew-style
 
-fetch: nlohmann_json noob ssh-askpass uti
+link: bpython2 bpython3 nlohmann_json poet2 poet3 ptpython2 ptpython3
+fetch: nlohmann-json noob ssh-askpass uti
 formula: pyinstaller sloc sphinx vermin
 
 brew-update:
@@ -31,7 +32,7 @@ brew-audit-tap:
 	done
 
 brew-audit-formula:
-	brew audit --fix --new-formula jarryshaw/tap/$(FORMULA)
+	brew audit --fix --new-formula jarryshaw/tap/$(FORMULA) || true
 
 brew-style:	brew-style-formula
 
@@ -49,19 +50,41 @@ pipenv-update:
 pipenv-remove:
 	pipenv --rm
 
+bpython2:
+	ln -sf ../Formula/bpython@2.rb ../Aliases/bpython2
+
+bpython3:
+	ln -sf ../Formula/bpython.rb ../Aliases/bpython3
+	ln -sf ../Formula/bpython.rb ../Aliases/bpython@3
+
 bro-pkg:
 	pipenv run python bro-pkg.py
 	FORMULA="bro-pkg" $(MAKE) brew-audit
 
+nlohmann-json:
+	pipenv run python nlohmann-json.py
+	FORMULA="nlohmann-json" $(MAKE) brew-audit
+
 nlohmann_json:
-	curl --output ../Formula/nlohmann_json.rb \
-	    https://raw.githubusercontent.com/nlohmann/homebrew-json/master/nlohmann_json.rb
-	FORMULA="nlohmann_json" $(MAKE) brew-audit
+	ln -sf ../Formula/nlohmann-json.rb ../Aliases/nlohmann_json
 
 noob:
-	curl --output ../Formula/noob.rb \
-		https://raw.githubusercontent.com/zmwangx/homebrew-npm-noob/master/Formula/noob.rb
+	pipenv run python noob.py
 	FORMULA="noob" $(MAKE) brew-audit
+
+poet2:
+	ln -sf ../Formula/poet@2.rb ../Aliases/poet2
+
+poet3:
+	ln -sf ../Formula/poet.rb ../Aliases/poet3
+	ln -sf ../Formula/poet.rb ../Aliases/poet@3
+
+ptpython2:
+	ln -sf ../Formula/ptpython@2.rb ../Aliases/ptpython2
+
+ptpython3:
+	ln -sf ../Formula/ptpython.rb ../Aliases/ptpython3
+	ln -sf ../Formula/ptpython.rb ../Aliases/ptpython@3
 
 pyinstaller:
 	pipenv run python pyinstaller.py
@@ -81,8 +104,7 @@ ssh-askpass:
 	FORMULA="ssh-askpass" $(MAKE) brew-audit
 
 uti:
-	curl --output ../Formula/uti.rb \
-		https://raw.githubusercontent.com/alexaubry/homebrew-formulas/master/Formula/uti.rb
+	pipenv run python uti.py
 	FORMULA="uti" $(MAKE) brew-audit
 
 vermin:

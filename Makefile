@@ -21,4 +21,4 @@ audit:
 	$(MAKE) -CGenerator check
 
 update:
-	$(MAKE) -CGenerator fetch formula
+	$(MAKE) -CGenerator fetch formula link

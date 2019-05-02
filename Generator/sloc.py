@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import hashlib
-import re
 import subprocess
-import sys
 
 formula = subprocess.check_output(['brew', 'formula', 'sloc']).decode().strip()
 

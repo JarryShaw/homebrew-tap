@@ -1,11 +1,14 @@
-.PHONY: core nlohmann_json noob ssh-askpass uti
+.PHONY: core git-hg nlohmann-json noob ssh-askpass uti
 
-all: core nlohmann_json noob ssh-askpass uti
+all: core git-hg nlohmann-json noob ssh-askpass uti
 
 core:
 	git submodule add -f https://github.com/JarryShaw/homebrew-core.git jarryshaw-core
 
-nlohmann_json:
+git-hg:
+	git submodule add -f https://github.com/cosmin/git-hg.git cosmin-git-hg
+
+nlohmann-json:
 	git submodule add -f https://github.com/nlohmann/homebrew-json.git nlohmann-json
 
 noob:

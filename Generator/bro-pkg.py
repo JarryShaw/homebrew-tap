@@ -18,6 +18,8 @@ for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():
 BROPKG_URL = f'https://github.com/zeek/package-manager/archive/v{VERSION}.tar.gz'
 BROPKG_SHA = hashlib.sha256(requests.get(BROPKG_URL).content).hexdigest()
 
+_data_pkgs = dict()
+
 
 def _fetch_dependency(package):
     dependencies = _data_pkgs.get(package)
@@ -49,7 +51,6 @@ def _list_dependency(dependencies):
     return _list_pkgs
 
 
-_data_pkgs = dict()
 _deps_list = _list_dependency(_fetch_dependency('bro-pkg'))
 
 args = ['poet', '--single']
