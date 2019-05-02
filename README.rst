@@ -140,6 +140,11 @@ Collections
   This formula is now included in Homebrew core repository. See:
   `Homebrew/homebrew-core#38257 <https://github.com/Homebrew/homebrew-core/pull/38257>`__
 
+- |git-hg|_ : checking out and tracking a mercurial repo from git
+
+  This formula is not notable enough to be included in Homebrew
+  core repository yet (<30 forks, <30 watchers and <75 stars).
+
 .. |docutils| replace:: ``docutils``
 .. _docutils: http://docutils.sourceforge.net
 .. |vermin| replace:: ``vermin``
@@ -168,6 +173,8 @@ Collections
 .. _pyinstaller: http://www.pyinstaller.org
 .. |nlohmann_json| replace:: ``nlohmann::json``
 .. _nlohmann_json: https://github.com/nlohmann/json
+.. |git-hg| replace:: ``git-hg``
+.. _git-hg: https://github.com/cosmin/git-hg
 
 -------
 License
