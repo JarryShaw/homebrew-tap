@@ -14,6 +14,10 @@ class GitHg < Formula
     # install git-hg
     bin.install "bin/git-hg"
 
+    inreplace "fast-export/hg-fast-export.sh" do |s|
+      s.gsub! "ROOT=\"`dirname $0`\"", "ROOT=\"#{lib}\""
+    end
+
     # install hg-fast-export.(sh|py)
     lib.install "fast-export/hg-fast-export.sh"
     lib.install "fast-export/hg-fast-export.py"

@@ -15,6 +15,7 @@ class GitHg < Formula
   url "https://github.com/cosmin/git-hg.git",
     :revision => "{REVISION}"
   version "{VERSION}"
+  revision 1
 
   depends_on "mercurial"
   depends_on "python@2"
@@ -24,6 +25,10 @@ class GitHg < Formula
   def install
     # install git-hg
     bin.install "bin/git-hg"
+
+    inreplace "fast-export/hg-fast-export.sh" do |s|
+      s.gsub! "ROOT=\\"`dirname $0`\\"", "ROOT=\\"#{{lib}}\\""
+    end
 
     # install hg-fast-export.(sh|py)
     lib.install "fast-export/hg-fast-export.sh"
