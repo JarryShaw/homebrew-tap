@@ -6,21 +6,43 @@ class GitHg < Formula
   version "2019.5.3"
 
   depends_on "mercurial"
-  depends_on "python"
+  depends_on "python@2"
+
+  patch :DATA
 
   def install
+    # install git-hg
     bin.install "bin/git-hg"
 
     # install hg-fast-export.(sh|py)
-    bin.install "fast-export/hg-fast-export.sh"
-    bin.install "fast-export/hg-fast-export.py"
-    bin.install "fast-export/hg2git.py"
+    lib.install "fast-export/hg-fast-export.sh"
+    lib.install "fast-export/hg-fast-export.py"
+    lib.install "fast-export/hg2git.py"
 
     # make alias
-    ln_s bin/"hg-fast-export.sh", bin/"hg-fast-export"
+    bin.install_symlink lib/"hg-fast-export.sh" => "hg-fast-export"
   end
 
   test do
     system bin/"git-hg", "help"
   end
 end
+
+__END__
+diff --git a/bin/git-hg b/bin/git-hg
+index be3223c..0259cea 100755
+--- a/bin/git-hg
++++ b/bin/git-hg
+@@ -1,9 +1,9 @@
+ #!/bin/sh
+
+-if which python2 >/dev/null 2>&1; then
+-    PYTHON=python2
+-    export PYTHON
+-fi
++PYTHONPATH="$(brew --prefix mercurial)/lib/python2.7/site-packages"
++export PYTHONPATH
++PYTHON="$(brew --prefix python@2)/bin/python"
++export PYTHON
+
+ set -e

@@ -12,6 +12,8 @@
         "deps",
         "distpath",
         "docutils",
+        "gsub",
+        "inreplace",
         "lxml",
         "nlohmann",
         "noob",
