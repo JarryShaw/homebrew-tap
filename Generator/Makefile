@@ -10,8 +10,8 @@ brew: brew-update
 style: brew-style
 
 link: bpython2 bpython3 nlohmann_json poet2 poet3 ptpython2 ptpython3
-fetch: nlohmann-json noob ssh-askpass uti
-formula: pyinstaller sloc sphinx vermin
+fetch: pyinstaller nlohmann-json noob ssh-askpass uti
+formula: f2format git-hg macdaily sloc sphinx vermin
 
 brew-update:
 	brew update
@@ -61,6 +61,18 @@ bro-pkg:
 	pipenv run python bro-pkg.py
 	FORMULA="bro-pkg" $(MAKE) brew-audit
 
+f2format:
+	pipenv run python f2format.py
+	FORMULA="f2format" $(MAKE) brew-audit
+
+git-hg:
+	pipenv run python git-hg.py
+	FORMULA="git-hg" $(MAKE) brew-audit
+
+macdaily:
+	pipenv run python macdaily.py
+	FORMULA="macdaily" $(MAKE) brew-audit
+
 nlohmann-json:
 	pipenv run python nlohmann-json.py
 	FORMULA="nlohmann-json" $(MAKE) brew-audit
@@ -99,8 +111,7 @@ sphinx:
 	FORMULA="sphinx" $(MAKE) brew-audit
 
 ssh-askpass:
-	curl --output ../Formula/ssh-askpass.rb \
-		https://raw.githubusercontent.com/theseal/homebrew-ssh-askpass/master/Formula/ssh-askpass.rb
+	pipenv run python ssh-askpass.py
 	FORMULA="ssh-askpass" $(MAKE) brew-audit
 
 uti:

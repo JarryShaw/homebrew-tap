@@ -32,7 +32,8 @@ class Vermin < Formula
   end
 
   test do
-    path = Pathname.glob(libexec/"lib/python?.?/site-packages/vermin")[0]
+    version = Language::Python.major_minor_version "python3"
+    path = libexec/"lib/python#{{version}}/site-packages/vermin"
     assert_match "Minimum required versions: 2.7, 3.0", shell_output("#{{bin}}/vermin -q #{{path}}")
   end
 end

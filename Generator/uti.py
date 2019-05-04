@@ -8,7 +8,7 @@ import requests
 TAG_REGEX = re.compile(r'\s*:tag\s*=>\s*"(?P<tag>.*?)",\s*', re.IGNORECASE)
 REVISION_REGEX = re.compile(r'\s*:revision\s*=>\s*"(?P<revision>.*?)",\s*', re.IGNORECASE)
 
-url = f'https://raw.githubusercontent.com/alexaubry/homebrew-formulas/master/Formula/uti.rb'
+url = 'https://raw.githubusercontent.com/alexaubry/homebrew-formulas/master/Formula/uti.rb'
 page = requests.get(url).text
 for line in page.splitlines():
     tag_match = TAG_REGEX.match(line)

@@ -8,7 +8,7 @@ context = list()
 with open(formula) as file:
     for line in file:
         context.append(line)
-        if 'depends_on "cmake" => :build' in line:
+        if 'depends_on "python"' in line:
             context.append('\n')
             context.append('  conflicts_with "pyinstaller", :because => "it is now integrated with homebrew-core"\n')
 

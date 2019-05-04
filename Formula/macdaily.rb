@@ -6,7 +6,7 @@ class Macdaily < Formula
   url "https://files.pythonhosted.org/packages/6a/63/57485b6c8bfd0dde324155dfad7155252b91149f3412c9a3c199552edf87/macdaily-2019.4.7.post1.tar.gz"
   version "2019.4.7"
   sha256 "4b8c5a792f8e73563be44f3161ec37775d61a1283d2acab34f94b52ba3172dc2"
-  revision 2
+  revision 3
 
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
@@ -37,8 +37,8 @@ class Macdaily < Formula
   end
 
   resource "psutil" do
-    url "https://files.pythonhosted.org/packages/2f/b8/11ec5006d2ec2998cb68349b8d1317c24c284cf918ecd6729739388e4c56/psutil-5.6.1.tar.gz"
-    sha256 "fa0a570e0a30b9dd618bffbece590ae15726b47f9f1eaf7518dfb35f4d7dcd21"
+    url "https://files.pythonhosted.org/packages/c6/c1/beed5e4eaa1345901b595048fab1c85aee647ea0fc02d9e8bf9aceb81078/psutil-5.6.2.tar.gz"
+    sha256 "828e1c3ca6756c54ac00f1427fdac8b12e21b8a068c3bb9b631a1734cada25ed"
   end
 
   resource "ptyng" do
@@ -95,21 +95,12 @@ class Macdaily < Formula
     end
     venv.pip_install_and_link buildpath
 
-    comp_path = Pathname.new(buildpath/"macdaily/comp/macdaily.bash-completion")
-    comp_base = File.dirname comp_path
-    bash_comp = File.join(comp_base, "macdaily")
-
-    cp comp_path, bash_comp
-    bash_completion.install bash_comp
+    comp_path = libexec/"lib/python#{version}/site-packages/macdaily/comp/macdaily.bash-completion"
+    bash_completion.install_symlink comp_path => "macdaily"
 
     man_path = Pathname.glob(libexec/"lib/python#{version}/site-packages/macdaily/man/*.8")
-    dir_name = File.dirname man_path[0]
-    dest = File.join(dir_name, "temp.8")
-
     man_path.each do |f|
-      cp f, dest
-      man8.install f
-      mv dest, f
+      man8.install_symlink f
     end
   end
 

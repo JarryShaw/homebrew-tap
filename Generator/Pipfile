@@ -3,12 +3,36 @@ name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
 
+[[source]]
+name = "aliyun"
+url = "https://mirrors.aliyun.com/pypi/simple"
+verify_ssl = true
+
+[[source]]
+name = "tsinghua"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+verify_ssl = true
+
+[[source]]
+name = "sjtu"
+url = "https://mirrors.sjtug.sjtu.edu.cn/pypi/web/simple"
+verify_ssl = true
+
 [dev-packages]
 sphinx = "*"
 sphinx-autobuild = "*"
 vermin = "*"
 bro-pkg = "*"
 pyinstaller = "*"
+legit = "*"
+parso = "*"
+tbtrim = "*"
+configupdater = "*"
+dictdumper = "*"
+psutil = "*"
+ptyng = "*"
+pathlib2 = "*"
+subprocess32 = "*"
 
 [packages]
 homebrew-pypi-poet = "*"
