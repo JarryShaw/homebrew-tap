@@ -64,5 +64,9 @@ class F2format < Formula
 end
 '''
 
-with open('../Formula/f2format.rb', 'w') as file:
+if __file__ == 'setup-formula.py':
+    formula = '/usr/local/Homebrew/Library/Taps/jarryshaw/homebrew-tap/Formula/f2format.rb'
+else:
+    formula = '../Formula/f2format.rb'
+with open(formula, 'w') as file:
     file.write(FORMULA)

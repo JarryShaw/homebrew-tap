@@ -205,5 +205,9 @@ class Macdaily < Formula
 end
 '''
 
-with open('../Formula/macdaily.rb', 'w') as file:
+if __file__ == 'setup-formula.py':
+    formula = '/usr/local/Homebrew/Library/Taps/jarryshaw/homebrew-tap/Formula/macdaily.rb'
+else:
+    formula = '../Formula/macdaily.rb'
+with open(formula, 'w') as file:
     file.write(FORMULA)
