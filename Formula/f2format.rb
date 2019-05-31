@@ -3,9 +3,8 @@ class F2format < Formula
 
   desc "Back-port compiler for Python 3.6 f-string literals"
   homepage "https://github.com/JarryShaw/f2format#f2format"
-  url "https://github.com/JarryShaw/f2format/archive/v0.6.0.tar.gz"
-  sha256 "e8ee7d7716718166e483563b6d03d88af5c74338ca7d12e3422a3723dfabe238"
-  revision 1
+  url "https://github.com/JarryShaw/f2format/archive/v0.6.1.dev1.tar.gz"
+  sha256 "cbd38ea0b80df1b6c699212987efb041ee4f41e2562cb764c9650d3c2a003579"
 
   head "https://github.com/JarryShaw/f2format.git", :branch => "master"
 
