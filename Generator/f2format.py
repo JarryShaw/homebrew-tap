@@ -7,7 +7,7 @@ import subprocess
 
 import requests
 
-with open(os.path.expanduser('~/Documents/GitHub/f2format/f2format/__main__.py'), 'r') as file:
+with open(os.path.expanduser('~/Documents/GitHub/f2format/f2format.py'), 'r') as file:
     for line in file:
         match = re.match(r"^__version__ = '(.*)'", line)
         if match is None:
@@ -45,8 +45,8 @@ class F2format < Formula
 
   def install
     virtualenv_install_with_resources
-    man1.install "man/f2format.1"
-    bash_completion.install "comp/f2format.bash-completion"
+    man1.install "share/f2format.1"
+    bash_completion.install "share/f2format.bash-completion"
   end
 
   test do
