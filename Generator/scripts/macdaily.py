@@ -205,9 +205,11 @@ class Macdaily < Formula
 end
 '''
 
-if __file__ == 'setup-formula.py':
-    formula = '/usr/local/Homebrew/Library/Taps/jarryshaw/homebrew-tap/Formula/macdaily.rb'
+if os.path.basename(__file__) == 'setup-formula.py':
+    repo_root = subprocess.check_output(['brew', '--repository', 'jarryshaw/tap'], encoding='utf-8').strip()
+    formula = os.path.join(repo_root, 'Formula', 'macdaily.rb')
 else:
-    formula = '../Formula/macdaily.rb'
+    formula = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'Formula',
+                           f'{os.path.splitext(os.path.basename(__file__))[0]}.rb')
 with open(formula, 'w') as file:
     file.write(FORMULA)

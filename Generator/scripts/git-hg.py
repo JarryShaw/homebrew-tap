@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import os
 import pkg_resources
 import subprocess
 import time
@@ -61,5 +62,6 @@ index be3223c..0259cea 100755
  set -e
 '''
 
-with open('../Formula/git-hg.rb', 'w') as file:
+with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'Formula',
+                       f'{os.path.splitext(os.path.basename(__file__))[0]}.rb'), 'w') as file:
     file.write(FORMULA)

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import hashlib
+import os
 import re
 import subprocess
 
@@ -39,5 +40,6 @@ class Vermin < Formula
 end
 '''
 
-with open('../Formula/vermin.rb', 'w') as file:
+with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'Formula',
+                       f'{os.path.splitext(os.path.basename(__file__))[0]}.rb'), 'w') as file:
     file.write(FORMULA)

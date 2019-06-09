@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # originally from https://raw.githubusercontent.com/alexaubry/homebrew-formulas/master/Formula/uti.rb
 
+import os
 import re
 
 import requests
@@ -40,5 +41,6 @@ class Uti < Formula
 end
 '''
 
-with open('../Formula/uti.rb', 'w') as file:
+with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'Formula',
+                       f'{os.path.splitext(os.path.basename(__file__))[0]}.rb'), 'w') as file:
     file.write(FORMULA)

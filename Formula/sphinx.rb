@@ -8,9 +8,9 @@ class Sphinx < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "9d092ce3cdde5d1c4f74ec750b2488ce6ff2968961df1f272e3cc0f90a6f5636" => :mojave
-    sha256 "c92e3368944d7bfaa8f51110abe3cede329e34d888d7b1ef518ab2f4c0865c5b" => :high_sierra
-    sha256 "facd8d1eb8a922887bbb930e2e584ece2812475ccc518278b64187daea047338" => :sierra
+    sha256 "aa8158953529891232513fea2c7b4543f9ac93d545b9cc18f25230395011a946" => :mojave
+    sha256 "8be060678456133418fc5b40e41e82055b6c001b051a5997148e2d05edec8da4" => :high_sierra
+    sha256 "083b5a68c6637fac4dc4474fbbf56ce88626f511f67b87c43b37fdc8ab78e1a7" => :sierra
   end
 
   depends_on "python"
@@ -28,13 +28,13 @@ class Sphinx < Formula
   end
 
   resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/9f/2c/9417b5c774792634834e730932745bc09a7d36754ca00acf1ccd1ac2594d/PyYAML-5.1.tar.gz"
-    sha256 "436bc774ecf7c103814098159fbb84c2715d25980175292c648f2da143909f95"
+    url "https://files.pythonhosted.org/packages/a3/65/837fefac7475963d1eccf4aa684c23b95aa6c1d033a2c5965ccb11e22623/PyYAML-5.1.1.tar.gz"
+    sha256 "b4bb4d3f5e232425e25dda21c070ce05168a786ac9eda43768ab7f3ac2770955"
   end
 
   resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/64/69/413708eaf3a64a6abb8972644e0f20891a55e621c6759e2c3f3891e05d63/Pygments-2.3.1.tar.gz"
-    sha256 "5ffada19f6203563680669ee7f53b64dabbeb100eb51b61996085e99c03b284a"
+    url "https://files.pythonhosted.org/packages/7e/ae/26808275fc76bf2832deb10d3a3ed3107bc4de01b85dcccbe525f2cd6d1e/Pygments-2.4.2.tar.gz"
+    sha256 "881c4c157e45f30af185c1ffe8d549d48ac9127433f2c380c24b84572ad66297"
   end
 
   resource "alabaster" do
@@ -48,8 +48,8 @@ class Sphinx < Formula
   end
 
   resource "Babel" do
-    url "https://files.pythonhosted.org/packages/be/cc/9c981b249a455fa0c76338966325fc70b7265521bad641bf2932f77712f4/Babel-2.6.0.tar.gz"
-    sha256 "8cba50f48c529ca3fa18cf81fa9403be176d374ac4d60738b839122dfaaa3d23"
+    url "https://files.pythonhosted.org/packages/bd/78/9fb975cbb3f4b136de2cd4b5e5ce4a3341169ebf4c6c03630996d05428f1/Babel-2.7.0.tar.gz"
+    sha256 "e86135ae101e31e2c8ec20a4e0c5220f4eed12487d5cf3f78be7e98d3a57fc28"
   end
 
   resource "certifi" do
@@ -78,8 +78,8 @@ class Sphinx < Formula
   end
 
   resource "livereload" do
-    url "https://files.pythonhosted.org/packages/45/1b/8a8d59d6c20807cdb4c581a958a7ae7ceaee9e3b1714e64575382571bca5/livereload-2.6.0.tar.gz"
-    sha256 "e632a6cd1d349155c1d7f13a65be873b38f43ef02961804a1bba8d817fa649a7"
+    url "https://files.pythonhosted.org/packages/27/26/85ba3851d2e4905be7d2d41082adca833182bb1d7de9dfc7f623383d36e1/livereload-2.6.1.tar.gz"
+    sha256 "89254f78d7529d7ea0a3417d224c34287ebfe266b05e67e51facaf82c27f0f66"
   end
 
   resource "packaging" do
@@ -108,8 +108,8 @@ class Sphinx < Formula
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/52/2c/514e4ac25da2b08ca5a464c50463682126385c4272c18193876e91f4bc38/requests-2.21.0.tar.gz"
-    sha256 "502a824f31acdacb3a35b6690b5fbf0bc41d63a24a45c4004352b0242707598e"
+    url "https://files.pythonhosted.org/packages/01/62/ddcf76d1d19885e8579acb1b1df26a852b03472c0e46d2b959a714c90608/requests-2.22.0.tar.gz"
+    sha256 "11e007a8a2aa0323f5a921e9e6a2d7e4e67d9877e85773fba9ba6419025cbeb4"
   end
 
   resource "six" do
@@ -163,8 +163,8 @@ class Sphinx < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/9a/8b/ea6d2beb2da6e331e9857d0a60b79ed4f72dcbc4e2c7f2d2521b0480fda2/urllib3-1.25.2.tar.gz"
-    sha256 "a53063d8b9210a7bdec15e7b272776b9d42b2fd6816401a0d43006ad2f9902db"
+    url "https://files.pythonhosted.org/packages/4c/13/2386233f7ee40aa8444b47f7463338f3cbdf00c316627558784e3f542f07/urllib3-1.25.3.tar.gz"
+    sha256 "dbe59173209418ae49d485b87d1681aefa36252ee85884c31346debd19463232"
   end
 
   resource "watchdog" do

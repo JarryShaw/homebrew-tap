@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # originally from https://raw.githubusercontent.com/nlohmann/homebrew-json/master/nlohmann_json.rb
 
+import os
 import subprocess
 
 formula = subprocess.check_output(['brew', 'formula', 'nlohmann-json']).decode().strip()
@@ -15,5 +16,6 @@ with open(formula) as file:
 
 FORMULA = ''.join(context)
 
-with open('../Formula/nlohmann-json.rb', 'w') as file:
+with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'Formula',
+                       f'{os.path.splitext(os.path.basename(__file__))[0]}.rb'), 'w') as file:
     file.write(FORMULA)

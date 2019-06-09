@@ -6,7 +6,7 @@ class Macdaily < Formula
   url "https://files.pythonhosted.org/packages/6a/63/57485b6c8bfd0dde324155dfad7155252b91149f3412c9a3c199552edf87/macdaily-2019.4.7.post1.tar.gz"
   version "2019.4.7"
   sha256 "4b8c5a792f8e73563be44f3161ec37775d61a1283d2acab34f94b52ba3172dc2"
-  revision 3
+  revision 1
 
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 

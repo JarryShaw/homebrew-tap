@@ -71,5 +71,6 @@ class SshAskpass < Formula
 end
 '''
 
-with open('../Formula/ssh-askpass.rb', 'w') as file:
+with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'Formula',
+                       f'{os.path.splitext(os.path.basename(__file__))[0]}.rb'), 'w') as file:
     file.write(FORMULA)
