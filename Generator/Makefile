@@ -43,6 +43,7 @@ brew-style-formula:
 	brew style --fix jarryshaw/tap/$(FORMULA)
 
 pipenv-update:
+	pipenv run pip install -U pip setuptools wheel
 	pipenv update
 	pipenv install --dev
 	pipenv clean
