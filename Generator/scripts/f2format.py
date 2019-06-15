@@ -30,7 +30,7 @@ FORMULA = f'''\
 class F2format < Formula
   include Language::Python::Virtualenv
 
-  desc "Back-port compiler for Python 3.6 f-string literals"
+  desc "Backport compiler for Python 3.6 f-string literals"
   homepage "https://github.com/JarryShaw/f2format#f2format"
   url "{F2FORMAT_URL}"
   sha256 "{F2FORMAT_SHA}"
