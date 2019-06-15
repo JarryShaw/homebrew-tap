@@ -58,11 +58,11 @@ bpython3:
 	ln -sf ../Formula/bpython.rb ../Aliases/bpython3
 	ln -sf ../Formula/bpython.rb ../Aliases/bpython@3
 
-bro-pkg:
+bro-pkg: pipenv
 	pipenv run python scripts/bro-pkg.py
 	FORMULA="bro-pkg" $(MAKE) brew-audit
 
-f2format:
+f2format: pipenv
 	pipenv run python scripts/f2format.py
 	FORMULA="f2format" $(MAKE) brew-audit
 
@@ -75,18 +75,18 @@ git-hg:
 	FORMULA="git-hg" $(MAKE) brew-audit
 	git submodule deinit ../Submodules/cosmin-git-hg
 
-macdaily:
+macdaily: pipenv
 	pipenv run python scripts/macdaily.py
 	FORMULA="macdaily" $(MAKE) brew-audit
 
-nlohmann-json:
+nlohmann-json: brew
 	pipenv run python scripts/nlohmann-json.py
 	FORMULA="nlohmann-json" $(MAKE) brew-audit
 
 nlohmann_json:
 	ln -sf ../Formula/nlohmann-json.rb ../Aliases/nlohmann_json
 
-noob:
+noob: brew
 	pipenv run python scripts/noob.py
 	FORMULA="noob" $(MAKE) brew-audit
 
@@ -104,15 +104,15 @@ ptpython3:
 	ln -sf ../Formula/ptpython.rb ../Aliases/ptpython3
 	ln -sf ../Formula/ptpython.rb ../Aliases/ptpython@3
 
-pyinstaller:
+pyinstaller: brew
 	pipenv run python scripts/pyinstaller.py
 	FORMULA="pyinstaller" $(MAKE) brew-audit
 
-sloc:
+sloc: brew
 	pipenv run python scripts/sloc.py
 	FORMULA="sloc" $(MAKE) brew-audit
 
-sphinx:
+sphinx: brew pipenv
 	pipenv run python scripts/sphinx.py
 	FORMULA="sphinx" $(MAKE) brew-audit
 
@@ -124,6 +124,6 @@ uti:
 	pipenv run python scripts/uti.py
 	FORMULA="uti" $(MAKE) brew-audit
 
-vermin:
+vermin: pipenv
 	pipenv run python scripts/vermin.py
 	FORMULA="vermin" $(MAKE) brew-audit
