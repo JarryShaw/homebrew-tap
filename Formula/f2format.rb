@@ -1,10 +1,10 @@
 class F2format < Formula
   include Language::Python::Virtualenv
 
-  desc "Back-port compiler for Python 3.6 f-string literals"
+  desc "Backport compiler for Python 3.6 f-string literals"
   homepage "https://github.com/JarryShaw/f2format#f2format"
-  url "https://github.com/JarryShaw/f2format/archive/v0.7.1.tar.gz"
-  sha256 "b52908bfe6f0d67f9eae03010dfaf27358ba9ea4ab252277ed9d0795154f89a7"
+  url "https://github.com/JarryShaw/f2format/archive/v0.7.2.tar.gz"
+  sha256 "dd2c396cc3aeb1ad91e7dbe17eeb2ce53dd5608adaafeead778b711ea096ee4f"
 
   head "https://github.com/JarryShaw/f2format.git", :branch => "master"
 
