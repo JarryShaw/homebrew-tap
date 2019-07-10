@@ -11,7 +11,7 @@ style: brew-style
 
 link: bpython2 bpython3 nlohmann_json poet2 poet3 ptpython2 ptpython3
 fetch: pyinstaller nlohmann-json noob ssh-askpass uti
-formula: f2format git-hg macdaily sloc sphinx vermin
+formula: basher f2format git-hg macdaily sloc sphinx vermin
 
 brew-update:
 	brew update
@@ -50,6 +50,10 @@ pipenv-update:
 
 pipenv-remove:
 	pipenv --rm
+
+basher: pipenv
+	pipenv run python scripts/basher.py
+	FORMULA="basher" $(MAKE) brew-audit
 
 bpython2:
 	ln -sf ../Formula/bpython@2.rb ../Aliases/bpython2

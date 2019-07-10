@@ -1,6 +1,6 @@
 [[source]]
-name = "pypi"
-url = "https://pypi.org/simple"
+name = "tsinghua"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
 verify_ssl = true
 
 [[source]]
@@ -9,13 +9,13 @@ url = "https://mirrors.aliyun.com/pypi/simple"
 verify_ssl = true
 
 [[source]]
-name = "tsinghua"
-url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+name = "sjtu"
+url = "https://mirrors.sjtug.sjtu.edu.cn/pypi/web/simple"
 verify_ssl = true
 
 [[source]]
-name = "sjtu"
-url = "https://mirrors.sjtug.sjtu.edu.cn/pypi/web/simple"
+name = "pypi"
+url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
@@ -39,9 +39,8 @@ homebrew-pypi-poet = "*"
 bs4 = "*"
 html5lib = "*"
 requests = "*"
-pep8 = "*"
 autopep8 = "*"
-doc8 = "*"
+pylint = "*"
 
 [requires]
 python_version = "3.7"

@@ -145,6 +145,10 @@ Collections
   This formula is not notable enough to be included in Homebrew
   core repository yet (<30 forks, <30 watchers and <75 stars).
 
+- |basher|_ : package manager for shell scripts
+
+  This formula is not yet included in Home brew core repository.
+
 .. |docutils| replace:: ``docutils``
 .. _docutils: http://docutils.sourceforge.net
 .. |vermin| replace:: ``vermin``
@@ -175,6 +179,8 @@ Collections
 .. _nlohmann_json: https://github.com/nlohmann/json
 .. |git-hg| replace:: ``git-hg``
 .. _git-hg: https://github.com/cosmin/git-hg
+.. |basher| replace:: ``basher``
+.. _basher: https://github.com/basherpm/basher
 
 -------
 License

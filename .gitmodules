@@ -16,3 +16,6 @@
 [submodule "Submodules/cosmin-git-hg"]
 	path = Submodules/cosmin-git-hg
 	url = https://github.com/cosmin/git-hg.git
+[submodule "Submodules/basherpm-basher"]
+	path = Submodules/basherpm-basher
+	url = https://github.com/basherpm/basher.git
