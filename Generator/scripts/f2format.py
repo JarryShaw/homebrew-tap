@@ -7,7 +7,7 @@ import subprocess
 
 import requests
 
-with open(os.path.expanduser('~/Documents/GitHub/f2format/f2format.py'), 'r') as file:
+with open(os.path.expanduser('~/GitHub/f2format/f2format.py'), 'r') as file:
     for line in file:
         match = re.match(r"^__version__ = '(.*)'", line)
         if match is None:
