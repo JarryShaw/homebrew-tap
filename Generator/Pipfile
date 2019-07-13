@@ -19,26 +19,32 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+bro-pkg = "*"
+
+dmgbuild = "*"
+
+f2format = "*"
+
+macdaily = {extras = ["all"],version = "*"}
+pathlib2 = "*"
+psutil = "*"
+subprocess32 = "*"
+
+pyinstaller = "*"
+
+vermin = "*"
+
 sphinx = "*"
 sphinx-autobuild = "*"
-vermin = "*"
-bro-pkg = "*"
-pyinstaller = "*"
-legit = "*"
-parso = "*"
-tbtrim = "*"
-configupdater = "*"
-dictdumper = "*"
-psutil = "*"
-ptyng = "*"
-pathlib2 = "*"
-subprocess32 = "*"
 
 [packages]
 homebrew-pypi-poet = "*"
+homebrew-npm-noob = "*"
+
 bs4 = "*"
 html5lib = "*"
 requests = "*"
+
 autopep8 = "*"
 pylint = "*"
 

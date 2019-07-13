@@ -10,8 +10,8 @@ brew: brew-update
 style: brew-style
 
 link: bpython2 bpython3 nlohmann_json poet2 poet3 ptpython2 ptpython3
-fetch: pyinstaller nlohmann-json noob ssh-askpass uti
-formula: basher f2format git-hg macdaily sloc sphinx vermin
+fetch: pyinstaller nlohmann-json ssh-askpass uti
+formula: appdmg basher dmgbuild f2format git-hg macdaily noob sloc sphinx vermin
 
 brew-update:
 	brew update
@@ -51,6 +51,10 @@ pipenv-update:
 pipenv-remove:
 	pipenv --rm
 
+appdmg: pipenv
+	pipenv run python scripts/appdmg.py
+	FORMULA="appdmg" $(MAKE) brew-audit
+
 basher: pipenv
 	pipenv run python scripts/basher.py
 	FORMULA="basher" $(MAKE) brew-audit
@@ -65,6 +69,10 @@ bpython3:
 bro-pkg: pipenv
 	pipenv run python scripts/bro-pkg.py
 	FORMULA="bro-pkg" $(MAKE) brew-audit
+
+dmgbuild: pipenv
+	pipenv run python scripts/dmgbuild.py
+	FORMULA="dmgbuild" $(MAKE) brew-audit
 
 f2format: pipenv
 	pipenv run python scripts/f2format.py
@@ -90,7 +98,7 @@ nlohmann-json: brew
 nlohmann_json:
 	ln -sf ../Formula/nlohmann-json.rb ../Aliases/nlohmann_json
 
-noob: brew
+noob: pipenv
 	pipenv run python scripts/noob.py
 	FORMULA="noob" $(MAKE) brew-audit
 
