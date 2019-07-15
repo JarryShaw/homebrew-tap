@@ -36,23 +36,23 @@ for line in filter(lambda item: isinstance(item, bs4.element.Tag), table.tbody):
 # print(MACDAILY_URL)
 # print(MACDAILY_SHA)
 
-with tempfile.TemporaryDirectory() as tempdir:
-    platform = distutils.util.get_platform().replace('-', '_').replace('.', '_')  # pylint: disable=no-member
-    python_version = '%s%s' % sys.version_info[:2]
-    implementation = sys.implementation.name[:2]
-    subprocess.check_call([sys.executable, '-m', 'pip', 'download', 'macdaily',
-                           f"--platform={platform}",
-                           f"--python-version={python_version}",
-                           f'--implementation={implementation}',
-                           f'--dest={tempdir}',
-                           '--no-deps'], stdout=subprocess.DEVNULL)
-    archive = f'{tempdir}/macdaily-{VERSION}-{implementation}{python_version}-none-{platform}.whl'
-    with open(archive, 'rb') as file:
-        content = file.read()
-    DEVEL_SUFFIX = hashlib.sha256(content).hexdigest()[:6]
+# with tempfile.TemporaryDirectory() as tempdir:
+#     platform = distutils.util.get_platform().replace('-', '_').replace('.', '_')  # pylint: disable=no-member
+#     python_version = '%s%s' % sys.version_info[:2]
+#     implementation = sys.implementation.name[:2]
+#     subprocess.check_call([sys.executable, '-m', 'pip', 'download', 'macdaily',
+#                            f"--platform={platform}",
+#                            f"--python-version={python_version}",
+#                            f'--implementation={implementation}',
+#                            f'--dest={tempdir}',
+#                            '--no-deps'], stdout=subprocess.DEVNULL)
+#     archive = f'{tempdir}/macdaily-{VERSION}-{implementation}{python_version}-none-{platform}.whl'
+#     with open(archive, 'rb') as file:
+#         content = file.read()
+#     DEVEL_SUFFIX = hashlib.sha256(content).hexdigest()[:6]
 
-DEVEL_URL = f'https://github.com/JarryShaw/MacDaily/archive/v{VERSION}.{DEVEL_SUFFIX}-devel.tar.gz'
-DEVEL_SHA = hashlib.sha256(requests.get(DEVEL_URL).content).hexdigest()
+# DEVEL_URL = f'https://github.com/JarryShaw/MacDaily/archive/v{VERSION}.{DEVEL_SUFFIX}-devel.tar.gz'
+# DEVEL_SHA = hashlib.sha256(requests.get(DEVEL_URL).content).hexdigest()
 # print(DEVEL_URL)
 # print(DEVEL_SHA)
 
@@ -75,18 +75,18 @@ match = re.match(r'([0-9.]+)\.post([0-9])', VERSION)
 if match is None:
     MACDAILY = (f'url "{MACDAILY_URL}"\n'
                 f'  sha256 "{MACDAILY_SHA}"')
-    DEVEL = (f'url "{DEVEL_URL}"\n'
-             f'    version "{VERSION}.{DEVEL_SUFFIX}"\n'
-             f'    sha256 "{DEVEL_SHA}"')
+    # DEVEL = (f'url "{DEVEL_URL}"\n'
+    #          f'    version "{VERSION}.{DEVEL_SUFFIX}"\n'
+    #          f'    sha256 "{DEVEL_SHA}"')
 else:
     version, revision = match.groups()
     MACDAILY = (f'url "{MACDAILY_URL}"\n'
                 f'  version "{version}"\n'
                 f'  sha256 "{MACDAILY_SHA}"\n'
                 f'  revision {revision}')
-    DEVEL = (f'url "{DEVEL_URL}"\n'
-             f'    version "{version}_{revision}.{DEVEL_SUFFIX}"\n'
-             f'    sha256 "{DEVEL_SHA}"')
+    # DEVEL = (f'url "{DEVEL_URL}"\n'
+    #          f'    version "{version}_{revision}.{DEVEL_SUFFIX}"\n'
+    #          f'    sha256 "{DEVEL_SHA}"')
 
 FORMULA = f'''\
 class Macdaily < Formula
@@ -98,9 +98,9 @@ class Macdaily < Formula
 
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
-  devel do
-    {DEVEL}
-  end
+  # devel do
+  #   ...
+  # end
 
   option "without-config", "Build without config modification support"
   option "without-tree", "Build without tree format support"

@@ -26,14 +26,25 @@ TBTRIM = subprocess.check_output(['poet', 'tbtrim']).decode().strip()
 # print(PARSO)
 # print(TBTRIM)
 
+match = re.match(r'([0-9.]+)\.post([0-9])', VERSION)
+if match is None:
+    F2FORMAT = (f'url "{F2FORMAT_URL}"\n'
+                f'  sha256 "{F2FORMAT_SHA}"')
+else:
+    version, revision = match.groups()
+    F2FORMAT = (f'url "{F2FORMAT_URL}"\n'
+                f'  version "{version}"\n'
+                f'  sha256 "{F2FORMAT_SHA}"\n'
+                f'  revision {revision}')
+
+
 FORMULA = f'''\
 class F2format < Formula
   include Language::Python::Virtualenv
 
   desc "Backport compiler for Python 3.6 f-string literals"
   homepage "https://github.com/JarryShaw/f2format#f2format"
-  url "{F2FORMAT_URL}"
-  sha256 "{F2FORMAT_SHA}"
+  {F2FORMAT}
 
   head "https://github.com/JarryShaw/f2format.git", :branch => "master"
 

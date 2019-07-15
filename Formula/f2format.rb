@@ -3,16 +3,18 @@ class F2format < Formula
 
   desc "Backport compiler for Python 3.6 f-string literals"
   homepage "https://github.com/JarryShaw/f2format#f2format"
-  url "https://github.com/JarryShaw/f2format/archive/v0.7.3.tar.gz"
-  sha256 "f8c43992c28b218bac8e91d935b4195c17d5c76c5393ef8116dd272cc764b1ed"
+  url "https://github.com/JarryShaw/f2format/archive/v0.7.3.post1.tar.gz"
+  version "0.7.3"
+  sha256 "54e1862e4b64b75683f3f1f1eb1de916d0e846fa249cbdb978d73c1a633bff68"
+  revision 1
 
   head "https://github.com/JarryShaw/f2format.git", :branch => "master"
 
   depends_on "python"
 
   resource "parso" do
-    url "https://files.pythonhosted.org/packages/68/88/99c08caaaed740853a2db12294e6a30e7a83a2d316585b8a3ea6e24c415d/parso-0.5.0.tar.gz"
-    sha256 "db5881df1643bf3e66c097bfd8935cf03eae73f4cb61ae4433c9ea4fb6613446"
+    url "https://files.pythonhosted.org/packages/21/40/615957db4d178b7504c87b1a5b85fa5945b0b4fa5f5a845e31fc7aad6018/parso-0.5.1.tar.gz"
+    sha256 "666b0ee4a7a1220f65d367617f2cd3ffddff3e205f3f16a0284df30e774c2a9c"
   end
 
   resource "tbtrim" do
