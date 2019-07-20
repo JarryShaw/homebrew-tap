@@ -48,15 +48,22 @@ Formula
 Productions
 -----------
 
-- |macdaily|_: Package day-care manager on macOS.
-- |f2format|_: Back-port compiler for Python 3.6 f-string literals.
+- |macdaily|_: Package day-care manager on macOS
+
+- |f2format|_: Back-port compiler for Python 3.6 f-string literals
+- |poseur|_: Back-port compiler for Python 3.8 positional-only parameters syntax
+
 - |askpass|_: AskPass Utility for macOS
 - |confirm|_: Confirm Utility for macOS
 
 .. |macdaily| replace:: ``MacDaily``
 .. _macdaily: https://github.com/JarryShaw/MacDaily#macdaily
+
 .. |f2format| replace:: ``f2format``
 .. _f2format: https://github.com/JarryShaw/f2format#f2format
+.. |poseur| replace:: ``poseur``
+.. _poseur: https://github.com/JarryShaw/poseur#poseur
+
 .. |askpass| replace:: ``AskPass``
 .. _askpass: https://github.com/JarryShaw/askpass#askpass
 .. |confirm| replace:: ``Confirm``

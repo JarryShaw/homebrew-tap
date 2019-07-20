@@ -11,7 +11,7 @@ style: brew-style
 
 link: bpython2 bpython3 nlohmann_json poet2 poet3 ptpython2 ptpython3
 fetch: pyinstaller nlohmann-json ssh-askpass uti
-formula: appdmg basher dmgbuild f2format git-hg macdaily noob sloc sphinx vermin
+formula: appdmg basher dmgbuild f2format git-hg macdaily noob poseur sloc sphinx vermin
 
 brew-update:
 	brew update
@@ -108,6 +108,10 @@ poet2:
 poet3:
 	ln -sf ../Formula/poet.rb ../Aliases/poet3
 	ln -sf ../Formula/poet.rb ../Aliases/poet@3
+
+poseur: pipenv
+	pipenv run python scripts/poseur.py
+	FORMULA="poseur" $(MAKE) brew-audit
 
 ptpython2:
 	ln -sf ../Formula/ptpython@2.rb ../Aliases/ptpython2
