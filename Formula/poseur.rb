@@ -3,8 +3,10 @@ class Poseur < Formula
 
   desc "Backport compiler for Python 3.8 positional-only parameters syntax"
   homepage "https://github.com/JarryShaw/poseur#poseur"
-  url "https://github.com/JarryShaw/poseur/archive/v0.1.0.tar.gz"
-  sha256 "ad4891a27e6b5059f60e3c9efe046b576fdc025c2254687fcb2bc5bb7401e8ba"
+  url "https://github.com/JarryShaw/poseur/archive/v0.1.0.post1.tar.gz"
+  version "0.1.0"
+  sha256 "ecfc4654f8170c4e9d30b5000ed8d920cd59c1102926d86e9fc63b06b36a5baa"
+  revision 1
 
   head "https://github.com/JarryShaw/poseur.git", :branch => "master"
 
@@ -21,7 +23,10 @@ class Poseur < Formula
   end
 
   def install
+    rm "setup.py"
+    cp "scripts/setup.pypi.py", "setup.py"
     virtualenv_install_with_resources
+
     man1.install "share/poseur.1"
     bash_completion.install "share/poseur.bash-completion"
   end
