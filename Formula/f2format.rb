@@ -4,7 +4,7 @@ class F2format < Formula
   desc "Backport compiler for Python 3.6 f-string literals"
   homepage "https://github.com/JarryShaw/f2format#f2format"
   url "https://github.com/JarryShaw/f2format/archive/v0.8.0.tar.gz"
-  sha256 "395408a3dc9c3db2b5c200b8722a13a60898c861633b99e6e250186adffd1370"
+  sha256 "9ee0667cbca7c83c5cc23f873ed4f5c26511c209f81e97577360ad575934a26e"
 
   head "https://github.com/JarryShaw/f2format.git", :branch => "master"
 
