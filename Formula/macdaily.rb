@@ -3,18 +3,14 @@ class Macdaily < Formula
 
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
-  url "https://files.pythonhosted.org/packages/6a/63/57485b6c8bfd0dde324155dfad7155252b91149f3412c9a3c199552edf87/macdaily-2019.4.7.post1.tar.gz"
-  version "2019.4.7"
-  sha256 "4b8c5a792f8e73563be44f3161ec37775d61a1283d2acab34f94b52ba3172dc2"
-  revision 1
+  url "https://files.pythonhosted.org/packages/4f/90/60120ff9d151cc8df5cd8c1a4de6ebc7ec4ff22bdbe17573f61f257859c4/macdaily-2019.8.4.tar.gz"
+  sha256 "3097aa5a46fbd9ba5d3ee792109b451bcca1f4c8d826eb166a5205b45e805e82"
 
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
-  devel do
-    url "https://github.com/JarryShaw/MacDaily/archive/v2019.4.7.post1.c7250d-devel.tar.gz"
-    version "2019.4.7_1.c7250d"
-    sha256 "f630fbf6ab99a12b4597c65277bae8ceb1aea380b78fe1ce36a80c6ef9af8327"
-  end
+  # devel do
+  #   ...
+  # end
 
   option "without-config", "Build without config modification support"
   option "without-tree", "Build without tree format support"
@@ -32,13 +28,13 @@ class Macdaily < Formula
   end
 
   resource "dictdumper" do
-    url "https://files.pythonhosted.org/packages/76/27/8b859ac191f351c7612e4abed73dbcf55cf17e88fd36d65a75d2d4c519d4/dictdumper-0.7.0.post2.tar.gz"
-    sha256 "dd7575db24e6f1a2b9278389df000a6db8fba4c45a92398c7e6d3e5fa575a3ab"
+    url "https://files.pythonhosted.org/packages/88/cd/c4df6cfb445733e948f31ea30b7033ca081f322c41c4a0a3531ce3003115/dictdumper-0.7.1.tar.gz"
+    sha256 "6e087f3b40d04462797d5f3b79d0d511cf12724803d5802b73cc9ea48ae56e3d"
   end
 
   resource "psutil" do
-    url "https://files.pythonhosted.org/packages/c6/c1/beed5e4eaa1345901b595048fab1c85aee647ea0fc02d9e8bf9aceb81078/psutil-5.6.2.tar.gz"
-    sha256 "828e1c3ca6756c54ac00f1427fdac8b12e21b8a068c3bb9b631a1734cada25ed"
+    url "https://files.pythonhosted.org/packages/1c/ca/5b8c1fe032a458c2c4bcbe509d1401dca9dda35c7fc46b36bb81c2834740/psutil-5.6.3.tar.gz"
+    sha256 "863a85c1c0a5103a12c05a35e59d336e1d665747e531256e061213e2e90f63f3"
   end
 
   resource "ptyng" do
@@ -47,8 +43,8 @@ class Macdaily < Formula
   end
 
   resource "pathlib2" do
-    url "https://files.pythonhosted.org/packages/bf/d7/a2568f4596b75d2c6e2b4094a7e64f620decc7887f69a1f2811931ea15b9/pathlib2-2.3.3.tar.gz"
-    sha256 "25199318e8cc3c25dcb45cbe084cc061051336d5a9ea2a12448d3d8cb748f742"
+    url "https://files.pythonhosted.org/packages/b5/f4/9c7cc726ece2498b6c8b62d3262aa43f59039b953fe23c9964ac5e18d40b/pathlib2-2.3.4.tar.gz"
+    sha256 "446014523bb9be5c28128c4d2a10ad6bb60769e78bd85658fe44a450674e0ef8"
   end
 
   resource "six" do
@@ -57,8 +53,8 @@ class Macdaily < Formula
   end
 
   resource "subprocess32" do
-    url "https://files.pythonhosted.org/packages/be/2b/beeba583e9877e64db10b52a96915afc0feabf7144dcbf2a0d0ea68bf73d/subprocess32-3.5.3.tar.gz"
-    sha256 "6bc82992316eef3ccff319b5033809801c0c3372709c5f6985299c88ac7225c3"
+    url "https://files.pythonhosted.org/packages/32/c8/564be4d12629b912ea431f1a50eb8b3b9d00f1a0b1ceff17f266be190007/subprocess32-3.5.4.tar.gz"
+    sha256 "eb2937c80497978d181efa1b839ec2d9622cf9600a039a79d0e108d1f9aec79d"
   end
 
   resource "tbtrim" do

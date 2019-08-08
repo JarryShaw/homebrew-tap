@@ -1,17 +1,14 @@
 # -*- coding: utf-8 -*-
 
-import distutils.util  # pylint: disable=no-name-in-module,import-error
 import hashlib
 import os
 import re
 import subprocess
-import sys
-import tempfile
 
 import bs4
 import requests
 
-with open(os.path.expanduser('~/GitHub/MacDaily/devel/macdaily/util/const/macro.py')) as file:
+with open(os.path.expanduser('~/GitHub/MacDaily/macdaily/util/const/macro.py')) as file:
     for line in file:
         match = re.match(r"VERSION = '(.*)'", line)
         if match is None:
