@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 
 import os
-import pkg_resources
 import subprocess
 import time
+
+import pkg_resources
 
 VERSION = pkg_resources.parse_version(time.strftime('%Y.%m.%d'))
 REVISION = subprocess.check_output(['git', 'rev-parse', 'HEAD'], encoding='utf-8',

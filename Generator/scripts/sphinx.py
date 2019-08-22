@@ -55,13 +55,13 @@ def _fetch_dependency(package):
 
     _deps_pkgs = dict()
     requirements = set()
-    for line in subprocess.check_output(argv).decode().strip().splitlines():
-        match = re.match(r"Requires: (.*)", line)
+    for line in subprocess.check_output(argv).decode().strip().splitlines():  # pylint: disable=redefine-outer-name
+        match = re.match(r"Requires: (.*)", line)  # pylint: disable=redefine-outer-name
         if match is not None:
             requirements = set(match.groups()[0].split(', '))
             break
 
-    for item in filter(None, requirements):
+    for item in filter(None, requirements):  # pylint: disable=redefine-outer-name
         _deps_pkgs[item] = _fetch_dependency(item)
     _data_pkgs.update(_deps_pkgs)
 

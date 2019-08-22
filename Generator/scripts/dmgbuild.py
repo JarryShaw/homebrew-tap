@@ -6,7 +6,6 @@ import re
 import subprocess
 import sys
 
-import bs4
 import requests
 
 for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():
@@ -29,8 +28,8 @@ def _fetch_dependency(package):
 
     _deps_pkgs = dict()
     requirements = set()
-    for line in subprocess.check_output(argv).decode().strip().splitlines():
-        match = re.match(r"Requires: (.*)", line)
+    for line in subprocess.check_output(argv).decode().strip().splitlines():  # pylint: disable=redefined-outer-name
+        match = re.match(r"Requires: (.*)", line)  # pylint: disable=redefined-outer-name
         if match is not None:
             requirements = set(match.groups()[0].split(', '))
             break

@@ -7,7 +7,6 @@ import re
 import subprocess
 import sys
 
-import bs4
 import requests
 
 for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():

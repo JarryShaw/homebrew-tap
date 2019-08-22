@@ -3,7 +3,6 @@
 
 import os
 import plistlib
-import re
 
 import requests
 
