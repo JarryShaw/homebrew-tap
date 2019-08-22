@@ -8,6 +8,8 @@ context = list()
 for line in subprocess.check_output(['noob', 'sass'], encoding='utf-8').splitlines():
     if re.match(r'\s*version ".+?"\s*', line):
         continue
+    if line.strip().startswith('desc'):
+        line = '  desc "Pure JavaScript implementation of SASS"'
     if line.strip() == 'raise "Test not implemented."':
         line = os.linesep.join([
             '    (testpath/"test.scss").write <<~EOS',
