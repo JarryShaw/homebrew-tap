@@ -1,7 +1,7 @@
 require "language/node"
 
 class Sass < Formula
-  desc "A pure JavaScript implementation of Sass"
+  desc "Pure JavaScript implementation of SASS"
   homepage "https://github.com/sass/dart-sass"
   url "https://registry.npmjs.org/sass/-/sass-1.22.10.tgz"
   sha256 "ecea121912cc18b742ae62e7473be26ac3783d95ce1f304deecc80e65a676a3a"
