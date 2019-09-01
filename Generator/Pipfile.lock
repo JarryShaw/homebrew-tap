@@ -300,10 +300,10 @@
         },
         "bro-pkg": {
             "hashes": [
-                "sha256:14dd0f160ba5d93874046c4c248bb03442791ff64e8487668412021c8318b5ff"
+                "sha256:9e2e52a92937114d30aac21df224760f7da0318bc79ec45dc2695e2c0f259edb"
             ],
             "index": "tsinghua",
-            "version": "==2.0.2"
+            "version": "==2.0.4"
         },
         "btest": {
             "hashes": [
@@ -605,10 +605,10 @@
         },
         "semantic-version": {
             "hashes": [
-                "sha256:2a4328680073e9b243667b201119772aefc5fc63ae32398d6afafff07c4f54c0",
-                "sha256:2d06ab7372034bcb8b54f2205370f4aa0643c133b7e6dbd129c5200b83ab394b"
+                "sha256:192d4c0fce55643e05af0e49ca47d06608acf2dac2145bb26339fce16abfd6d2",
+                "sha256:9b38513ddc319aea9720bf6262f96e8cbf074c9f7150e13cc97fd71909abd750"
             ],
-            "version": "==2.6.0"
+            "version": "==2.8.1"
         },
         "six": {
             "hashes": [
@@ -724,10 +724,10 @@
         },
         "vermin": {
             "hashes": [
-                "sha256:e8cbc843eddfc3e9ba7c621249bd395cb621b268f3ce70e2f6d1833e2e7144ef"
+                "sha256:2d30809b59482a1a254ca0468d6b56f6a62de9c95ca1432628bf79c6752d27d1"
             ],
             "index": "tsinghua",
-            "version": "==0.6.1"
+            "version": "==0.6.3"
         },
         "watchdog": {
             "hashes": [
