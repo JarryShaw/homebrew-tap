@@ -605,10 +605,10 @@
         },
         "semantic-version": {
             "hashes": [
-                "sha256:192d4c0fce55643e05af0e49ca47d06608acf2dac2145bb26339fce16abfd6d2",
-                "sha256:9b38513ddc319aea9720bf6262f96e8cbf074c9f7150e13cc97fd71909abd750"
+                "sha256:695d5a06a86439d2dd0e5eaf3e46c5e6090bb5e72ba88377680a0acb483a3b44",
+                "sha256:71c716e99086c44d068262b86e4775aa6db7fabee0743e4e33b00fbf6f672585"
             ],
-            "version": "==2.8.1"
+            "version": "==2.8.2"
         },
         "six": {
             "hashes": [
@@ -626,9 +626,9 @@
         },
         "snowballstemmer": {
             "hashes": [
-                "sha256:9f3b9ffe0809d174f7047e121431acf99c89a7040f0ca84f94ba53a498e6d0c9"
+                "sha256:713e53b79cbcf97bc5245a06080a33d54a77e7cce2f789c835a143bcdb5c033e"
             ],
-            "version": "==1.9.0"
+            "version": "==1.9.1"
         },
         "sphinx": {
             "hashes": [
@@ -724,10 +724,10 @@
         },
         "vermin": {
             "hashes": [
-                "sha256:2d30809b59482a1a254ca0468d6b56f6a62de9c95ca1432628bf79c6752d27d1"
+                "sha256:243639253a01742d68469393a094e11d3bc87036756206a5c69715f67385978b"
             ],
             "index": "tsinghua",
-            "version": "==0.6.3"
+            "version": "==0.7.0"
         },
         "watchdog": {
             "hashes": [
