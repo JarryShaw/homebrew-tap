@@ -3,8 +3,8 @@ class Poseur < Formula
 
   desc "Backport compiler for Python 3.8 positional-only parameters syntax"
   homepage "https://github.com/JarryShaw/poseur#poseur"
-  url "https://github.com/JarryShaw/poseur/archive/v0.3.3.tar.gz"
-  sha256 "2e805d9a32cf32d2475290ff548481c86de4d3e2c9033c98771e45f5e767d43f"
+  url "https://github.com/JarryShaw/poseur/archive/v0.3.4.tar.gz"
+  sha256 "e17f6ec8f33cd62a3e84cb296187d2eb43f9a79d5495139b17b773c8850ea045"
 
   head "https://github.com/JarryShaw/poseur.git", :branch => "master"
 
