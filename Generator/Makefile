@@ -11,7 +11,7 @@ style: brew-style
 
 link: bpython2 bpython3 nlohmann_json poet2 poet3 ptpython2 ptpython3
 fetch: pyinstaller nlohmann-json ssh-askpass uti
-formula: appdmg basher dmgbuild f2format git-hg macdaily noob poseur sass sloc sphinx vermin
+formula: appdmg basher dmgbuild f2format git-hg macdaily noob poseur sass sloc sphinx vermin walrus
 
 brew-update:
 	brew update
@@ -147,3 +147,7 @@ uti:
 vermin: pipenv
 	pipenv run python scripts/vermin.py
 	FORMULA="vermin" $(MAKE) brew-audit
+
+walrus: pipenv
+	pipenv run python scripts/walrus.py
+	FORMULA="walrus" $(MAKE) brew-audit

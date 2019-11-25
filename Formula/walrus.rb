@@ -5,6 +5,7 @@ class Walrus < Formula
   homepage "https://github.com/JarryShaw/walrus#walrus"
   url "https://github.com/JarryShaw/walrus/archive/v0.1.0.tar.gz"
   sha256 "a07bc62db75f8814c6c63feeb4aa7a1347e315fdee5c50a647cecadf2c684e5f"
+  revision 1
 
   head "https://github.com/JarryShaw/walrus.git", :branch => "master"
 
@@ -21,8 +22,6 @@ class Walrus < Formula
   end
 
   def install
-    rm "setup.py"
-    cp "scripts/setup.pypi.py", "setup.py"
     virtualenv_install_with_resources
 
     man1.install "share/walrus.1"
