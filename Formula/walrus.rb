@@ -3,8 +3,10 @@ class Walrus < Formula
 
   desc "Backport compiler for Python 3.8 assignment expressions"
   homepage "https://github.com/JarryShaw/walrus#walrus"
-  url "https://github.com/JarryShaw/walrus/archive/v0.1.2.tar.gz"
-  sha256 "38b2055335830d7b85d392f828740ae367c7632b90dcc3d90937466041123065"
+  url "https://github.com/JarryShaw/walrus/archive/v0.1.2.post1.tar.gz"
+  version "0.1.2a"
+  sha256 "f609ce0f7a64744770cea97f3a416621d41f0124d90ef3ff0ef38f68c0c9dee2"
+
 
   head "https://github.com/JarryShaw/walrus.git", :branch => "master"
 
