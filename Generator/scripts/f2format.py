@@ -26,16 +26,16 @@ TBTRIM = subprocess.check_output(['poet', 'tbtrim']).decode().strip()
 # print(PARSO)
 # print(TBTRIM)
 
-match = re.match(r'([0-9.]+)\.post([0-9])', VERSION)
+match = re.match(r'([0-9.]+)\.post([0-9]+)', VERSION)
 if match is None:
     F2FORMAT = (f'url "{F2FORMAT_URL}"\n'
                 f'  sha256 "{F2FORMAT_SHA}"')
 else:
-    version, revision = match.groups()
+    version, subversion = match.groups()
+    revision = chr(96 + int(subversion))  # ord('a') -> 97
     F2FORMAT = (f'url "{F2FORMAT_URL}"\n'
-                f'  version "{version}"\n'
-                f'  sha256 "{F2FORMAT_SHA}"\n'
-                f'  revision {revision}')
+                f'  version "{version}{revision}"\n'
+                f'  sha256 "{F2FORMAT_SHA}"')
 
 
 FORMULA = f'''\

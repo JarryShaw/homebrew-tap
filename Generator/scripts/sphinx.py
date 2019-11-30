@@ -6,7 +6,7 @@ import re
 import subprocess
 import sys
 
-import bs4
+# import bs4
 import requests
 
 formula = subprocess.check_output(['brew', 'formula', 'sphinx-doc']).decode().strip()
@@ -16,18 +16,20 @@ for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():
     if match is not None:
         VERSION = match.groups()[0]
 
-url = f'https://pypi.org/project/Sphinx/{VERSION}/#files'
-page = requests.get(url)
-soup = bs4.BeautifulSoup(page.text, 'html5lib')
-table = soup.find_all('table', class_='table--downloads')[0]
+SPHINX_URL = f'https://github.com/sphinx-doc/sphinx/archive/v{VERSION}.tar.gz'
+SPHINX_SHA = hashlib.sha256(requests.get(SPHINX_URL).content).hexdigest()
+# url = f'https://pypi.org/project/Sphinx/{VERSION}/#files'
+# page = requests.get(url)
+# soup = bs4.BeautifulSoup(page.text, 'html5lib')
+# table = soup.find_all('table', class_='table--downloads')[0]
 
-for line in filter(lambda item: isinstance(item, bs4.element.Tag), table.tbody):
-    item = line.find_all('td')[0]
-    link = item.a.get('href') or ''
-    if link.endswith('.tar.gz'):
-        SPHINX_URL = link
-        SPHINX_SHA = hashlib.sha256(requests.get(SPHINX_URL).content).hexdigest()
-        break
+# for line in filter(lambda item: isinstance(item, bs4.element.Tag), table.tbody):
+#     item = line.find_all('td')[0]
+#     link = item.a.get('href') or ''
+#     if link.endswith('.tar.gz'):
+#         SPHINX_URL = link
+#         SPHINX_SHA = hashlib.sha256(requests.get(SPHINX_URL).content).hexdigest()
+#         break
 
 bottle = list()
 bottle_flag = False
@@ -36,7 +38,7 @@ with open(formula) as file:
         if line == '  end\n':
             bottle.append(line)
             break
-        elif bottle_flag:
+        if bottle_flag:
             bottle.append(line)
         elif line == '  bottle do\n':
             bottle.append(line)
@@ -55,13 +57,13 @@ def _fetch_dependency(package):
 
     _deps_pkgs = dict()
     requirements = set()
-    for line in subprocess.check_output(argv).decode().strip().splitlines():  # pylint: disable=redefine-outer-name
-        match = re.match(r"Requires: (.*)", line)  # pylint: disable=redefine-outer-name
+    for line in subprocess.check_output(argv).decode().strip().splitlines():  # pylint: disable=redefined-outer-name
+        match = re.match(r"Requires: (.*)", line)  # pylint: disable=redefined-outer-name
         if match is not None:
             requirements = set(match.groups()[0].split(', '))
             break
 
-    for item in filter(None, requirements):  # pylint: disable=redefine-outer-name
+    for item in filter(None, requirements):  # pylint: disable=redefined-outer-name
         _deps_pkgs[item] = _fetch_dependency(item)
     _data_pkgs.update(_deps_pkgs)
 

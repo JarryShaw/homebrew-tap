@@ -31,11 +31,11 @@ if match is None:
     WALRUS = (f'url "{WALRUS_URL}"\n'
               f'  sha256 "{WALRUS_SHA}"')
 else:
-    version, revision = match.groups()
+    version, subversion = match.groups()
+    revision = chr(96 + int(subversion))  # ord('a') -> 97
     WALRUS = (f'url "{WALRUS_URL}"\n'
-              f'  version "{version}"\n'
-              f'  sha256 "{WALRUS_SHA}"\n'
-              f'  revision {revision}')
+              f'  version "{version}{revision}"\n'
+              f'  sha256 "{WALRUS_SHA}"')
 
 
 FORMULA = f'''\

@@ -31,11 +31,11 @@ if match is None:
     POSEUR = (f'url "{POSEUR_URL}"\n'
               f'  sha256 "{POSEUR_SHA}"')
 else:
-    version, revision = match.groups()
+    version, subversion = match.groups()
+    revision = chr(96 + int(subversion))  # ord('a') -> 97
     POSEUR = (f'url "{POSEUR_URL}"\n'
-              f'  version "{version}"\n'
-              f'  sha256 "{POSEUR_SHA}"\n'
-              f'  revision {revision}')
+              f'  version "{version}{revision}"\n'
+              f'  sha256 "{POSEUR_SHA}"')
 
 
 FORMULA = f'''\

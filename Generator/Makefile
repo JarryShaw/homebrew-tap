@@ -2,7 +2,7 @@
 
 export PIPENV_VENV_IN_PROJECT=1
 
-all: brew pipenv formula style
+all: brew pipenv link fetch formula style
 check: brew-style-tap brew-audit-tap
 pipenv: pipenv-update
 
@@ -10,8 +10,8 @@ brew: brew-update
 style: brew-style
 
 link: bpython2 bpython3 nlohmann_json poet2 poet3 ptpython2 ptpython3
-fetch: pyinstaller nlohmann-json ssh-askpass uti
-formula: appdmg basher dmgbuild f2format git-hg macdaily noob poseur sass sloc sphinx vermin walrus
+fetch: pyinstaller nlohmann-json sass ssh-askpass uti
+formula: appdmg basher dmgbuild f2format git-hg macdaily node-sass noob poseur sloc sphinx vermin walrus
 
 brew-update:
 	brew update
@@ -44,7 +44,9 @@ brew-style-formula:
 
 pipenv-update:
 	pipenv run pip install -U pip setuptools wheel
-	pipenv update
+	while true; do \
+		pipenv update && break ; \
+	done
 	pipenv install --dev
 	pipenv clean
 
@@ -97,6 +99,10 @@ nlohmann-json: brew
 
 nlohmann_json:
 	ln -sf ../Formula/nlohmann-json.rb ../Aliases/nlohmann_json
+
+node-sass: brew
+	pipenv run python scripts/node-sass.py
+	FORMULA="node-sass" $(MAKE) brew-audit
 
 noob: pipenv
 	pipenv run python scripts/noob.py

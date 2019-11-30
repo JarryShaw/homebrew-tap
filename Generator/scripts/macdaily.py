@@ -5,7 +5,7 @@ import os
 import re
 import subprocess
 
-import bs4
+# import bs4
 import requests
 
 with open(os.path.expanduser('~/GitHub/MacDaily/macdaily/util/const/macro.py')) as file:
@@ -17,19 +17,22 @@ with open(os.path.expanduser('~/GitHub/MacDaily/macdaily/util/const/macro.py')) 
         break
 # print(VERSION)
 
-url = f'https://pypi.org/project/macdaily/{VERSION}/#files'
-page = requests.get(url)
-soup = bs4.BeautifulSoup(page.text, 'html5lib')
-table = soup.find_all('table', class_='table--downloads')[0]
+MACDAILY_URL = f'https://github.com/JarryShaw/f2format/archive/v{VERSION}.tar.gz'
+MACDAILY_SHA = hashlib.sha256(requests.get(MACDAILY_URL).content).hexdigest()
+# url = f'https://pypi.org/project/macdaily/{VERSION}/#files'
+# page = requests.get(url)
+# soup = bs4.BeautifulSoup(page.text, 'html5lib')
+# table = soup.find_all('table', class_='table--downloads')[0]
 
-for line in filter(lambda item: isinstance(item, bs4.element.Tag), table.tbody):
-    item = line.find_all('td')[0]
-    link = item.a.get('href') or ''
-    # print(link)
-    if link.endswith('.tar.gz'):
-        MACDAILY_URL = link
-        MACDAILY_SHA = hashlib.sha256(requests.get(MACDAILY_URL).content).hexdigest()
-        break
+# for line in filter(lambda item: isinstance(item, bs4.element.Tag), table.tbody):
+#     item = line.find_all('td')[0]
+#     print(item)
+#     link = item.a.get('href') or ''
+#     # print(link)
+#     if link.endswith('.tar.gz'):
+#         MACDAILY_URL = link
+#         MACDAILY_SHA = hashlib.sha256(requests.get(MACDAILY_URL).content).hexdigest()
+#         break
 # print(MACDAILY_URL)
 # print(MACDAILY_SHA)
 
