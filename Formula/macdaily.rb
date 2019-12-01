@@ -3,8 +3,8 @@ class Macdaily < Formula
 
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
-  url "https://files.pythonhosted.org/packages/4f/90/60120ff9d151cc8df5cd8c1a4de6ebc7ec4ff22bdbe17573f61f257859c4/macdaily-2019.8.4.tar.gz"
-  sha256 "3097aa5a46fbd9ba5d3ee792109b451bcca1f4c8d826eb166a5205b45e805e82"
+  url "https://github.com/JarryShaw/f2format/archive/v2019.8.4.tar.gz"
+  sha256 "395408a3dc9c3db2b5c200b8722a13a60898c861633b99e6e250186adffd1370"
 
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
@@ -22,9 +22,9 @@ class Macdaily < Formula
   depends_on "fortune" => :optional
   depends_on "lolcat" => :optional
 
-  resource "configupdater" do
-    url "https://files.pythonhosted.org/packages/aa/af/069c7db438b9382a05fdaa6c90a2b44595dd7acdb1707848a0b8f2cbe1c1/ConfigUpdater-1.0.tar.gz"
-    sha256 "a86d97bcb3f1012e10f13dc25a3b99019aa27abec414a047b6392255b2bbf4ca"
+  resource "ConfigUpdater" do
+    url "https://files.pythonhosted.org/packages/ae/77/5d3c17609475ecd93b1ad5df28791e0d6424e000877ac4085003b4e81b9e/ConfigUpdater-1.0.1.tar.gz"
+    sha256 "b750d8bc64bd22fa928feb12686e1e7135ff867730b23812e60cbd87cbe1c547"
   end
 
   resource "dictdumper" do
@@ -33,8 +33,8 @@ class Macdaily < Formula
   end
 
   resource "psutil" do
-    url "https://files.pythonhosted.org/packages/1c/ca/5b8c1fe032a458c2c4bcbe509d1401dca9dda35c7fc46b36bb81c2834740/psutil-5.6.3.tar.gz"
-    sha256 "863a85c1c0a5103a12c05a35e59d336e1d665747e531256e061213e2e90f63f3"
+    url "https://files.pythonhosted.org/packages/73/93/4f8213fbe66fc20cb904f35e6e04e20b47b85bee39845cc66a0bcf5ccdcb/psutil-5.6.7.tar.gz"
+    sha256 "ffad8eb2ac614518bbe3c0b8eb9dffdb3a8d2e3a7d5da51c5b974fb723a5c5aa"
   end
 
   resource "ptyng" do
@@ -43,13 +43,13 @@ class Macdaily < Formula
   end
 
   resource "pathlib2" do
-    url "https://files.pythonhosted.org/packages/b5/f4/9c7cc726ece2498b6c8b62d3262aa43f59039b953fe23c9964ac5e18d40b/pathlib2-2.3.4.tar.gz"
-    sha256 "446014523bb9be5c28128c4d2a10ad6bb60769e78bd85658fe44a450674e0ef8"
+    url "https://files.pythonhosted.org/packages/94/d8/65c86584e7e97ef824a1845c72bbe95d79f5b306364fa778a3c3e401b309/pathlib2-2.3.5.tar.gz"
+    sha256 "6cd9a47b597b37cc57de1c05e56fb1a1c9cc9fab04fe78c29acd090418529868"
   end
 
   resource "six" do
-    url "https://files.pythonhosted.org/packages/dd/bf/4138e7bfb757de47d1f4b6994648ec67a51efe58fa907c1e11e350cddfca/six-1.12.0.tar.gz"
-    sha256 "d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73"
+    url "https://files.pythonhosted.org/packages/94/3e/edcf6fef41d89187df7e38e868b2dd2182677922b600e880baad7749c865/six-1.13.0.tar.gz"
+    sha256 "30f610279e8b2578cab6db20741130331735c781b56053c59c4076da27f06b66"
   end
 
   resource "subprocess32" do
@@ -78,13 +78,13 @@ class Macdaily < Formula
       venv.pip_install resource("ptyng")
 
       exitcode = `#{libexec}/"bin/python" -c "print(__import__('os').system('ps axo pid=,stat= > /dev/null 2>&1'))"`
-      if exitcode !~ /0/
+      unless /0/.match?(exitcode)
         venv.pip_install resource("psutil")
       end
     end
 
     version = Language::Python.major_minor_version "python3"
-    if version =~ /3.4/
+    if /3.4/.match?(version)
       %w[pathlib2 six subprocess32].each do |r|
         venv.pip_install resource(r)
       end

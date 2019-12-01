@@ -2,13 +2,17 @@ class GitHg < Formula
   desc "Checking out and tracking a mercurial repo from git"
   homepage "https://github.com/cosmin/git-hg"
   url "https://github.com/cosmin/git-hg.git",
-    :revision => "16b573ed0567e89348ba1d066e6afe5bb48b916c"
-  version "2019.7.26"
+    :revision => "f7076bc9d3921e34a61ab8d6f4802b57584c7e7c"
+  version "2019.11.30"
 
   depends_on "mercurial"
   depends_on "python@2"
 
-  patch :DATA
+  # patch :DATA
+  patch do
+    url "https://raw.githubusercontent.com/JarryShaw/homebrew-tap/master/Patches/git-hg.patch"
+    sha256 "fdc08b396ffb9e01402bf0b2bde759735f9724dd3c26dda9d65e384a83efc80e"
+  end
 
   def install
     # install git-hg
@@ -30,21 +34,21 @@ class GitHg < Formula
   end
 end
 
-__END__
-diff --git a/bin/git-hg b/bin/git-hg
-index be3223c..0259cea 100755
---- a/bin/git-hg
-+++ b/bin/git-hg
-@@ -1,9 +1,9 @@
- #!/bin/sh
+# __END__
+# diff --git a/bin/git-hg b/bin/git-hg
+# index be3223c..0259cea 100755
+# --- a/bin/git-hg
+# +++ b/bin/git-hg
+# @@ -1,9 +1,9 @@
+#  #!/bin/sh
 
--if which python2 >/dev/null 2>&1; then
--    PYTHON=python2
--    export PYTHON
--fi
-+PYTHONPATH="$(brew --prefix mercurial)/lib/python2.7/site-packages"
-+export PYTHONPATH
-+PYTHON="$(brew --prefix python@2)/bin/python"
-+export PYTHON
+# -if which python2 >/dev/null 2>&1; then
+# -    PYTHON=python2
+# -    export PYTHON
+# -fi
+# +PYTHONPATH="$(brew --prefix mercurial)/lib/python2.7/site-packages"
+# +export PYTHONPATH
+# +PYTHON="$(brew --prefix python@2)/bin/python"
+# +export PYTHON
 
- set -e
+#  set -e

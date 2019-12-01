@@ -6,8 +6,8 @@ class Pkt2flow < Formula
 
   head "https://github.com/caesar0301/pkt2flow.git", :branch => "master"
 
-  depends_on "libpcap"
   depends_on "scons" => :build
+  depends_on "libpcap"
 
   def install
     cd buildpath

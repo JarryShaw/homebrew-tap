@@ -171,7 +171,7 @@ class BpythonAT2 < Formula
     end
 
     version = Language::Python.major_minor_version "python"
-    if version =~ /2.7.[0123456]/
+    if /2.7.[0123456]/.match?(version)
       %w[asn1crypto cffi cryptography idna pycparser pyOpenSSL pyasn1 ndg-httpsclient].each do |r|
         venv.pip_install resource(r)
       end

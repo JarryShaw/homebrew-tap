@@ -7,7 +7,6 @@ class Walrus < Formula
   version "0.1.2a"
   sha256 "f609ce0f7a64744770cea97f3a416621d41f0124d90ef3ff0ef38f68c0c9dee2"
 
-
   head "https://github.com/JarryShaw/walrus.git", :branch => "master"
 
   depends_on "python"

@@ -7,7 +7,6 @@ class Poseur < Formula
   version "0.4.2a"
   sha256 "ce0e6a6df00864719aaa364cb6f9eab699b9c7d06c0cbd5008b8047cda7fcbbb"
 
-
   head "https://github.com/JarryShaw/poseur.git", :branch => "master"
 
   depends_on "python"

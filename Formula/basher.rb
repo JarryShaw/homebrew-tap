@@ -3,7 +3,7 @@ class Basher < Formula
   homepage "https://github.com/basherpm/basher"
   url "https://github.com/basherpm/basher.git",
     :revision => "dcf5c0dd9e033712fdac3da2bfdfeb430f13d16a"
-  version "2019.7.26"
+  version "2019.11.29"
 
   def install
     Dir["*"].each do |f|

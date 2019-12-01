@@ -3,8 +3,8 @@ class Vermin < Formula
 
   desc "Concurrently detect the minimum Python versions needed to run code"
   homepage "https://github.com/netromdk/vermin"
-  url "https://github.com/netromdk/vermin/archive/v0.8.1.tar.gz"
-  sha256 "dc1670d82a209497587100595d2df6bda7c13ba17abc6966234768b6c90b9d8f"
+  url "https://github.com/netromdk/vermin/archive/v0.8.2.tar.gz"
+  sha256 "feec34b98043242ff116da9fb30856afbe08ab69fa2a1a463751dd654d6b324f"
 
   head "https://github.com/netromdk/vermin.git", :branch => "master"
 

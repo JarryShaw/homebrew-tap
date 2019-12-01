@@ -7,7 +7,6 @@ class F2format < Formula
   version "0.8.5a"
   sha256 "3d98631c900c65ca4d0203f6683e7929456cdd6a7a9ed8a26650b0ea6334bf77"
 
-
   head "https://github.com/JarryShaw/f2format.git", :branch => "master"
 
   depends_on "python"

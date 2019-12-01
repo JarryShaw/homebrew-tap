@@ -1,0 +1,15 @@
+--- a/bin/git-hg
++++ b/bin/git-hg
+@@ -1,9 +1,9 @@
+ #!/bin/sh
+
+-if which python2 >/dev/null 2>&1; then
+-    PYTHON=python2
+-    export PYTHON
+-fi
++PYTHONPATH="$(brew --prefix mercurial)/lib/python2.7/site-packages"
++export PYTHONPATH
++PYTHON="$(brew --prefix python@2)/bin/python"
++export PYTHON
+
+ set -e

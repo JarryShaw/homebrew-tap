@@ -156,6 +156,16 @@ Collections
 
   This formula is not yet included in Home brew core repository.
 
+- |node-sass|_ : pure JavaScript implementation of SASS
+
+  This formula is not yet included in Home brew core repository. See:
+  `Homebrew/homebrew-core##43388 <https://github.com/Homebrew/homebrew-core/pull/#43388>`__
+
+- |sass|_ : stylesheet preprocessor
+
+  This formula is not yet included in Home brew core repository. See:
+  `Homebrew/homebrew-core##43388 <https://github.com/Homebrew/homebrew-core/pull/#43388>`__
+
 .. |docutils| replace:: ``docutils``
 .. _docutils: http://docutils.sourceforge.net
 .. |vermin| replace:: ``vermin``
@@ -188,6 +198,10 @@ Collections
 .. _git-hg: https://github.com/cosmin/git-hg
 .. |basher| replace:: ``basher``
 .. _basher: https://github.com/basherpm/basher
+.. |node-sass| replace:: ``node-sass``
+.. _node-sass: https://sass-lang.com/
+.. |sass| replace:: ``sass``
+.. _sass: https://github.com/sass/homebrew-sass
 
 -------
 License
