@@ -11,7 +11,7 @@ for line in subprocess.check_output(['noob', 'sass'], encoding='utf-8').splitlin
     if line.strip().startswith('class Sass'):
         line = line.replace('Sass', 'NodeSass')
     if line.strip().startswith('desc'):
-        line = '  desc "Pure JavaScript implementation of SASS"'
+        line = '  desc "JavaScript implementation of a Sass compiler"'
     if line.strip() == 'raise "Test not implemented."':
         line = os.linesep.join([
             '    (testpath/"test.scss").write <<~EOS',
