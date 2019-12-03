@@ -7,12 +7,12 @@ class DartSass < Formula
   url "https://github.com/sass/dart-sass/archive/1.23.7.tar.gz"
   sha256 "1b73dec233a1cea21748b3f70bcdd46597a11951ec19d2c77a6e1e44446d1c37"
 
-  depends_on "dart-lang/dart/dart" => :build
+  depends_on "jarryshaw/tap/dart" => :build
 
   conflicts_with "node-sass", :because => "both install a `sass` binary"
 
   def install
-    dart = Formula["dart-lang/dart/dart"].opt_bin
+    dart = Formula["jarryshaw/tap/dart"].opt_bin
 
     pubspec = YAML.safe_load(File.read("pubspec.yaml"))
     version = pubspec["version"]
