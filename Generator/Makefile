@@ -9,8 +9,8 @@ pipenv: pipenv-update
 brew: brew-update
 style: brew-style
 
-link: bpython2 bpython3 nlohmann_json poet2 poet3 ptpython2 ptpython3
-fetch: pyinstaller nlohmann-json sass ssh-askpass uti
+link: bpython2 bpython3 nlohmann_json poet2 poet3 ptpython2 ptpython3 sass
+fetch: dart-sass pyinstaller nlohmann-json ssh-askpass uti
 formula: appdmg basher dmgbuild f2format git-hg macdaily node-sass noob poseur sloc sphinx vermin walrus
 
 brew-update:
@@ -72,6 +72,10 @@ bro-pkg: pipenv
 	pipenv run python scripts/bro-pkg.py
 	FORMULA="bro-pkg" $(MAKE) brew-audit
 
+dart-sass: brew
+	pipenv run python scripts/dart-sass.py
+	FORMULA="dart-sass" $(MAKE) brew-audit
+
 dmgbuild: pipenv
 	pipenv run python scripts/dmgbuild.py
 	FORMULA="dmgbuild" $(MAKE) brew-audit
@@ -130,9 +134,8 @@ pyinstaller: brew
 	pipenv run python scripts/pyinstaller.py
 	FORMULA="pyinstaller" $(MAKE) brew-audit
 
-sass: brew
-	pipenv run python scripts/sass.py
-	FORMULA="sass" $(MAKE) brew-audit
+sass:
+	ln -sf ../Formula/dart-sass.rb ../Aliases/sass
 
 sloc: brew
 	pipenv run python scripts/sloc.py

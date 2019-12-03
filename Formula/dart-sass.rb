@@ -1,7 +1,7 @@
 require "yaml"
 
-class Sass < Formula
-  desc "Stylesheet Preprocessor"
+class DartSass < Formula
+  desc "Dart implementation of a Sass compiler"
   homepage "https://sass-lang.com"
 
   url "https://github.com/sass/dart-sass/archive/1.23.7.tar.gz"
