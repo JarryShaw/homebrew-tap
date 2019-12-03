@@ -13,6 +13,11 @@ for line in source.splitlines():
         line = line.replace('Sass', 'DartSass')
     if line.strip().startswith('desc'):
         line = '  desc "Dart implementation of a Sass compiler"'
+    if line.strip().startswith('depends_on'):
+        context.append(line)
+        context.append('')
+        context.append('conflicts_with "node-sass", :because => "both install a `sass` binary"')
+        continue
     context.append(line)
 FORMULA = os.linesep.join(context)
 

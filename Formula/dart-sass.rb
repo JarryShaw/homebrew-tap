@@ -9,6 +9,8 @@ class DartSass < Formula
 
   depends_on "dart-lang/dart/dart" => :build
 
+  conflicts_with "node-sass", :because => "both install a `sass` binary"
+
   def install
     dart = Formula["dart-lang/dart/dart"].opt_bin
 

@@ -45,5 +45,6 @@
         "tbody",
         "tsinghua"
     ],
-    "python.pythonPath": "${workspaceFolder}/Generator/.venv/bin/python"
+    "python.pythonPath": "${workspaceFolder}/Generator/.venv/bin/python",
+    "restructuredtext.confPath": "${workspaceFolder}/docs/conf.py"
 }

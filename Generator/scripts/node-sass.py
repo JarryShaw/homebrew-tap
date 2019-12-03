@@ -25,6 +25,11 @@ for line in subprocess.check_output(['noob', 'sass'], encoding='utf-8').splitlin
             '    assert_equal "div img{border:0px}",',
             '    shell_output("#{bin}/sass --style=compressed test.scss").strip',
         ])
+    if line.strip().startswith('depends_on'):
+        context.append(line)
+        context.append('')
+        context.append('conflicts_with "dart-sass", :because => "both install a `sass` binary"')
+        continue
     context.append(line)
 
 FORMULA = os.linesep.join(context)

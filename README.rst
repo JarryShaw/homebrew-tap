@@ -156,15 +156,19 @@ Collections
 
   This formula is not yet included in Home brew core repository.
 
-- |node-sass|_ : pure JavaScript implementation of SASS
+- |node-sass|_ : JavaScript implementation of a Sass compiler
 
   This formula is not yet included in Home brew core repository. See:
-  `Homebrew/homebrew-core##43388 <https://github.com/Homebrew/homebrew-core/pull/#43388>`__
+  `Homebrew/homebrew-core#43388 <https://github.com/Homebrew/homebrew-core/pull/#43388>`__
+  and `Homebrew/homebrew-core#47439 <https://github.com/Homebrew/homebrew-core/pull/47439>`__
 
-- |sass|_ : stylesheet preprocessor
+- |dart-sass|_ : Dart implementation of a Sass compiler
 
   This formula is not yet included in Home brew core repository. See:
-  `Homebrew/homebrew-core##43388 <https://github.com/Homebrew/homebrew-core/pull/#43388>`__
+  `Homebrew/homebrew-core#43388 <https://github.com/Homebrew/homebrew-core/pull/#43388>`__
+  and `Homebrew/homebrew-core#47438 <https://github.com/Homebrew/homebrew-core/pull/47438>`__
+
+  It also ships with an alias as ``sass``.
 
 .. |docutils| replace:: ``docutils``
 .. _docutils: http://docutils.sourceforge.net
@@ -200,8 +204,8 @@ Collections
 .. _basher: https://github.com/basherpm/basher
 .. |node-sass| replace:: ``node-sass``
 .. _node-sass: https://sass-lang.com/
-.. |sass| replace:: ``sass``
-.. _sass: https://github.com/sass/homebrew-sass
+.. |dart-sass| replace:: ``sass``
+.. _dart-sass: https://github.com/sass/homebrew-sass
 
 -------
 License

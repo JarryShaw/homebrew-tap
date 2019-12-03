@@ -8,6 +8,8 @@ class NodeSass < Formula
 
   depends_on "node"
 
+  conflicts_with "dart-sass", :because => "both install a `sass` binary"
+
   def install
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
     bin.install_symlink Dir["#{libexec}/bin/*"]
