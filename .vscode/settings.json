@@ -45,6 +45,5 @@
         "tbody",
         "tsinghua"
     ],
-    "restructuredtext.confPath": "${workspaceFolder}/docs/conf.py",
-    "python.pythonPath": "/usr/local/Homebrew/Library/Taps/jarryshaw/homebrew-tap/Generator/.venv/bin/python"
+    "python.pythonPath": "${workspaceFolder}/Generator/.venv/bin/python"
 }
