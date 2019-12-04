@@ -1,6 +1,6 @@
-require "language/node"
-
 class NodeSass < Formula
+  require "language/node"
+
   desc "JavaScript implementation of a Sass compiler"
   homepage "https://github.com/sass/dart-sass"
   url "https://registry.npmjs.org/sass/-/sass-1.23.7.tgz"

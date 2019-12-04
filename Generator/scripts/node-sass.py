@@ -8,8 +8,13 @@ context = list()
 for line in subprocess.check_output(['noob', 'sass'], encoding='utf-8').splitlines():
     if re.match(r'\s*version ".+?"\s*', line):
         continue
+    if line.strip().startswith('require'):
+        continue
     if line.strip().startswith('class Sass'):
-        line = line.replace('Sass', 'NodeSass')
+        context.append(line.replace('Sass', 'NodeSass'))
+        context.append('  require "language/node"')
+        context.append('')
+        continue
     if line.strip().startswith('desc'):
         line = '  desc "JavaScript implementation of a Sass compiler"'
     if line.strip() == 'raise "Test not implemented."':
@@ -32,7 +37,7 @@ for line in subprocess.check_output(['noob', 'sass'], encoding='utf-8').splitlin
         continue
     context.append(line)
 
-FORMULA = os.linesep.join(context)
+FORMULA = os.linesep.join(context).strip()
 
 with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'Formula',
                        f'{os.path.splitext(os.path.basename(__file__))[0]}.rb'), 'w') as file:
