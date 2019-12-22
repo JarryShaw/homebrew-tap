@@ -158,9 +158,8 @@ Collections
 
 - |node-sass|_ : JavaScript implementation of a Sass compiler
 
-  This formula is not yet included in Home brew core repository. See:
-  `Homebrew/homebrew-core#43388 <https://github.com/Homebrew/homebrew-core/pull/#43388>`__
-  and `Homebrew/homebrew-core#47439 <https://github.com/Homebrew/homebrew-core/pull/47439>`__
+  This formula is now included in Homebrew core repository. See:
+  `Homebrew/homebrew-core#48167 <https://github.com/Homebrew/homebrew-core/pull/#48167>`__
 
 - |dart-sass|_ : Dart implementation of a Sass compiler
 

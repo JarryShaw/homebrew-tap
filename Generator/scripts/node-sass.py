@@ -33,7 +33,8 @@ for line in subprocess.check_output(['noob', 'sass'], encoding='utf-8').splitlin
     if line.strip().startswith('depends_on'):
         context.append(line)
         context.append('')
-        context.append('  conflicts_with "dart-sass", :because => "both install a `sass` binary"')
+        context.append('  conflicts_with "node-sass", :because => "it is now integrated with homebrew-core"')
+        context.append('  conflicts_with "jarryshaw/tap/dart-sass", :because => "both install a `sass` binary"')
         continue
     context.append(line)
 
