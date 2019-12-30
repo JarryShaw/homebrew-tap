@@ -16,11 +16,11 @@ Homebrew installation.
     # to install MacDaily
     $ brew install macdaily
 
-~The |tappin|_ is necessary since some formulae have already
-been included in the core tap of Homebrew.~ A pinned tap's 
+|ss| The |tappin|_ is necessary since some formulae have already
+been included in the core tap of Homebrew. |se| A pinned tap's 
 formulae take precedence over duplicates in other taps.
-
-    NOTE: |tappin|_ is now deprecated by Homebrew
+    
+    NB: |tappin|_ is now deprecated by Homebrew
 
 .. |tappin| replace:: ``tap-pin`` command
 .. _tappin: https://docs.brew.sh/Taps#formula-duplicate-names
@@ -229,3 +229,11 @@ of |mas|_ for reference.
 
 .. |mas| replace:: ``mas-cli/homebrew-tap``
 .. _mas: https://github.com/mas-cli/homebrew-tap
+
+.. |ss| raw:: html
+
+   <strike>
+
+.. |se| raw:: html
+
+   </strike>
