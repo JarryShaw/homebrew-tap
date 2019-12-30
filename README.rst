@@ -16,9 +16,11 @@ Homebrew installation.
     # to install MacDaily
     $ brew install macdaily
 
-The |tappin|_ is necessary since mas is already included
-in the core tap of Homebrew. A pinned tap's formulae take
-precedence over duplicates in other taps.
+~The |tappin|_ is necessary since some formulae have already
+been included in the core tap of Homebrew.~ A pinned tap's 
+formulae take precedence over duplicates in other taps.
+
+    NOTE: |tappin|_ is now deprecated by Homebrew
 
 .. |tappin| replace:: ``tap-pin`` command
 .. _tappin: https://docs.brew.sh/Taps#formula-duplicate-names
@@ -52,6 +54,7 @@ Productions
 
 - |f2format|_: Back-port compiler for Python 3.6 f-string literals
 - |poseur|_: Back-port compiler for Python 3.8 positional-only parameters syntax
+- |walrus|_: Back-port complier for Python 3.8 assignment expressions
 
 - |askpass|_: AskPass Utility for macOS
 - |confirm|_: Confirm Utility for macOS
@@ -63,6 +66,8 @@ Productions
 .. _f2format: https://github.com/JarryShaw/f2format#f2format
 .. |poseur| replace:: ``poseur``
 .. _poseur: https://github.com/JarryShaw/poseur#poseur
+.. |walrus| replace:: ``walrus``
+.. _walrus: https://github.com/JarryShaw/walrus#walrus
 
 .. |askpass| replace:: ``AskPass``
 .. _askpass: https://github.com/JarryShaw/askpass#askpass
