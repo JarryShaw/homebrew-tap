@@ -2,6 +2,17 @@
 
 all: core git-hg nlohmann-json noob ssh-askpass uti
 
+config:
+	cd jarryshaw-core && git remote add upstream https://github.com/homebrew/homebrew-core.git
+
+.ONESHELL:
+sync:
+	cd jarryshaw-core
+	set -ex
+	git checkout master
+	git pull upstream master
+	git push origin master
+
 core:
 	git submodule add -f https://github.com/JarryShaw/homebrew-core.git jarryshaw-core
 

@@ -22,3 +22,6 @@ audit:
 
 update:
 	$(MAKE) -CGenerator fetch formula link
+
+sync:
+	$(MAKE) -CSubmodules sync
