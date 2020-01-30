@@ -5,8 +5,9 @@ class Noob < Formula
   homepage "https://github.com/zmwangx/homebrew-npm-noob"
   url "https://github.com/zmwangx/homebrew-npm-noob/archive/v0.2.tar.gz"
   sha256 "15e2ac4cbf3e549f62199e3b0e3c8d5fbc94043a7aba1b04786f37dffc41de11"
+  revision 1
 
-  head "https://github.com/zeek/package-manager.git", :branch => "master"
+  head "https://github.com/zmwangx/homebrew-npm-noob.git", :branch => "master"
 
   depends_on "python"
 
@@ -31,8 +32,8 @@ class Noob < Formula
   end
 
   resource "Jinja2" do
-    url "https://files.pythonhosted.org/packages/7b/db/1d037ccd626d05a7a47a1b81ea73775614af83c2b3e53d86a0bb41d8d799/Jinja2-2.10.3.tar.gz"
-    sha256 "9fe95f19286cfefaa917656583d020be14e7859c6b0252588391e47db34527de"
+    url "https://files.pythonhosted.org/packages/30/4b/898001ad08a1c51ffdcfadb028e5654a78484d0a3669d72d56f6ae5472bb/Jinja2-2.11.0.tar.gz"
+    sha256 "d6609ae5ec3d56212ca7d802eda654eaf2310000816ce815361041465b108be4"
   end
 
   resource "requests" do
@@ -41,8 +42,8 @@ class Noob < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/ad/fc/54d62fa4fc6e675678f9519e677dfc29b8964278d75333cf142892caf015/urllib3-1.25.7.tar.gz"
-    sha256 "f3c5fd51747d450d4dcf6f923c81f78f811aab8205fda64b0aba34a4e48b0745"
+    url "https://files.pythonhosted.org/packages/09/06/3bc5b100fe7e878d3dee8f807a4febff1a40c213d2783e3246edde1f3419/urllib3-1.25.8.tar.gz"
+    sha256 "87716c2d2a7121198ebcb7ce7cccf6ce5e9ba539041cfbaeecfb641dc0bf6acc"
   end
 
   def install

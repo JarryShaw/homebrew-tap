@@ -3,11 +3,11 @@ class Basher < Formula
   homepage "https://github.com/basherpm/basher"
   url "https://github.com/basherpm/basher.git",
     :revision => "dcf5c0dd9e033712fdac3da2bfdfeb430f13d16a"
-  version "2019.11.29"
+  version "2020.1.28"
 
   def install
     Dir["*"].each do |f|
-      cp_r f, prefix/f.to_s
+      cp_r f, prefix/"#{f}"
     end
 
     # Dir[".*"].each do |f|

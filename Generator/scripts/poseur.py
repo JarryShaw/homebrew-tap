@@ -16,7 +16,7 @@ with open(os.path.expanduser('~/GitHub/poseur/poseur.py'), 'r') as file:
         break
 # print(VERSION)
 
-POSEUR_URL = f'https://github.com/JarryShaw/poseur/archive/v{VERSION}.tar.gz'
+POSEUR_URL = f'https://github.com/pybpc/poseur/archive/v{VERSION}.tar.gz'
 POSEUR_SHA = hashlib.sha256(requests.get(POSEUR_URL).content).hexdigest()
 # print(POSEUR_URL)
 # print(POSEUR_SHA)
@@ -43,10 +43,10 @@ class Poseur < Formula
   include Language::Python::Virtualenv
 
   desc "Backport compiler for Python 3.8 positional-only parameters syntax"
-  homepage "https://github.com/JarryShaw/poseur#poseur"
+  homepage "https://github.com/pybpc/poseur#poseur"
   {POSEUR}
 
-  head "https://github.com/JarryShaw/poseur.git", :branch => "master"
+  head "https://github.com/pybpc/poseur.git", :branch => "master"
 
   depends_on "python"
 

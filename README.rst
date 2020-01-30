@@ -17,9 +17,9 @@ Homebrew installation.
     $ brew install macdaily
 
 |ss| The |tappin|_ is necessary since some formulae have already
-been included in the core tap of Homebrew. |se| A pinned tap's 
+been included in the core tap of Homebrew. |se| A pinned tap's
 formulae take precedence over duplicates in other taps.
-    
+
     NB: |tappin|_ is now deprecated by Homebrew
 
 .. |tappin| replace:: ``tap-pin`` command
@@ -59,6 +59,8 @@ Productions
 - |askpass|_: AskPass Utility for macOS
 - |confirm|_: Confirm Utility for macOS
 
+- |pydl|_: Video downloader powered by https://jarryshaw.me RESTful APIs
+
 .. |macdaily| replace:: ``MacDaily``
 .. _macdaily: https://github.com/JarryShaw/MacDaily#macdaily
 
@@ -73,6 +75,9 @@ Productions
 .. _askpass: https://github.com/JarryShaw/askpass#askpass
 .. |confirm| replace:: ``Confirm``
 .. _confirm: https://github.com/JarryShaw/confirm#confirm
+
+.. |pydl| replace:: ``pydl``
+.. _pydl: https://jarryshaw.me
 
 Collections
 -----------
@@ -174,6 +179,11 @@ Collections
 
   It also ships with an alias as ``sass``.
 
+- |libraqm|_ : library for complex text layout
+
+  This formula is not notable enough to be included in Homebrew
+  core repository yet (<30 forks, <30 watchers and <75 stars).
+
 .. |docutils| replace:: ``docutils``
 .. _docutils: http://docutils.sourceforge.net
 .. |vermin| replace:: ``vermin``
@@ -210,6 +220,8 @@ Collections
 .. _node-sass: https://sass-lang.com/
 .. |dart-sass| replace:: ``sass``
 .. _dart-sass: https://github.com/sass/homebrew-sass
+.. |libraqm| replace:: ``libraqm``
+.. _libraqm: https://github.com/HOST-Oman/libraqm
 
 -------
 License

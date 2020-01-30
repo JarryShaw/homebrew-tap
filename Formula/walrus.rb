@@ -2,22 +2,23 @@ class Walrus < Formula
   include Language::Python::Virtualenv
 
   desc "Backport compiler for Python 3.8 assignment expressions"
-  homepage "https://github.com/JarryShaw/walrus#walrus"
-  url "https://github.com/JarryShaw/walrus/archive/v0.1.3.tar.gz"
+  homepage "https://github.com/pybpc/walrus#walrus"
+  url "https://github.com/pybpc/walrus/archive/v0.1.3.tar.gz"
   sha256 "7bfcbeebac8da679abba1a9deedea4bbd987f49a64fa79790ce111e90b6baec4"
+  revision 1
 
-  head "https://github.com/JarryShaw/walrus.git", :branch => "master"
+  head "https://github.com/pybpc/walrus.git", :branch => "master"
 
   depends_on "python"
 
   resource "parso" do
-    url "https://files.pythonhosted.org/packages/21/40/615957db4d178b7504c87b1a5b85fa5945b0b4fa5f5a845e31fc7aad6018/parso-0.5.1.tar.gz"
-    sha256 "666b0ee4a7a1220f65d367617f2cd3ffddff3e205f3f16a0284df30e774c2a9c"
+    url "https://files.pythonhosted.org/packages/e0/a2/3786c568fc8e9f64b9f7143e4c3904e61a8c5cb17260f22a6a3019d80c02/parso-0.5.2.tar.gz"
+    sha256 "55cf25df1a35fd88b878715874d2c4dc1ad3f0eebd1e0266a67e1f55efccfbe1"
   end
 
   resource "tbtrim" do
-    url "https://files.pythonhosted.org/packages/5d/79/617749a3e689dbb741da15cf3134fd52a47e3227d878a48573ece71df043/tbtrim-0.2.1.tar.gz"
-    sha256 "b0810edfb5dcf94c5fe3335a8a8e18ae38a411f6ff6afca188c66ac72444218f"
+    url "https://files.pythonhosted.org/packages/85/62/89756f5d2d61691591c4293fd4cc1fbb3aab1466251c7319fe60dd08fb27/tbtrim-0.3.1.tar.gz"
+    sha256 "b6285ac02e9a7b78fab97de65668fe2def0f5d8783b0e0dfcb4b7c0a635b3d11"
   end
 
   def install

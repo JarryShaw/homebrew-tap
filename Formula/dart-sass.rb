@@ -4,8 +4,8 @@ class DartSass < Formula
   desc "Dart implementation of a Sass compiler"
   homepage "https://sass-lang.com"
 
-  url "https://github.com/sass/dart-sass/archive/1.23.7.tar.gz"
-  sha256 "1b73dec233a1cea21748b3f70bcdd46597a11951ec19d2c77a6e1e44446d1c37"
+  url "https://github.com/sass/dart-sass/archive/1.25.0.tar.gz"
+  sha256 "2caaf375fc6d47d06d6f6814eff37af078afa0aa31051fe375a92e27e3d3b613"
 
   depends_on "jarryshaw/tap/dart" => :build
 
@@ -29,6 +29,7 @@ class DartSass < Formula
       bin.install "sass"
     else
       system dart/"dart",
+             "-Dversion=#{version}",
              "--snapshot=sass.dart.app.snapshot",
              "--snapshot-kind=app-jit",
              "bin/sass.dart", "tool/app-snapshot-input.scss"
@@ -41,7 +42,7 @@ class DartSass < Formula
 
       (bin/"sass").write <<~SH
         #!/bin/sh
-        exec "#{lib}/dart" "-Dversion=#{version}" "#{lib}/sass.dart.app.snapshot" "$@"
+        exec "#{lib}/dart" "#{lib}/sass.dart.app.snapshot" "$@"
       SH
     end
     chmod 0555, "#{bin}/sass"

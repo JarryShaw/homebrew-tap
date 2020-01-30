@@ -1,44 +1,20 @@
 # -*- coding: utf-8 -*-
 
 import os
-import re
 import subprocess
 
-context = list()
-for line in subprocess.check_output(['noob', 'sass'], encoding='utf-8').splitlines():
-    if re.match(r'\s*version ".+?"\s*', line):
-        continue
-    if line.strip().startswith('require'):
-        continue
-    if line.strip().startswith('class Sass'):
-        context.append(line.replace('Sass', 'NodeSass'))
-        context.append('  require "language/node"')
-        context.append('')
-        continue
-    if line.strip().startswith('desc'):
-        line = '  desc "JavaScript implementation of a Sass compiler"'
-    if line.strip() == 'raise "Test not implemented."':
-        line = os.linesep.join([
-            '    (testpath/"test.scss").write <<~EOS',
-            '      div {',
-            '        img {',
-            '          border: 0px;',
-            '        }',
-            '      }',
-            '    EOS',
-            '',
-            '    assert_equal "div img{border:0px}",',
-            '    shell_output("#{bin}/sass --style=compressed test.scss").strip',
-        ])
-    if line.strip().startswith('depends_on'):
-        context.append(line)
-        context.append('')
-        context.append('  conflicts_with "node-sass", :because => "it is now integrated with homebrew-core"')
-        context.append('  conflicts_with "jarryshaw/tap/dart-sass", :because => "both install a `sass` binary"')
-        continue
-    context.append(line)
+formula = subprocess.check_output(['brew', 'formula', 'node-sass']).decode().strip()
 
-FORMULA = os.linesep.join(context).strip()
+context = list()
+with open(formula) as file:
+    for line in file:
+        context.append(line)
+        if 'depends_on "node"' in line:
+            context.append('\n')
+            context.append('  conflicts_with "node-sass", :because => "it is now integrated with homebrew-core"\n')
+            context.append('  conflicts_with "jarryshaw/tap/dart-sass", :because => "both install a `sass` binary"')
+
+FORMULA = ''.join(context).strip()
 
 with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'Formula',
                        f'{os.path.splitext(os.path.basename(__file__))[0]}.rb'), 'w') as file:

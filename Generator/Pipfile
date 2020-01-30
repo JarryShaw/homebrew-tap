@@ -16,6 +16,10 @@ verify_ssl = true
 [dev-packages]
 bro-pkg = "*"
 
+docutils = "*"
+Pillow = "*"
+pygments = "*"
+
 dmgbuild = "*"
 
 f2format = "*"
@@ -36,9 +40,8 @@ sphinx-autobuild = "*"
 homebrew-pypi-poet = "*"
 homebrew-npm-noob = "*"
 
-bs4 = "*"
-html5lib = "*"
-requests = "*"
+beautifulsoup4 = {extras = ["html5lib"],version = "*"}
+requests = {extras = ["socks"],version = "*"}
 
 autopep8 = "*"
 pylint = "*"

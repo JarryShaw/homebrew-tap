@@ -11,7 +11,7 @@ style: brew-style
 
 link: bpython2 bpython3 nlohmann_json poet2 poet3 ptpython2 ptpython3 sass
 fetch: dart dart-sass pyinstaller nlohmann-json ssh-askpass uti
-formula: appdmg basher dmgbuild f2format git-hg macdaily node-sass noob poseur sloc sphinx vermin walrus
+formula: appdmg basher dmgbuild f2format git-hg macdaily node-sass noob poseur pydl sloc sphinx vermin walrus
 
 brew-update:
 	brew update
@@ -133,6 +133,10 @@ ptpython2:
 ptpython3:
 	ln -sf ../Formula/ptpython.rb ../Aliases/ptpython3
 	ln -sf ../Formula/ptpython.rb ../Aliases/ptpython@3
+
+pydl: pipenv
+	pipenv run python scripts/pydl.py
+	FORMULA="pydl" $(MAKE) brew-audit
 
 pyinstaller: brew
 	pipenv run python scripts/pyinstaller.py

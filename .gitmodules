@@ -19,3 +19,6 @@
 [submodule "Submodules/basherpm-basher"]
 	path = Submodules/basherpm-basher
 	url = https://github.com/basherpm/basher.git
+[submodule "Submodules/HOST-Oman-libraqm"]
+	path = Submodules/HOST-Oman-libraqm
+	url = https://github.com/HOST-Oman/libraqm.git

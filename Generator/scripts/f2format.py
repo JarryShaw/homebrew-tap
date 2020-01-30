@@ -16,7 +16,7 @@ with open(os.path.expanduser('~/GitHub/f2format/f2format.py'), 'r') as file:
         break
 # print(VERSION)
 
-F2FORMAT_URL = f'https://github.com/JarryShaw/f2format/archive/v{VERSION}.tar.gz'
+F2FORMAT_URL = f'https://github.com/pybpc/f2format/archive/v{VERSION}.tar.gz'
 F2FORMAT_SHA = hashlib.sha256(requests.get(F2FORMAT_URL).content).hexdigest()
 # print(F2FORMAT_URL)
 # print(F2FORMAT_SHA)
@@ -43,10 +43,10 @@ class F2format < Formula
   include Language::Python::Virtualenv
 
   desc "Backport compiler for Python 3.6 f-string literals"
-  homepage "https://github.com/JarryShaw/f2format#f2format"
+  homepage "https://github.com/pybpc/f2format#f2format"
   {F2FORMAT}
 
-  head "https://github.com/JarryShaw/f2format.git", :branch => "master"
+  head "https://github.com/pybpc/f2format.git", :branch => "master"
 
   depends_on "python"
 

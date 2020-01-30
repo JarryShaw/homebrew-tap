@@ -16,7 +16,7 @@ with open(os.path.expanduser('~/GitHub/walrus/walrus.py'), 'r') as file:
         break
 # print(VERSION)
 
-WALRUS_URL = f'https://github.com/JarryShaw/walrus/archive/v{VERSION}.tar.gz'
+WALRUS_URL = f'https://github.com/pybpc/walrus/archive/v{VERSION}.tar.gz'
 WALRUS_SHA = hashlib.sha256(requests.get(WALRUS_URL).content).hexdigest()
 # print(WALRUS_URL)
 # print(WALRUS_SHA)
@@ -43,10 +43,10 @@ class Walrus < Formula
   include Language::Python::Virtualenv
 
   desc "Backport compiler for Python 3.8 assignment expressions"
-  homepage "https://github.com/JarryShaw/walrus#walrus"
+  homepage "https://github.com/pybpc/walrus#walrus"
   {WALRUS}
 
-  head "https://github.com/JarryShaw/walrus.git", :branch => "master"
+  head "https://github.com/pybpc/walrus.git", :branch => "master"
 
   depends_on "python"
 

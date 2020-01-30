@@ -65,7 +65,7 @@ class Noob < Formula
   url "{NOOB_URL}"
   sha256 "{NOOB_SHA}"
 
-  head "https://github.com/zeek/package-manager.git", :branch => "master"
+  head "https://github.com/zmwangx/homebrew-npm-noob.git", :branch => "master"
 
   depends_on "python"
 
