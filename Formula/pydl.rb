@@ -4,10 +4,10 @@ class Pydl < Formula
   desc "Video downloader powered by jarryshaw.me"
   homepage "https://jarryshaw.me"
   url "https://github.com/JarryShaw/pydl.git"
-  version "2020.1.28"
+  version "2020.1.31"
 
   depends_on "aria2"
-  depends_on "python"
+  depends_on "python@3.8"
 
   resource "certifi" do
     url "https://pypi.tuna.tsinghua.edu.cn/packages/41/bf/9d214a5af07debc6acf7f3f257265618f1db242a3f8e49a9b516f24523a6/certifi-2019.11.28.tar.gz"
