@@ -3,9 +3,9 @@ class Macdaily < Formula
 
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
-  url "https://github.com/JarryShaw/f2format/archive/v2019.8.4.tar.gz"
-  sha256 "395408a3dc9c3db2b5c200b8722a13a60898c861633b99e6e250186adffd1370"
-  revision 1
+  url "https://github.com/JarryShaw/MacDaily/archive/v2019.8.4.tar.gz"
+  sha256 "08e5a96c2d6bf5206cd51adc627456e2023c33567f470b34d0cee83159de9885"
+  revision 2
 
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
@@ -68,7 +68,7 @@ class Macdaily < Formula
     venv.pip_install resource("tbtrim")
 
     if build.with?("config")
-      venv.pip_install resource("configupdater")
+      venv.pip_install resource("ConfigUpdater")
     end
 
     if build.with?("tree")

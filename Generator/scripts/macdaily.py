@@ -17,7 +17,7 @@ with open(os.path.expanduser('~/GitHub/MacDaily/macdaily/util/const/macro.py')) 
         break
 # print(VERSION)
 
-MACDAILY_URL = f'https://github.com/JarryShaw/f2format/archive/v{VERSION}.tar.gz'
+MACDAILY_URL = f'https://github.com/JarryShaw/MacDaily/archive/v{VERSION}.tar.gz'
 MACDAILY_SHA = hashlib.sha256(requests.get(MACDAILY_URL).content).hexdigest()
 # url = f'https://pypi.org/project/macdaily/{VERSION}/#files'
 # page = requests.get(url)
@@ -131,7 +131,7 @@ class Macdaily < Formula
     venv.pip_install resource("tbtrim")
 
     if build.with?("config")
-      venv.pip_install resource("configupdater")
+      venv.pip_install resource("ConfigUpdater")
     end
 
     if build.with?("tree")
