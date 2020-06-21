@@ -14,8 +14,6 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-bro-pkg = "*"
-
 docutils = "*"
 Pillow = "*"
 pygments = "*"
@@ -35,6 +33,8 @@ vermin = "*"
 
 sphinx = "*"
 sphinx-autobuild = "*"
+
+zkg = "*"
 
 [packages]
 homebrew-pypi-poet = "*"

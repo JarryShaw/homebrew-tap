@@ -48,7 +48,7 @@ class F2format < Formula
 
   head "https://github.com/pybpc/f2format.git", :branch => "master"
 
-  depends_on "python"
+  depends_on "homebrew/core/python@3.8"
 
   {PARSO}
 

@@ -12,7 +12,7 @@ class Bpython < Formula
   option "without-watch", "build without filesystem events monitoring support"
   option "without-jedi", "build without static analysis support"
 
-  depends_on "python"
+  depends_on "homebrew/core/python"
 
   resource "PyYAML" do
     url "https://files.pythonhosted.org/packages/9e/a3/1d13970c3f36777c583f136c136f804d70f500168edc1edea6daa7200769/PyYAML-3.13.tar.gz"

@@ -4,14 +4,14 @@ export PIPENV_VENV_IN_PROJECT=1
 
 all: brew pipenv link fetch formula style
 check: brew-style-tap brew-audit-tap
-pipenv: pipenv-update
+pipenv: #pipenv-update
 
-brew: brew-update
+brew: #brew-update
 style: brew-style
 
-link: bpython2 bpython3 nlohmann_json poet2 poet3 ptpython2 ptpython3 sass
-fetch: dart dart-sass pyinstaller nlohmann-json ssh-askpass uti
-formula: appdmg basher dmgbuild f2format git-hg macdaily node-sass noob poseur pydl sloc sphinx vermin walrus
+link: bpython2 bpython3 bro-pkg nlohmann_json poet2 poet3 ptpython2 ptpython3 sass
+fetch: dart dart-beta dart-sass pyinstaller nlohmann-json ssh-askpass uti
+formula: appdmg basher dmgbuild docutils f2format git-hg macdaily node-sass noob poseur pydl sloc sphinx vermin walrus zkg
 
 brew-update:
 	brew update
@@ -68,13 +68,16 @@ bpython3:
 	ln -sf ../Formula/bpython.rb ../Aliases/bpython3
 	ln -sf ../Formula/bpython.rb ../Aliases/bpython@3
 
-bro-pkg: pipenv
-	pipenv run python scripts/bro-pkg.py
-	FORMULA="bro-pkg" $(MAKE) brew-audit
+bro-pkg:
+	ln -sf ../Formula/zkg.rb ../Aliases/bro-pkg
 
 dart: brew
 	pipenv run python scripts/dart.py
 	FORMULA="dart" $(MAKE) brew-audit
+
+dart-beta: brew
+	pipenv run python scripts/dart-beta.py
+	FORMULA="dart-beta" $(MAKE) brew-audit
 
 dart-sass: brew
 	pipenv run python scripts/dart-sass.py
@@ -84,6 +87,10 @@ dmgbuild: pipenv
 	pipenv run python scripts/dmgbuild.py
 	FORMULA="dmgbuild" $(MAKE) brew-audit
 
+docutils: brew
+	pipenv run python scripts/docutils.py
+	FORMULA="docutils" $(MAKE) brew-audit
+
 f2format: pipenv
 	pipenv run python scripts/f2format.py
 	FORMULA="f2format" $(MAKE) brew-audit
@@ -91,8 +98,8 @@ f2format: pipenv
 git-hg:
 	git submodule init ../Submodules/cosmin-git-hg
 	git submodule update ../Submodules/cosmin-git-hg
-	git checkout master
-	git pull
+	git -C ../Submodules/cosmin-git-hg checkout master
+	git -C ../Submodules/cosmin-git-hg pull
 	pipenv run python scripts/git-hg.py
 	FORMULA="git-hg" $(MAKE) brew-audit
 	git submodule deinit ../Submodules/cosmin-git-hg
@@ -168,3 +175,7 @@ vermin: pipenv
 walrus: pipenv
 	pipenv run python scripts/walrus.py
 	FORMULA="walrus" $(MAKE) brew-audit
+
+zkg: pipenv
+	pipenv run python scripts/zkg.py
+	FORMULA="zkg" $(MAKE) brew-audit

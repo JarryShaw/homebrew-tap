@@ -48,7 +48,7 @@ class Poseur < Formula
 
   head "https://github.com/pybpc/poseur.git", :branch => "master"
 
-  depends_on "python"
+  depends_on "homebrew/core/python@3.8"
 
   {PARSO}
 
@@ -74,10 +74,10 @@ class Poseur < Formula
           """Positional-only arguments runtime checker.
 
           Args:
-          - str, name of positional-only arguments
+              *poseur (List[str]): Name of positional-only arguments.
 
-          Refs:
-          - https://mail.python.org/pipermail/python-ideas/2017-February/044888.html
+          See Also:
+              https://mail.python.org/pipermail/python-ideas/2017-February/044888.html
 
           """
           import functools

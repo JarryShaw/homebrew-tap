@@ -3,23 +3,23 @@ class Sphinx < Formula
 
   desc "Tool to create intelligent and beautiful documentation"
   homepage "https://www.sphinx-doc.org/"
-  url "https://github.com/sphinx-doc/sphinx/archive/v2.3.1.tar.gz"
-  sha256 "5baff07fff9b486aab6f955792355b58ebc3a293b0451a31dc860e9cced2ca8f"
+  url "https://github.com/sphinx-doc/sphinx/archive/v3.1.1.tar.gz"
+  sha256 "0a2f7836506b49b89426c86bd42ea574bbd86c1e7e68bc16423ea853d99006bb"
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "60c37affa28c278d7c5bf331e46b330279b24eb18c5574f51d7f5286d6490376" => :catalina
-    sha256 "94b3f25034f62f1ad3d39d81c823e581d2fbfb3af13b74a8cb92f95713b146ae" => :mojave
-    sha256 "c8675c458d5d90a910a181b8cc53e0800285c8677831f8ee2dba4b6b811da20a" => :high_sierra
+    sha256 "d147960294ab0a1f68491c22b718ca2797c180758d368cedac431d3d72fccb2d" => :catalina
+    sha256 "f6ee326cac28e8c2a12682e46672357d508a619d137e6fc4ddec76de0a73e56b" => :mojave
+    sha256 "14f9d7451631fdbb14ae909325586b2373acefb9191b643d7dd7b982cd10672e" => :high_sierra
   end
 
-  depends_on "python"
+  depends_on "homebrew/core/python@3.8"
 
-  conflicts_with "sphinx-doc", :because => "this is a port of sphinx-doc from homebrew-core"
+  conflicts_with "homebrew/core/sphinx-doc", :because => "this is a port of sphinx-doc from homebrew-core"
 
   resource "Jinja2" do
-    url "https://files.pythonhosted.org/packages/30/4b/898001ad08a1c51ffdcfadb028e5654a78484d0a3669d72d56f6ae5472bb/Jinja2-2.11.0.tar.gz"
-    sha256 "d6609ae5ec3d56212ca7d802eda654eaf2310000816ce815361041465b108be4"
+    url "https://files.pythonhosted.org/packages/64/a7/45e11eebf2f15bf987c3bc11d37dcc838d9dc81250e67e4c5968f6008b6c/Jinja2-2.11.2.tar.gz"
+    sha256 "89aab215427ef59c34ad58735269eb58b1a5808103067f7bb9d5836c651b3bb0"
   end
 
   resource "MarkupSafe" do
@@ -28,13 +28,13 @@ class Sphinx < Formula
   end
 
   resource "PyYAML" do
-    url "https://files.pythonhosted.org/packages/3d/d9/ea9816aea31beeadccd03f1f8b625ecf8f645bd66744484d162d84803ce5/PyYAML-5.3.tar.gz"
-    sha256 "e9f45bd5b92c7974e59bcd2dcc8631a6b6cc380a904725fce7bc08872e691615"
+    url "https://files.pythonhosted.org/packages/64/c2/b80047c7ac2478f9501676c988a5411ed5572f35d1beff9cae07d321512c/PyYAML-5.3.1.tar.gz"
+    sha256 "b8eac752c5e14d3eca0e6dd9199cd627518cb5ec06add0de9d32baeee6fe645d"
   end
 
   resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/cb/9f/27d4844ac5bf158a33900dbad7985951e2910397998e85712da03ce125f0/Pygments-2.5.2.tar.gz"
-    sha256 "98c8aa5a9f778fcd1026a17361ddaf7330d1b7c62ae97c3bb0ae73e0b9b6b0fe"
+    url "https://files.pythonhosted.org/packages/6e/4d/4d2fe93a35dfba417311a4ff627489a947b01dc0cc377a3673c00cf7e4b2/Pygments-2.6.1.tar.gz"
+    sha256 "647344a061c249a3b74e230c739f434d7ea4d8b1d5f3721bc0f3558049b38f44"
   end
 
   resource "alabaster" do
@@ -53,8 +53,8 @@ class Sphinx < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/41/bf/9d214a5af07debc6acf7f3f257265618f1db242a3f8e49a9b516f24523a6/certifi-2019.11.28.tar.gz"
-    sha256 "25b64c7da4cd7479594d035c08c2d809eb4aab3a26e5a990ea98cc450c320f1f"
+    url "https://files.pythonhosted.org/packages/b4/19/53433f37a31543364c8676f30b291d128cdf4cd5b31b755b7890f8e89ac8/certifi-2020.4.5.2.tar.gz"
+    sha256 "5ad7e9a056d25ffa5082862e36f119f7f7cec6457fa07ee2f8c339814b80c9b1"
   end
 
   resource "chardet" do
@@ -68,8 +68,8 @@ class Sphinx < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/ad/13/eb56951b6f7950cadb579ca166e448ba77f9d24efc03edd7e55fa57d04b7/idna-2.8.tar.gz"
-    sha256 "c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407"
+    url "https://files.pythonhosted.org/packages/cb/19/57503b5de719ee45e83472f339f617b0c01ad75cba44aba1e4c97c2b0abd/idna-2.9.tar.gz"
+    sha256 "7588d1c14ae4c77d74036e8c22ff447b26d0fde8f007354fd48a7814db15b7cb"
   end
 
   resource "imagesize" do
@@ -78,13 +78,13 @@ class Sphinx < Formula
   end
 
   resource "livereload" do
-    url "https://files.pythonhosted.org/packages/27/26/85ba3851d2e4905be7d2d41082adca833182bb1d7de9dfc7f623383d36e1/livereload-2.6.1.tar.gz"
-    sha256 "89254f78d7529d7ea0a3417d224c34287ebfe266b05e67e51facaf82c27f0f66"
+    url "https://files.pythonhosted.org/packages/b5/a2/a36af515c73fac8d596b5e0f1f9b38b83a9366facb3959dd8428727cc650/livereload-2.6.2.tar.gz"
+    sha256 "d1eddcb5c5eb8d2ca1fa1f750e580da624c0f7fcb734aa5780dc81b7dcbd89be"
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/7b/d5/199f982ae38231995276421377b72f4a25d8251f4fa56f6be7cfcd9bb022/packaging-20.1.tar.gz"
-    sha256 "e665345f9eef0c621aa0bf2f8d78cf6d21904eef16a93f020240b704a57f1334"
+    url "https://files.pythonhosted.org/packages/55/fd/fc1aca9cf51ed2f2c11748fa797370027babd82f87829c7a8e6dbe720145/packaging-20.4.tar.gz"
+    sha256 "4357f74f47b9c12db93624a82154e9b120fa8293699949152b22065d556079f8"
   end
 
   resource "pathtools" do
@@ -97,39 +97,24 @@ class Sphinx < Formula
     sha256 "47b5cb48f8e036497cd73b96de305cecb4070e9ecbc908724afcbd2224edccde"
   end
 
-  resource "pyobjc-core" do
-    url "https://files.pythonhosted.org/packages/3a/80/0cdb2130b86a984e4765beb93135aa9c2120fd64be1a27e1c7cb31c719bc/pyobjc-core-6.1.tar.gz"
-    sha256 "1a0fbf012fb575e0adf8c18cfd4453e657cc2c0deb2660c529bf524ba4c9149a"
-  end
-
-  resource "pyobjc-framework-Cocoa" do
-    url "https://files.pythonhosted.org/packages/7a/99/bfac679ee346f344bca72ee315249e56f4f34bc974345f66d7810380ce7a/pyobjc-framework-Cocoa-6.1.tar.gz"
-    sha256 "c4077d2e6f96e4f3fd9780d66778cf51d27f414822498b24410e9df7a6a4d531"
-  end
-
-  resource "pyobjc-framework-FSEvents" do
-    url "https://files.pythonhosted.org/packages/af/f9/0b3d5459abc72ee6bb823085c4029bd57ae94bdb6cd268ae84d6a4a43779/pyobjc-framework-FSEvents-6.1.tar.gz"
-    sha256 "7a635c86af744a1d17f0c6c3913bef87b5fd146e0311c03229eba9e512b81520"
-  end
-
   resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/a2/56/0404c03c83cfcca229071d3c921d7d79ed385060bbe969fde3fd8f774ebd/pyparsing-2.4.6.tar.gz"
-    sha256 "4c830582a84fb022400b85429791bc551f1f4871c33f23e44f353119e92f969f"
+    url "https://files.pythonhosted.org/packages/c1/47/dfc9c342c9842bbe0036c7f763d2d6686bcf5eb1808ba3e170afdb282210/pyparsing-2.4.7.tar.gz"
+    sha256 "c203ec8783bf771a155b207279b9bccb8dea02d8f0c9e5f8ead507bc3246ecc1"
   end
 
   resource "pytz" do
-    url "https://files.pythonhosted.org/packages/82/c3/534ddba230bd4fbbd3b7a3d35f3341d014cca213f369a9940925e7e5f691/pytz-2019.3.tar.gz"
-    sha256 "b02c06db6cf09c12dd25137e563b31700d3b80fcc4ad23abb7a315f2789819be"
+    url "https://files.pythonhosted.org/packages/f4/f6/94fee50f4d54f58637d4b9987a1b862aeb6cd969e73623e02c5c00755577/pytz-2020.1.tar.gz"
+    sha256 "c35965d010ce31b23eeb663ed3cc8c906275d6be1a34393a1d73a41febf4a048"
   end
 
   resource "requests" do
-    url "https://files.pythonhosted.org/packages/01/62/ddcf76d1d19885e8579acb1b1df26a852b03472c0e46d2b959a714c90608/requests-2.22.0.tar.gz"
-    sha256 "11e007a8a2aa0323f5a921e9e6a2d7e4e67d9877e85773fba9ba6419025cbeb4"
+    url "https://files.pythonhosted.org/packages/da/67/672b422d9daf07365259958912ba533a0ecab839d4084c487a5fe9a5405f/requests-2.24.0.tar.gz"
+    sha256 "b3559a131db72c33ee969480840fff4bb6dd111de7dd27c8ee1f820f4f00231b"
   end
 
   resource "six" do
-    url "https://files.pythonhosted.org/packages/21/9f/b251f7f8a76dec1d6651be194dfba8fb8d7781d10ab3987190de8391d08e/six-1.14.0.tar.gz"
-    sha256 "236bdbdce46e6e6a3d61a337c0f8b763ca1e8717c03b369e87a7ec7ce1319c0a"
+    url "https://files.pythonhosted.org/packages/6b/34/415834bfdafca3c5f451532e8a8d9ba89a21c9743a0c59fbd0205c7f9426/six-1.15.0.tar.gz"
+    sha256 "30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259"
   end
 
   resource "snowballstemmer" do
@@ -143,18 +128,18 @@ class Sphinx < Formula
   end
 
   resource "sphinxcontrib-applehelp" do
-    url "https://files.pythonhosted.org/packages/1b/71/8bafa145e48131049dd4f731d6f6eeefe0c34c3017392adbec70171ad407/sphinxcontrib-applehelp-1.0.1.tar.gz"
-    sha256 "edaa0ab2b2bc74403149cb0209d6775c96de797dfd5b5e2a71981309efab3897"
+    url "https://files.pythonhosted.org/packages/9f/01/ad9d4ebbceddbed9979ab4a89ddb78c9760e74e6757b1880f1b2760e8295/sphinxcontrib-applehelp-1.0.2.tar.gz"
+    sha256 "a072735ec80e7675e3f432fcae8610ecf509c5f1869d17e2eecff44389cdbc58"
   end
 
   resource "sphinxcontrib-devhelp" do
-    url "https://files.pythonhosted.org/packages/57/5f/bf9a0f7454df68a7a29033a5cf8d53d0797ae2e426b1b419e4622726ec7d/sphinxcontrib-devhelp-1.0.1.tar.gz"
-    sha256 "6c64b077937330a9128a4da74586e8c2130262f014689b4b89e2d08ee7294a34"
+    url "https://files.pythonhosted.org/packages/98/33/dc28393f16385f722c893cb55539c641c9aaec8d1bc1c15b69ce0ac2dbb3/sphinxcontrib-devhelp-1.0.2.tar.gz"
+    sha256 "ff7f1afa7b9642e7060379360a67e9c41e8f3121f2ce9164266f61b9f4b338e4"
   end
 
   resource "sphinxcontrib-htmlhelp" do
-    url "https://files.pythonhosted.org/packages/f1/f2/88e9d6dc4a17f1e95871f8b634adefcc5d691334f7a121e9f384d1dc06fd/sphinxcontrib-htmlhelp-1.0.2.tar.gz"
-    sha256 "4670f99f8951bd78cd4ad2ab962f798f5618b17675c35c5ac3b2132a14ea8422"
+    url "https://files.pythonhosted.org/packages/c9/2e/a7a5fef38327b7f643ed13646321d19903a2f54b0a05868e4bc34d729e1f/sphinxcontrib-htmlhelp-1.0.3.tar.gz"
+    sha256 "e8f5bb7e31b2dbb25b9cc435c8ab7a79787ebf7f906155729338f3156d93659b"
   end
 
   resource "sphinxcontrib-jsmath" do
@@ -163,28 +148,28 @@ class Sphinx < Formula
   end
 
   resource "sphinxcontrib-qthelp" do
-    url "https://files.pythonhosted.org/packages/0c/f0/690cd10603e3ea8d184b2fffde1d965dd337b87a1d5f7625d0f6791094f4/sphinxcontrib-qthelp-1.0.2.tar.gz"
-    sha256 "79465ce11ae5694ff165becda529a600c754f4bc459778778c7017374d4d406f"
+    url "https://files.pythonhosted.org/packages/b1/8e/c4846e59f38a5f2b4a0e3b27af38f2fcf904d4bfd82095bf92de0b114ebd/sphinxcontrib-qthelp-1.0.3.tar.gz"
+    sha256 "4c33767ee058b70dba89a6fc5c1892c0d57a54be67ddd3e7875a18d14cba5a72"
   end
 
   resource "sphinxcontrib-serializinghtml" do
-    url "https://files.pythonhosted.org/packages/cd/cc/fd7d17cfae18e5a92564bb899bc05e13260d7a633f3cffdaad4e5f3ce46a/sphinxcontrib-serializinghtml-1.1.3.tar.gz"
-    sha256 "c0efb33f8052c04fd7a26c0a07f1678e8512e0faec19f4aa8f2473a8b81d5227"
+    url "https://files.pythonhosted.org/packages/ac/86/021876a9dd4eac9dae0b1d454d848acbd56d5574d350d0f835043b5ac2cd/sphinxcontrib-serializinghtml-1.1.4.tar.gz"
+    sha256 "eaa0eccc86e982a9b939b2b82d12cc5d013385ba5eadcc7e4fed23f4405f77bc"
   end
 
   resource "tornado" do
-    url "https://files.pythonhosted.org/packages/30/78/2d2823598496127b21423baffaa186b668f73cd91887fcef78b6eade136b/tornado-6.0.3.tar.gz"
-    sha256 "c845db36ba616912074c5b1ee897f8e0124df269468f25e4fe21fe72f6edd7a9"
+    url "https://files.pythonhosted.org/packages/95/84/119a46d494f008969bf0c775cb2c6b3579d3c4cc1bb1b41a022aa93ee242/tornado-6.0.4.tar.gz"
+    sha256 "0fe2d45ba43b00a41cd73f8be321a44936dc1aba233dee979f17a042b83eb6dc"
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/09/06/3bc5b100fe7e878d3dee8f807a4febff1a40c213d2783e3246edde1f3419/urllib3-1.25.8.tar.gz"
-    sha256 "87716c2d2a7121198ebcb7ce7cccf6ce5e9ba539041cfbaeecfb641dc0bf6acc"
+    url "https://files.pythonhosted.org/packages/05/8c/40cd6949373e23081b3ea20d5594ae523e681b6f472e600fbc95ed046a36/urllib3-1.25.9.tar.gz"
+    sha256 "3018294ebefce6572a474f0604c2021e33b3fd8006ecd11d62107a5d2a963527"
   end
 
   resource "watchdog" do
-    url "https://files.pythonhosted.org/packages/01/01/cc9b2fd111e19687dd42155f066718bccb414c8a728eb7df0b229742caf7/watchdog-0.10.0.tar.gz"
-    sha256 "8e800496cdfb921cfdc62b58a11966d0d2203a35dc005b4b5b8e1ab3097b2eb5"
+    url "https://files.pythonhosted.org/packages/73/c3/ed6d992006837e011baca89476a4bbffb0a91602432f73bd4473816c76e2/watchdog-0.10.2.tar.gz"
+    sha256 "c560efb643faed5ef28784b2245cf8874f939569717a4a12826a173ac644456b"
   end
 
   def install

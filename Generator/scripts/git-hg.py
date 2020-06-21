@@ -39,9 +39,9 @@ class GitHg < Formula
     :revision => "{REVISION}"
   version "{VERSION}"
 
-  depends_on "mercurial"
-  depends_on "python@2"
-
+  depends_on "homebrew/core/mercurial"
+  depends_on "homebrew/core/python@2"
+w
   # patch :DATA
   patch do
     url "https://raw.githubusercontent.com/JarryShaw/homebrew-tap/master/Patches/git-hg.patch"

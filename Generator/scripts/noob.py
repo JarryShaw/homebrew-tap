@@ -67,7 +67,7 @@ class Noob < Formula
 
   head "https://github.com/zmwangx/homebrew-npm-noob.git", :branch => "master"
 
-  depends_on "python"
+  depends_on "homebrew/core/python"
 
   {NOOB}
 

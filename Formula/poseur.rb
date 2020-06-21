@@ -5,11 +5,11 @@ class Poseur < Formula
   homepage "https://github.com/pybpc/poseur#poseur"
   url "https://github.com/pybpc/poseur/archive/v0.4.3.tar.gz"
   sha256 "63205db9fc8375f61a94c967fdb90d8d3f16330eb18ad77b990c52aa3791b69b"
-  revision 1
+  revision 2
 
   head "https://github.com/pybpc/poseur.git", :branch => "master"
 
-  depends_on "python"
+  depends_on "homebrew/core/python@3.8"
 
   resource "parso" do
     url "https://files.pythonhosted.org/packages/e0/a2/3786c568fc8e9f64b9f7143e4c3904e61a8c5cb17260f22a6a3019d80c02/parso-0.5.2.tar.gz"
@@ -41,10 +41,10 @@ class Poseur < Formula
           """Positional-only arguments runtime checker.
 
           Args:
-          - str, name of positional-only arguments
+              *poseur (List[str]): Name of positional-only arguments.
 
-          Refs:
-          - https://mail.python.org/pipermail/python-ideas/2017-February/044888.html
+          See Also:
+              https://mail.python.org/pipermail/python-ideas/2017-February/044888.html
 
           """
           import functools

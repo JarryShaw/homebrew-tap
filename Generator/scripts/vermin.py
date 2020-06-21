@@ -26,7 +26,7 @@ class Vermin < Formula
 
   head "https://github.com/netromdk/vermin.git", :branch => "master"
 
-  depends_on "python"
+  depends_on "homebrew/core/python"
 
   def install
     virtualenv_install_with_resources

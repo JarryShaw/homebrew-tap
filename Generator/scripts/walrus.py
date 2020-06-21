@@ -48,7 +48,7 @@ class Walrus < Formula
 
   head "https://github.com/pybpc/walrus.git", :branch => "master"
 
-  depends_on "python"
+  depends_on "homebrew/core/python@3.8"
 
   {PARSO}
 

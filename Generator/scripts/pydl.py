@@ -28,8 +28,8 @@ class Pydl < Formula
   url "https://github.com/JarryShaw/pydl.git"
   version "{VERSION}"
 
-  depends_on "aria2"
-  depends_on "python@3.8"
+  depends_on "homebrew/core/aria2"
+  depends_on "homebrew/core/python@3.8"
 
   {CERTIFI}
 

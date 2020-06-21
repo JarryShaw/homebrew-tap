@@ -11,12 +11,12 @@ import sys
 import requests
 
 for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():
-    match = re.match(r"bro-pkg==(.*)", line, re.IGNORECASE)
+    match = re.match(r"zkg==(.*)", line, re.IGNORECASE)
     if match is not None:
         VERSION = match.groups()[0]
 
-BROPKG_URL = f'https://github.com/zeek/package-manager/archive/v{VERSION}.tar.gz'
-BROPKG_SHA = hashlib.sha256(requests.get(BROPKG_URL).content).hexdigest()
+ZKG_URL = f'https://github.com/zeek/package-manager/archive/v{VERSION}.tar.gz'
+ZKG_SHA = hashlib.sha256(requests.get(ZKG_URL).content).hexdigest()
 
 _data_pkgs = dict()
 
@@ -51,49 +51,49 @@ def _list_dependency(dependencies):
     return _list_pkgs
 
 
-_deps_list = _list_dependency(_fetch_dependency('bro-pkg'))
+_deps_list = _list_dependency(_fetch_dependency('zkg'))
 
 args = ['poet', '--single']
 args.extend(sorted(set(_deps_list)))
-BROPKG = subprocess.check_output(args).decode().strip()
+ZKG = subprocess.check_output(args).decode().strip()
 
 FORMULA = f'''\
-class BroPkg < Formula
+class Zkg < Formula
   include Language::Python::Virtualenv
 
   desc "Package manager for Zeek"
   homepage "https://docs.zeek.org/projects/package-manager"
-  url "{BROPKG_URL}"
-  sha256 "{BROPKG_SHA}"
+  url "{ZKG_URL}"
+  sha256 "{ZKG_SHA}"
 
   head "https://github.com/zeek/package-manager.git", :branch => "master"
 
-  depends_on "bro"
-  depends_on "python"
+  depends_on "homebrew/core/python@3.8"
+  depends_on "homebrew/core/zeek"
 
-  {BROPKG}
+  {ZKG}
 
   def install
     virtualenv_install_with_resources
   end
 
   # def post_install
-  #   system bin/"bro-pkg", "autoconfig"
+  #   system bin/"zkg", "autoconfig"
   # end
 
   def caveats
     text = <<~EOS
-      bro-pkg has been installed as
-        #{{HOMEBREW_PREFIX}}/bin/bro-pkg
+      zkg has been installed as
+        #{{HOMEBREW_PREFIX}}/bin/zkg
 
       To perform postinstall process, please directly call the
-      following command: `bro-pkg autoconfig`.
+      following command: `zkg autoconfig`.
 
-      Configuration file locates at ~/.bro-pkg/config, please
-      run `bro-pkg config` command to set up your runtime
+      Configuration file locates at ~/.zkg/config, please
+      run `zkg config` command to set up your runtime
       specifications.
 
-      For more information, check out `bro-pkg --help` command.
+      For more information, check out `zkg --help` command.
       Online documentations available at GitHub repository.
 
       See: https://docs.zeek.org/projects/package-manager
@@ -102,7 +102,7 @@ class BroPkg < Formula
   end
 
   test do
-    system bin/"bro-pkg", "--help"
+    system bin/"zkg", "--help"
   end
 end
 '''

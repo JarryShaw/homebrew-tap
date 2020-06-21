@@ -5,10 +5,11 @@ class Dmgbuild < Formula
   homepage "https://github.com/al45tair/dmgbuild"
   url "https://github.com/al45tair/dmgbuild/archive/v1.3.3.tar.gz"
   sha256 "6157d96c8e460b56d145d5cc76396cda8bb7a3765bf89e771096450de48b5e42"
+  revision 1
 
   head "https://github.com/al45tair/dmgbuild.git", :branch => "master"
 
-  depends_on "python"
+  depends_on "homebrew/core/python@3.8"
 
   resource "biplist" do
     url "https://files.pythonhosted.org/packages/3e/56/2db170a498c9c6545cda16e93c2f2ef9302da44802787b45a8a520d01bdb/biplist-1.0.3.tar.gz"

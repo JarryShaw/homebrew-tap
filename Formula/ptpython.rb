@@ -10,9 +10,9 @@ class Ptpython < Formula
 
   option "with-ptipython", "build with IPython support"
 
-  depends_on "python"
+  depends_on "homebrew/core/python"
   if build.with?("ptipython")
-    depends_on "zeromq"
+    depends_on "homebrew/core/zeromq"
   end
 
   resource "Pygments" do

@@ -4,12 +4,12 @@ class DartSass < Formula
   desc "Dart implementation of a Sass compiler"
   homepage "https://sass-lang.com"
 
-  url "https://github.com/sass/dart-sass/archive/1.25.0.tar.gz"
-  sha256 "2caaf375fc6d47d06d6f6814eff37af078afa0aa31051fe375a92e27e3d3b613"
+  url "https://github.com/sass/dart-sass/archive/1.26.8.tar.gz"
+  sha256 "7ba09b9b011b89bb9ab141c3a0fb831dc7145cbf02a6ed31ef5c927b59978a12"
 
   depends_on "jarryshaw/tap/dart" => :build
 
-  conflicts_with "node-sass", :because => "both install a `sass` binary"
+  conflicts_with "homebrew/core/node-sass", :because => "both install a `sass` binary"
 
   def install
     dart = Formula["jarryshaw/tap/dart"].opt_bin

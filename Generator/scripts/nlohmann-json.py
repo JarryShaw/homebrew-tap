@@ -12,7 +12,7 @@ with open(formula) as file:
         context.append(line)
         if 'depends_on "cmake" => :build' in line:
             context.append('\n')
-            context.append('  conflicts_with "nlohmann-json", :because => "it is now integrated with homebrew-core"\n')
+            context.append('  conflicts_with "homebrew/core/nlohmann-json", :because => "it is now integrated with homebrew-core"\n')
 
 FORMULA = ''.join(context)
 

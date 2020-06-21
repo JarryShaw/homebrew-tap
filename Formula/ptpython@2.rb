@@ -12,9 +12,9 @@ class PtpythonAT2 < Formula
 
   option "with-ptipython", "build with IPython support"
 
-  depends_on "python@2"
+  depends_on "homebrew/core/python@2"
   if build.with?("ptipython")
-    depends_on "zeromq"
+    depends_on "homebrew/core/zeromq"
   end
 
   resource "Pygments" do

@@ -106,11 +106,11 @@ class Macdaily < Formula
   option "without-tree", "Build without tree format support"
   option "without-ptyng", "Build without alternative PTY support"
 
-  depends_on "python"
-  depends_on "expect" => :recommended
-  depends_on "cowsay" => :optional
-  depends_on "fortune" => :optional
-  depends_on "lolcat" => :optional
+  depends_on "homebrew/core/python@3.8"
+  depends_on "homebrew/core/expect" => :recommended
+  depends_on "homebrew/core/cowsay" => :optional
+  depends_on "homebrew/core/fortune" => :optional
+  depends_on "homebrew/core/lolcat" => :optional
 
   {CONFIGUPDATER}
 
@@ -130,25 +130,19 @@ class Macdaily < Formula
     venv = virtualenv_create(libexec, "python3")
     venv.pip_install resource("tbtrim")
 
-    if build.with?("config")
-      venv.pip_install resource("ConfigUpdater")
-    end
+    venv.pip_install resource("ConfigUpdater") if build.with?("config")
 
-    if build.with?("tree")
-      venv.pip_install resource("dictdumper")
-    end
+    venv.pip_install resource("dictdumper") if build.with?("tree")
 
     if build.with?("ptyng")
       venv.pip_install resource("ptyng")
 
       exitcode = `#{{libexec}}/"bin/python" -c "print(__import__('os').system('ps axo pid=,stat= > /dev/null 2>&1'))"`
-      if exitcode !~ /0/
-        venv.pip_install resource("psutil")
-      end
+      venv.pip_install resource("psutil") unless /0/.match?(exitcode)
     end
 
     version = Language::Python.major_minor_version "python3"
-    if version =~ /3.4/
+    if /3.4/.match?(version)
       %w[pathlib2 six subprocess32].each do |r|
         venv.pip_install resource(r)
       end

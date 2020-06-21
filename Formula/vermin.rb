@@ -5,10 +5,11 @@ class Vermin < Formula
   homepage "https://github.com/netromdk/vermin"
   url "https://github.com/netromdk/vermin/archive/v0.10.1.tar.gz"
   sha256 "54a53cd40d6c8cd9be7c8b41952dede0e62a5f69fed71e62efdf5e7ebf84f6f2"
+  revision 1
 
   head "https://github.com/netromdk/vermin.git", :branch => "master"
 
-  depends_on "python"
+  depends_on "homebrew/core/python"
 
   def install
     virtualenv_install_with_resources

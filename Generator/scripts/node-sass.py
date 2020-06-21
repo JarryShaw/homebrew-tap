@@ -8,11 +8,13 @@ formula = subprocess.check_output(['brew', 'formula', 'node-sass']).decode().str
 context = list()
 with open(formula) as file:
     for line in file:
-        context.append(line)
         if 'depends_on "node"' in line:
+            context.append('  depends_on "homebrew/core/node"\n')
             context.append('\n')
-            context.append('  conflicts_with "node-sass", :because => "it is now integrated with homebrew-core"\n')
-            context.append('  conflicts_with "jarryshaw/tap/dart-sass", :because => "both install a `sass` binary"')
+            context.append('  conflicts_with "homebrew/core/node-sass", :because => "it is now integrated with homebrew-core"\n')
+            context.append('  conflicts_with "jarryshaw/tap/dart-sass", :because => "both install a `sass` binary"\n')
+            continue
+        context.append(line)
 
 FORMULA = ''.join(context).strip()
 

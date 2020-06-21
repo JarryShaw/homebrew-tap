@@ -66,7 +66,7 @@ class Dmgbuild < Formula
 
   head "https://github.com/al45tair/dmgbuild.git", :branch => "master"
 
-  depends_on "python"
+  depends_on "homebrew/core/python@3.8"
 
   {DMGBUILD}
 
