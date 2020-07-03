@@ -15,9 +15,9 @@ class Sloc < Formula
     sha256 "1386a024efebe74829d85c8d75d07ae9f09f8c8a8104aa41424a5ea8c425fca5" => :sierra
   end
 
-  depends_on "homebrew/core/node"
+  depends_on "node"
 
-  conflicts_with "homebrew/core/sloc", :because => "it is now integrated with homebrew-core"
+  conflicts_with "sloc", :because => "it is now integrated with homebrew-core"
 
   def install
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)

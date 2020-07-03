@@ -9,16 +9,16 @@ class Docutils < Formula
   option "without-pil", "build without Python Image Library support"
   option "without-pygments", "build without code syntax highlighting support"
 
-  depends_on "homebrew/core/freetype" => :build
-  depends_on "homebrew/core/fribidi" => :build
-  depends_on "homebrew/core/harfbuzz" => :build
-  depends_on "homebrew/core/libjpeg" => :build
-  depends_on "homebrew/core/libtiff" => :build
-  depends_on "homebrew/core/little-cms2" => :build
-  depends_on "homebrew/core/webp" => :build
-  depends_on "homebrew/core/python@3.8"
+  depends_on "freetype" => :build
+  depends_on "fribidi" => :build
+  depends_on "harfbuzz" => :build
+  depends_on "libjpeg" => :build
+  depends_on "libtiff" => :build
+  depends_on "little-cms2" => :build
+  depends_on "webp" => :build
+  depends_on "python@3.8"
 
-  conflicts_with "homebrew/core/docutils", :because => "this is a port of docutils from homebrew-core"
+  conflicts_with "docutils", :because => "this is a port of docutils from homebrew-core"
 
   resource "libraqm" do
     url "https://raw.githubusercontent.com/python-pillow/pillow-depends/master/raqm-cmake-99300ff3.tar.gz"

@@ -10,7 +10,7 @@ class PoetAT2 < Formula
 
   keg_only :versioned_formula
 
-  depends_on "homebrew/core/python@2"
+  depends_on "python@2"
 
   resource "Jinja2" do
     url "https://files.pythonhosted.org/packages/56/e6/332789f295cf22308386cf5bbd1f4e00ed11484299c5d7383378cf48ba47/Jinja2-2.10.tar.gz"

@@ -14,7 +14,7 @@ class NlohmannJson < Formula
 
   depends_on "cmake" => :build
 
-  conflicts_with "homebrew/core/nlohmann-json", :because => "it is now integrated with homebrew-core"
+  conflicts_with "nlohmann-json", :because => "it is now integrated with homebrew-core"
 
   def install
     mkdir "build" do

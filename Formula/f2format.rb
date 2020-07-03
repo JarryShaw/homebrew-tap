@@ -9,7 +9,7 @@ class F2format < Formula
 
   head "https://github.com/pybpc/f2format.git", :branch => "master"
 
-  depends_on "homebrew/core/python@3.8"
+  depends_on "python@3.8"
 
   resource "parso" do
     url "https://files.pythonhosted.org/packages/e0/a2/3786c568fc8e9f64b9f7143e4c3904e61a8c5cb17260f22a6a3019d80c02/parso-0.5.2.tar.gz"

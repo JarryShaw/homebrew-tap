@@ -10,9 +10,9 @@ class BpythonAT2 < Formula
 
   keg_only :versioned_formula
 
-  option "homebrew/core/without-urwid", "build without console user interface support"
-  option "homebrew/core/without-watch", "build without filesystem events monitoring support"
-  option "homebrew/core/without-jedi", "build without static analysis support"
+  option "without-urwid", "build without console user interface support"
+  option "without-watch", "build without filesystem events monitoring support"
+  option "without-jedi", "build without static analysis support"
 
   depends_on "python@2"
 

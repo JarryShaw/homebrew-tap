@@ -4,14 +4,14 @@ class LibraqmAT2 < Formula
   url "https://github.com/HOST-Oman/libraqm/archive//v0.2.0.tar.gz"
   sha256 "a12a8428e18b4e35b4984a8f5afc225c8ec0ca7aeb64455a47671316c3e29cdb"
 
-  depends_on "homebrew/core/freetype"
-  depends_on "homebrew/core/fribidi"
-  depends_on "homebrew/core/harfbuzz"
-  depends_on "homebrew/core/autoconf" => :build
-  depends_on "homebrew/core/automake" => :build
-  depends_on "homebrew/core/gtk-doc" => :build
-  depends_on "homebrew/core/libtool" => :build
-  depends_on "homebrew/core/pkg-config" => :build
+  depends_on "freetype"
+  depends_on "fribidi"
+  depends_on "harfbuzz"
+  depends_on "autoconf" => :build
+  depends_on "automake" => :build
+  depends_on "gtk-doc" => :build
+  depends_on "libtool" => :build
+  depends_on "pkg-config" => :build
 
   def install
     ENV["LIBTOOL"] = Formula["libtool"].bin

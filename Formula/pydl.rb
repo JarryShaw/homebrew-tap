@@ -6,8 +6,8 @@ class Pydl < Formula
   url "https://github.com/JarryShaw/pydl.git"
   version "2020.6.20"
 
-  depends_on "homebrew/core/aria2"
-  depends_on "homebrew/core/python@3.8"
+  depends_on "aria2"
+  depends_on "python@3.8"
 
   resource "certifi" do
     url "https://pypi.tuna.tsinghua.edu.cn/packages/b4/19/53433f37a31543364c8676f30b291d128cdf4cd5b31b755b7890f8e89ac8/certifi-2020.4.5.2.tar.gz"

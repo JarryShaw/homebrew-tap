@@ -8,8 +8,8 @@ class Zkg < Formula
 
   head "https://github.com/zeek/package-manager.git", :branch => "master"
 
-  depends_on "homebrew/core/python@3.8"
-  depends_on "homebrew/core/zeek"
+  depends_on "python@3.8"
+  depends_on "zeek"
 
   resource "btest" do
     url "https://files.pythonhosted.org/packages/26/00/f60440c939ab30e11cc55b6fc6463c7e9ec583a9ce7d6c5c2d80dff676a6/btest-0.61.tar.gz"

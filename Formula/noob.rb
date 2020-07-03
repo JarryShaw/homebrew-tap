@@ -9,7 +9,7 @@ class Noob < Formula
 
   head "https://github.com/zmwangx/homebrew-npm-noob.git", :branch => "master"
 
-  depends_on "homebrew/core/python"
+  depends_on "python"
 
   resource "MarkupSafe" do
     url "https://files.pythonhosted.org/packages/b9/2e/64db92e53b86efccfaea71321f597fa2e1b2bd3853d8ce658568f7a13094/MarkupSafe-1.1.1.tar.gz"

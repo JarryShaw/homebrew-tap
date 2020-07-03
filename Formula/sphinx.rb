@@ -13,9 +13,9 @@ class Sphinx < Formula
     sha256 "14f9d7451631fdbb14ae909325586b2373acefb9191b643d7dd7b982cd10672e" => :high_sierra
   end
 
-  depends_on "homebrew/core/python@3.8"
+  depends_on "python@3.8"
 
-  conflicts_with "homebrew/core/sphinx-doc", :because => "this is a port of sphinx-doc from homebrew-core"
+  conflicts_with "sphinx-doc", :because => "this is a port of sphinx-doc from homebrew-core"
 
   resource "Jinja2" do
     url "https://files.pythonhosted.org/packages/64/a7/45e11eebf2f15bf987c3bc11d37dcc838d9dc81250e67e4c5968f6008b6c/Jinja2-2.11.2.tar.gz"

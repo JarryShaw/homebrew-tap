@@ -5,8 +5,8 @@ class GitHg < Formula
     :revision => "16b573ed0567e89348ba1d066e6afe5bb48b916c"
   version "2020.6.20"
 
-  depends_on "homebrew/core/mercurial"
-  depends_on "homebrew/core/python@2"
+  depends_on "mercurial"
+  depends_on "python@2"
 
   # patch :DATA
   patch do

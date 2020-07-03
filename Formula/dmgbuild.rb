@@ -9,7 +9,7 @@ class Dmgbuild < Formula
 
   head "https://github.com/al45tair/dmgbuild.git", :branch => "master"
 
-  depends_on "homebrew/core/python@3.8"
+  depends_on "python@3.8"
 
   resource "biplist" do
     url "https://files.pythonhosted.org/packages/3e/56/2db170a498c9c6545cda16e93c2f2ef9302da44802787b45a8a520d01bdb/biplist-1.0.3.tar.gz"

@@ -13,8 +13,8 @@ class NodeSass < Formula
     sha256 "d4388fee525f8dd257cef3b813c7c705281364f8249f60a66cab4f8a46b22cdd" => :high_sierra
   end
 
-  depends_on "homebrew/core/node"
-  conflicts_with "homebrew/core/node-sass", :because => "it is now integrated with homebrew-core"
+  depends_on "node"
+  conflicts_with "node-sass", :because => "it is now integrated with homebrew-core"
   conflicts_with "jarryshaw/tap/dart-sass", :because => "both install a `sass` binary"
   # waiting for pull request at #47438
   # conflicts_with "dart-sass", :because => "both install a `sass` binary"

@@ -17,11 +17,11 @@ class Macdaily < Formula
   option "without-tree", "Build without tree format support"
   option "without-ptyng", "Build without alternative PTY support"
 
-  depends_on "homebrew/core/python@3.8"
-  depends_on "homebrew/core/expect" => :recommended
-  depends_on "homebrew/core/cowsay" => :optional
-  depends_on "homebrew/core/fortune" => :optional
-  depends_on "homebrew/core/lolcat" => :optional
+  depends_on "python@3.8"
+  depends_on "expect" => :recommended
+  depends_on "cowsay" => :optional
+  depends_on "fortune" => :optional
+  depends_on "lolcat" => :optional
 
   resource "ConfigUpdater" do
     url "https://files.pythonhosted.org/packages/ae/77/5d3c17609475ecd93b1ad5df28791e0d6424e000877ac4085003b4e81b9e/ConfigUpdater-1.0.1.tar.gz"
