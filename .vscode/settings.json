@@ -58,6 +58,5 @@
         "tsinghua",
         "webp"
     ],
-    "python.pythonPath": "${workspaceFolder}/Generator/.venv/bin/python",
     "restructuredtext.confPath": "${workspaceFolder}/docs/conf.py"
 }

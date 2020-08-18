@@ -1,16 +1,14 @@
 # -*- coding: utf-8 -*-
 
-# -*- coding: utf-8 -*-
-
 import hashlib
 import os
 import re
-import subprocess
+import subprocess  # nosec
 import sys
 
 import requests
 
-for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():
+for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec
     match = re.match(r"zkg==(.*)", line, re.IGNORECASE)
     if match is not None:
         VERSION = match.groups()[0]
@@ -18,7 +16,7 @@ for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():
 ZKG_URL = f'https://github.com/zeek/package-manager/archive/v{VERSION}.tar.gz'
 ZKG_SHA = hashlib.sha256(requests.get(ZKG_URL).content).hexdigest()
 
-_data_pkgs = dict()
+_data_pkgs = dict()  # type: ignore
 
 
 def _fetch_dependency(package):
@@ -30,7 +28,7 @@ def _fetch_dependency(package):
 
     _deps_pkgs = dict()
     requirements = set()
-    for line in subprocess.check_output(argv).decode().strip().splitlines():  # pylint: disable=redefined-outer-name
+    for line in subprocess.check_output(argv).decode().strip().splitlines():  # nosec  # pylint: disable=redefined-outer-name
         match = re.match(r"Requires: (.*)", line)  # pylint: disable=redefined-outer-name
         if match is not None:
             requirements = set(match.groups()[0].split(', '))
@@ -55,7 +53,7 @@ _deps_list = _list_dependency(_fetch_dependency('zkg'))
 
 args = ['poet', '--single']
 args.extend(sorted(set(_deps_list)))
-ZKG = subprocess.check_output(args).decode().strip()
+ZKG = subprocess.check_output(args).decode().strip()  # nosec
 
 FORMULA = f'''\
 class Zkg < Formula
