@@ -11,7 +11,7 @@ style: brew-style
 
 link: bpython2 bpython3 bro-pkg nlohmann_json poet2 poet3 ptpython2 ptpython3 sass
 fetch: dart dart-beta dart-sass pyinstaller nlohmann-json ssh-askpass uti
-formula: appdmg basher dmgbuild docutils f2format git-hg macdaily node-sass noob poseur pydl sloc sphinx vermin walrus zkg
+formula: appdmg bandit basher dmgbuild docutils f2format git-hg macdaily node-sass noob poseur pydl sloc sphinx vermin walrus zkg
 
 brew-update:
 	brew update

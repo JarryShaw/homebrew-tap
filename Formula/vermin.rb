@@ -5,7 +5,6 @@ class Vermin < Formula
   homepage "https://github.com/netromdk/vermin"
   url "https://github.com/netromdk/vermin/archive/v0.10.3.tar.gz"
   sha256 "6b8cee8fe95ef854e4e96aacd9cc927b3c47e6ef6c3d76e69a3611dc834fc046"
-  revision 1
 
   head "https://github.com/netromdk/vermin.git", :branch => "master"
 

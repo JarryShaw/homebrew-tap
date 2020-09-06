@@ -5,16 +5,19 @@ import os
 import re
 import subprocess  # nosec
 import sys
+import typing
 
 import requests
 
+if typing.TYPE_CHECKING:
+    VERSION = ''
 for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec
-    match = re.match(r"zkg==(.*)", line, re.IGNORECASE)
+    match = re.match(r"bandit==(.*)", line, re.IGNORECASE)
     if match is not None:
         VERSION = match.groups()[0]
 
-ZKG_URL = f'https://github.com/zeek/package-manager/archive/v{VERSION}.tar.gz'
-ZKG_SHA = hashlib.sha256(requests.get(ZKG_URL).content).hexdigest()
+BANDIT_URL = f'https://github.com/PyCQA/bandit/archive/{VERSION}.tar.gz'
+BANDIT_SHA = hashlib.sha256(requests.get(BANDIT_URL).content).hexdigest()
 
 _data_pkgs = dict()  # type: ignore
 
@@ -49,58 +52,33 @@ def _list_dependency(dependencies):
     return _list_pkgs
 
 
-_deps_list = _list_dependency(_fetch_dependency('zkg'))
+_deps_list = _list_dependency(_fetch_dependency('bandit'))
 
 args = ['poet', '--single']
 args.extend(sorted(set(_deps_list)))
-ZKG = subprocess.check_output(args).decode().strip()  # nosec
+BANDIT = subprocess.check_output(args).decode().strip()  # nosec
 
 FORMULA = f'''\
-class Zkg < Formula
+class Bandit < Formula
   include Language::Python::Virtualenv
 
   desc "Package manager for Zeek"
-  homepage "https://docs.zeek.org/projects/package-manager"
-  url "{ZKG_URL}"
-  sha256 "{ZKG_SHA}"
+  homepage "https://bandit.readthedocs.io/"
+  url "{BANDIT_URL}"
+  sha256 "{BANDIT_SHA}"
 
-  head "https://github.com/zeek/package-manager.git", :branch => "master"
+  head "https://github.com/PyCQA/bandit.git", :branch => "master"
 
   depends_on "homebrew/core/python@3.8"
-  depends_on "homebrew/core/zeek"
 
-  {ZKG}
+  {BANDIT}
 
   def install
     virtualenv_install_with_resources
   end
 
-  # def post_install
-  #   system bin/"zkg", "autoconfig"
-  # end
-
-  def caveats
-    text = <<~EOS
-      zkg has been installed as
-        #{{HOMEBREW_PREFIX}}/bin/zkg
-
-      To perform postinstall process, please directly call the
-      following command: `zkg autoconfig`.
-
-      Configuration file locates at ~/.zkg/config, please
-      run `zkg config` command to set up your runtime
-      specifications.
-
-      For more information, check out `zkg --help` command.
-      Online documentations available at GitHub repository.
-
-      See: https://docs.zeek.org/projects/package-manager
-    EOS
-    text
-  end
-
   test do
-    system bin/"zkg", "--help"
+    system bin/"bandit", "--help"
   end
 end
 '''

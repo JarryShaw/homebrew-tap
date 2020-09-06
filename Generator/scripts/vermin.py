@@ -3,11 +3,14 @@
 import hashlib
 import os
 import re
-import subprocess
+import subprocess  # nosec
+import typing
 
 import requests
 
-for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():
+if typing.TYPE_CHECKING:
+    VERSION = ''
+for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec
     match = re.match(r"vermin==(.*)", line, re.IGNORECASE)
     if match is not None:
         VERSION = match.groups()[0]
