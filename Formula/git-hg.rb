@@ -10,7 +10,7 @@ class GitHg < Formula
 
   # patch :DATA
   patch do
-    url "https://raw.githubusercontent.com/JarryShaw/homebrew-tap/master/Patches/git-hg.patch"
+    url "https://github.com/JarryShaw/homebrew-tap/raw/76dd3cc274fed8fc71b844514f482b6d5d7eca16/Patches/git-hg.patch"
     sha256 "fdc08b396ffb9e01402bf0b2bde759735f9724dd3c26dda9d65e384a83efc80e"
   end
 

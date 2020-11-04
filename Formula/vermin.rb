@@ -6,7 +6,7 @@ class Vermin < Formula
   url "https://github.com/netromdk/vermin/archive/v1.0.1.tar.gz"
   sha256 "c06183ba653b9d5f6687a6686da8565fb127fab035f9127a5acb172b7c445079"
 
-  head "https://github.com/netromdk/vermin.git", :branch => "master"
+  head "https://github.com/netromdk/vermin.git", branch: "master"
 
   depends_on "homebrew/core/python"
 

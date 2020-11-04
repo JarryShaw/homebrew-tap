@@ -158,8 +158,6 @@ class Sphinx < Formula
     sha256 "8d7eaa5a82a1cac232164990f04874c594c9453ec55eef02eab885aa02fc17a2"
   end
 
-
-
   def install
     virtualenv_install_with_resources
   end

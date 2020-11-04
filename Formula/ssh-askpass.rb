@@ -1,5 +1,5 @@
 class SshAskpass < Formula
-  desc "SSH AskPass util for MacOS"
+  desc "macOS SSH AskPass utility"
   homepage "https://github.com/theseal/ssh-askpass/"
   url "https://github.com/theseal/ssh-askpass/archive/v1.2.1.tar.gz"
   sha256 "285e52794db4d1e5d230b115db138cc9b5fcd5e0171c41e3b540e41c540bf357"

@@ -29,9 +29,9 @@ class Uti < Formula
   desc "CLI tool for interacting with File Type Identifiers on Mac"
   homepage "https://github.com/alexaubry/uti"
   url "https://github.com/alexaubry/uti.git",
-    :tag      => "{TAG}",
-    :revision => "{REVISION}",
-    :shallow  => false
+    tag:      "{TAG}",
+    revision: "{REVISION}",
+    shallow:  false
 
   def install
     system "swift", "build", "-c", "release", "--disable-sandbox", "--static-swift-stdlib"

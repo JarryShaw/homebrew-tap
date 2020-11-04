@@ -27,7 +27,7 @@ class Vermin < Formula
   url "{VERMIN_URL}"
   sha256 "{VERMIN_SHA}"
 
-  head "https://github.com/netromdk/vermin.git", :branch => "master"
+  head "https://github.com/netromdk/vermin.git", branch: "master"
 
   depends_on "homebrew/core/python"
 

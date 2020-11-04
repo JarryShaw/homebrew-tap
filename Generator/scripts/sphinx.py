@@ -103,7 +103,7 @@ for line in temp.splitlines(True):
         continue
 
     SPHINX += line
-SPHINX = 'end\n\n'.join(map(lambda s: s.strip('\n'), SPHINX.split('end')))
+SPHINX = 'end\n\n'.join(map(lambda s: s.strip('\n'), SPHINX.split('end'))).strip()
 
 FORMULA = f'''\
 class Sphinx < Formula

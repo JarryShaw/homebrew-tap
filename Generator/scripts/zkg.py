@@ -67,7 +67,7 @@ class Zkg < Formula
   url "{ZKG_URL}"
   sha256 "{ZKG_SHA}"
 
-  head "https://github.com/zeek/package-manager.git", :branch => "master"
+  head "https://github.com/zeek/package-manager.git", branch: "master"
 
   depends_on "homebrew/core/python@3.9"
   depends_on "homebrew/core/zeek"
@@ -83,7 +83,7 @@ class Zkg < Formula
   # end
 
   def caveats
-    text = <<~EOS
+    <<~EOS
       zkg has been installed as
         #{{HOMEBREW_PREFIX}}/bin/zkg
 
@@ -99,7 +99,6 @@ class Zkg < Formula
 
       See: https://docs.zeek.org/projects/package-manager
     EOS
-    text
   end
 
   test do

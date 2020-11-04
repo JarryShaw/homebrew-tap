@@ -54,7 +54,7 @@ class Walrus < Formula
   homepage "https://github.com/pybpc/walrus#walrus"
   {WALRUS}
 
-  head "https://github.com/pybpc/walrus.git", :branch => "master"
+  head "https://github.com/pybpc/walrus.git", branch: "master"
 
   depends_on "homebrew/core/python@3.9"
 
