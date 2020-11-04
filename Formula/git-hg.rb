@@ -2,7 +2,7 @@ class GitHg < Formula
   desc "Checking out and tracking a mercurial repo from git"
   homepage "https://github.com/cosmin/git-hg"
   url "https://github.com/cosmin/git-hg.git",
-    revision: "ad63d7450272b1993f2d730633f94e9087bcf633"
+    revision: "a062f60d18fb724457e5d525c8ccd093afd8ef7d"
   version "2020.11.4"
 
   depends_on "homebrew/core/mercurial"
@@ -33,22 +33,3 @@ class GitHg < Formula
     system bin/"git-hg", "help"
   end
 end
-
-# __END__
-# diff --git a/bin/git-hg b/bin/git-hg
-# index be3223c..0259cea 100755
-# --- a/bin/git-hg
-# +++ b/bin/git-hg
-# @@ -1,9 +1,9 @@
-#  #!/bin/sh
-
-# -if which python2 >/dev/null 2>&1; then
-# -    PYTHON=python2
-# -    export PYTHON
-# -fi
-# +PYTHONPATH="$(brew --prefix mercurial)/lib/python2.7/site-packages"
-# +export PYTHONPATH
-# +PYTHON="$(brew --prefix python@2)/bin/python"
-# +export PYTHON
-
-#  set -e
