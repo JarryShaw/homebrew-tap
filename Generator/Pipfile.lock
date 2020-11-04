@@ -54,12 +54,12 @@
                 "html5lib"
             ],
             "hashes": [
-                "sha256:4c98143716ef1cb40bf7f39a8e3eec8f8b009509e74904ba3a7b315431577e35",
-                "sha256:84729e322ad1d5b4d25f805bfa05b902dd96450f43842c4e99067d5e1369eb25",
-                "sha256:fff47e031e34ec82bf17e00da8f592fe7de69aeea38be00523c04623c04fb666"
+                "sha256:1edf5e39f3a5bc6e38b235b369128416c7239b34f692acccececb040233032a1",
+                "sha256:5dfe44f8fddc89ac5453f02659d3ab1668f2c0d9684839f0785037e8c6d9ac8d",
+                "sha256:645d833a828722357038299b7f6879940c11dddd95b900fe5387c258b72bb883"
             ],
             "index": "tsinghua",
-            "version": "==4.9.3"
+            "version": "==4.9.2"
         },
         "certifi": {
             "hashes": [
@@ -132,11 +132,11 @@
         },
         "isort": {
             "hashes": [
-                "sha256:dcab1d98b469a12a1a624ead220584391648790275560e1a43e54c5dceae65e7",
-                "sha256:dcaeec1b5f0eca77faea2a35ab790b4f3680ff75590bfcb7145986905aab2f58"
+                "sha256:6187a9f1ce8784cbc6d1b88790a43e6083a6302f03e9ae482acc0f232a98c843",
+                "sha256:c16eaa7432a1c004c585d79b12ad080c6c421dd18fe27982ca11f95e6898e432"
             ],
             "markers": "python_version >= '3.6' and python_version < '4.0'",
-            "version": "==5.6.4"
+            "version": "==5.5.3"
         },
         "jinja2": {
             "hashes": [
@@ -747,11 +747,11 @@
         },
         "pygments": {
             "hashes": [
-                "sha256:381985fcc551eb9d37c52088a32914e00517e57f4a21609f48141ba08e193fa0",
-                "sha256:88a0bbcd659fcb9573703957c6b9cff9fab7295e6e76db54c9d00ae42df32773"
+                "sha256:307543fe65c0947b126e83dd5a61bd8acbd84abec11f43caebaf5534cbc17998",
+                "sha256:926c3f319eda178d1bd90851e4317e6d8cdb5e292a3386aac9bd75eca29cf9c7"
             ],
             "index": "tsinghua",
-            "version": "==2.7.2"
+            "version": "==2.7.1"
         },
         "pyinstaller": {
             "hashes": [
@@ -762,10 +762,10 @@
         },
         "pyinstaller-hooks-contrib": {
             "hashes": [
-                "sha256:bf4543a16c9c6e9dd2d70ea3fee78b81d3357a68f706df471d990213892259d9",
-                "sha256:dd752c88c1c7bb6920f7de248c12d4411c0463877e5e64afdc4f7e93dff9fc94"
+                "sha256:4935b2b48c2a38ab4f8f80d77147781642bff7d31748fca07d26dbdeeefb560d",
+                "sha256:71982f32883309e89675bfd10093cdcaca4f894bce11a91a34559b8224cf5e63"
             ],
-            "version": "==2020.10"
+            "version": "==2020.8"
         },
         "pyparsing": {
             "hashes": [
@@ -978,24 +978,17 @@
         },
         "vermin": {
             "hashes": [
-                "sha256:01ac8c033d2884f6b640a2669defea314a3c9929ea1a0a6a1b693adbaf4f25f0"
+                "sha256:32d5ae48d3104e402db4297da23e877c01af793897396930ff9573c27a5cd17f"
             ],
             "index": "tsinghua",
-            "version": "==1.0.1"
-        },
-        "walrus": {
-            "hashes": [
-                "sha256:6752420331b0110af6b3c6d32e61252dbafbd05ae2fc1a5fbfa6d42d2382062a"
-            ],
-            "index": "tsinghua",
-            "version": "==0.8.1"
+            "version": "==0.10.4"
         },
         "zkg": {
             "hashes": [
-                "sha256:dabb4e2179459894cdfda2eba45a409b4db46acaeabe7624cdc6157b104e8d3a"
+                "sha256:90f57a8cd8f512b447bb073332ef9ec53e00cd14b8d70ce48ee3184bfe96b353"
             ],
             "index": "tsinghua",
-            "version": "==2.4.1"
+            "version": "==2.3.1"
         }
     }
 }
