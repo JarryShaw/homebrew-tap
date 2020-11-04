@@ -13,8 +13,8 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v2
       - name: Setup Pipenv
+        working-directory: Generators
         run: |
-          cd ./Generators
           brew install pipenv
           
           export PIPENV_VENV_IN_PROJECT=1
@@ -26,20 +26,20 @@ jobs:
           done
           echo -e 'exit: 0'
       - name: make formula
+        working-directory: Generators
         run: |
-          cd ./Generators
           for name in appdmg bandit basher dmgbuild docutils f2format git-hg macdaily node-sass noob poseur pydl sloc sphinx vermin walrus zkg; do
             pipenv run python scripts/${name}.py
           done
       - name: make fetch
+        working-directory: Generators
         run: |
-          cd ./Generators
           for name in dart dart-beta dart-sass pyinstaller nlohmann-json ssh-askpass uti; do
             pipenv run python scripts/${name}.py
           done
       - name: make link
+        working-directory: Generators
         run: |
-          cd ./Generators
           make link
       - name: Commit files
         run: |
