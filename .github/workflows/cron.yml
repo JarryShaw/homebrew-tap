@@ -14,8 +14,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Setup Pipenv
         run: |
-          cd Generator
-
+          brew install pipenv
+          
           export PIPENV_VENV_IN_PROJECT=1
           while true; do
             echo '+ pipenv install --dev'
@@ -24,22 +24,23 @@ jobs:
             echo -e 'exit: $?'
           done
           echo -e 'exit: 0'
+        working-directory: ./Generators
       - name: make formula
         run: |
-          cd Generator
           for name in appdmg bandit basher dmgbuild docutils f2format git-hg macdaily node-sass noob poseur pydl sloc sphinx vermin walrus zkg; do
             pipenv run python scripts/${name}.py
           done
+        working-directory: ./Generators
       - name: make fetch
         run: |
-          cd Generator
           for name in dart dart-beta dart-sass pyinstaller nlohmann-json ssh-askpass uti; do
             pipenv run python scripts/${name}.py
           done
+        working-directory: ./Generators
       - name: make link
         run: |
-          cd Generator
           make link
+        working-directory: ./Generators
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
