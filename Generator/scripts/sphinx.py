@@ -81,6 +81,7 @@ def _list_dependency(dependencies):
 _deps_list = ['sphinx-autobuild']
 _deps_list.extend(_list_dependency(_fetch_dependency('Sphinx')))
 _deps_list.extend(_list_dependency(_fetch_dependency('sphinx-autobuild')))
+_deps_list.extend(_list_dependency(_fetch_dependency('sphinx-autodoc-typehints')))
 _deps_list.remove('setuptools')
 
 args = ['poet', '--single']

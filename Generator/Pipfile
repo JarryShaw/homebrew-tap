@@ -20,9 +20,12 @@ pygments = "*"
 
 dmgbuild = "*"
 
-f2format = "*"
+bpc-f2format = {git = "https://github.com/pybpc/f2format.git"}
+bpc-poseur = {git = "https://github.com/pybpc/poseur.git"}
+bpc-walrus = {git = "https://github.com/pybpc/walrus.git"}
+bpc-utils = {git = "https://github.com/pybpc/utils.git"}
 
-macdaily = {extras = ["all"],version = "*"}
+macdaily = {extras = ["all"],git = "https://github.com/JarryShaw/MacDaily.git"}
 pathlib2 = "*"
 psutil = "*"
 subprocess32 = "*"
@@ -31,8 +34,9 @@ pyinstaller = "*"
 
 vermin = "*"
 
-sphinx = "*"
+Sphinx = "*"
 sphinx-autobuild = "*"
+sphinx-autodoc-typehints = "*"
 
 zkg = "*"
 
@@ -45,8 +49,9 @@ requests = {extras = ["socks"],version = "*"}
 
 autopep8 = "*"
 bandit = "*"
+flake8 = "*"
 mypy = "*"
 pylint = "*"
 
 [requires]
-python_version = "3.8"
+python_version = "3.9"

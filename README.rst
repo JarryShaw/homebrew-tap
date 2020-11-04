@@ -65,11 +65,11 @@ Productions
 .. _macdaily: https://github.com/JarryShaw/MacDaily#macdaily
 
 .. |f2format| replace:: ``f2format``
-.. _f2format: https://github.com/JarryShaw/f2format#f2format
+.. _f2format: https://github.com/pybpc/f2format#f2format
 .. |poseur| replace:: ``poseur``
-.. _poseur: https://github.com/JarryShaw/poseur#poseur
+.. _poseur: https://github.com/pybpc/poseur#poseur
 .. |walrus| replace:: ``walrus``
-.. _walrus: https://github.com/JarryShaw/walrus#walrus
+.. _walrus: https://github.com/pybpc/walrus#walrus
 
 .. |askpass| replace:: ``AskPass``
 .. _askpass: https://github.com/JarryShaw/askpass#askpass

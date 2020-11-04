@@ -104,6 +104,10 @@ git-hg:
 	FORMULA="git-hg" $(MAKE) brew-audit
 	git submodule deinit ../Submodules/cosmin-git-hg
 
+jshint: pipenv
+	pipenv run python scripts/jshint.py
+	FORMULA="jshint" $(MAKE) brew-audit
+
 macdaily: pipenv
 	pipenv run python scripts/macdaily.py
 	FORMULA="macdaily" $(MAKE) brew-audit
