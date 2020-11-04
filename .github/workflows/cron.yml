@@ -15,7 +15,7 @@ jobs:
       - name: Setup Pipenv
         working-directory: Generator
         run: |
-          brew install pipenv
+          brew install pipenv python@3.9
           
           export PIPENV_VENV_IN_PROJECT=1
           while true; do
