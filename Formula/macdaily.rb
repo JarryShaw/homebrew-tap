@@ -6,7 +6,7 @@ class Macdaily < Formula
   url "https://github.com/JarryShaw/MacDaily/archive/v1.6.2.tar.gz"
   sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
 
-  head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
+  head "https://github.com/JarryShaw/MacDaily.git", branch: "master"
 
   # devel do
   #   ...
@@ -105,7 +105,7 @@ class Macdaily < Formula
   end
 
   def caveats
-    text = <<~EOS
+    <<~EOS
       MacDaily has been installed as
         #{HOMEBREW_PREFIX}/bin/macdaily
 
@@ -126,7 +126,6 @@ class Macdaily < Formula
 
       See: https://github.com/JarryShaw/MacDaily#generals
     EOS
-    text
   end
 
   test do

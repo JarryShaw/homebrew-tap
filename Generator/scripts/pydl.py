@@ -1,23 +1,23 @@
 # -*- coding: utf-8 -*-
 
 import os
-import subprocess
+import subprocess  # nosec: B404
 import time
 
 import pkg_resources
 
-VERSION = pkg_resources.parse_version(time.strftime('%Y.%m.%d'))
+VERSION = pkg_resources.parse_version(time.strftime(r'%Y.%m.%d'))
 
-CERTIFI = subprocess.check_output(['poet', 'certifi']).decode().strip() \
-    .replace('https://files.pythonhosted.org', 'https://pypi.tuna.tsinghua.edu.cn')
-CHARDET = subprocess.check_output(['poet', 'chardet']).decode().strip() \
-    .replace('https://files.pythonhosted.org', 'https://pypi.tuna.tsinghua.edu.cn')
-IDNA = subprocess.check_output(['poet', 'idna']).decode().strip() \
-    .replace('https://files.pythonhosted.org', 'https://pypi.tuna.tsinghua.edu.cn')
-REQUESTS = subprocess.check_output(['poet', 'requests']).decode().strip() \
-    .replace('https://files.pythonhosted.org', 'https://pypi.tuna.tsinghua.edu.cn')
-URLLIB3 = subprocess.check_output(['poet', 'urllib3']).decode().strip() \
-    .replace('https://files.pythonhosted.org', 'https://pypi.tuna.tsinghua.edu.cn')
+CERTIFI = subprocess.check_output(['poet', 'certifi']).decode().strip().replace(  # nosec: B603,B607
+    'https://files.pythonhosted.org', 'https://pypi.tuna.tsinghua.edu.cn')
+CHARDET = subprocess.check_output(['poet', 'chardet']).decode().strip().replace(  # nosec: B603,B607
+    'https://files.pythonhosted.org', 'https://pypi.tuna.tsinghua.edu.cn')
+IDNA = subprocess.check_output(['poet', 'idna']).decode().strip().replace(  # nosec: B603,B607
+    'https://files.pythonhosted.org', 'https://pypi.tuna.tsinghua.edu.cn')
+REQUESTS = subprocess.check_output(['poet', 'requests']).decode().strip().replace(  # nosec: B603,B607
+    'https://files.pythonhosted.org', 'https://pypi.tuna.tsinghua.edu.cn')
+URLLIB3 = subprocess.check_output(['poet', 'urllib3']).decode().strip().replace(  # nosec: B603,B607
+    'https://files.pythonhosted.org', 'https://pypi.tuna.tsinghua.edu.cn')
 
 FORMULA = f'''\
 class Pydl < Formula

@@ -16,7 +16,7 @@ for line in source.splitlines():
     if line.strip().startswith('depends_on'):
         context.append('  depends_on "jarryshaw/tap/dart" => :build')
         context.append('')
-        context.append('  conflicts_with "homebrew/core/node-sass", :because => "both install a `sass` binary"')
+        context.append('  conflicts_with "homebrew/core/node-sass", because: "both install a `sass` binary"')
         continue
     context.append(line.replace('dart-lang/dart/dart', 'jarryshaw/tap/dart'))
 FORMULA = os.linesep.join(context).strip()

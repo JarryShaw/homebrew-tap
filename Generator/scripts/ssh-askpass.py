@@ -49,19 +49,17 @@ class SshAskpass < Formula
   end
 
   def caveats
-    text = <<~EOF
+    <<~EOF
       {CAVEATS}
     EOF
-    text
   end
 
-  plist_options :startup => "true", :manual => "launch ssh-askpass"
+  plist_options startup: "true", manual: "launch ssh-askpass"
 
   def plist
-    file = <<~EOS
+    <<~EOS
       {PLIST}
     EOS
-    file
   end
 
   test do

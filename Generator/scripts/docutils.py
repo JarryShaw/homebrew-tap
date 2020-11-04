@@ -1,13 +1,17 @@
 # -*- coding: utf-8 -*-
 
+
 import hashlib
 import os
 import re
-import subprocess
+import subprocess  # nosec: B404
+import typing
 
 import requests
 
-for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():
+if typing.TYPE_CHECKING:
+    VERSION = ''
+for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec: B603,B607
     match = re.match(r"docutils==(.*)", line, re.IGNORECASE)
     if match is not None:
         VERSION = match.groups()[0]
@@ -15,6 +19,8 @@ for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():
 DOCUTILS_URL = f'https://downloads.sourceforge.net/project/docutils/docutils/{VERSION}/docutils-{VERSION}.tar.gz'
 DOCUTILS_SHA = hashlib.sha256(requests.get(DOCUTILS_URL).content).hexdigest()
 
+if typing.TYPE_CHECKING:
+    ARCHIVE = ''
 install_raqm_cmake = requests.get('https://github.com/python-pillow/Pillow/raw/master/depends/install_raqm_cmake.sh')
 for line in install_raqm_cmake.text.splitlines():
     match = re.match(r"archive=(.*)", line, re.IGNORECASE)
@@ -24,8 +30,8 @@ for line in install_raqm_cmake.text.splitlines():
 RAQM_URL = f'https://raw.githubusercontent.com/python-pillow/pillow-depends/master/{ARCHIVE}.tar.gz'
 RAQM_SHA = hashlib.sha256(requests.get(RAQM_URL).content).hexdigest()
 
-PILLOW = subprocess.check_output(['poet', 'Pillow']).decode().strip()
-PYGMENTS = subprocess.check_output(['poet', 'Pygments']).decode().strip()
+PILLOW = subprocess.check_output(['poet', 'Pillow']).decode().strip()  # nosec: B603,B607
+PYGMENTS = subprocess.check_output(['poet', 'Pygments']).decode().strip()  # nosec: B603,B607
 
 FORMULA = f'''\
 class Docutils < Formula
@@ -48,7 +54,7 @@ class Docutils < Formula
   depends_on "homebrew/core/webp" => :build
   depends_on "homebrew/core/python@3.9"
 
-  conflicts_with "homebrew/core/docutils", :because => "this is a port of docutils from homebrew-core"
+  conflicts_with "homebrew/core/docutils", because: "this is a port of docutils from homebrew-core"
 
   resource "libraqm" do
     url "{RAQM_URL}"
@@ -64,9 +70,7 @@ class Docutils < Formula
     venv = virtualenv_create(libexec)
 
     # install Pygments
-    if build.with?("pygments")
-      venv.pip_install resource("Pygments")
-    end
+    venv.pip_install resource("Pygments") if build.with?("pygments")
 
     # install PIL
     if build.with?("pil")

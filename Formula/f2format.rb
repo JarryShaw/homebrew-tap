@@ -6,7 +6,7 @@ class F2format < Formula
   url "https://github.com/pybpc/f2format/archive/v1.6.2.tar.gz"
   sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
 
-  head "https://github.com/pybpc/f2format.git", :branch => "master"
+  head "https://github.com/pybpc/f2format.git", branch: "master"
 
   depends_on "homebrew/core/python@3.9"
 

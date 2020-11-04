@@ -3,12 +3,15 @@
 
 import os
 import re
+import typing
 
 import requests
 
 TAG_REGEX = re.compile(r'\s*:tag\s*=>\s*"(?P<tag>.*?)",\s*', re.IGNORECASE)
 REVISION_REGEX = re.compile(r'\s*:revision\s*=>\s*"(?P<revision>.*?)",\s*', re.IGNORECASE)
 
+if typing.TYPE_CHECKING:
+    TAG = REVISION = ''
 url = 'https://raw.githubusercontent.com/alexaubry/homebrew-formulas/master/Formula/uti.rb'
 page = requests.get(url).text
 for line in page.splitlines():

@@ -6,14 +6,12 @@ class Ptpython < Formula
   url "https://files.pythonhosted.org/packages/ec/00/7db6b203f1cc9ebe316f76078a66feb64e175bde48412baf167d3bdf2ff3/ptpython-2.0.4.tar.gz"
   sha256 "ebe9d68ea7532ec8ab306d4bdc7ec393701cd9bbd6eff0aa3067c821f99264d4"
 
-  head "https://github.com/bpython/bpython.git", :branch => "master"
+  head "https://github.com/bpython/bpython.git", branch: "master"
 
   option "with-ptipython", "build with IPython support"
 
   depends_on "python"
-  if build.with?("ptipython")
-    depends_on "zeromq"
-  end
+  depends_on "zeromq" if build.with?("ptipython")
 
   resource "Pygments" do
     url "https://files.pythonhosted.org/packages/64/69/413708eaf3a64a6abb8972644e0f20891a55e621c6759e2c3f3891e05d63/Pygments-2.3.1.tar.gz"
@@ -115,7 +113,7 @@ class Ptpython < Formula
         ENV.prepend_create_path "PYTHONPATH", libexec/"lib/python#{xy}/site-packages"
         system "python3", *Language::Python.setup_install_args(libexec)
         bin.install libexec/"bin/ipython"
-        bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
+        bin.env_script_all_files(libexec/"bin", PYTHONPATH: ENV["PYTHONPATH"])
       end
 
       # install IPython man page
@@ -143,7 +141,7 @@ class Ptpython < Formula
         system "python3", *Language::Python.setup_install_args(libexec)
         bin.install Dir[libexec/"bin/ptpython*"]
         bin.install Dir[libexec/"bin/ptipython*"]
-        bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
+        bin.env_script_all_files(libexec/"bin", PYTHONPATH: ENV["PYTHONPATH"])
       end
     else
       venv = virtualenv_create(libexec, "python3")

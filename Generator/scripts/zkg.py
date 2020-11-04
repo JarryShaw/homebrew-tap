@@ -3,12 +3,15 @@
 import hashlib
 import os
 import re
-import subprocess  # nosec
+import subprocess  # nosec: B404
 import sys
+import typing
 
 import requests
 
-for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec
+if typing.TYPE_CHECKING:
+    VERSION = ''
+for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec: B603,B607
     match = re.match(r"zkg==(.*)", line, re.IGNORECASE)
     if match is not None:
         VERSION = match.groups()[0]
@@ -16,7 +19,7 @@ for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  #
 ZKG_URL = f'https://github.com/zeek/package-manager/archive/v{VERSION}.tar.gz'
 ZKG_SHA = hashlib.sha256(requests.get(ZKG_URL).content).hexdigest()
 
-_data_pkgs = dict()  # type: ignore
+_data_pkgs = dict()  # type: typing.Dict[str, str]
 
 
 def _fetch_dependency(package):
@@ -28,7 +31,7 @@ def _fetch_dependency(package):
 
     _deps_pkgs = dict()
     requirements = set()
-    for line in subprocess.check_output(argv).decode().strip().splitlines():  # nosec  # pylint: disable=redefined-outer-name
+    for line in subprocess.check_output(argv).decode().strip().splitlines():  # nosec: B603,B607; pylint: disable=redefined-outer-name
         match = re.match(r"Requires: (.*)", line)  # pylint: disable=redefined-outer-name
         if match is not None:
             requirements = set(match.groups()[0].split(', '))
@@ -53,7 +56,7 @@ _deps_list = _list_dependency(_fetch_dependency('zkg'))
 
 args = ['poet', '--single']
 args.extend(sorted(set(_deps_list)))
-ZKG = subprocess.check_output(args).decode().strip()  # nosec
+ZKG = subprocess.check_output(args).decode().strip()  # nosec: B603,B607
 
 FORMULA = f'''\
 class Zkg < Formula

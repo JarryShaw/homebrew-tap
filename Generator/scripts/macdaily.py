@@ -3,7 +3,7 @@
 import hashlib
 import os
 import re
-import subprocess
+import subprocess  # nosec: B404
 import typing
 
 # import bs4
@@ -19,7 +19,7 @@ import requests
 # # print(VERSION)
 if typing.TYPE_CHECKING:
     VERSION = ''
-for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec
+for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec: B603,B607
     match = re.match(r"bandit==(.*)", line, re.IGNORECASE)
     if match is not None:
         VERSION = match.groups()[0]
@@ -63,13 +63,13 @@ MACDAILY_SHA = hashlib.sha256(requests.get(MACDAILY_URL).content).hexdigest()
 # print(DEVEL_URL)
 # print(DEVEL_SHA)
 
-CONFIGUPDATER = subprocess.check_output(['poet', 'configupdater']).decode().strip()
-DICTDUMPER = subprocess.check_output(['poet', 'dictdumper']).decode().strip()
-PSUTIL = subprocess.check_output(['poet', 'psutil']).decode().strip()
-PTYNG = subprocess.check_output(['poet', 'ptyng']).decode().strip()
-PATHLIB2 = subprocess.check_output(['poet', 'pathlib2']).decode().strip()
-SUBPROCESS32 = subprocess.check_output(['poet', 'subprocess32']).decode().strip()
-TBTRIM = subprocess.check_output(['poet', 'tbtrim']).decode().strip()
+CONFIGUPDATER = subprocess.check_output(['poet', 'configupdater']).decode().strip()  # nosec: B603,B607
+DICTDUMPER = subprocess.check_output(['poet', 'dictdumper']).decode().strip()  # nosec: B603,B607
+PSUTIL = subprocess.check_output(['poet', 'psutil']).decode().strip()  # nosec: B603,B607
+PTYNG = subprocess.check_output(['poet', 'ptyng']).decode().strip()  # nosec: B603,B607
+PATHLIB2 = subprocess.check_output(['poet', 'pathlib2']).decode().strip()  # nosec: B603,B607
+SUBPROCESS32 = subprocess.check_output(['poet', 'subprocess32']).decode().strip()  # nosec: B603,B607
+TBTRIM = subprocess.check_output(['poet', 'tbtrim']).decode().strip()  # nosec: B603,B607
 # print(CONFIGUPDATER)
 # print(DICTDUMPER)
 # print(PSUTIL)
@@ -103,7 +103,7 @@ class Macdaily < Formula
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
   {MACDAILY}
 
-  head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
+  head "https://github.com/JarryShaw/MacDaily.git", branch: "master"
 
   # devel do
   #   ...
@@ -176,7 +176,7 @@ class Macdaily < Formula
   end
 
   def caveats
-    text = <<~EOS
+    <<~EOS
       MacDaily has been installed as
         #{{HOMEBREW_PREFIX}}/bin/macdaily
 
@@ -197,7 +197,6 @@ class Macdaily < Formula
 
       See: https://github.com/JarryShaw/MacDaily#generals
     EOS
-    text
   end
 
   test do
@@ -207,7 +206,8 @@ end
 '''
 
 if os.path.basename(__file__) == 'setup-formula.py':
-    repo_root = subprocess.check_output(['brew', '--repository', 'jarryshaw/tap'], encoding='utf-8').strip()
+    repo_root = subprocess.check_output(['brew', '--repository', 'jarryshaw/tap'],   # nosec: B603,B607
+                                        encoding='utf-8').strip()
     formula = os.path.join(repo_root, 'Formula', 'macdaily.rb')
 else:
     formula = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'Formula',

@@ -6,7 +6,7 @@ class Poet < Formula
   url "https://files.pythonhosted.org/packages/f7/d9/4b525af3be6ac0a0a962e101b7771db6511d9e96369ded2765406233f9ff/homebrew-pypi-poet-0.10.0.tar.gz"
   sha256 "e09e997e35a98f66445f9a39ccb33d6d93c5cd090302a59f231707eac0bf378e"
 
-  head "https://github.com/tdsmith/homebrew-pypi-poet.git", :branch => "master"
+  head "https://github.com/tdsmith/homebrew-pypi-poet.git", branch: "master"
 
   depends_on "python@3.8"
 

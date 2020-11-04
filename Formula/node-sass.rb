@@ -20,8 +20,8 @@ class NodeSass < Formula
 
   depends_on "homebrew/core/node"
 
-  conflicts_with "homebrew/core/node-sass", :because => "it is now integrated with homebrew-core"
-  conflicts_with "jarryshaw/tap/dart-sass", :because => "both install a `sass` binary"
+  conflicts_with "homebrew/core/node-sass", because: "it is now integrated with homebrew-core"
+  conflicts_with "jarryshaw/tap/dart-sass", because: "both install a `sass` binary"
 
   # waiting for pull request at #47438
   # conflicts_with "dart-sass", :because => "both install a `sass` binary"

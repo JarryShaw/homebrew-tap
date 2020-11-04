@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 
 import os
-import subprocess
+import subprocess  # nosec: B404
 import time
 
 import pkg_resources
 
 VERSION = pkg_resources.parse_version(time.strftime('%Y.%m.%d'))
-REVISION = subprocess.check_output(['git', 'rev-parse', 'HEAD'], encoding='utf-8',
+REVISION = subprocess.check_output(['git', 'rev-parse', 'HEAD'], encoding='utf-8',  # nosec: B603,B607
                                    cwd='../Submodules/basherpm-basher').strip()
 
 FORMULA = f'''\
@@ -15,24 +15,20 @@ class Basher < Formula
   desc "Package manager for shell scripts"
   homepage "https://github.com/basherpm/basher"
   url "https://github.com/basherpm/basher.git",
-    :revision => "{REVISION}"
+    revision: "{REVISION}"
   version "{VERSION}"
 
   def install
     Dir["*"].each do |f|
-      cp_r f, prefix/"#{{f}}"
+      cp_r f, prefix/f.to_s
     end
-
-    # Dir[".*"].each do |f|
-    #   cp_r f, prefix/"#{{f}}"
-    # end
 
     bash_completion.install "completions/basher.bash"
     zsh_completion.install "completions/basher.zsh"
   end
 
   def caveats
-    text = <<~EOS
+    <<~EOS
       To make basher work smoothly, link it to your home directory
         ln -s /usr/local/opt/basher ~/.basher
 
@@ -42,7 +38,6 @@ class Basher < Formula
       For Fish, use the following line on your ~/.config/fish/config.fish.
         status --is-interactive; and . (basher init -|psub)
     EOS
-    text
   end
 
   test do

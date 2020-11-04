@@ -21,8 +21,7 @@ jobs:
 
           while true; do
             echo '+ pipenv install --dev'
-            pipenv install --dev
-            $@ && break
+            pipenv install --dev && break
             echo -e 'exit: $?'
           done
           echo -e 'exit: 0'

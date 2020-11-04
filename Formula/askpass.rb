@@ -9,19 +9,18 @@ class Askpass < Formula
   end
 
   def caveats
-    text = <<~EOS
+    <<~EOS
       NOTE:
         After you have started the launchd service (read below),
         you need to log out and in (reboot might be easiest)
         before you can add keys to the agent with `ssh-add -c`.
     EOS
-    text
   end
 
-  plist_options :startup => "true"
+  plist_options startup: "true"
 
   def plist
-    text = <<~EOS
+    <<~EOS
       <?xml version="1.0" encoding="UTF-8"?>
           <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
           <plist version="1.0">
@@ -53,7 +52,6 @@ class Askpass < Formula
           </dict>
           </plist>
     EOS
-    text
   end
 
   test do

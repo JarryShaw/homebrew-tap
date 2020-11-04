@@ -3,7 +3,7 @@
 import hashlib
 import os
 import re
-import subprocess  # nosec
+import subprocess  # nosec: B404
 import sys
 import typing
 
@@ -11,7 +11,7 @@ import requests
 
 if typing.TYPE_CHECKING:
     VERSION = ''
-for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec
+for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec: B603,B607
     match = re.match(r"bandit==(.*)", line, re.IGNORECASE)
     if match is not None:
         VERSION = match.groups()[0]
@@ -67,7 +67,7 @@ class Bandit < Formula
   url "{BANDIT_URL}"
   sha256 "{BANDIT_SHA}"
 
-  head "https://github.com/PyCQA/bandit.git", :branch => "master"
+  head "https://github.com/PyCQA/bandit.git", branch: "master"
 
   depends_on "homebrew/core/python@3.9"
 

@@ -6,7 +6,7 @@ class Bpython < Formula
   url "https://files.pythonhosted.org/packages/51/7b/0812c2742b298e74d98b0e142a2d0e9aca5ace574156deeea565f11b0ebc/bpython-0.17.1.tar.gz"
   sha256 "8907c510bca3c4d9bc0a157279bdc5e3b739cc68c0f247167279b6fe4becb02f"
 
-  head "https://github.com/bpython/bpython.git", :branch => "master"
+  head "https://github.com/bpython/bpython.git", branch: "master"
 
   option "without-urwid", "build without console user interface support"
   option "without-watch", "build without filesystem events monitoring support"
@@ -117,9 +117,7 @@ class Bpython < Formula
       venv.pip_install resource(r)
     end
 
-    if build.with?("urwid")
-      venv.pip_install resource("urwid")
-    end
+    venv.pip_install resource("urwid") if build.with?("urwid")
 
     if build.with?("watch")
       %w[argh pathtools PyYAML watchdog].each do |r|

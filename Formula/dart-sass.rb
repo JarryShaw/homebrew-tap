@@ -9,7 +9,7 @@ class DartSass < Formula
 
   depends_on "jarryshaw/tap/dart" => :build
 
-  conflicts_with "homebrew/core/node-sass", :because => "both install a `sass` binary"
+  conflicts_with "homebrew/core/node-sass", because: "both install a `sass` binary"
 
   def install
     dart = Formula["jarryshaw/tap/dart"].opt_bin

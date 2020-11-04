@@ -18,7 +18,7 @@ class Docutils < Formula
   depends_on "homebrew/core/webp" => :build
   depends_on "homebrew/core/python@3.9"
 
-  conflicts_with "homebrew/core/docutils", :because => "this is a port of docutils from homebrew-core"
+  conflicts_with "homebrew/core/docutils", because: "this is a port of docutils from homebrew-core"
 
   resource "libraqm" do
     url "https://raw.githubusercontent.com/python-pillow/pillow-depends/master/raqm-cmake-99300ff3.tar.gz"
@@ -40,9 +40,7 @@ class Docutils < Formula
     venv = virtualenv_create(libexec)
 
     # install Pygments
-    if build.with?("pygments")
-      venv.pip_install resource("Pygments")
-    end
+    venv.pip_install resource("Pygments") if build.with?("pygments")
 
     # install PIL
     if build.with?("pil")

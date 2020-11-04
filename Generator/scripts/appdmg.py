@@ -2,10 +2,10 @@
 
 import os
 import re
-import subprocess
+import subprocess  # nosec: B404
 
 context = list()
-for line in subprocess.check_output(['noob', 'appdmg'], encoding='utf-8').splitlines():
+for line in subprocess.check_output(['noob', 'appdmg'], encoding='utf-8').splitlines():  # nosec: B603,B607
     if re.match(r'\s*version ".+?"\s*', line):
         continue
     if line.strip() == 'raise "Test not implemented."':

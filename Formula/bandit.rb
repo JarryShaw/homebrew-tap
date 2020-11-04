@@ -6,7 +6,7 @@ class Bandit < Formula
   url "https://github.com/PyCQA/bandit/archive/1.6.2.tar.gz"
   sha256 "5be37593959fc90d4c6f9992486ca94ceead919adb3cf8e3cdf8b1aa44cbfc00"
 
-  head "https://github.com/PyCQA/bandit.git", :branch => "master"
+  head "https://github.com/PyCQA/bandit.git", branch: "master"
 
   depends_on "homebrew/core/python@3.9"
 

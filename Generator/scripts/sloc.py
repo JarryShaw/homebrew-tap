@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 import os
-import subprocess
+import subprocess  # nosec: B404
 
-formula = subprocess.check_output(['brew', 'formula', 'sloc']).decode().strip()
+formula = subprocess.check_output(['brew', 'formula', 'sloc']).decode().strip()  # nosec: B603,B607
 
 context = list()
 with open(formula) as file:
@@ -11,7 +11,8 @@ with open(formula) as file:
         if 'depends_on "node"' in line:
             context.append('  depends_on "homebrew/core/node"\n')
             context.append('\n')
-            context.append('  conflicts_with "homebrew/core/sloc", :because => "it is now integrated with homebrew-core"\n')
+            context.append('  conflicts_with "homebrew/core/sloc", '
+                           'because: "it is now integrated with homebrew-core"\n')
             continue
         context.append(line)
 

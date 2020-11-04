@@ -2,12 +2,12 @@ class Basher < Formula
   desc "Package manager for shell scripts"
   homepage "https://github.com/basherpm/basher"
   url "https://github.com/basherpm/basher.git",
-    :revision => "e29d4c07e680a86b892ff4567c97ac2613dc6343"
+    revision: "e29d4c07e680a86b892ff4567c97ac2613dc6343"
   version "2020.11.4"
 
   def install
     Dir["*"].each do |f|
-      cp_r f, prefix/"#{f}"
+      cp_r f, prefix/f.to_s
     end
 
     # Dir[".*"].each do |f|
@@ -19,7 +19,7 @@ class Basher < Formula
   end
 
   def caveats
-    text = <<~EOS
+    <<~EOS
       To make basher work smoothly, link it to your home directory
         ln -s /usr/local/opt/basher ~/.basher
 
@@ -29,7 +29,6 @@ class Basher < Formula
       For Fish, use the following line on your ~/.config/fish/config.fish.
         status --is-interactive; and . (basher init -|psub)
     EOS
-    text
   end
 
   test do

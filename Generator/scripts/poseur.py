@@ -3,7 +3,7 @@
 import hashlib
 import os
 import re
-import subprocess
+import subprocess  # nosec: B603,B607
 import typing
 
 import requests
@@ -18,7 +18,7 @@ import requests
 # # print(VERSION)
 if typing.TYPE_CHECKING:
     VERSION = ''
-for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec
+for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec: B603,B607
     match = re.match(r"bandit==(.*)", line, re.IGNORECASE)
     if match is not None:
         VERSION = match.groups()[0]
@@ -28,9 +28,9 @@ POSEUR_SHA = hashlib.sha256(requests.get(POSEUR_URL).content).hexdigest()
 # print(POSEUR_URL)
 # print(POSEUR_SHA)
 
-PARSO = subprocess.check_output(['poet', 'parso']).decode().strip()
-TBTRIM = subprocess.check_output(['poet', 'tbtrim']).decode().strip()
-BPC_UTILS = subprocess.check_output(['poet', 'bpc-utils']).decode().strip()
+PARSO = subprocess.check_output(['poet', 'parso']).decode().strip()  # nosec: B603,B607
+TBTRIM = subprocess.check_output(['poet', 'tbtrim']).decode().strip()  # nosec: B603,B607
+BPC_UTILS = subprocess.check_output(['poet', 'bpc-utils']).decode().strip()  # nosec: B603,B607
 # print(PARSO)
 # print(TBTRIM)
 
@@ -54,7 +54,7 @@ class Poseur < Formula
   homepage "https://github.com/pybpc/poseur#poseur"
   {POSEUR}
 
-  head "https://github.com/pybpc/poseur.git", :branch => "master"
+  head "https://github.com/pybpc/poseur.git", branch: "master"
 
   depends_on "homebrew/core/python@3.9"
 
@@ -113,7 +113,8 @@ end
 '''
 
 if os.path.basename(__file__) == 'setup-formula.py':
-    repo_root = subprocess.check_output(['brew', '--repository', 'jarryshaw/tap'], encoding='utf-8').strip()
+    repo_root = subprocess.check_output(['brew', '--repository', 'jarryshaw/tap'],   # nosec: B603,B607
+                                        encoding='utf-8').strip()
     formula = os.path.join(repo_root, 'Formula', 'poseur.rb')
 else:
     formula = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'Formula',

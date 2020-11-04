@@ -3,12 +3,15 @@
 import hashlib
 import os
 import re
-import subprocess
+import subprocess  # nosec: B404
 import sys
+import typing
 
 import requests
 
-for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():
+if typing.TYPE_CHECKING:
+    VERSION = ''
+for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec: B603,B607
     match = re.match(r"dmgbuild==(.*)", line, re.IGNORECASE)
     if match is not None:
         VERSION = match.groups()[0]
@@ -16,7 +19,7 @@ for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():
 DMGBUILD_URL = f'https://github.com/al45tair/dmgbuild/archive/v{VERSION}.tar.gz'
 DMGBUILD_SHA = hashlib.sha256(requests.get(DMGBUILD_URL).content).hexdigest()
 
-_data_pkgs = dict()
+_data_pkgs = dict()  # type: typing.Dict[str, str]
 
 
 def _fetch_dependency(package):
@@ -28,7 +31,7 @@ def _fetch_dependency(package):
 
     _deps_pkgs = dict()
     requirements = set()
-    for line in subprocess.check_output(argv).decode().strip().splitlines():  # pylint: disable=redefined-outer-name
+    for line in subprocess.check_output(argv).decode().strip().splitlines():  # nosec: B603; pylint: disable=redefined-outer-name
         match = re.match(r"Requires: (.*)", line)  # pylint: disable=redefined-outer-name
         if match is not None:
             requirements = set(match.groups()[0].split(', '))
@@ -53,7 +56,7 @@ _deps_list = _list_dependency(_fetch_dependency('dmgbuild'))
 
 args = ['poet', '--single']
 args.extend(sorted(set(_deps_list)))
-DMGBUILD = subprocess.check_output(args).decode().strip()
+DMGBUILD = subprocess.check_output(args).decode().strip()  # nosec: B603
 
 FORMULA = f'''\
 class Dmgbuild < Formula
@@ -64,7 +67,7 @@ class Dmgbuild < Formula
   url "{DMGBUILD_URL}"
   sha256 "{DMGBUILD_SHA}"
 
-  head "https://github.com/al45tair/dmgbuild.git", :branch => "master"
+  head "https://github.com/al45tair/dmgbuild.git", branch: "master"
 
   depends_on "homebrew/core/python@3.9"
 

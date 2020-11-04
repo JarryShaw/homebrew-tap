@@ -6,7 +6,7 @@ class Dmgbuild < Formula
   url "https://github.com/al45tair/dmgbuild/archive/v1.4.2.tar.gz"
   sha256 "6beb387f706f4f100ae9099440ce57a5dc66d8769da2411266ac5f820bb77031"
 
-  head "https://github.com/al45tair/dmgbuild.git", :branch => "master"
+  head "https://github.com/al45tair/dmgbuild.git", branch: "master"
 
   depends_on "homebrew/core/python@3.9"
 
