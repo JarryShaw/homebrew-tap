@@ -46,7 +46,7 @@ class Docutils < Formula
   depends_on "homebrew/core/libtiff" => :build
   depends_on "homebrew/core/little-cms2" => :build
   depends_on "homebrew/core/webp" => :build
-  depends_on "homebrew/core/python@3.8"
+  depends_on "homebrew/core/python@3.9"
 
   conflicts_with "homebrew/core/docutils", :because => "this is a port of docutils from homebrew-core"
 

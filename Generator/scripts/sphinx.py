@@ -99,7 +99,7 @@ class Sphinx < Formula
 
   {BOTTLE}
 
-  depends_on "homebrew/core/python@3.8"
+  depends_on "homebrew/core/python@3.9"
 
   conflicts_with "homebrew/core/sphinx-doc", :because => "this is a port of sphinx-doc from homebrew-core"
 

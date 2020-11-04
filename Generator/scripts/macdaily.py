@@ -4,18 +4,25 @@ import hashlib
 import os
 import re
 import subprocess
+import typing
 
 # import bs4
 import requests
 
-with open(os.path.expanduser('~/GitHub/MacDaily/macdaily/util/const/macro.py')) as file:
-    for line in file:
-        match = re.match(r"VERSION = '(.*)'", line)
-        if match is None:
-            continue
+# with open(os.path.expanduser('~/GitHub/MacDaily/macdaily/util/const/macro.py')) as file:
+#     for line in file:
+#         match = re.match(r"VERSION = '(.*)'", line)
+#         if match is None:
+#             continue
+#         VERSION = match.groups()[0]
+#         break
+# # print(VERSION)
+if typing.TYPE_CHECKING:
+    VERSION = ''
+for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec
+    match = re.match(r"bandit==(.*)", line, re.IGNORECASE)
+    if match is not None:
         VERSION = match.groups()[0]
-        break
-# print(VERSION)
 
 MACDAILY_URL = f'https://github.com/JarryShaw/MacDaily/archive/v{VERSION}.tar.gz'
 MACDAILY_SHA = hashlib.sha256(requests.get(MACDAILY_URL).content).hexdigest()
@@ -106,7 +113,7 @@ class Macdaily < Formula
   option "without-tree", "Build without tree format support"
   option "without-ptyng", "Build without alternative PTY support"
 
-  depends_on "homebrew/core/python@3.8"
+  depends_on "homebrew/core/python@3.9"
   depends_on "homebrew/core/expect" => :recommended
   depends_on "homebrew/core/cowsay" => :optional
   depends_on "homebrew/core/fortune" => :optional

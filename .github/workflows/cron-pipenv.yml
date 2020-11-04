@@ -1,6 +1,8 @@
 name: "Regular update on Pipenv.lock"
 
 on:
+  push:
+    branches: [master, ]
   schedule:
     - cron: '* 6 * * *'
 

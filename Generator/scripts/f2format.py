@@ -4,17 +4,24 @@ import hashlib
 import os
 import re
 import subprocess
+import typing
 
 import requests
 
-with open(os.path.expanduser('~/GitHub/f2format/f2format.py'), 'r') as file:
-    for line in file:
-        match = re.match(r"^__version__ = '(.*)'", line)
-        if match is None:
-            continue
+# with open(os.path.expanduser('~/GitHub/f2format/f2format.py'), 'r') as file:
+#     for line in file:
+#         match = re.match(r"^__version__ = '(.*)'", line)
+#         if match is None:
+#             continue
+#         VERSION = match.groups()[0]
+#         break
+# # print(VERSION)
+if typing.TYPE_CHECKING:
+    VERSION = ''
+for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec
+    match = re.match(r"bandit==(.*)", line, re.IGNORECASE)
+    if match is not None:
         VERSION = match.groups()[0]
-        break
-# print(VERSION)
 
 F2FORMAT_URL = f'https://github.com/pybpc/f2format/archive/v{VERSION}.tar.gz'
 F2FORMAT_SHA = hashlib.sha256(requests.get(F2FORMAT_URL).content).hexdigest()
@@ -23,6 +30,7 @@ F2FORMAT_SHA = hashlib.sha256(requests.get(F2FORMAT_URL).content).hexdigest()
 
 PARSO = subprocess.check_output(['poet', 'parso']).decode().strip()
 TBTRIM = subprocess.check_output(['poet', 'tbtrim']).decode().strip()
+BPC_UTILS = subprocess.check_output(['poet', 'bpc-utils']).decode().strip()
 # print(PARSO)
 # print(TBTRIM)
 
@@ -48,7 +56,9 @@ class F2format < Formula
 
   head "https://github.com/pybpc/f2format.git", :branch => "master"
 
-  depends_on "homebrew/core/python@3.8"
+  depends_on "homebrew/core/python@3.9"
+
+  {BPC_UTILS}
 
   {PARSO}
 

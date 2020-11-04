@@ -66,7 +66,7 @@ class Zkg < Formula
 
   head "https://github.com/zeek/package-manager.git", :branch => "master"
 
-  depends_on "homebrew/core/python@3.8"
+  depends_on "homebrew/core/python@3.9"
   depends_on "homebrew/core/zeek"
 
   {ZKG}

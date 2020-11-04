@@ -9,7 +9,7 @@ context = list()
 with open(formula) as file:
     for line in file:
         if 'depends_on "python@3.8"' in line:
-            context.append('  depends_on "homebrew/core/python@3.8"\n')
+            context.append('  depends_on "homebrew/core/python@3.9"\n')
             context.append('\n')
             context.append('  conflicts_with "homebrew/core/pyinstaller", :because => "it is now integrated with homebrew-core"\n')
             continue

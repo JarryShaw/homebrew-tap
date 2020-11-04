@@ -29,7 +29,7 @@ class Pydl < Formula
   version "{VERSION}"
 
   depends_on "homebrew/core/aria2"
-  depends_on "homebrew/core/python@3.8"
+  depends_on "homebrew/core/python@3.9"
 
   {CERTIFI}
 

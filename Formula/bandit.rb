@@ -8,7 +8,7 @@ class Bandit < Formula
 
   head "https://github.com/PyCQA/bandit.git", :branch => "master"
 
-  depends_on "homebrew/core/python@3.8"
+  depends_on "homebrew/core/python@3.9"
 
   resource "GitPython" do
     url "https://files.pythonhosted.org/packages/53/ea/fc34cddaa30bfc5e283f13e754fb3e2648ccd9f7019eaa3518fb5350ae51/GitPython-3.1.7.tar.gz"

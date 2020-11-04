@@ -69,7 +69,7 @@ class Bandit < Formula
 
   head "https://github.com/PyCQA/bandit.git", :branch => "master"
 
-  depends_on "homebrew/core/python@3.8"
+  depends_on "homebrew/core/python@3.9"
 
   {BANDIT}
 
