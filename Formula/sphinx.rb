@@ -6,11 +6,17 @@ class Sphinx < Formula
   url "https://github.com/sphinx-doc/sphinx/archive/v3.3.0.tar.gz"
   sha256 "ed8b694fbab74cac5a2cde736940e8c402a484363029ec7c2dcb157382fb866f"
 
+  bottle do
+    cellar :any_skip_relocation
+    sha256 "c8c6ab72f561f7b0723c77914c10fdbbb05585b18766a406019eb255486c4bc1" => :catalina
+    sha256 "0012ca18936be129f605601c888a6a661aeb4b1e6620564b1d1e318aac2f9f11" => :mojave
+    sha256 "9e590a1aba6dbcff8146ac704abd8640cc3afdc3f6524e8bc3b75f43e3061fef" => :high_sierra
+    sha256 "1b375a2abcc6bf786bb2f196c867d9bfc1709c4d272f5c88e36196593707920f" => :x86_64_linux
   end
 
   depends_on "homebrew/core/python@3.9"
 
-  conflicts_with "homebrew/core/sphinx-doc", :because => "this is a port of sphinx-doc from homebrew-core"
+  conflicts_with "homebrew/core/sphinx-doc", because: "this is a port of sphinx-doc from homebrew-core"
 
   resource "Jinja2" do
     url "https://files.pythonhosted.org/packages/64/a7/45e11eebf2f15bf987c3bc11d37dcc838d9dc81250e67e4c5968f6008b6c/Jinja2-2.11.2.tar.gz"
@@ -92,11 +98,6 @@ class Sphinx < Formula
     sha256 "b3559a131db72c33ee969480840fff4bb6dd111de7dd27c8ee1f820f4f00231b"
   end
 
-  resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/a7/e0/30642b9c2df516506d40b563b0cbd080c49c6b3f11a70b4c7a670f13a78b/setuptools-50.3.2.zip"
-    sha256 "ed0519d27a243843b05d82a5e9d01b0b083d9934eaa3d02779a23da18077bd3c"
-  end
-
   resource "six" do
     url "https://files.pythonhosted.org/packages/6b/34/415834bfdafca3c5f451532e8a8d9ba89a21c9743a0c59fbd0205c7f9426/six-1.15.0.tar.gz"
     sha256 "30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259"
@@ -156,6 +157,8 @@ class Sphinx < Formula
     url "https://files.pythonhosted.org/packages/76/d9/bbbafc76b18da706451fa91bc2ebe21c0daf8868ef3c30b869ac7cb7f01d/urllib3-1.25.11.tar.gz"
     sha256 "8d7eaa5a82a1cac232164990f04874c594c9453ec55eef02eab885aa02fc17a2"
   end
+
+
 
   def install
     virtualenv_install_with_resources

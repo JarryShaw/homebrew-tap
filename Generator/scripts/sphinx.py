@@ -10,8 +10,6 @@ import typing
 # import bs4
 import requests
 
-formula = subprocess.check_output(['brew', 'formula', 'sphinx-doc']).decode().strip()  # nosec: B603,B607
-
 if typing.TYPE_CHECKING:
     VERSION = ''
 for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec: B603,B607
@@ -36,14 +34,15 @@ SPHINX_SHA = hashlib.sha256(requests.get(SPHINX_URL).content).hexdigest()
 
 bottle = list()
 bottle_flag = False
+
+formula = subprocess.check_output(['brew', 'formula', 'sphinx-doc']).decode().strip()  # nosec: B603,B607
 with open(formula) as file:
     for line in file:
-        if line == '  end\n':
-            bottle.append(line)
-            break
         if bottle_flag:
             bottle.append(line)
-        elif line == '  bottle do\n':
+            if line.strip() == 'end':
+                break
+        elif line.strip() == 'bottle do':
             bottle.append(line)
             bottle_flag = True
 BOTTLE = ''.join(bottle).strip()
@@ -89,7 +88,22 @@ _deps_list.remove('setuptools')
 
 args = ['poet', '--single']
 args.extend(sorted(set(_deps_list)))
-SPHINX = subprocess.check_output(args).decode().strip()  # nosec: B603,B607
+temp = subprocess.check_output(args).decode().strip()  # nosec: B603,B607
+
+st_flag = False
+SPHINX = ''
+for line in temp.splitlines(True):
+    if line.strip() == 'resource "setuptools" do':
+        st_flag = True
+        continue
+
+    if st_flag:
+        if line.strip() == 'end':
+            st_flag = False
+        continue
+
+    SPHINX += line
+SPHINX = 'end\n\n'.join(map(lambda s: s.strip('\n'), SPHINX.split('end')))
 
 FORMULA = f'''\
 class Sphinx < Formula
@@ -104,7 +118,7 @@ class Sphinx < Formula
 
   depends_on "homebrew/core/python@3.9"
 
-  conflicts_with "homebrew/core/sphinx-doc", :because => "this is a port of sphinx-doc from homebrew-core"
+  conflicts_with "homebrew/core/sphinx-doc", because: "this is a port of sphinx-doc from homebrew-core"
 
   {SPHINX}
 
