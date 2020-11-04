@@ -20,12 +20,11 @@ pygments = "*"
 
 dmgbuild = "*"
 
-bpc-f2format = {git = "https://github.com/pybpc/f2format.git"}
-bpc-poseur = {git = "https://github.com/pybpc/poseur.git"}
-bpc-walrus = {git = "https://github.com/pybpc/walrus.git"}
-bpc-utils = {git = "https://github.com/pybpc/utils.git"}
+f2format = "*"
+poseur = "*"
+walrus = "*"
 
-macdaily = {extras = ["all"],git = "https://github.com/JarryShaw/MacDaily.git"}
+macdaily = {extras = ["all"],version = "*"}
 pathlib2 = "*"
 psutil = "*"
 subprocess32 = "*"

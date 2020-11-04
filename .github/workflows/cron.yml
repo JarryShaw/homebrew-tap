@@ -16,7 +16,7 @@ jobs:
         working-directory: Generator
         run: |
           brew install pipenv
-          
+
           export PIPENV_VENV_IN_PROJECT=1
           pipenv install --dev --python $(brew --prefix python@3.9)/bin/python3.9
 
