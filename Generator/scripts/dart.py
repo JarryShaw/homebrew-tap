@@ -11,6 +11,8 @@ context = list()
 for line in source.splitlines():
     if line.strip().startswith('desc'):
         line = '  desc "SDK for dart language"'
+    if line.strip().startswith('version'):
+        continue
     context.append(line)
 FORMULA = os.linesep.join(context)
 

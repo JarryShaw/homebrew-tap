@@ -2,9 +2,7 @@ class Dart < Formula
   desc "SDK for dart language"
   homepage "https://dart.dev"
 
-  version "2.10.3"
   head do
-    version "2.12.0-13.0.dev"
     if OS.mac?
       url "https://storage.googleapis.com/dart-archive/channels/dev/release/2.12.0-13.0.dev/sdk/dartsdk-macos-x64-release.zip"
       sha256 "a4cd33a2fd5630ad548d3941c5dcddced2b24e71833e051ddf20eb2d396dafd7"
