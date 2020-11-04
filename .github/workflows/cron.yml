@@ -1,0 +1,52 @@
+name: "Cron"
+
+on:
+  push:
+    branches: [master, ]
+  schedule:
+    - cron: '0 * * * *'
+
+jobs:
+  update:
+    runs-on: macos-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: Setup Pipenv
+        run: |
+          cd Generator
+
+          export PIPENV_VENV_IN_PROJECT=1
+          while true; do
+            echo '+ pipenv install --dev'
+            pipenv install --dev
+            $@ && break
+            echo -e 'exit: $?'
+          done
+          echo -e 'exit: 0'
+      - name: make formula
+        run: |
+          cd Generator
+          for name in appdmg bandit basher dmgbuild docutils f2format git-hg macdaily node-sass noob poseur pydl sloc sphinx vermin walrus zkg; do
+            pipenv run python scripts/${name}.py
+          done
+      - name: make fetch
+        run: |
+          cd Generator
+          for name in dart dart-beta dart-sass pyinstaller nlohmann-json ssh-askpass uti; do
+            pipenv run python scripts/${name}.py
+          done
+      - name: make link
+        run: |
+          cd Generator
+          make link
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Regular update on $(date)" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
