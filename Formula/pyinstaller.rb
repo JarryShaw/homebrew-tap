@@ -21,7 +21,9 @@ class Pyinstaller < Formula
     sha256 "8458ed3230b6421e88293f41174f6fb83d97bb5dd59716767cba17c82ffaa0b8" => :high_sierra
   end
 
-  depends_on "python@3.9"
+  depends_on "homebrew/core/python@3.9"
+
+  conflicts_with "homebrew/core/pyinstaller", because: "it is now integrated with homebrew-core"
 
   resource "altgraph" do
     url "https://files.pythonhosted.org/packages/22/5a/ac50b52581bbf0d8f6fd50ad77d20faac19a2263b43c60e7f3af8d1ec880/altgraph-0.17.tar.gz"

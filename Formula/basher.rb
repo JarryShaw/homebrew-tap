@@ -2,7 +2,7 @@ class Basher < Formula
   desc "Package manager for shell scripts"
   homepage "https://github.com/basherpm/basher"
   url "https://github.com/basherpm/basher.git",
-    revision: "a062f60d18fb724457e5d525c8ccd093afd8ef7d"
+    revision: "f6c06a4d3585368b4b16a0b5732e29fd9ba23211"
   version "2020.11.4"
 
   def install
