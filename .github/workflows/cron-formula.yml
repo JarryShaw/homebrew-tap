@@ -1,8 +1,6 @@
 name: "Cron Job for Formula"
 
 on:
-  push:
-    branches: [master, ]
   schedule:
     - cron: '0 * * * *'
 
