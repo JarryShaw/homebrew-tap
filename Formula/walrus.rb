@@ -3,12 +3,17 @@ class Walrus < Formula
 
   desc "Backport compiler for Python 3.8 assignment expressions"
   homepage "https://github.com/pybpc/walrus#walrus"
-  url "https://github.com/pybpc/walrus/archive/v0.1.4.tar.gz"
-  sha256 "9c568b24f33f38bad9625ca38f8d1cd3cef479e07951b4f071d30dafd967c0ae"
+  url "https://github.com/pybpc/walrus/archive/v1.6.2.tar.gz"
+  sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
 
   head "https://github.com/pybpc/walrus.git", :branch => "master"
 
-  depends_on "python@3.8"
+  depends_on "homebrew/core/python@3.9"
+
+  resource "bpc-utils" do
+    url "https://files.pythonhosted.org/packages/ec/48/120d1ae589e2bd96868f1e33f95042a4d27a8cbe9ecf7b4f8c0b5e130c38/bpc-utils-0.9.0.tar.gz"
+    sha256 "849fbd4477ae6973fe43428b83c08abf28bb488a476fb18671fb5f65fba33311"
+  end
 
   resource "parso" do
     url "https://files.pythonhosted.org/packages/e0/a2/3786c568fc8e9f64b9f7143e4c3904e61a8c5cb17260f22a6a3019d80c02/parso-0.5.2.tar.gz"

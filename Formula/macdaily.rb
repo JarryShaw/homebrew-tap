@@ -3,9 +3,8 @@ class Macdaily < Formula
 
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
-  url "https://github.com/JarryShaw/MacDaily/archive/v2019.8.4.tar.gz"
-  sha256 "08e5a96c2d6bf5206cd51adc627456e2023c33567f470b34d0cee83159de9885"
-  revision 3
+  url "https://github.com/JarryShaw/MacDaily/archive/v1.6.2.tar.gz"
+  sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
 
   head "https://github.com/JarryShaw/MacDaily.git", :branch => "master"
 
@@ -17,15 +16,15 @@ class Macdaily < Formula
   option "without-tree", "Build without tree format support"
   option "without-ptyng", "Build without alternative PTY support"
 
-  depends_on "python@3.8"
-  depends_on "expect" => :recommended
-  depends_on "cowsay" => :optional
-  depends_on "fortune" => :optional
-  depends_on "lolcat" => :optional
+  depends_on "homebrew/core/python@3.9"
+  depends_on "homebrew/core/expect" => :recommended
+  depends_on "homebrew/core/cowsay" => :optional
+  depends_on "homebrew/core/fortune" => :optional
+  depends_on "homebrew/core/lolcat" => :optional
 
   resource "ConfigUpdater" do
-    url "https://files.pythonhosted.org/packages/ae/77/5d3c17609475ecd93b1ad5df28791e0d6424e000877ac4085003b4e81b9e/ConfigUpdater-1.0.1.tar.gz"
-    sha256 "b750d8bc64bd22fa928feb12686e1e7135ff867730b23812e60cbd87cbe1c547"
+    url "https://files.pythonhosted.org/packages/3c/39/f24e02182304f64c903a85c2c6b872ef5c414804337d9fe993359e682860/ConfigUpdater-1.1.3.tar.gz"
+    sha256 "5363c45babe9c95df58f054b72ed513d1fca1be089ee4b2e32dc9fb3351f12b8"
   end
 
   resource "dictdumper" do
@@ -34,8 +33,8 @@ class Macdaily < Formula
   end
 
   resource "psutil" do
-    url "https://files.pythonhosted.org/packages/c4/b8/3512f0e93e0db23a71d82485ba256071ebef99b227351f0f5540f744af41/psutil-5.7.0.tar.gz"
-    sha256 "685ec16ca14d079455892f25bd124df26ff9137664af445563c1bd36629b5e0e"
+    url "https://files.pythonhosted.org/packages/33/e0/82d459af36bda999f82c7ea86c67610591cf5556168f48fd6509e5fa154d/psutil-5.7.3.tar.gz"
+    sha256 "af73f7bcebdc538eda9cc81d19db1db7bf26f103f91081d780bbacfcb620dee2"
   end
 
   resource "ptyng" do

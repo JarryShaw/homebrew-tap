@@ -3,22 +3,22 @@ class Zkg < Formula
 
   desc "Package manager for Zeek"
   homepage "https://docs.zeek.org/projects/package-manager"
-  url "https://github.com/zeek/package-manager/archive/v2.1.2.tar.gz"
-  sha256 "db79517f0f68b8f83f583f899bc1e7757942667996283a5e49b64898911fd404"
+  url "https://github.com/zeek/package-manager/archive/v2.4.1.tar.gz"
+  sha256 "4d17b35a1068706346aa9e71262d36d99db4d02f5a5ee9be9bc5413ee5a05765"
 
   head "https://github.com/zeek/package-manager.git", :branch => "master"
 
-  depends_on "python@3.8"
-  depends_on "zeek"
+  depends_on "homebrew/core/python@3.9"
+  depends_on "homebrew/core/zeek"
 
   resource "btest" do
-    url "https://files.pythonhosted.org/packages/26/00/f60440c939ab30e11cc55b6fc6463c7e9ec583a9ce7d6c5c2d80dff676a6/btest-0.61.tar.gz"
-    sha256 "8d8ee1723a3a55406911b3771ba5ae5247a5c34bf17c2222531660f1f4cad30c"
+    url "https://files.pythonhosted.org/packages/62/04/c29981cc95f0ee964fd0d76b142ef02de9ed6e7ebc649cf064a7042ba093/btest-0.64.tar.gz"
+    sha256 "0533651f968bfecb40ee158ca138376f483d3d2302535924c3043336a52481a8"
   end
 
   resource "configparser" do
-    url "https://files.pythonhosted.org/packages/e5/7c/d4ccbcde76b4eea8cbd73b67b88c72578e8b4944d1270021596e80b13deb/configparser-5.0.0.tar.gz"
-    sha256 "2ca44140ee259b5e3d8aaf47c79c36a7ab0d5e94d70bd4105c03ede7a20ea5a1"
+    url "https://files.pythonhosted.org/packages/3f/e7/9518720c56396179f8c63d7b5924c8463ed423828e54329be7f8cde5c364/configparser-5.0.1.tar.gz"
+    sha256 "005c3b102c96f4be9b8f40dafbd4997db003d07d1caa19f37808be8031475f2a"
   end
 
   resource "gitdb" do
@@ -27,8 +27,8 @@ class Zkg < Formula
   end
 
   resource "GitPython" do
-    url "https://files.pythonhosted.org/packages/5b/ef/96dd6b06400821bbad3f7e275f4a4f88af324124c5c04958e2f2c14ce2c8/GitPython-3.1.3.tar.gz"
-    sha256 "e107af4d873daed64648b4f4beb89f89f0cfbe3ef558fc7821ed2331c2f8da1a"
+    url "https://files.pythonhosted.org/packages/85/3d/ee9aa9c77a3c0e9074461d2d8da86c3564ed96abd28fa099dc3e05338a72/GitPython-3.1.11.tar.gz"
+    sha256 "befa4d101f91bad1b632df4308ec64555db684c360bd7d2130b4807d49ce86b8"
   end
 
   resource "semantic-version" do
