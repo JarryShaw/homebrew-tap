@@ -145,7 +145,8 @@ Collections
 - |sphinx|_ : Tool to create intelligent and beautiful documentation
 
   This formula is a port of ``sphinx-doc`` from Homebrew core repository,
-  which integrates ``sphinx`` and ``sphinx-autobuild`` along.
+  which integrates ``sphinx``, ``sphinx-autobuild`` and
+  ``sphinx-autodoc-typehints`` along.
 
 - |pyinstaller|_ : bundle a Python application and all its dependencies
 
@@ -183,6 +184,10 @@ Collections
 
   This formula is not notable enough to be included in Homebrew
   core repository yet (<30 forks, <30 watchers and <75 stars).
+
+- |jshint|_ : static analysis tool for JavaScript
+
+  This formula is not yet included in Home brew core repository.
 
 .. |docutils| replace:: ``docutils``
 .. _docutils: http://docutils.sourceforge.net
@@ -222,6 +227,8 @@ Collections
 .. _dart-sass: https://github.com/sass/homebrew-sass
 .. |libraqm| replace:: ``libraqm``
 .. _libraqm: https://github.com/HOST-Oman/libraqm
+.. |jshint| replace:: ``jshint``
+.. _jshint: http://jshint.com/
 
 -------
 License
