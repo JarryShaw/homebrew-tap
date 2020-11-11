@@ -11,8 +11,8 @@ class Walrus < Formula
   depends_on "homebrew/core/python@3.9"
 
   resource "bpc-utils" do
-    url "https://files.pythonhosted.org/packages/ec/48/120d1ae589e2bd96868f1e33f95042a4d27a8cbe9ecf7b4f8c0b5e130c38/bpc-utils-0.9.0.tar.gz"
-    sha256 "849fbd4477ae6973fe43428b83c08abf28bb488a476fb18671fb5f65fba33311"
+    url "https://files.pythonhosted.org/packages/fe/f9/233bb16668b2be1ea8be2d5c81466e271df40c92b9cf02e03c6546b5fb6d/bpc-utils-0.9.1.tar.gz"
+    sha256 "5bfd5e5fd460674b207f9786f7a0db315a06fff1de0c9b6b8c17d0ce07ad865b"
   end
 
   resource "parso" do

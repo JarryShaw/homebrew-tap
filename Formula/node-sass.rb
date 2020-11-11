@@ -3,8 +3,8 @@ class NodeSass < Formula
 
   desc "JavaScript implementation of a Sass compiler"
   homepage "https://github.com/sass/dart-sass"
-  url "https://registry.npmjs.org/sass/-/sass-1.27.0.tgz"
-  sha256 "40ffe0c5ebd4f41d814d323f29f3eea5f6bde877ae52a7017a23b740ad096347"
+  url "https://registry.npmjs.org/sass/-/sass-1.29.0.tgz"
+  sha256 "ab8c7ecbc4cec8a6709d1edabf6cd6679b0a870ee5a00d116ad8f708cf897823"
   license "MIT"
 
   livecheck do
@@ -13,18 +13,15 @@ class NodeSass < Formula
 
   bottle do
     cellar :any_skip_relocation
-    sha256 "ad140d92f71475bacfe5d9c3534726f4a3f7f098ddd466194fad103266a4f098" => :catalina
-    sha256 "22a74ac2c219b4dd2dcf87d39fdc107f4ad7d4735d198ab1446fe465a64a49a9" => :mojave
-    sha256 "53ba77b03fd6278da929312c431cc47a8f1fa4c92cbd24cc60704c90d7367bdc" => :high_sierra
+    sha256 "56e3e99b30e6770aadd154177343a43bb56681c5dff2fcec7b97539581c9d0ae" => :catalina
+    sha256 "4d7d268582508a2dc165837a96ba655bffb4b783a7daf035b1a8011912fd941f" => :mojave
+    sha256 "663b8447ee56847a676839e55058ce1c41400041fd75ba415daa5c5d37fae8e8" => :high_sierra
   end
 
   depends_on "homebrew/core/node"
 
   conflicts_with "homebrew/core/node-sass", because: "it is now integrated with homebrew-core"
   conflicts_with "jarryshaw/tap/dart-sass", because: "both install a `sass` binary"
-
-  # waiting for pull request at #47438
-  # conflicts_with "dart-sass", :because => "both install a `sass` binary"
 
   def install
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)

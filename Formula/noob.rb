@@ -41,8 +41,8 @@ class Noob < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/76/d9/bbbafc76b18da706451fa91bc2ebe21c0daf8868ef3c30b869ac7cb7f01d/urllib3-1.25.11.tar.gz"
-    sha256 "8d7eaa5a82a1cac232164990f04874c594c9453ec55eef02eab885aa02fc17a2"
+    url "https://files.pythonhosted.org/packages/f6/0c/2add359fbc96307f081172e2033799eab7471026a5dcdd372803aefa19fa/urllib3-1.26.0.tar.gz"
+    sha256 "4849f132941d68144df0a3785ccc4fe423430ba5db0108d045c8cadbc90f517a"
   end
 
   def install
