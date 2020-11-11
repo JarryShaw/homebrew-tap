@@ -435,11 +435,11 @@
         },
         "babel": {
             "hashes": [
-                "sha256:1aac2ae2d0d8ea368fa90906567f5c08463d98ade155c0c4bfedd6a0f7160e38",
-                "sha256:d670ea0b10f8b723672d3a6abeb87b565b244da220d76b4dba1b66269ec152d4"
+                "sha256:820c195271534e8a86f564ba9ef2c207f356cfeb7e94d2bdc6b57897c4233837",
+                "sha256:be432f50d6c38c705ea45a0c05a4bbb22a70742a93888fbae5e7948da1635d23"
             ],
             "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
-            "version": "==2.8.0"
+            "version": "==2.8.1"
         },
         "btest": {
             "hashes": [
@@ -975,10 +975,10 @@
         },
         "vermin": {
             "hashes": [
-                "sha256:01ac8c033d2884f6b640a2669defea314a3c9929ea1a0a6a1b693adbaf4f25f0"
+                "sha256:153c9c7e8a9c3fa28214fe1eb6b81e2da5bae5bf14c9dd1e99dd6a036676d506"
             ],
             "index": "tsinghua",
-            "version": "==1.0.1"
+            "version": "==1.0.2"
         },
         "walrus": {
             "hashes": [
@@ -989,10 +989,10 @@
         },
         "zkg": {
             "hashes": [
-                "sha256:dabb4e2179459894cdfda2eba45a409b4db46acaeabe7624cdc6157b104e8d3a"
+                "sha256:cbbe5baae5fecd42c88756f4c38c9ec63f9ac4d4b18c69867bf9f732b6104fd3"
             ],
             "index": "tsinghua",
-            "version": "==2.4.1"
+            "version": "==2.4.2"
         }
     }
 }
