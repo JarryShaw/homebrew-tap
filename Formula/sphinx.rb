@@ -3,8 +3,8 @@ class Sphinx < Formula
 
   desc "Tool to create intelligent and beautiful documentation"
   homepage "https://www.sphinx-doc.org/"
-  url "https://github.com/sphinx-doc/sphinx/archive/v3.3.0.tar.gz"
-  sha256 "ed8b694fbab74cac5a2cde736940e8c402a484363029ec7c2dcb157382fb866f"
+  url "https://github.com/sphinx-doc/sphinx/archive/v3.3.1.tar.gz"
+  sha256 "af59d137d94a9a54b00e9a8a282504ccb9b3a35d00a709568ab0589be6fc8155"
 
   bottle do
     cellar :any_skip_relocation
@@ -33,8 +33,8 @@ class Sphinx < Formula
   end
 
   resource "Sphinx" do
-    url "https://files.pythonhosted.org/packages/e7/66/e9bc0151c3d796f2623a28f9596a0b24865976418cdbae2efd6c6a8d6ca5/Sphinx-3.3.0.tar.gz"
-    sha256 "1c21e7c5481a31b531e6cbf59c3292852ccde175b504b00ce2ff0b8f4adc3649"
+    url "https://files.pythonhosted.org/packages/16/06/9a7ce305cf7c31d5f167f83e37c159e8b79ebe595b627cbc7d73d8468e81/Sphinx-3.3.1.tar.gz"
+    sha256 "1e8d592225447104d1172be415bc2972bd1357e3e12fdc76edf2261105db4300"
   end
 
   resource "alabaster" do
@@ -43,8 +43,8 @@ class Sphinx < Formula
   end
 
   resource "Babel" do
-    url "https://files.pythonhosted.org/packages/13/1e/17cbd78f3b0b0115c6fa10e55c0bb5d3dd2c0d482d2114339e9d33c171a1/Babel-2.8.1.tar.gz"
-    sha256 "820c195271534e8a86f564ba9ef2c207f356cfeb7e94d2bdc6b57897c4233837"
+    url "https://files.pythonhosted.org/packages/41/1b/5ed6e564b9ca54318df20ebe5d642ab25da4118df3c178247b8c4b26fa13/Babel-2.9.0.tar.gz"
+    sha256 "da031ab54472314f210b0adcff1588ee5d1d1d0ba4dbd07b94dba82bde791e05"
   end
 
   resource "certifi" do
@@ -108,8 +108,8 @@ class Sphinx < Formula
   end
 
   resource "Sphinx" do
-    url "https://files.pythonhosted.org/packages/e7/66/e9bc0151c3d796f2623a28f9596a0b24865976418cdbae2efd6c6a8d6ca5/Sphinx-3.3.0.tar.gz"
-    sha256 "1c21e7c5481a31b531e6cbf59c3292852ccde175b504b00ce2ff0b8f4adc3649"
+    url "https://files.pythonhosted.org/packages/16/06/9a7ce305cf7c31d5f167f83e37c159e8b79ebe595b627cbc7d73d8468e81/Sphinx-3.3.1.tar.gz"
+    sha256 "1e8d592225447104d1172be415bc2972bd1357e3e12fdc76edf2261105db4300"
   end
 
   resource "sphinx-autobuild" do
@@ -153,8 +153,8 @@ class Sphinx < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/19/80/b2a19b372f16bc846fd156de8d9b3a9b1092aef1f1963d800b0f8c76a67a/urllib3-1.26.1.tar.gz"
-    sha256 "097116a6f16f13482d2a2e56792088b9b2920f4eb6b4f84a2c90555fb673db74"
+    url "https://files.pythonhosted.org/packages/29/e6/d1a1d78c439cad688757b70f26c50a53332167c364edb0134cadd280e234/urllib3-1.26.2.tar.gz"
+    sha256 "19188f96923873c92ccb987120ec4acaa12f0461fa9ce5d3d0772bc965a39e08"
   end
 
   def install

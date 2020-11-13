@@ -4,7 +4,7 @@ class Pydl < Formula
   desc "Video downloader powered by jarryshaw.me"
   homepage "https://jarryshaw.me"
   url "https://github.com/JarryShaw/pydl.git"
-  version "2020.11.12"
+  version "2020.11.13"
 
   depends_on "homebrew/core/aria2"
   depends_on "homebrew/core/python@3.9"
@@ -45,13 +45,13 @@ class Pydl < Formula
   end
 
   resource "urllib3" do
-    url "https://pypi.tuna.tsinghua.edu.cn/packages/19/80/b2a19b372f16bc846fd156de8d9b3a9b1092aef1f1963d800b0f8c76a67a/urllib3-1.26.1.tar.gz"
-    sha256 "097116a6f16f13482d2a2e56792088b9b2920f4eb6b4f84a2c90555fb673db74"
+    url "https://pypi.tuna.tsinghua.edu.cn/packages/29/e6/d1a1d78c439cad688757b70f26c50a53332167c364edb0134cadd280e234/urllib3-1.26.2.tar.gz"
+    sha256 "19188f96923873c92ccb987120ec4acaa12f0461fa9ce5d3d0772bc965a39e08"
   end
 
   resource "urllib3" do
-    url "https://pypi.tuna.tsinghua.edu.cn/packages/19/80/b2a19b372f16bc846fd156de8d9b3a9b1092aef1f1963d800b0f8c76a67a/urllib3-1.26.1.tar.gz"
-    sha256 "097116a6f16f13482d2a2e56792088b9b2920f4eb6b4f84a2c90555fb673db74"
+    url "https://pypi.tuna.tsinghua.edu.cn/packages/29/e6/d1a1d78c439cad688757b70f26c50a53332167c364edb0134cadd280e234/urllib3-1.26.2.tar.gz"
+    sha256 "19188f96923873c92ccb987120ec4acaa12f0461fa9ce5d3d0772bc965a39e08"
   end
 
   def install
