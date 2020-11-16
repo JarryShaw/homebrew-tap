@@ -101,11 +101,11 @@
         },
         "homebrew-npm-noob": {
             "hashes": [
-                "sha256:08080c4e0fe8a532800a10b793b626955f317de4e0038aa7b770c7ed96ed2cd7",
-                "sha256:3610a2ef9746970913dd42991e1786aa2f276e4930a9177b67f352ddca5684f3"
+                "sha256:4ed37c7d4efff30a8486e0cdc5fa030eef40d1a752b6e7ec159984e53e3c2f44",
+                "sha256:d4dfe5b9d72bd6970aa66d9e25c77fc30e09050facc36b989fdb325a85d2b00d"
             ],
             "index": "tsinghua",
-            "version": "==0.2"
+            "version": "==0.3"
         },
         "homebrew-pypi-poet": {
             "hashes": [
