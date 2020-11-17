@@ -5,6 +5,11 @@ class Appdmg < Formula
   homepage "https://github.com/LinusU/node-appdmg#readme"
   url "https://registry.npmjs.org/appdmg/-/appdmg-0.6.0.tgz"
   sha256 "a1faebdec4ed269a9ed159e45634df6abac5fe734970f592ca2c9d649710f48c"
+  license "MIT"
+
+  livecheck do
+    url :stable
+  end
 
   depends_on "node"
 
