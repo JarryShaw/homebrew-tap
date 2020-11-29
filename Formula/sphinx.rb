@@ -79,8 +79,8 @@ class Sphinx < Formula
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/61/b8/5a96ce56fcdf1bf7494f642ec7fad3e8c192b3a5b2116b59955ff32f70de/packaging-20.5.tar.gz"
-    sha256 "5d21ed3d936beb102850195eadaa1371bfb4b93da6ad63d231410c6dca25a665"
+    url "https://files.pythonhosted.org/packages/16/7c/33ae3aa02eb10ca726b21aa88d338e3f619c674e4fb8544eb352330d880a/packaging-20.7.tar.gz"
+    sha256 "05af3bb85d320377db281cf254ab050e1a7ebcbf5410685a9a407e18a1f81236"
   end
 
   resource "pyparsing" do
