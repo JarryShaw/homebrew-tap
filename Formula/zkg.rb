@@ -3,8 +3,8 @@ class Zkg < Formula
 
   desc "Package manager for Zeek"
   homepage "https://docs.zeek.org/projects/package-manager"
-  url "https://github.com/zeek/package-manager/archive/v2.4.2.tar.gz"
-  sha256 "d85d6470174fc015fd45726b2f66d1995168a0c711b6aa7c33a215f2499b9643"
+  url "https://github.com/zeek/package-manager/archive/v2.5.0.tar.gz"
+  sha256 "c395ea75870bf4a5b24cfb1e0c5cc7d1674e1b676a9f614d83291ba3c7cd796e"
 
   head "https://github.com/zeek/package-manager.git", branch: "master"
 
@@ -14,11 +14,6 @@ class Zkg < Formula
   resource "btest" do
     url "https://files.pythonhosted.org/packages/62/04/c29981cc95f0ee964fd0d76b142ef02de9ed6e7ebc649cf064a7042ba093/btest-0.64.tar.gz"
     sha256 "0533651f968bfecb40ee158ca138376f483d3d2302535924c3043336a52481a8"
-  end
-
-  resource "configparser" do
-    url "https://files.pythonhosted.org/packages/3f/e7/9518720c56396179f8c63d7b5924c8463ed423828e54329be7f8cde5c364/configparser-5.0.1.tar.gz"
-    sha256 "005c3b102c96f4be9b8f40dafbd4997db003d07d1caa19f37808be8031475f2a"
   end
 
   resource "gitdb" do
