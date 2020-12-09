@@ -16,8 +16,8 @@ class Dmgbuild < Formula
   end
 
   resource "mac-alias" do
-    url "https://files.pythonhosted.org/packages/6c/56/44da6a046876e5fb36e2bf3e5e0a41fc8f4b49ac2d18ca54430cb3688d06/mac_alias-2.1.1.tar.gz"
-    sha256 "55468c84a87c8b3929a3dc98f753194f7fe93fd8621abbfea1a4019448058a14"
+    url "https://files.pythonhosted.org/packages/54/cf/d4379fc5a6c7835ef92ff8ca49e8dc1c5c51b3c72333a394118887c87a6d/mac_alias-2.2.0.tar.gz"
+    sha256 "0eb84a63f98bf54c2f9fbdc4de956a63e64eb8a4a124143a1c1f5a78326442f0"
   end
 
   def install
