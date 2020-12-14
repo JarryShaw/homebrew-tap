@@ -3,7 +3,7 @@ class F2format < Formula
 
   desc "Backport compiler for Python 3.6 f-string literals"
   homepage "https://github.com/pybpc/f2format#f2format"
-  url "https://github.com/pybpc/f2format/archive/v1.6.3.tar.gz"
+  url "https://github.com/pybpc/f2format/archive/v1.7.0.tar.gz"
   sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
 
   head "https://github.com/pybpc/f2format.git", branch: "master"
