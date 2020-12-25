@@ -3,8 +3,8 @@ class Sphinx < Formula
 
   desc "Tool to create intelligent and beautiful documentation"
   homepage "https://www.sphinx-doc.org/"
-  url "https://github.com/sphinx-doc/sphinx/archive/v3.4.0.tar.gz"
-  sha256 "f610543964c97000bb06726bb6c1b0da1bfbc3e3f3494a48dd5160394752f6a6"
+  url "https://github.com/sphinx-doc/sphinx/archive/v3.4.1.tar.gz"
+  sha256 "96d8050a2f08efb58828c8923d96495778f663d92b888d5dda187ab7005ed213"
 
   bottle do
     cellar :any_skip_relocation
@@ -34,8 +34,8 @@ class Sphinx < Formula
   end
 
   resource "Sphinx" do
-    url "https://files.pythonhosted.org/packages/bd/19/f4f58f26119ac93f7802ae469c080e3f239fb973e3626017edf08b0e8676/Sphinx-3.4.0.tar.gz"
-    sha256 "4dcde313801f23ea4789ac31e5405e240cb758b5d375804807f2f3cc3c396bfa"
+    url "https://files.pythonhosted.org/packages/4f/76/daa2e41de4e31788fc48c77d98e5113809f65b516b359503113e1b681dc0/Sphinx-3.4.1.tar.gz"
+    sha256 "e450cb205ff8924611085183bf1353da26802ae73d9251a8fcdf220a8f8712ef"
   end
 
   resource "alabaster" do
@@ -89,8 +89,8 @@ class Sphinx < Formula
   end
 
   resource "pytz" do
-    url "https://files.pythonhosted.org/packages/09/07/448a8887c7195450604dfc0305d80d74324c36ee18ed997664051d4bffe3/pytz-2020.4.tar.gz"
-    sha256 "3e6b7dd2d1e0a59084bcee14a17af60c5c562cdc16d828e8eba2e683d3a7e268"
+    url "https://files.pythonhosted.org/packages/70/44/404ec10dca553032900a65bcded8b8280cf7c64cc3b723324e2181bf93c9/pytz-2020.5.tar.gz"
+    sha256 "180befebb1927b16f6b57101720075a984c019ac16b1b7575673bea42c6c3da5"
   end
 
   resource "requests" do
@@ -109,8 +109,8 @@ class Sphinx < Formula
   end
 
   resource "Sphinx" do
-    url "https://files.pythonhosted.org/packages/bd/19/f4f58f26119ac93f7802ae469c080e3f239fb973e3626017edf08b0e8676/Sphinx-3.4.0.tar.gz"
-    sha256 "4dcde313801f23ea4789ac31e5405e240cb758b5d375804807f2f3cc3c396bfa"
+    url "https://files.pythonhosted.org/packages/4f/76/daa2e41de4e31788fc48c77d98e5113809f65b516b359503113e1b681dc0/Sphinx-3.4.1.tar.gz"
+    sha256 "e450cb205ff8924611085183bf1353da26802ae73d9251a8fcdf220a8f8712ef"
   end
 
   resource "sphinx-autobuild" do
