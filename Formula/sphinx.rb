@@ -3,8 +3,8 @@ class Sphinx < Formula
 
   desc "Tool to create intelligent and beautiful documentation"
   homepage "https://www.sphinx-doc.org/"
-  url "https://github.com/sphinx-doc/sphinx/archive/v3.4.1.tar.gz"
-  sha256 "96d8050a2f08efb58828c8923d96495778f663d92b888d5dda187ab7005ed213"
+  url "https://github.com/sphinx-doc/sphinx/archive/v3.4.2.tar.gz"
+  sha256 "db9be396a5d82ab40880f89ee87bfc9e8916f884388770707763067039213d71"
 
   bottle do
     cellar :any_skip_relocation
@@ -34,8 +34,8 @@ class Sphinx < Formula
   end
 
   resource "Sphinx" do
-    url "https://files.pythonhosted.org/packages/4f/76/daa2e41de4e31788fc48c77d98e5113809f65b516b359503113e1b681dc0/Sphinx-3.4.1.tar.gz"
-    sha256 "e450cb205ff8924611085183bf1353da26802ae73d9251a8fcdf220a8f8712ef"
+    url "https://files.pythonhosted.org/packages/ef/47/807912d1723226d57871c50cf27fa14a167dde2a5d97ef78a435ab35b66f/Sphinx-3.4.2.tar.gz"
+    sha256 "77dec5ac77ca46eee54f59cf477780f4fb23327b3339ef39c8471abb829c1285"
   end
 
   resource "alabaster" do
@@ -64,8 +64,8 @@ class Sphinx < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/2f/2e/bfe821bd26194fb474e0932df8ed82e24bd312ba628a8644d93c5a28b5d4/idna-3.0.tar.gz"
-    sha256 "c9a26e10e5558412384fac891eefb41957831d31be55f1e2c98ed97a70abb969"
+    url "https://files.pythonhosted.org/packages/9f/24/1444ee2c9aee531783c031072a273182109c6800320868ab87675d147a05/idna-3.1.tar.gz"
+    sha256 "c5b02147e01ea9920e6b0a3f1f7bb833612d507592c837a6c49552768f4054e1"
   end
 
   resource "imagesize" do
@@ -109,8 +109,8 @@ class Sphinx < Formula
   end
 
   resource "Sphinx" do
-    url "https://files.pythonhosted.org/packages/4f/76/daa2e41de4e31788fc48c77d98e5113809f65b516b359503113e1b681dc0/Sphinx-3.4.1.tar.gz"
-    sha256 "e450cb205ff8924611085183bf1353da26802ae73d9251a8fcdf220a8f8712ef"
+    url "https://files.pythonhosted.org/packages/ef/47/807912d1723226d57871c50cf27fa14a167dde2a5d97ef78a435ab35b66f/Sphinx-3.4.2.tar.gz"
+    sha256 "77dec5ac77ca46eee54f59cf477780f4fb23327b3339ef39c8471abb829c1285"
   end
 
   resource "sphinx-autobuild" do
