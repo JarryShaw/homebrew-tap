@@ -12,8 +12,8 @@ class Zkg < Formula
   depends_on "homebrew/core/zeek"
 
   resource "btest" do
-    url "https://files.pythonhosted.org/packages/c5/b1/78e0be3836fee821c305c4864328b6163922039c2d7ce503599038077ec6/btest-0.65.tar.gz"
-    sha256 "d368045c6c6a9f050924f5c23d55d1ca15f274eaaa5e8e18a09b89561ab94e42"
+    url "https://files.pythonhosted.org/packages/25/95/bb9d5cee38287e389be79778a66d2e07f0e1905bd1057f91017a7cf7246a/btest-0.66.tar.gz"
+    sha256 "2c1ae91dfbb603dd11494a102b67e1b67ba9ea7f35d385d63205df479ae9bc40"
   end
 
   resource "gitdb" do
