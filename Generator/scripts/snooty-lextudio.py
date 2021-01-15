@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 
-import hashlib
 import os
 import re
 import subprocess  # nosec: B404
 import sys
 import typing
 
-import requests
+import pypi_simple
 
 if typing.TYPE_CHECKING:
     VERSION = ''
@@ -15,17 +14,18 @@ for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  #
     match = re.match(r"snooty-lextudio==(.*)", line, re.IGNORECASE)
     if match is not None:
         VERSION = match.groups()[0]
-print(VERSION)
 
-SNOOTY_URL = f'https://github.com/vscode-restructuredtext/snooty-parser/archive/v{VERSION}.tar.gz'
-SNOOTY_SHA = hashlib.sha256(requests.get(SNOOTY_URL).content).hexdigest()
-print(SNOOTY_SHA)
+with pypi_simple.PyPISimple() as client:
+    snooty_page = client.get_project_page('snooty-lextudio')  # type: pypi_simple.ProjectPage # type: ignore[assignment]
+snooty_pkg = snooty_page.packages[0]
+
+SNOOTY_URL = snooty_pkg.url
+SNOOTY_SHA = snooty_pkg.get_digests()['sha256']
 
 _data_pkgs = dict()  # type: ignore
 
 
 def _fetch_dependency(package):
-    print(package)
     dependencies = _data_pkgs.get(package)
     if dependencies is not None:
         return dependencies
@@ -44,7 +44,6 @@ def _fetch_dependency(package):
         _deps_pkgs[item] = _fetch_dependency(item)
     _data_pkgs.update(_deps_pkgs)
 
-    print(_deps_pkgs)
     return _deps_pkgs
 
 
@@ -57,13 +56,10 @@ def _list_dependency(dependencies):
 
 
 _deps_list = _list_dependency(_fetch_dependency('snooty-lextudio'))
-print(_deps_list)
 
 args = ['poet', '--single']
 args.extend(sorted(set(_deps_list)))
-print(args)
 SNOOTY = subprocess.check_output(args).decode().strip()  # nosec
-print(SNOOTY)
 
 FORMULA = f'''\
 class SnootyLextudio < Formula

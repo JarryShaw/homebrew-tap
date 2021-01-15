@@ -3,8 +3,8 @@ class SnootyLextudio < Formula
 
   desc "Visual Studio Code language server for reStructureText"
   homepage "https://github.com/vscode-restructuredtext/snooty-parser"
-  url "https://files.pythonhosted.org/packages/ea/77/0cbe13cf8da36a725cf0d548e719206a083be041309652428d785aac2845/snooty-lextudio-1.8.6.dev0.tar.gz"
-  sha256 "93f6a858e63fece28ef5261448c2b8738f72ad2ab5eaba8ac09e63d09721e470"
+  url "https://files.pythonhosted.org/packages/65/4d/3448bc230ca6088b68ea9c5f5ef60d66bd7e8fb7d525fd740a3ffc5ed2dc/snooty-lextudio-1.8.2.dev0.tar.gz#sha256=18de0b78ec32fed13cc0b5c90d39df654f3471eb887d4bc84baaa41c13b5aa55"
+  sha256 "18de0b78ec32fed13cc0b5c90d39df654f3471eb887d4bc84baaa41c13b5aa55"
 
   head "https://github.com/vscode-restructuredtext/snooty-parser.git", branch: "master"
 
