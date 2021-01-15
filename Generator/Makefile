@@ -11,7 +11,7 @@ style: brew-style
 
 link: bpython2 bpython3 bro-pkg nlohmann_json poet2 poet3 ptpython2 ptpython3 sass
 fetch: dart dart-beta dart-sass pyinstaller nlohmann-json ssh-askpass uti
-formula: appdmg bandit basher dmgbuild docutils f2format git-hg jshint macdaily node-sass noob poseur pydl sloc snooty-lextudio sphinx vermin walrus zkg
+formula: appdmg bandit basher dmgbuild docutils f2format git-hg jshint macdaily mirror-config-china node-sass noob poseur pydl sloc snooty-lextudio sphinx vermin walrus zkg
 
 brew-update:
 	brew update
@@ -112,6 +112,10 @@ macdaily: pipenv
 	pipenv run python scripts/macdaily.py
 	FORMULA="macdaily" $(MAKE) brew-audit
 
+mirror-config-china: pipenv
+	pipenv run python scripts/macdaily.py
+	FORMULA="macdaily" $(MAKE) brew-audit
+
 nlohmann-json: brew
 	pipenv run python scripts/nlohmann-json.py
 	FORMULA="nlohmann-json" $(MAKE) brew-audit
@@ -160,7 +164,7 @@ sloc: brew
 	pipenv run python scripts/sloc.py
 	FORMULA="sloc" $(MAKE) brew-audit
 
-snooty-lextudio: brew pipenv
+snooty-lextudio: pipenv
 	pipenv run python scripts/snooty-lextudio.py
 	FORMULA="snooty-lextudio" $(MAKE) brew-audit
 

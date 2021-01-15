@@ -44,6 +44,7 @@ zkg = "*"
 [packages]
 homebrew-pypi-poet = "*"
 homebrew-npm-noob = "*"
+pypi-simple = "*"
 
 beautifulsoup4 = {extras = ["html5lib"],version = "*"}
 requests = {extras = ["socks"],version = "*"}
