@@ -189,6 +189,11 @@ Collections
 
   This formula is not yet included in Home brew core repository.
 
+- |snooty-lextudio|_ : reStructureText language server for Visual Studio Code
+
+  This formula is not notable enough to be included in Homebrew
+  core repository yet (<30 forks, <30 watchers and <75 stars).
+
 .. |docutils| replace:: ``docutils``
 .. _docutils: http://docutils.sourceforge.net
 .. |vermin| replace:: ``vermin``
@@ -229,6 +234,8 @@ Collections
 .. _libraqm: https://github.com/HOST-Oman/libraqm
 .. |jshint| replace:: ``jshint``
 .. _jshint: http://jshint.com/
+.. |snooty-lextudio| replace:: ``snooty-lextudio``
+.. _snooty-lextudio: https://github.com/vscode-restructuredtext/snooty-parser
 
 -------
 License

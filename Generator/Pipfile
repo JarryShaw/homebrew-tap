@@ -33,6 +33,8 @@ pyinstaller = "*"
 
 vermin = "*"
 
+snooty-lextudio = "*"
+
 Sphinx = "*"
 sphinx-autobuild = "*"
 sphinx-autodoc-typehints = "*"
@@ -54,3 +56,6 @@ pylint = "*"
 
 [requires]
 python_version = "3.9"
+
+[pipenv]
+allow_prereleases = true
