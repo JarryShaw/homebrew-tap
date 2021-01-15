@@ -194,6 +194,11 @@ Collections
   This formula is not notable enough to be included in Homebrew
   core repository yet (<30 forks, <30 watchers and <75 stars).
 
+- |mirror-config-china|_ : Node.js packages mirror configuration set for China
+
+  This formula is not notable enough to be included in Homebrew
+  core repository yet (<30 forks, <30 watchers and <75 stars).
+
 .. |docutils| replace:: ``docutils``
 .. _docutils: http://docutils.sourceforge.net
 .. |vermin| replace:: ``vermin``
@@ -236,6 +241,8 @@ Collections
 .. _jshint: http://jshint.com/
 .. |snooty-lextudio| replace:: ``snooty-lextudio``
 .. _snooty-lextudio: https://github.com/vscode-restructuredtext/snooty-parser
+.. |mirror-config-china| replace:: ``mirror-config-china``
+.. _mirror-config-china: https://github.com/gucong3000/mirror-config-china
 
 -------
 License
