@@ -3,20 +3,16 @@ class Pyinstaller < Formula
 
   desc "Bundle a Python application and all its dependencies"
   homepage "https://www.pyinstaller.org"
-  url "https://files.pythonhosted.org/packages/9e/ed/fbdad7f5d8f794c901076b814b8e9f5ce31d32c0bc3b63ddd27b61db9530/pyinstaller-4.1.tar.gz"
-  sha256 "954ae81de9a4bc096ff02433b3e245b9272fe53f27cac319e71fe7540952bd3d"
-  license "GPL-2.0"
+  url "https://files.pythonhosted.org/packages/b4/83/9f6ff034650abe9778c9a4f86bcead63f89a62acf02b1b47fc2bfc6bf8dd/pyinstaller-4.2.tar.gz"
+  sha256 "f5c0eeb2aa663cce9a5404292c0195011fa500a6501c873a466b2e8cad3c950c"
+  license "GPL-2.0-or-later"
   head "https://github.com/pyinstaller/pyinstaller.git", branch: "develop"
 
-  livecheck do
-    url :stable
-  end
-
   bottle do
-    cellar :any_skip_relocation
-    sha256 "6518b7fb92db54abc227d3be74530c65d08ef75b79d7d8e5aa3655a31bfb8a31" => :big_sur
-    sha256 "4bccc73cc20b297d0ce9f8133c0fac8b7366323785fa83d3f7001cc136fd4918" => :catalina
-    sha256 "4fbfb39966796c5fd73366fa0799b7e9260b3fcc8863838695516b922c237c02" => :mojave
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "75711c89dfaca5a231e9532dad47a1f16b3b64f27ea191da2db806a777a19bc4"
+    sha256 cellar: :any_skip_relocation, big_sur:       "eb1d6148599f36a8f35132c182dc2062af62bd3c3792b562d06ac3a1e9092db9"
+    sha256 cellar: :any_skip_relocation, catalina:      "6dc9e1630ec207b522f3ff7339ed941f4463ccc6cd67e2a69ef4922b3ff6c1e5"
+    sha256 cellar: :any_skip_relocation, mojave:        "194caf5c538bf6116de70b5cd80dd1ffa0ed82c4c1f6e0c92cd40154e65bf7ad"
   end
 
   depends_on "homebrew/core/python@3.9"
@@ -34,8 +30,8 @@ class Pyinstaller < Formula
   end
 
   resource "pyinstaller-hooks-contrib" do
-    url "https://files.pythonhosted.org/packages/a3/a9/ea55eba430824703625d37a01ff8a219643f3174a4afea1a4073ce5a0db0/pyinstaller-hooks-contrib-2020.10.tar.gz"
-    sha256 "bf4543a16c9c6e9dd2d70ea3fee78b81d3357a68f706df471d990213892259d9"
+    url "https://files.pythonhosted.org/packages/ad/ac/25bd5c6f192280182403e75e62abc5f8113cf3f287c828987ce62fd4b07f/pyinstaller-hooks-contrib-2020.11.tar.gz"
+    sha256 "fc3290a2ca337d1d58c579c223201360bfe74caed6454eaf5a2550b77dbda45c"
   end
 
   def install

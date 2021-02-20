@@ -3,8 +3,8 @@ class Zkg < Formula
 
   desc "Package manager for Zeek"
   homepage "https://docs.zeek.org/projects/package-manager"
-  url "https://github.com/zeek/package-manager/archive/v2.6.1.tar.gz"
-  sha256 "f57168c4a31a76eadfa315311fdb1c92f68810ed1d5d94f8949c601c5aef7474"
+  url "https://github.com/zeek/package-manager/archive/v2.7.1.tar.gz"
+  sha256 "ff0d9cf003d51135fa82c8f6f0ca98ba02528df7267636d877d4da38e51ac8fa"
 
   head "https://github.com/zeek/package-manager.git", branch: "master"
 
@@ -12,8 +12,8 @@ class Zkg < Formula
   depends_on "homebrew/core/zeek"
 
   resource "btest" do
-    url "https://files.pythonhosted.org/packages/25/95/bb9d5cee38287e389be79778a66d2e07f0e1905bd1057f91017a7cf7246a/btest-0.66.tar.gz"
-    sha256 "2c1ae91dfbb603dd11494a102b67e1b67ba9ea7f35d385d63205df479ae9bc40"
+    url "https://files.pythonhosted.org/packages/d3/e1/c786ddc445446d55e3f211f3988e6920991e5584ed0a840f63b420558db7/btest-0.67.tar.gz"
+    sha256 "1df5b1462b62efba6c718d8aa09b1d566cc18e93f50f84132fe96326c40305c1"
   end
 
   resource "gitdb" do
@@ -22,8 +22,8 @@ class Zkg < Formula
   end
 
   resource "GitPython" do
-    url "https://files.pythonhosted.org/packages/ec/4d/e6553122c85ec7c4c3e702142cc0f5ed02e5cf1b4d7ecea86a07e45725a0/GitPython-3.1.12.tar.gz"
-    sha256 "42dbefd8d9e2576c496ed0059f3103dcef7125b9ce16f9d5f9c834aed44a1dac"
+    url "https://files.pythonhosted.org/packages/d4/a9/60a66a0e8b452726cfc5939242ffa7158c1a9a78ff628bd4540b49156240/GitPython-3.1.13.tar.gz"
+    sha256 "8621a7e777e276a5ec838b59280ba5272dd144a18169c36c903d8b38b99f750a"
   end
 
   resource "semantic-version" do
@@ -32,8 +32,8 @@ class Zkg < Formula
   end
 
   resource "smmap" do
-    url "https://files.pythonhosted.org/packages/75/fb/2f594e5364f9c986b2c89eb662fc6067292cb3df2b88ae31c939b9138bb9/smmap-3.0.4.tar.gz"
-    sha256 "9c98bbd1f9786d22f14b3d4126894d56befb835ec90cef151af566c7e19b5d24"
+    url "https://files.pythonhosted.org/packages/dd/d4/2b4f196171674109f0fbb3951b8beab06cd0453c1b247ec0c4556d06648d/smmap-4.0.0.tar.gz"
+    sha256 "7e65386bd122d45405ddf795637b7f7d2b532e7e401d46bbe3fb49b9986d5182"
   end
 
   def install
