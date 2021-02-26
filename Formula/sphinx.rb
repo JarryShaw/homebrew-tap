@@ -7,10 +7,10 @@ class Sphinx < Formula
   sha256 "888dece1245c0239085797f649bda9909e8276a68d9aa5ac5560785fcb4a3696"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "e08f34bbdbed5857dfc962ae6e04e50bfc1bcb13963de9f046fcf0dffa4979e5"
-    sha256 cellar: :any_skip_relocation, big_sur:       "cbdf28903101f4aa172f06b2cc1c0d08ed56011a294a5cc4386488852de53405"
-    sha256 cellar: :any_skip_relocation, catalina:      "d4c8f97001c58cab8fb015a9156829bc049a35ba5e5d86eeafb8d068c4502f8e"
-    sha256 cellar: :any_skip_relocation, mojave:        "c39c79343b10c3a8d41ef24d42b6c834e4319fe765ef792ee403ce6803fbc192"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "2b46652435092af08cf48e21745801d7e92b1ad156429fb38b526aa3209b77d6"
+    sha256 cellar: :any_skip_relocation, big_sur:       "67883db6696fa3cd56caa7ca0b2dbdf0412f52fb86e9a4fb36eddf0d8d2bd9a4"
+    sha256 cellar: :any_skip_relocation, catalina:      "fb4b52480f017a1144294305cc8f462466bd3b4272c8b00171782cf0ce61eb0f"
+    sha256 cellar: :any_skip_relocation, mojave:        "f0656a37e3718e1ed01d9718ede458820c1e109fe3bd8cee12eb64ab07d0fcca"
   end
 
   depends_on "homebrew/core/python@3.9"
