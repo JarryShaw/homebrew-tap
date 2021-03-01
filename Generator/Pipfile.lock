@@ -28,11 +28,11 @@
     "default": {
         "astroid": {
             "hashes": [
-                "sha256:87ae7f2398b8a0ae5638ddecf9987f081b756e0e9fc071aeebdca525671fc4dc",
-                "sha256:b31c92f545517dcc452f284bc9c044050862fbe6d93d2b3de4a215a6b384bf0d"
+                "sha256:21d735aab248253531bb0f1e1e6d068f0ee23533e18ae8a6171ff892b98297cf",
+                "sha256:cfc35498ee64017be059ceffab0a25bedf7548ab76f2bea691c5565896e7128d"
             ],
             "markers": "python_version >= '3.6'",
-            "version": "==2.5.0"
+            "version": "==2.5.1"
         },
         "autopep8": {
             "hashes": [
@@ -95,11 +95,11 @@
         },
         "gitpython": {
             "hashes": [
-                "sha256:8621a7e777e276a5ec838b59280ba5272dd144a18169c36c903d8b38b99f750a",
-                "sha256:c5347c81d232d9b8e7f47b68a83e5dc92e7952127133c5f2df9133f2c75a1b29"
+                "sha256:3283ae2fba31c913d857e12e5ba5f9a7772bbc064ae2bb09efafa71b0dd4939b",
+                "sha256:be27633e7509e58391f10207cd32b2a6cf5b908f92d9cd30da2e514e1137af61"
             ],
             "markers": "python_version >= '3.4'",
-            "version": "==3.1.13"
+            "version": "==3.1.14"
         },
         "homebrew-npm-noob": {
             "hashes": [
@@ -137,7 +137,7 @@
                 "sha256:c729845434366216d320e936b8ad6f9d681aab72dc7cbc2d51bedc3582f3ad1e",
                 "sha256:fff4f0c04e1825522ce6949973e83110a6e907750cd92d128b0d14aaaadbffdc"
             ],
-            "markers": "python_version >= '3.6' and python_version < '4.0'",
+            "markers": "python_version >= '3.6' and python_version < '4'",
             "version": "==5.7.0"
         },
         "jinja2": {
@@ -312,11 +312,11 @@
         },
         "pylint": {
             "hashes": [
-                "sha256:2e0c6749d809985e4f181c336a8f89b2b797340d8049160bf95f35a3f0ecf6fc",
-                "sha256:3ea3926700db399765db1faf53860f11e4e981a090646e9eacd01ca78e020579"
+                "sha256:0e21d3b80b96740909d77206d741aa3ce0b06b41be375d92e1f3244a274c1f8a",
+                "sha256:d09b0b07ba06bcdff463958f53f23df25e740ecd81895f7d2699ec04bbd8dc3b"
             ],
             "index": "tsinghua",
-            "version": "==2.7.0"
+            "version": "==2.7.2"
         },
         "pyparsing": {
             "hashes": [
@@ -468,7 +468,7 @@
                 "sha256:1b465e494e3e0d8939b50680403e3aedaa2bc434b7d5af64dfd3c958d7f5ae80",
                 "sha256:de3eedaad74a2683334e282005cd8d7f22f4d55fa690a2a1020a416cb0a47e73"
             ],
-            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4' and python_version < '4.0'",
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4' and python_version < '4'",
             "version": "==1.26.3"
         },
         "webencodings": {
@@ -531,11 +531,11 @@
         },
         "configupdater": {
             "hashes": [
-                "sha256:5363c45babe9c95df58f054b72ed513d1fca1be089ee4b2e32dc9fb3351f12b8",
-                "sha256:d49f1d64d16cb92f2cffef442d42fdfd5e317fd9368ddfb8b96f7683b3ec751c"
+                "sha256:6a60447fb25e5cb5036cdd5761287ac5649135a49094bc8bd71d999417483441",
+                "sha256:bc62bd5141c45a89840a3e82e0a06f23fb2c00de82e2b72c8030cafb4daea9a2"
             ],
             "markers": "python_version >= '3.6'",
-            "version": "==1.1.3"
+            "version": "==2.0"
         },
         "decorator": {
             "hashes": [
@@ -611,11 +611,11 @@
         },
         "gitpython": {
             "hashes": [
-                "sha256:8621a7e777e276a5ec838b59280ba5272dd144a18169c36c903d8b38b99f750a",
-                "sha256:c5347c81d232d9b8e7f47b68a83e5dc92e7952127133c5f2df9133f2c75a1b29"
+                "sha256:3283ae2fba31c913d857e12e5ba5f9a7772bbc064ae2bb09efafa71b0dd4939b",
+                "sha256:be27633e7509e58391f10207cd32b2a6cf5b908f92d9cd30da2e514e1137af61"
             ],
             "markers": "python_version >= '3.4'",
-            "version": "==3.1.13"
+            "version": "==3.1.14"
         },
         "idna": {
             "hashes": [
@@ -1068,11 +1068,11 @@
         },
         "snooty-lextudio": {
             "hashes": [
-                "sha256:0bd4c190ee4d3afe20eb1bdb6549803832b83f4b5f68230c2584bcf6fbb508c7",
-                "sha256:172d3ae58fc2c5ede31626e9ab0df20a6dede76c930f322286b64d687111b38b"
+                "sha256:181186dfc7ca599a385960356b3f4947b2083bb0bec7c5b9c7c0ecf1adcea86b",
+                "sha256:b4133f19db2214b38f02365822fedb4b18db7886dc65104bda059542d896087f"
             ],
             "index": "tsinghua",
-            "version": "==1.8.9.dev0"
+            "version": "==1.8.10.dev0"
         },
         "snowballstemmer": {
             "hashes": [
@@ -1245,7 +1245,7 @@
                 "sha256:1b465e494e3e0d8939b50680403e3aedaa2bc434b7d5af64dfd3c958d7f5ae80",
                 "sha256:de3eedaad74a2683334e282005cd8d7f22f4d55fa690a2a1020a416cb0a47e73"
             ],
-            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4' and python_version < '4.0'",
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4' and python_version < '4'",
             "version": "==1.26.3"
         },
         "vermin": {
