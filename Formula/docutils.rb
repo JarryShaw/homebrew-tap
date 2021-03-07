@@ -26,8 +26,8 @@ class Docutils < Formula
   end
 
   resource "Pillow" do
-    url "https://files.pythonhosted.org/packages/a6/24/1346f8c70dae5daf58e22435a1f1f4696682b4f85321eb4d18ca1d81c0c2/Pillow-8.1.1.tar.gz"
-    sha256 "f6fc18f9c9c7959bf58e6faf801d14fafb6d4717faaf6f79a68c8bb2a13dcf20"
+    url "https://files.pythonhosted.org/packages/60/f0/dd2eb7911f948bf529f58f0c7931f6f6466f711bd6f1d81a69dc4edd4e2a/Pillow-8.1.2.tar.gz"
+    sha256 "b07c660e014852d98a00a91adfbe25033898a9d90a8f39beb2437d22a203fc44"
   end
 
   resource "Pygments" do
