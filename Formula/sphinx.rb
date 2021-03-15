@@ -57,6 +57,11 @@ class Sphinx < Formula
     sha256 "0d6f53a15db4120f2b08c94f11e7d93d2c911ee118b6b30a04ec3ee8310179fa"
   end
 
+  resource "colorama" do
+    url "https://files.pythonhosted.org/packages/1f/bb/5d3246097ab77fa083a61bd8d3d527b7ae063c7d8e8671b1cf8c4ec10cbe/colorama-0.4.4.tar.gz"
+    sha256 "5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b"
+  end
+
   resource "docutils" do
     url "https://files.pythonhosted.org/packages/2f/e0/3d435b34abd2d62e8206171892f174b180cd37b09d57b924ca5c2ef2219d/docutils-0.16.tar.gz"
     sha256 "c2de3a60e9e7d07be26b7f2b00ca0309c207e06c100f9cc2a94931fc75a478fc"
@@ -113,8 +118,8 @@ class Sphinx < Formula
   end
 
   resource "sphinx-autobuild" do
-    url "https://files.pythonhosted.org/packages/69/34/9f55e505643c01b50749f05b05ae435d10a918028f4cae544cc0abf95ad8/sphinx-autobuild-2020.9.1.tar.gz"
-    sha256 "4b184a7db893f2100bbd831991ae54ca89167a2b9ce68faea71eaa9e37716aed"
+    url "https://files.pythonhosted.org/packages/df/a5/2ed1b81e398bc14533743be41bf0ceaa49d671675f131c4d9ce74897c9c1/sphinx-autobuild-2021.3.14.tar.gz"
+    sha256 "de1ca3b66e271d2b5b5140c35034c89e47f263f2cd5db302c9217065f7443f05"
   end
 
   resource "sphinxcontrib-applehelp" do
