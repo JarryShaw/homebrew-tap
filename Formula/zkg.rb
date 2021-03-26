@@ -17,8 +17,8 @@ class Zkg < Formula
   end
 
   resource "gitdb" do
-    url "https://files.pythonhosted.org/packages/d1/05/eaf2ac564344030d8b3ce870b116d7bb559020163e80d9aa4a3d75f3e820/gitdb-4.0.5.tar.gz"
-    sha256 "c9e1f2d0db7ddb9a704c2a0217be31214e91a4fe1dea1efad19ae42ba0c285c9"
+    url "https://files.pythonhosted.org/packages/b6/7b/e373bd7e93a5b4bb041b44601fbb96c7029033d6e838e0a6936fe4f25275/gitdb-4.0.6.tar.gz"
+    sha256 "42535bb16b5db8983e2c4f6a714d29a8feba7165a12addc63e08fc672dfeccb9"
   end
 
   resource "GitPython" do
