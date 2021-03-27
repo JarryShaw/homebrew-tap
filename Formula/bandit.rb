@@ -21,8 +21,8 @@ class Bandit < Formula
   end
 
   resource "gitdb" do
-    url "https://files.pythonhosted.org/packages/b6/7b/e373bd7e93a5b4bb041b44601fbb96c7029033d6e838e0a6936fe4f25275/gitdb-4.0.6.tar.gz"
-    sha256 "42535bb16b5db8983e2c4f6a714d29a8feba7165a12addc63e08fc672dfeccb9"
+    url "https://files.pythonhosted.org/packages/34/fe/9265459642ab6e29afe734479f94385870e8702e7f892270ed6e52dd15bf/gitdb-4.0.7.tar.gz"
+    sha256 "96bf5c08b157a666fec41129e6d327235284cca4c81e92109260f353ba138005"
   end
 
   resource "pbr" do
