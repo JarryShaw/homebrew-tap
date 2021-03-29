@@ -199,6 +199,10 @@ Collections
   This formula is not notable enough to be included in Homebrew
   core repository yet (<30 forks, <30 watchers and <75 stars).
 
+- |amass|_ : In-depth attack surface mapping and asset discovery
+
+  This formula is not yet included in Home brew core repository.
+
 .. |docutils| replace:: ``docutils``
 .. _docutils: http://docutils.sourceforge.net
 .. |vermin| replace:: ``vermin``
@@ -243,6 +247,8 @@ Collections
 .. _snooty-lextudio: https://github.com/vscode-restructuredtext/snooty-parser
 .. |mirror-config-china| replace:: ``mirror-config-china``
 .. _mirror-config-china: https://github.com/gucong3000/mirror-config-china
+.. |amass| replace:: ``amass``
+.. _amass: https://github.com/OWASP/Amass
 
 -------
 License

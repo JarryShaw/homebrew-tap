@@ -10,7 +10,7 @@ brew: #brew-update
 style: brew-style
 
 link: bpython2 bpython3 bro-pkg nlohmann_json poet2 poet3 ptpython2 ptpython3 sass
-fetch: dart dart-beta dart-sass pyinstaller nlohmann-json ssh-askpass uti
+fetch: amass dart dart-beta dart-sass pyinstaller nlohmann-json ssh-askpass uti
 formula: appdmg bandit basher dmgbuild docutils f2format git-hg jshint macdaily mirror-config-china node-sass noob poseur pydl sloc snooty-lextudio sphinx vermin walrus zkg
 
 brew-update:
@@ -52,6 +52,10 @@ pipenv-update:
 
 pipenv-remove:
 	pipenv --rm
+
+amass: brew
+	pipenv run python scripts/amass.py
+	FORMULA="amass" $(MAKE) brew-audit
 
 appdmg: pipenv
 	pipenv run python scripts/appdmg.py
