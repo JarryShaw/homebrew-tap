@@ -11,8 +11,8 @@ class F2format < Formula
   depends_on "homebrew/core/python@3.9"
 
   resource "bpc-utils" do
-    url "https://files.pythonhosted.org/packages/bf/c5/72e145a618019cdb77c2aac51be7f5a2af3ee8a399b6960e0b469653ec65/bpc-utils-0.10.0.tar.gz"
-    sha256 "d6b6704aa1991e82af1bb6021a851d7d9da676105eb5e82c00ea8274936c281e"
+    url "https://files.pythonhosted.org/packages/c8/b7/8131c9884d2d79c5b68d6ad8856aa7e7d89543a4dda7ff5fa0abc49e6f80/bpc-utils-0.10.1.tar.gz"
+    sha256 "0954282e947e712152b6396f7b04487c28e2cdfef7e4538453cb13662faa7d33"
   end
 
   resource "parso" do
