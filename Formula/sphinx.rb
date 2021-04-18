@@ -63,8 +63,8 @@ class Sphinx < Formula
   end
 
   resource "docutils" do
-    url "https://files.pythonhosted.org/packages/8e/5a/85e35f8692abd8dcd00a67e79c1e45caa6019b8d49d3bee5b2482583d81d/docutils-0.17.tar.gz"
-    sha256 "e2ffeea817964356ba4470efba7c2f42b6b0de0b04e66378507e3e2504bbff4c"
+    url "https://files.pythonhosted.org/packages/4c/17/559b4d020f4b46e0287a2eddf2d8ebf76318fd3bd495f1625414b052fdc9/docutils-0.17.1.tar.gz"
+    sha256 "686577d2e4c32380bb50cbb22f575ed742d58168cee37e99117a854bcd88f125"
   end
 
   resource "idna" do
