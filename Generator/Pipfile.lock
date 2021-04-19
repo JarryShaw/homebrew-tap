@@ -79,11 +79,11 @@
         },
         "flake8": {
             "hashes": [
-                "sha256:12d05ab02614b6aee8df7c36b97d1a3b2372761222b19b58621355e82acddcff",
-                "sha256:78873e372b12b093da7b5e5ed302e8ad9e988b38b063b61ad937f26ca58fc5f0"
+                "sha256:1aa8990be1e689d96c745c5682b687ea49f2e05a443aff1f8251092b0014e378",
+                "sha256:3b9f848952dddccf635be78098ca75010f073bfe14d2c6bda867154bea728d2a"
             ],
             "index": "tsinghua",
-            "version": "==3.9.0"
+            "version": "==3.9.1"
         },
         "gitdb": {
             "hashes": [
@@ -516,9 +516,9 @@
         },
         "btest": {
             "hashes": [
-                "sha256:1df5b1462b62efba6c718d8aa09b1d566cc18e93f50f84132fe96326c40305c1"
+                "sha256:a3142da8a01e7cc2319940b293a02dad3f2df36a119c4db0fc19a201f371dd02"
             ],
-            "version": "==0.67"
+            "version": "==0.68"
         },
         "certifi": {
             "hashes": [
@@ -904,10 +904,10 @@
         },
         "pyinstaller": {
             "hashes": [
-                "sha256:f5c0eeb2aa663cce9a5404292c0195011fa500a6501c873a466b2e8cad3c950c"
+                "sha256:5ecf8bbc230d7298a796e52bb745b95eee12878d141f1645612c99246ecd23f2"
             ],
             "index": "tsinghua",
-            "version": "==4.2"
+            "version": "==4.3"
         },
         "pyinstaller-hooks-contrib": {
             "hashes": [
@@ -1122,11 +1122,11 @@
         },
         "sphinx-autodoc-typehints": {
             "hashes": [
-                "sha256:244ba6d3e2fdb854622f643c7763d6f95b6886eba24bec28e86edf205e4ddb20",
-                "sha256:da049791d719f4c9813642496ee4764203e317f0697eb75446183fa2a68e3f77"
+                "sha256:193617d9dbe0847281b1399d369e74e34cd959c82e02c7efde077fca908a9f52",
+                "sha256:5e81776ec422dd168d688ab60f034fccfafbcd94329e9537712c93003bddc04a"
             ],
             "index": "tsinghua",
-            "version": "==1.11.1"
+            "version": "==1.12.0"
         },
         "sphinxcontrib-applehelp": {
             "hashes": [
@@ -1273,10 +1273,10 @@
         },
         "vermin": {
             "hashes": [
-                "sha256:ab0c03ec1199c477ea49196355e2320934bfedc64605186c40850df36f5c64a0"
+                "sha256:2866f2d3ec3a67a9249f6491e66af10be01931a91376f55ef2cb5e2915779e13"
             ],
             "index": "tsinghua",
-            "version": "==1.1.0"
+            "version": "==1.1.1"
         },
         "walrus": {
             "hashes": [
