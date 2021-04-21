@@ -3,16 +3,16 @@ class Pyinstaller < Formula
 
   desc "Bundle a Python application and all its dependencies"
   homepage "https://www.pyinstaller.org"
-  url "https://files.pythonhosted.org/packages/b4/83/9f6ff034650abe9778c9a4f86bcead63f89a62acf02b1b47fc2bfc6bf8dd/pyinstaller-4.2.tar.gz"
-  sha256 "f5c0eeb2aa663cce9a5404292c0195011fa500a6501c873a466b2e8cad3c950c"
+  url "https://files.pythonhosted.org/packages/b6/27/a006fcadba0db30819c968eb8decb4937cda398ca7a44d8874172cdc228a/pyinstaller-4.3.tar.gz"
+  sha256 "5ecf8bbc230d7298a796e52bb745b95eee12878d141f1645612c99246ecd23f2"
   license "GPL-2.0-or-later"
   head "https://github.com/pyinstaller/pyinstaller.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "75711c89dfaca5a231e9532dad47a1f16b3b64f27ea191da2db806a777a19bc4"
-    sha256 cellar: :any_skip_relocation, big_sur:       "eb1d6148599f36a8f35132c182dc2062af62bd3c3792b562d06ac3a1e9092db9"
-    sha256 cellar: :any_skip_relocation, catalina:      "6dc9e1630ec207b522f3ff7339ed941f4463ccc6cd67e2a69ef4922b3ff6c1e5"
-    sha256 cellar: :any_skip_relocation, mojave:        "194caf5c538bf6116de70b5cd80dd1ffa0ed82c4c1f6e0c92cd40154e65bf7ad"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "292e4fe62bbd4c2c59af1e78efd679928b0c4e01cd089547d70382fec7c990fc"
+    sha256 cellar: :any_skip_relocation, big_sur:       "06978aedae4293f278b0f729727ce21b612ababb90339b76dd3ad2a58fd42eb1"
+    sha256 cellar: :any_skip_relocation, catalina:      "b8f2786b1aa933009cd69f8254e4529f55f1fc07b398b34a0473a07619e28c64"
+    sha256 cellar: :any_skip_relocation, mojave:        "d2270fa53effbfb5842f5e66d89fbbcde05acc125056ec4660f5e717119855f7"
   end
 
   depends_on "homebrew/core/python@3.9"
@@ -30,8 +30,8 @@ class Pyinstaller < Formula
   end
 
   resource "pyinstaller-hooks-contrib" do
-    url "https://files.pythonhosted.org/packages/ad/ac/25bd5c6f192280182403e75e62abc5f8113cf3f287c828987ce62fd4b07f/pyinstaller-hooks-contrib-2020.11.tar.gz"
-    sha256 "fc3290a2ca337d1d58c579c223201360bfe74caed6454eaf5a2550b77dbda45c"
+    url "https://files.pythonhosted.org/packages/70/4b/453588ea48782e7c3e531d2fc016aa88248687123bfac9d5c72f57a4def6/pyinstaller-hooks-contrib-2021.1.tar.gz"
+    sha256 "892310e6363655838485ee748bf1c5e5cade7963686d9af8650ee218a3e0b031"
   end
 
   def install
@@ -39,9 +39,15 @@ class Pyinstaller < Formula
   end
 
   test do
-    xy = Language::Python.major_minor_version "python3.9"
+    (testpath/"easy_install.py").write <<~EOS
+      """Run the EasyInstall command"""
+
+      if __name__ == '__main__':
+          from setuptools.command.easy_install import main
+          main()
+    EOS
     system bin/"pyinstaller", "-F", "--distpath=#{testpath}/dist", "--workpath=#{testpath}/build",
-                              libexec/"lib/python#{xy}/site-packages/easy_install.py"
+                              "#{testpath}/easy_install.py"
     assert_predicate testpath/"dist/easy_install", :exist?
   end
 end
