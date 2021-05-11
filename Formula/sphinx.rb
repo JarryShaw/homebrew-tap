@@ -3,8 +3,8 @@ class Sphinx < Formula
 
   desc "Tool to create intelligent and beautiful documentation"
   homepage "https://www.sphinx-doc.org/"
-  url "https://github.com/sphinx-doc/sphinx/archive/v4.0.0.tar.gz"
-  sha256 "20bc7ca3e6feb106ce03f0a652f3b9c6abafa39a631d11ff036b182ec6e59537"
+  url "https://github.com/sphinx-doc/sphinx/archive/v4.0.1.tar.gz"
+  sha256 "6ecc5d34fce2319e0a7c5bd1a2e62b625c5fc686aee8652c5350614a89773491"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_big_sur: "dc9e744d37a4815c4ed1fa7c3b73c9d4592bc2da41960ca8a6cb0c788f8996e2"
@@ -33,8 +33,8 @@ class Sphinx < Formula
   end
 
   resource "Sphinx" do
-    url "https://files.pythonhosted.org/packages/08/80/00ee18adef7a7d97214fddba6fd6cc2e9a34cf5a50a515038fbb53af67be/Sphinx-4.0.0.tar.gz"
-    sha256 "b246ebd74f5fb966d7e90086bbda5ed74ee4d30b4c3cbefddc1fb5210aa317c7"
+    url "https://files.pythonhosted.org/packages/53/9f/ab9ac21a877c181312c2cf26089ea4eb8181edd503dc5bcfb73aa2f34f5c/Sphinx-4.0.1.tar.gz"
+    sha256 "cf5104777571b2b7f06fa88ee08fade24563f4a0594cf4bd17d31c47b8740b4c"
   end
 
   resource "alabaster" do
@@ -113,8 +113,8 @@ class Sphinx < Formula
   end
 
   resource "Sphinx" do
-    url "https://files.pythonhosted.org/packages/08/80/00ee18adef7a7d97214fddba6fd6cc2e9a34cf5a50a515038fbb53af67be/Sphinx-4.0.0.tar.gz"
-    sha256 "b246ebd74f5fb966d7e90086bbda5ed74ee4d30b4c3cbefddc1fb5210aa317c7"
+    url "https://files.pythonhosted.org/packages/53/9f/ab9ac21a877c181312c2cf26089ea4eb8181edd503dc5bcfb73aa2f34f5c/Sphinx-4.0.1.tar.gz"
+    sha256 "cf5104777571b2b7f06fa88ee08fade24563f4a0594cf4bd17d31c47b8740b4c"
   end
 
   resource "sphinx-autobuild" do
