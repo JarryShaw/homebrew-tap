@@ -7,10 +7,10 @@ class Sphinx < Formula
   sha256 "6ecc5d34fce2319e0a7c5bd1a2e62b625c5fc686aee8652c5350614a89773491"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "de98aa81282a836fbdd1b387d894261d27a10cef744ffcb1b649cfe11f3e34ef"
-    sha256 cellar: :any_skip_relocation, big_sur:       "e111e751b1c25a7ca5287ed13f348c481cd683782f83092175ac667db89d8c56"
-    sha256 cellar: :any_skip_relocation, catalina:      "9583d0b223addf7c57a97697c1d41441dc8a71a6fc67aa4784d30f9c49176245"
-    sha256 cellar: :any_skip_relocation, mojave:        "2fed55cd1748c8b415c42a7e26778e052c9e8e18081461682a836683ae6a48a3"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "ae15659782777a9cba84213720fede1ae5b1a508c829addda09c5d4d49a780b4"
+    sha256 cellar: :any_skip_relocation, big_sur:       "d7cd139f25b3dd85e6d15013c9eaa0b238feffb06669836df0e0fbf23429aa21"
+    sha256 cellar: :any_skip_relocation, catalina:      "c057b8d1de7c61002c6b66d2fc7b497b2f97151b84677c20d8b13a67a8f75ead"
+    sha256 cellar: :any_skip_relocation, mojave:        "21286cc64e7b9a4d204132ee10c6b2da91b393fea562c0879bd10eaa866fa8a2"
   end
 
   depends_on "homebrew/core/python@3.9"
@@ -18,13 +18,13 @@ class Sphinx < Formula
   conflicts_with "homebrew/core/sphinx-doc", because: "this is a port of sphinx-doc from homebrew-core"
 
   resource "Jinja2" do
-    url "https://files.pythonhosted.org/packages/7a/0c/23cbcf515b5394e9f59a3e6629f26e1142b92d474ee0725a26aa5a3bcf76/Jinja2-3.0.0.tar.gz"
-    sha256 "ea8d7dd814ce9df6de6a761ec7f1cac98afe305b8cdc4aaae4e114b8d8ce24c5"
+    url "https://files.pythonhosted.org/packages/39/11/8076571afd97303dfeb6e466f27187ca4970918d4b36d5326725514d3ed3/Jinja2-3.0.1.tar.gz"
+    sha256 "703f484b47a6af502e743c9122595cc812b0271f661722403114f71a79d0f5a4"
   end
 
   resource "MarkupSafe" do
-    url "https://files.pythonhosted.org/packages/67/6a/5b3ed5c122e20c33d2562df06faf895a6b91b0a6b96a4626440ffe1d5c8e/MarkupSafe-2.0.0.tar.gz"
-    sha256 "4fae0677f712ee090721d8b17f412f1cbceefbf0dc180fe91bab3232f38b4527"
+    url "https://files.pythonhosted.org/packages/bf/10/ff66fea6d1788c458663a84d88787bae15d45daa16f6b3ef33322a51fc7e/MarkupSafe-2.0.1.tar.gz"
+    sha256 "594c67807fb16238b30c44bdf74f36c02cdf22d1c8cda91ef8a0ed8dabf5620a"
   end
 
   resource "Pygments" do
