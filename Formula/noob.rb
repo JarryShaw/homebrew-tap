@@ -26,8 +26,8 @@ class Noob < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/9f/24/1444ee2c9aee531783c031072a273182109c6800320868ab87675d147a05/idna-3.1.tar.gz"
-    sha256 "c5b02147e01ea9920e6b0a3f1f7bb833612d507592c837a6c49552768f4054e1"
+    url "https://files.pythonhosted.org/packages/cb/38/4c4d00ddfa48abe616d7e572e02a04273603db446975ab46bbcd36552005/idna-3.2.tar.gz"
+    sha256 "467fbad99067910785144ce333826c71fb0e63a425657295239737f7ecd125f3"
   end
 
   resource "Jinja2" do
