@@ -3,8 +3,8 @@ class Dmgbuild < Formula
 
   desc "macOS command-line utility to build disk images"
   homepage "https://github.com/al45tair/dmgbuild"
-  url "https://github.com/al45tair/dmgbuild/archive/v1.4.2.tar.gz"
-  sha256 "6beb387f706f4f100ae9099440ce57a5dc66d8769da2411266ac5f820bb77031"
+  url "https://github.com/al45tair/dmgbuild/archive/v1.5.1.tar.gz"
+  sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
 
   head "https://github.com/al45tair/dmgbuild.git", branch: "master"
 
