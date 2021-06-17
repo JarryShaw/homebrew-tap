@@ -2,8 +2,8 @@ class Basher < Formula
   desc "Package manager for shell scripts"
   homepage "https://github.com/basherpm/basher"
   url "https://github.com/basherpm/basher.git",
-    revision: "ea2d8442f94770dc29e515ad03da9dc46ad4120f"
-  version "2021.6.16"
+    revision: "37ed58d15e855535ab993d7116225d37e7dd018a"
+  version "2021.6.17"
 
   def install
     Dir["*"].each do |f|
