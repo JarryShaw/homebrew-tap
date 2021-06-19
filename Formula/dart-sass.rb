@@ -12,7 +12,7 @@ class DartSass < Formula
   conflicts_with "homebrew/core/node-sass", because: "both install a `sass` binary"
 
   def install
-    dart = Formula["jarryshaw/tap/dart"].opt_bin
+    dart = Formula["jarryshaw/tap/dart"].libexec/"bin"
 
     pubspec = YAML.safe_load(File.read("pubspec.yaml"))
     version = pubspec["version"]
