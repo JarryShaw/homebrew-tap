@@ -2,8 +2,8 @@ class GitHg < Formula
   desc "Checking out and tracking a mercurial repo from git"
   homepage "https://github.com/cosmin/git-hg"
   url "https://github.com/cosmin/git-hg.git",
-    revision: "e30a8918091a414affa81b167af4deffe53b5b1a"
-  version "2021.6.27"
+    revision: "f1247fa88aa12c06fc817b13ae2aa64f12ac0cba"
+  version "2021.6.28"
 
   depends_on "homebrew/core/mercurial"
   depends_on "homebrew/core/python@2"
