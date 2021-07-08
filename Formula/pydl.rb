@@ -4,7 +4,7 @@ class Pydl < Formula
   desc "Video downloader powered by jarryshaw.me"
   homepage "https://jarryshaw.me"
   url "https://github.com/JarryShaw/pydl.git"
-  version "2021.7.7"
+  version "2021.7.8"
 
   depends_on "homebrew/core/aria2"
   depends_on "homebrew/core/python@3.9"
