@@ -3,15 +3,15 @@ class Sphinx < Formula
 
   desc "Tool to create intelligent and beautiful documentation"
   homepage "https://www.sphinx-doc.org/"
-  url "https://github.com/sphinx-doc/sphinx/archive/v4.1.0.tar.gz"
-  sha256 "cefb940fc1cfd339b774f128d0e48d1bfef54d372c288f4ac0e507096663a2ca"
+  url "https://github.com/sphinx-doc/sphinx/archive/v4.1.1.tar.gz"
+  sha256 "1157c59cdf55fc51602d9efd8e2353cd776274c605c15c8662ec4f9b8241c88b"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "0a32ebed931f785bce12623ec4b1bed4d46db784b9c660b92b5cc6cc93bba467"
-    sha256 cellar: :any_skip_relocation, big_sur:       "c67429e4346655620ba705246577a10c03d6c1cd3bfd0c478571e2c9d1171272"
-    sha256 cellar: :any_skip_relocation, catalina:      "b1b76f43316d51f9a1379b2dc61f9bac0e2d694fa390c44557acbee61b521190"
-    sha256 cellar: :any_skip_relocation, mojave:        "3b7ee7057af1727786eb096ee727e021c5a1cbb7f344124638453733d3662117"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a082ae3fb5751b0164d84d1cecfb2407e85ce8617b7eab961c79974c986624e5"
+    sha256 cellar: :any_skip_relocation, big_sur:       "fba78c6e4997cc99cf8191b71802abf310b5e12092569117083d68b717379e79"
+    sha256 cellar: :any_skip_relocation, catalina:      "1659e6503714c3dde8b270e7a3082c631b2e5308c524acf145274c575fb13056"
+    sha256 cellar: :any_skip_relocation, mojave:        "e395574d01a76e95e92e8ca8c035b332bbfb8173aacd694a30d0bd851c0296ed"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:  "7c7a44f4863f257d17d1a25f435f1556e8033bb1edc978187d586e22402c1d1e"
   end
 
   depends_on "homebrew/core/python@3.9"
@@ -34,8 +34,8 @@ class Sphinx < Formula
   end
 
   resource "Sphinx" do
-    url "https://files.pythonhosted.org/packages/7e/7c/13a7bac354edfe1c2f2165ded2eb8ad61d492aa210a2405c85552f94c408/Sphinx-4.1.0.tar.gz"
-    sha256 "4219f14258ca5612a0c85ed9b7222d54da69724d7e9dd92d1819ad1bf65e1ad2"
+    url "https://files.pythonhosted.org/packages/a9/7b/dd334e8d8178986b47760743b5fcee4a9796e10e1fc0ebe2bf6ac59c3a2e/Sphinx-4.1.1.tar.gz"
+    sha256 "23c846a1841af998cb736218539bb86d16f5eb95f5760b1966abcd2d584e62b8"
   end
 
   resource "alabaster" do
@@ -54,8 +54,8 @@ class Sphinx < Formula
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/45/ab/74c77cf4590dfc846c101aee617f390ae679500630dd806b07f1a8e27b7b/charset-normalizer-2.0.1.tar.gz"
-    sha256 "ad0da505736fc7e716a8da15bf19a985db21ac6415c26b34d2fafd3beb3d927e"
+    url "https://files.pythonhosted.org/packages/e1/e6/707ff774274c66f1db739ff4d7eb493252899ed86f0018ac3e9e462fe3de/charset-normalizer-2.0.2.tar.gz"
+    sha256 "951567c2f7433a70ab63f1be67e5ee05d3925d9423306ecb71a3b272757bcc95"
   end
 
   resource "colorama" do
@@ -114,8 +114,8 @@ class Sphinx < Formula
   end
 
   resource "Sphinx" do
-    url "https://files.pythonhosted.org/packages/7e/7c/13a7bac354edfe1c2f2165ded2eb8ad61d492aa210a2405c85552f94c408/Sphinx-4.1.0.tar.gz"
-    sha256 "4219f14258ca5612a0c85ed9b7222d54da69724d7e9dd92d1819ad1bf65e1ad2"
+    url "https://files.pythonhosted.org/packages/a9/7b/dd334e8d8178986b47760743b5fcee4a9796e10e1fc0ebe2bf6ac59c3a2e/Sphinx-4.1.1.tar.gz"
+    sha256 "23c846a1841af998cb736218539bb86d16f5eb95f5760b1966abcd2d584e62b8"
   end
 
   resource "sphinx-autobuild" do
