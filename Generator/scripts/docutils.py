@@ -11,17 +11,23 @@ import requests
 
 if typing.TYPE_CHECKING:
     VERSION = ''
+    VERSION_PILLOW = ''
 for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec: B603,B607
     match = re.match(r"docutils==(.*)", line, re.IGNORECASE)
     if match is not None:
         VERSION = match.groups()[0]
+
+    match = re.match(r"Pillow==(.*)", line, re.IGNORECASE)
+    if match is not None:
+        VERSION_PILLOW = match.groups()[0]
+
 
 DOCUTILS_URL = f'https://downloads.sourceforge.net/project/docutils/docutils/{VERSION}/docutils-{VERSION}.tar.gz'
 DOCUTILS_SHA = hashlib.sha256(requests.get(DOCUTILS_URL).content).hexdigest()
 
 if typing.TYPE_CHECKING:
     ARCHIVE = ''
-install_raqm_cmake = requests.get('https://github.com/python-pillow/Pillow/raw/master/depends/install_raqm_cmake.sh')
+install_raqm_cmake = requests.get(f'https://raw.githubusercontent.com/python-pillow/Pillow/{VERSION_PILLOW}/depends/install_raqm_cmake.sh')
 for line in install_raqm_cmake.text.splitlines():
     match = re.match(r"archive=(.*)", line, re.IGNORECASE)
     if match is not None:
