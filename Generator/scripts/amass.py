@@ -5,7 +5,7 @@ import os
 
 import requests
 
-source = requests.get('hhttps://raw.githubusercontent.com/caffix/homebrew-amass/master/formula/amass.rb').text.strip()
+source = requests.get('https://raw.githubusercontent.com/caffix/homebrew-amass/master/formula/amass.rb').text.strip()
 
 context = list()
 for line in source.splitlines():
