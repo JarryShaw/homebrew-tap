@@ -1,54 +1,22 @@
 class SshAskpass < Formula
   desc "macOS SSH AskPass utility"
   homepage "https://github.com/theseal/ssh-askpass/"
-  url "https://github.com/theseal/ssh-askpass/archive/v1.2.1.tar.gz"
-  sha256 "285e52794db4d1e5d230b115db138cc9b5fcd5e0171c41e3b540e41c540bf357"
+  url "https://github.com/theseal/ssh-askpass/archive/v1.4.0.tar.gz"
+  sha256 "9f13178d3856e7b280f8cc07bb7e755d8d1cd4ee4411fd48ffaa3235fcef9c32"
 
   def install
-    bin.install "ssh-askpass"
+    bin.install "#{name}"
+    # The label in the plist must be #{plist_name} in order for `brew services` to work
+    # See https://github.com/Homebrew/homebrew-services/issues/376
+    inreplace "ssh-askpass.plist", /<string>com.github.theseal.ssh-askpass<\/string>/, "<string>#{plist_name}</string>"
+    inreplace "ssh-askpass.plist", %r{/usr/local/bin}, "#{opt_prefix}/bin"
+    prefix.install "#{name}.plist" => "#{plist_name}.plist"
   end
 
-  def caveats
-    <<~EOF
-      NOTE: After you have started the launchd service (read below) you need to log out and in (reboot might be easiest) before you can add keys to the agent with `ssh-add -c`.
+  def caveats; <<~EOF
+    NOTE: You will need to run the following to load the SSH_ASKPASS environment variable:
+      brew services start #{name}
     EOF
-  end
-
-  plist_options startup: "true", manual: "launch ssh-askpass"
-
-  def plist
-    <<~EOS
-      <?xml version="1.0" encoding="UTF-8"?>
-      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-      <plist version="1.0">
-      <dict>
-      	<key>EnableTransactions</key>
-      	<true/>
-      	<key>EnvironmentVariables</key>
-      	<dict>
-      		<key>DISPLAY</key>
-      		<string>0</string>
-      		<key>SSH_ASKPASS</key>
-      		<string>#{opt_bin}/ssh-askpass</string>
-      	</dict>
-      	<key>Label</key>
-      	<string>#{plist_name}</string>
-      	<key>ProgramArguments</key>
-      	<array>
-      		<string>/usr/bin/ssh-agent</string>
-      		<string>-l</string>
-      	</array>
-      	<key>Sockets</key>
-      	<dict>
-      		<key>Listeners</key>
-      		<dict>
-      			<key>SecureSocketWithKey</key>
-      			<string>SSH_AUTH_SOCK</string>
-      		</dict>
-      	</dict>
-      </dict>
-      </plist>
-    EOS
   end
 
   test do

@@ -3,8 +3,8 @@ class Zkg < Formula
 
   desc "Package manager for Zeek"
   homepage "https://docs.zeek.org/projects/package-manager"
-  url "https://github.com/zeek/package-manager/archive/v2.11.0.tar.gz"
-  sha256 "8a978cd817d028291b83fd35a7efe58d70b9bd9603149439c6f05005b9109679"
+  url "https://github.com/zeek/package-manager/archive/v2.12.0.tar.gz"
+  sha256 "cc56f0af93484c3ae419ecfcf32d847804d8dc1f6a0479b27683d7365e94a103"
 
   head "https://github.com/zeek/package-manager.git", branch: "master"
 
@@ -12,18 +12,18 @@ class Zkg < Formula
   depends_on "homebrew/core/zeek"
 
   resource "btest" do
-    url "https://files.pythonhosted.org/packages/33/cf/0c4f57b346695265720bc74a82cb60244dca157c0b86f130086b39b8e05d/btest-0.68.tar.gz"
-    sha256 "a3142da8a01e7cc2319940b293a02dad3f2df36a119c4db0fc19a201f371dd02"
+    url "https://files.pythonhosted.org/packages/7c/90/75046372839622fe22413b9cfffdc94d4ef3077b7e7785e43a7272bc7036/btest-0.71.tar.gz"
+    sha256 "d7b26918d82af75eea369d6c9c5d88ead79e89df51c4268cea749889087d39cc"
   end
 
   resource "gitdb" do
-    url "https://files.pythonhosted.org/packages/34/fe/9265459642ab6e29afe734479f94385870e8702e7f892270ed6e52dd15bf/gitdb-4.0.7.tar.gz"
-    sha256 "96bf5c08b157a666fec41129e6d327235284cca4c81e92109260f353ba138005"
+    url "https://files.pythonhosted.org/packages/fc/44/64e02ef96f20b347385f0e9c03098659cb5a1285d36c3d17c56e534d80cf/gitdb-4.0.9.tar.gz"
+    sha256 "bac2fd45c0a1c9cf619e63a90d62bdc63892ef92387424b855792a6cabe789aa"
   end
 
   resource "GitPython" do
-    url "https://files.pythonhosted.org/packages/29/22/3d591875078c1c5e7e11b478616821995053968a74b76043c55448c46381/GitPython-3.1.18.tar.gz"
-    sha256 "b838a895977b45ab6f0cc926a9045c8d1c44e2b653c1fcc39fe91f42c6e8f05b"
+    url "https://files.pythonhosted.org/packages/34/cc/aaa7a0d066ac9e94fbffa5fcf0738f5742dd7095bdde950bd582fca01f5a/GitPython-3.1.24.tar.gz"
+    sha256 "df83fdf5e684fef7c6ee2c02fc68a5ceb7e7e759d08b694088d0cacb4eba59e5"
   end
 
   resource "semantic-version" do
@@ -32,8 +32,13 @@ class Zkg < Formula
   end
 
   resource "smmap" do
-    url "https://files.pythonhosted.org/packages/dd/d4/2b4f196171674109f0fbb3951b8beab06cd0453c1b247ec0c4556d06648d/smmap-4.0.0.tar.gz"
-    sha256 "7e65386bd122d45405ddf795637b7f7d2b532e7e401d46bbe3fb49b9986d5182"
+    url "https://files.pythonhosted.org/packages/21/2d/39c6c57032f786f1965022563eec60623bb3e1409ade6ad834ff703724f3/smmap-5.0.0.tar.gz"
+    sha256 "c840e62059cd3be204b0c9c9f74be2c09d5648eddd4580d9314c3ecde0b30936"
+  end
+
+  resource "typing-extensions" do
+    url "https://files.pythonhosted.org/packages/0d/4a/60ba3706797b878016f16edc5fbaf1e222109e38d0fa4d7d9312cb53f8dd/typing_extensions-4.0.1.tar.gz"
+    sha256 "4ca091dea149f945ec56afb48dae714f21e8692ef22a395223bcd328961b6a0e"
   end
 
   def install

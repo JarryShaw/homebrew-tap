@@ -3,7 +3,7 @@ class Macdaily < Formula
 
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
-  url "https://github.com/JarryShaw/MacDaily/archive/v1.7.0.tar.gz"
+  url "https://github.com/JarryShaw/MacDaily/archive/v1.7.1.tar.gz"
   sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
 
   head "https://github.com/JarryShaw/MacDaily.git", branch: "master"
@@ -19,8 +19,8 @@ class Macdaily < Formula
   depends_on "homebrew/core/lolcat" => :optional
 
   resource "ConfigUpdater" do
-    url "https://files.pythonhosted.org/packages/1e/c7/d0cea2bbd01cdcbd6106074429f3dd0cca0126084cbcd757c2b576fbc17f/ConfigUpdater-2.0.tar.gz"
-    sha256 "6a60447fb25e5cb5036cdd5761287ac5649135a49094bc8bd71d999417483441"
+    url "https://files.pythonhosted.org/packages/9b/0e/0e730b2b3691f8374a74833a48b90616eb4de61f197d924cebd8d2e07d00/ConfigUpdater-3.0.1.tar.gz"
+    sha256 "372a6a6ef598a118ec17927bec9486a7d36f44ccd3e641e879e0bf998b70924e"
   end
 
   resource "dictdumper" do
@@ -29,8 +29,8 @@ class Macdaily < Formula
   end
 
   resource "psutil" do
-    url "https://files.pythonhosted.org/packages/e1/b0/7276de53321c12981717490516b7e612364f2cb372ee8901bd4a66a000d7/psutil-5.8.0.tar.gz"
-    sha256 "0c9ccb99ab76025f2f0bbecf341d4656e9c1351db8cc8a03ccd62e318ab4b5c6"
+    url "https://files.pythonhosted.org/packages/47/b6/ea8a7728f096a597f0032564e8013b705aa992a0990becd773dcc4d7b4a7/psutil-5.9.0.tar.gz"
+    sha256 "869842dbd66bb80c3217158e629d6fceaecc3a3166d3d1faee515b05dd26ca25"
   end
 
   resource "ptyng" do

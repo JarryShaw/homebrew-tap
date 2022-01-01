@@ -10,7 +10,7 @@ VERSION = pkg_resources.parse_version(time.strftime(r'%Y.%m.%d'))
 
 CERTIFI = subprocess.check_output(['poet', 'certifi']).decode().strip().replace(  # nosec: B603,B607
     'https://files.pythonhosted.org', 'https://pypi.tuna.tsinghua.edu.cn')
-CHARDET = subprocess.check_output(['poet', 'chardet']).decode().strip().replace(  # nosec: B603,B607
+CHARSET_NORMALIZER = subprocess.check_output(['poet', 'charset-normalizer']).decode().strip().replace(  # nosec: B603,B607
     'https://files.pythonhosted.org', 'https://pypi.tuna.tsinghua.edu.cn')
 IDNA = subprocess.check_output(['poet', 'idna']).decode().strip().replace(  # nosec: B603,B607
     'https://files.pythonhosted.org', 'https://pypi.tuna.tsinghua.edu.cn')
@@ -33,7 +33,7 @@ class Pydl < Formula
 
   {CERTIFI}
 
-  {CHARDET}
+  {CHARSET_NORMALIZER}
 
   {IDNA}
 

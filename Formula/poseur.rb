@@ -3,7 +3,7 @@ class Poseur < Formula
 
   desc "Backport compiler for Python 3.8 positional-only parameters syntax"
   homepage "https://github.com/pybpc/poseur#poseur"
-  url "https://github.com/pybpc/poseur/archive/v1.7.0.tar.gz"
+  url "https://github.com/pybpc/poseur/archive/v1.7.1.tar.gz"
   sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
 
   head "https://github.com/pybpc/poseur.git", branch: "master"
@@ -11,13 +11,23 @@ class Poseur < Formula
   depends_on "homebrew/core/python@3.9"
 
   resource "bpc-utils" do
-    url "https://files.pythonhosted.org/packages/c8/b7/8131c9884d2d79c5b68d6ad8856aa7e7d89543a4dda7ff5fa0abc49e6f80/bpc-utils-0.10.1.tar.gz"
-    sha256 "0954282e947e712152b6396f7b04487c28e2cdfef7e4538453cb13662faa7d33"
+    url "https://files.pythonhosted.org/packages/fe/f9/233bb16668b2be1ea8be2d5c81466e271df40c92b9cf02e03c6546b5fb6d/bpc-utils-0.9.1.tar.gz"
+    sha256 "5bfd5e5fd460674b207f9786f7a0db315a06fff1de0c9b6b8c17d0ce07ad865b"
   end
 
   resource "parso" do
-    url "https://files.pythonhosted.org/packages/e0/a2/3786c568fc8e9f64b9f7143e4c3904e61a8c5cb17260f22a6a3019d80c02/parso-0.5.2.tar.gz"
-    sha256 "55cf25df1a35fd88b878715874d2c4dc1ad3f0eebd1e0266a67e1f55efccfbe1"
+    url "https://files.pythonhosted.org/packages/a2/0e/41f0cca4b85a6ea74d66d2226a7cda8e41206a624f5b330b958ef48e2e52/parso-0.8.3.tar.gz"
+    sha256 "8c07be290bb59f03588915921e29e8a50002acaf2cdc5fa0e0114f91709fafa0"
+  end
+
+  resource "typing-extensions" do
+    url "https://files.pythonhosted.org/packages/0d/4a/60ba3706797b878016f16edc5fbaf1e222109e38d0fa4d7d9312cb53f8dd/typing_extensions-4.0.1.tar.gz"
+    sha256 "4ca091dea149f945ec56afb48dae714f21e8692ef22a395223bcd328961b6a0e"
+  end
+
+  resource "parso" do
+    url "https://files.pythonhosted.org/packages/a2/0e/41f0cca4b85a6ea74d66d2226a7cda8e41206a624f5b330b958ef48e2e52/parso-0.8.3.tar.gz"
+    sha256 "8c07be290bb59f03588915921e29e8a50002acaf2cdc5fa0e0114f91709fafa0"
   end
 
   resource "tbtrim" do

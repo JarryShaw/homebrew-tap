@@ -2,28 +2,34 @@ class Basher < Formula
   desc "Package manager for shell scripts"
   homepage "https://github.com/basherpm/basher"
   url "https://github.com/basherpm/basher.git",
-    revision: "6868d7f70405d2691a2637dff27c4f2e5cf2bd5f"
-  version "2021.7.16"
+    revision: "f6aab2a7fc653c6e1cd160dc87f6bf0407655bd1"
+  version "2022.1.1"
+
+  depends_on "homebrew/core/bash"
+  depends_on "homebrew/core/coreutils"
 
   def install
+    ENV["BASHER_ROOT"] = "#{prefix}"
+
+    inreplace libexec/"basher", "$HOME/.basher", "#{prefix}"
+    inreplace libexec/"basher", "$BASHER_ROOT/cellar", "#{HOMEBREW_PREFIX}/lib/basher/cellar"
+
     Dir["*"].each do |f|
       cp_r f, prefix/f.to_s
     end
 
-    bash_completion.install "completions/basher.bash"
-    zsh_completion.install "completions/basher.zsh"
+    (bash_completion/"basher").write `#{bin}/basher init - bash`
+    (fish_completion/"basher").write `#{bin}/basher init - fish|psub`
+    (zsh_completion/"basher").write `#{bin}/basher init - zsh`
   end
 
   def caveats
     <<~EOS
       To make basher work smoothly, link it to your home directory
-        ln -s /usr/local/opt/basher ~/.basher
+        ln -s #{opt_prefix} ~/.basher
 
-      Add `basher init` to your shell to enable basher runtime functions
-        echo 'eval "$(basher init -)"' >> ~/.bash_profile
-
-      For Fish, use the following line on your ~/.config/fish/config.fish.
-        status --is-interactive; and . (basher init -|psub)
+      Or add the following environment variable as
+        BASHER_ROOT=#{opt_prefix}
     EOS
   end
 

@@ -1,19 +1,14 @@
 class NlohmannJson < Formula
   desc "JSON for modern C++"
   homepage "https://github.com/nlohmann/json"
-  url "https://github.com/nlohmann/json/archive/v3.9.1.tar.gz"
-  sha256 "4cf0df69731494668bdd6460ed8cb269b68de9c19ad8c27abc24cd72605b2d5b"
+  url "https://github.com/nlohmann/json/archive/v3.10.4.tar.gz"
+  sha256 "1155fd1a83049767360e9a120c43c578145db3204d2b309eba49fbbedd0f4ed3"
   license "MIT"
-  revision 1
   head "https://github.com/nlohmann/json.git", branch: "develop"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "34d7a9adeccba3105b55c432d4587e511802996829ffd5aed62f7db9c4e73047"
-    sha256 cellar: :any_skip_relocation, big_sur:       "f8a76b68eaf9a0aa8f6e9ccd8eceadaaea2e428c7e30a73e215a32fe1b62d009"
-    sha256 cellar: :any_skip_relocation, catalina:      "b541218f118a50a5f95f7f3650e520be58398619bbc6073d7b36cb320bf212c7"
-    sha256 cellar: :any_skip_relocation, mojave:        "fe00728aa85f032016788a0ec770b47a0e8e4b7cf2fc1547aa4ecf774bf1028c"
-    sha256 cellar: :any_skip_relocation, high_sierra:   "43b0bfd3b8d202358ab4141a01a11588f1b90c9ecf0a71c5764d97ac546f5fde"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "319e7299d8378d957e23ead85e67f0cb4841ad0c63bdc092d50566ac3d5a05a7"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, all: "8a6449d5fc0f166a43b6f4a426007a312f838b01e0eca915ef8bc557bf82e809"
   end
 
   depends_on "cmake" => :build
