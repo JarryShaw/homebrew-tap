@@ -29,9 +29,6 @@ pathlib2 = "*"
 psutil = "*"
 subprocess32 = "*"
 
-#pydl
-requests = "*"
-
 pyinstaller = "*"
 
 vermin = "*"
