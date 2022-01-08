@@ -11,8 +11,8 @@ class Bandit < Formula
   depends_on "homebrew/core/python@3.9"
 
   resource "GitPython" do
-    url "https://files.pythonhosted.org/packages/34/cc/aaa7a0d066ac9e94fbffa5fcf0738f5742dd7095bdde950bd582fca01f5a/GitPython-3.1.24.tar.gz"
-    sha256 "df83fdf5e684fef7c6ee2c02fc68a5ceb7e7e759d08b694088d0cacb4eba59e5"
+    url "https://files.pythonhosted.org/packages/af/c6/6b27dc2819ae4f4b7ef85a07b3051e032ee1d332c56fb1f4ebd69aa0ecc7/GitPython-3.1.25.tar.gz"
+    sha256 "b923e8952c2fe0d70b129fddd8511acc90b3070c8dddb20d86ca9911a5d0c248"
   end
 
   resource "PyYAML" do
