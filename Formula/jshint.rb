@@ -3,8 +3,8 @@ require "language/node"
 class Jshint < Formula
   desc "Static analysis tool for JavaScript"
   homepage "http://jshint.com/"
-  url "https://registry.npmjs.org/jshint/-/jshint-2.13.3.tgz"
-  sha256 "b6e9897134aac532cae572615ff091d4cc643f5f3711bc71dd88054cda005795"
+  url "https://registry.npmjs.org/jshint/-/jshint-2.13.4.tgz"
+  sha256 "1290b3d1b34f4c317b962a014441a2a406e7f3be1f6ddfad31bf8465f3e31293"
   license "MIT"
 
   livecheck do
