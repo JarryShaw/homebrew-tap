@@ -3,7 +3,7 @@ class Macdaily < Formula
 
   desc "macOS Automated Package Manager"
   homepage "https://github.com/JarryShaw/MacDaily#macdaily"
-  url "https://github.com/JarryShaw/MacDaily/archive/v1.7.1.tar.gz"
+  url "https://github.com/JarryShaw/MacDaily/archive/v1.7.2.tar.gz"
   sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
 
   head "https://github.com/JarryShaw/MacDaily.git", branch: "master"

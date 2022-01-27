@@ -3,7 +3,7 @@ class Poseur < Formula
 
   desc "Backport compiler for Python 3.8 positional-only parameters syntax"
   homepage "https://github.com/pybpc/poseur#poseur"
-  url "https://github.com/pybpc/poseur/archive/v1.7.1.tar.gz"
+  url "https://github.com/pybpc/poseur/archive/v1.7.2.tar.gz"
   sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
 
   head "https://github.com/pybpc/poseur.git", branch: "master"
