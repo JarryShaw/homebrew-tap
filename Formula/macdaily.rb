@@ -39,8 +39,8 @@ class Macdaily < Formula
   end
 
   resource "pathlib2" do
-    url "https://files.pythonhosted.org/packages/d0/74/0fefd1dd0c159cf91bdc43f9dbfdaeadb231d9bfc9d7111c4e03e893291b/pathlib2-2.3.7.post0.tar.gz"
-    sha256 "3207eb068c994a04998c42a34ae01c81c8d1d50eb88d7371f57fee61d1822302"
+    url "https://files.pythonhosted.org/packages/31/51/99caf463dc7c18eb18dad1fffe465a3cf3ee50ac3d1dccbd1781336fe9c7/pathlib2-2.3.7.post1.tar.gz"
+    sha256 "9fe0edad898b83c0c3e199c842b27ed216645d2e177757b2dd67384d4113c641"
   end
 
   resource "six" do
