@@ -41,8 +41,8 @@ class SnootyLextudio < Formula
   end
 
   resource "networkx" do
-    url "https://files.pythonhosted.org/packages/97/ae/7497bc5e1c84af95e585e3f98585c9f06c627fac6340984c4243053e8f44/networkx-2.6.3.tar.gz"
-    sha256 "c0946ed31d71f1b732b5aaa6da5a0388a345019af232ce2f49c766e2d6795c51"
+    url "https://files.pythonhosted.org/packages/46/c7/7d4059af100345541e8e96f75bac3e6fb8c8c9b83d34764cf19e3a8e90a4/networkx-2.7.tar.gz"
+    sha256 "effb7d9cd5c36e1e0d33f42a3aef5badde5030535826a367d5cf608a170af515"
   end
 
   resource "pymongo" do
