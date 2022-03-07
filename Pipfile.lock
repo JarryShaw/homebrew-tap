@@ -44,11 +44,11 @@
         },
         "bandit": {
             "hashes": [
-                "sha256:3ce9b4e6a4f7f41aa966c9543e635dd35e52a793a47e746f0c55c7ecfc69d7e8",
-                "sha256:58772ca951bf1129dda8a280d351547de832720bf7b5c29fac3103927980b8a6"
+                "sha256:2d63a8c573417bae338962d4b9b06fbc6080f74ecd955a092849e1e65c717bd2",
+                "sha256:412d3f259dab4077d0e7f0c11f50f650cc7d10db905d98f6520a95a18049658a"
             ],
             "index": "tsinghua",
-            "version": "==1.7.3"
+            "version": "==1.7.4"
         },
         "beautifulsoup4": {
             "extras": [
@@ -507,14 +507,6 @@
             "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
             "version": "==2.9.1"
         },
-        "bpc-utils": {
-            "hashes": [
-                "sha256:316544e3fed59cb6155129a33b4e57fde08f1a06b593a8108baeeba0c99abeb0",
-                "sha256:5bfd5e5fd460674b207f9786f7a0db315a06fff1de0c9b6b8c17d0ce07ad865b"
-            ],
-            "markers": "python_version >= '3.4'",
-            "version": "==0.9.1"
-        },
         "btest": {
             "hashes": [
                 "sha256:d7b26918d82af75eea369d6c9c5d88ead79e89df51c4268cea749889087d39cc"
@@ -577,11 +569,11 @@
         },
         "dnspython": {
             "hashes": [
-                "sha256:081649da27ced5e75709a1ee542136eaba9842a0fe4c03da4fb0a3d3ed1f3c44",
-                "sha256:e79351e032d0b606b98d38a4b0e6e2275b31a5b85c873e587cc11b73aca026d6"
+                "sha256:0f7569a4a6ff151958b64304071d370daa3243d15941a7beedf0c9fe5105603e",
+                "sha256:a851e51367fb93e9e1361732c1d60dab63eff98712e503ea7d92e6eccb109b4f"
             ],
             "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
-            "version": "==2.2.0"
+            "version": "==2.2.1"
         },
         "docopt": {
             "hashes": [
@@ -605,11 +597,11 @@
         },
         "f2format": {
             "hashes": [
-                "sha256:1ecff8118d686a1b8b234dd4f4cf311331afa16a071dae0084ad3145959bf03b",
-                "sha256:96348642864dafdc002d502948a76f20ec8f58a777d01afca46023d5f6fb3039"
+                "sha256:929bfb7ec8ad016427d41ec6206b6ad24c3811ee48d1e36f6957eac770aa7e73",
+                "sha256:d1d0be24277fe4ddedd9407e95329f7e6b4ebaeeabe86f64156e4822a0e8e0fb"
             ],
             "index": "tsinghua",
-            "version": "==0.8.7rc2"
+            "version": "==0.8.6"
         },
         "fett": {
             "hashes": [
@@ -748,11 +740,11 @@
         },
         "networkx": {
             "hashes": [
-                "sha256:09f1bf4113e81e8fb192203304f530d3d687fcca98fd7b466c73b4e7dd23dada",
-                "sha256:e40dd30cf650dcd8ec8ba1282f6215873a70497559a44a06fdabea4f957c1ab2"
+                "sha256:011e85d277c89681e8fa661cf5ff0743443445049b0b68789ad55ef09340c6e0",
+                "sha256:d1194ba753e5eed07cdecd1d23c5cd7a3c772099bd8dbd2fea366788cf4de7ba"
             ],
             "markers": "python_version >= '3.8'",
-            "version": "==2.7rc1"
+            "version": "==2.7.1"
         },
         "packaging": {
             "hashes": [
@@ -764,11 +756,11 @@
         },
         "parso": {
             "hashes": [
-                "sha256:8c07be290bb59f03588915921e29e8a50002acaf2cdc5fa0e0114f91709fafa0",
-                "sha256:c001d4636cd3aecdaf33cbb40aebb59b094be2a74c556778ef5576c175e19e75"
+                "sha256:55cf25df1a35fd88b878715874d2c4dc1ad3f0eebd1e0266a67e1f55efccfbe1",
+                "sha256:5c1f7791de6bd5dbbeac8db0ef5594b36799de198b3f7f7014643b0c5536b9d3"
             ],
             "markers": "python_version >= '3.6'",
-            "version": "==0.8.3"
+            "version": "==0.5.2"
         },
         "pathlib2": {
             "hashes": [
@@ -821,11 +813,11 @@
         },
         "poseur": {
             "hashes": [
-                "sha256:788365a2636b7ee8eaaf8c8723981eb2f9e9ba37dd855252ce8f8ced047002a4",
-                "sha256:dbb16c2321aec9575294b3e8ade7dd788f0e9920bae1493e084c6a6dff1af662"
+                "sha256:3a550409a88cef5cdd19c690f5ade3d4e137ee041cee6c25713a77e7a9c52e5f",
+                "sha256:c66e140608656a863a607ec69cbde7533f6a25b0a80bf5347a8146c589705a98"
             ],
             "index": "tsinghua",
-            "version": "==0.3.1"
+            "version": "==0.4.3"
         },
         "psutil": {
             "hashes": [
@@ -901,20 +893,20 @@
         },
         "pyinstaller": {
             "hashes": [
-                "sha256:24035eb9fffa2e3e288b4c1c9710043819efc7203cae5c8c573bec16f4a8e98f",
-                "sha256:59372b950d176fdc5ecea29719a8ab3f194b73a15b7f9875ac2a1de9a3daf5ed",
-                "sha256:62c97cbbdbee30974d607eb1de9afb081eb3adba787c203b00438e21027b829b",
-                "sha256:75a180a658871bc41f9cf94b6f90ffa54e98f5d6a7cdb02d7530f0360afe24f9",
-                "sha256:7f46ab11ec986e4c525b93251063144e12d432a132dbc0070e3030e34c76537a",
-                "sha256:a0b988cfc197d40e3d773b3aa1c7d3e918fc0933b4c15ec3fc5d156f222d82cb",
-                "sha256:b5f1a94150315ea75bf3501be6c8476d65a7209580bb662da06dbdbc4454f375",
-                "sha256:bec57b3b2b6178907255557ec0fc4b5ce5a0474013414cdadea853205c74ed26",
-                "sha256:e2f165cea4470ce8a8349112cd78f48a61413805adc17792a91997a11cfe1d80",
-                "sha256:ebeb87cdbadb2b4e8f991ffd9945ebd4fb3a7303180e63682c3e1ce01b3fdd22",
-                "sha256:ec3ca331d565ffca1b6470c5aaf798885a03708c3d0b15c1b19009126f84c1d4"
+                "sha256:05c21117b84199272ebd355b556af4714f6e79245e1c435d6f16653786d7d17e",
+                "sha256:0dcaf6557cdb2da763c46e06e95a94a7634ab03fb09d91bc77988b01ee05c907",
+                "sha256:15557cd1a79d182967f0a5040750e6902e13ebd6cab41e3ed84d7b28a306357b",
+                "sha256:581620bdcd32f01e89b13231256b807bb090e7eadf40c81c864ec402afa4758a",
+                "sha256:70c71e827f4b34602cbc7a0947a067b662c1cbdc4db51832e13b97cca3c54dd7",
+                "sha256:714c4dcc319a41416744d1e30c6317405dfaed80d2adc45f8bfa70dc7367e664",
+                "sha256:7749c868d2e2dc84df7d6f65437226183c8a366f3a99bb2737785625c3a3cca1",
+                "sha256:7d94518ba1f8e9a8577345312276891ad7d6cd9785e453e9951b35647e2c7078",
+                "sha256:cfed0b3a43e73550a43a094610328109564710b9514afa093ef7199d072cae87",
+                "sha256:d4f79c0a774451f12baca4e476376418f011fa3039dde8fd172ea2aa8ff67bad",
+                "sha256:f2166ff2cd95eefb0d377ae8d1071f186fa25edd410ede65b376162d5ec41909"
             ],
             "index": "tsinghua",
-            "version": "==4.9"
+            "version": "==4.10"
         },
         "pyinstaller-hooks-contrib": {
             "hashes": [
