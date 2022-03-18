@@ -3,8 +3,8 @@ require "language/node"
 class Appdmg < Formula
   desc "Generate beautiful DMG-images for your OS X applications"
   homepage "https://github.com/LinusU/node-appdmg#readme"
-  url "https://registry.npmjs.org/appdmg/-/appdmg-0.6.2.tgz"
-  sha256 "518cc2861de257c12f61b7c4a7e9420ac1c032d5934ba1beadf60f0b5074e4bd"
+  url "https://registry.npmjs.org/appdmg/-/appdmg-0.6.4.tgz"
+  sha256 "1386cc525c253c28d7ab9609fb284ecfdb652c2bc632f6d674b8069163efcb66"
   license "MIT"
 
   livecheck do
