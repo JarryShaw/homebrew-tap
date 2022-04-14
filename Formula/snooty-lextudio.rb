@@ -46,8 +46,8 @@ class SnootyLextudio < Formula
   end
 
   resource "pymongo" do
-    url "https://files.pythonhosted.org/packages/3f/d8/d0c1f1b753cb70e6286e6ba45711130e5019c578b416e2cc086e483ac9ef/pymongo-4.1.0.tar.gz"
-    sha256 "dbba77bc0b706c7ee496fc75a6c6ed406d85f6091d5fec488a8944c3828e6462"
+    url "https://files.pythonhosted.org/packages/19/5c/ef2753159dfb4e5879e2b091412186f66faae01ce8151761617138c28c91/pymongo-4.1.1.tar.gz"
+    sha256 "d7b8f25c9b0043cbaf77b8b895814e33e7a3c807a097377c07e1bd49946030d5"
   end
 
   resource "python-jsonrpc-server" do
