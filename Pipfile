@@ -1,4 +1,9 @@
 [[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[[source]]
 name = "tsinghua"
 url = "https://pypi.tuna.tsinghua.edu.cn/simple"
 verify_ssl = true
@@ -6,11 +11,6 @@ verify_ssl = true
 [[source]]
 name = "sjtu"
 url = "https://mirrors.sjtug.sjtu.edu.cn/pypi/web/simple"
-verify_ssl = true
-
-[[source]]
-name = "pypi"
-url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
