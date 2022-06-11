@@ -86,8 +86,8 @@ class SnootyLextudio < Formula
   end
 
   resource "watchdog" do
-    url "https://files.pythonhosted.org/packages/90/61/ddbf959d24fab35a98a8311e95d581e55109560e524f1a5a299ee991499d/watchdog-2.1.8.tar.gz"
-    sha256 "6d03149126864abd32715d4e9267d2754cede25a69052901399356ad3bc5ecff"
+    url "https://files.pythonhosted.org/packages/42/f7/da8e889f8626786eac9454e8d2718fc79359ed517be20cdd50c647167d39/watchdog-2.1.9.tar.gz"
+    sha256 "43ce20ebb36a51f21fa376f76d1d4692452b2527ccd601950d69ed36b9e21609"
   end
 
   def install
