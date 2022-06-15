@@ -45,8 +45,8 @@ class Sphinx < Formula
   end
 
   resource "Babel" do
-    url "https://files.pythonhosted.org/packages/23/a6/a616817c8e4fb1a69f7e8aae9fc7fce1a147e1a492f45b6fa0b7d6823178/Babel-2.10.1.tar.gz"
-    sha256 "98aeaca086133efb3e1e2aad0396987490c8425929ddbcfe0550184fdc54cd13"
+    url "https://files.pythonhosted.org/packages/b0/91/c521fa4102ef9afc8c9f64d1828993d39b7e99944d40a76d4ef94f6321b2/Babel-2.10.2.tar.gz"
+    sha256 "7aed055f0c04c9e7f51a2f75261e41e1c804efa724cb65b60a970dd4448d469d"
   end
 
   resource "certifi" do
