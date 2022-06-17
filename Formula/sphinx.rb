@@ -3,8 +3,8 @@ class Sphinx < Formula
 
   desc "Tool to create intelligent and beautiful documentation"
   homepage "https://www.sphinx-doc.org/"
-  url "https://github.com/sphinx-doc/sphinx/archive/v5.0.1.tar.gz"
-  sha256 "a76bd72f8fe94e340fcb7a840c8aa00bc24fbea8a965701438a6ffc474ba84c3"
+  url "https://github.com/sphinx-doc/sphinx/archive/v5.0.2.tar.gz"
+  sha256 "f57b1831b5ea1eb1d06b1c39c964eae125867a1889b3eed96f17f6edc07da671"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "3c9451cdbdfa497ed92a6b8374ca5dcbdd573512ae40e77f8b4e000921bb8307"
@@ -35,8 +35,8 @@ class Sphinx < Formula
   end
 
   resource "Sphinx" do
-    url "https://files.pythonhosted.org/packages/9c/4e/a1a978d4b4f0de4632e2f00e67472a6135346b35c142dea873e8e92803c1/Sphinx-5.0.1.tar.gz"
-    sha256 "f4da1187785a5bc7312cc271b0e867a93946c319d106363e102936a3d9857306"
+    url "https://files.pythonhosted.org/packages/83/5f/0ebf0c94dffd7a848ebfeafc0d3147a784afffb44e2c6fcaeab7eadd67ad/Sphinx-5.0.2.tar.gz"
+    sha256 "b18e978ea7565720f26019c702cd85c84376e948370f1cd43d60265010e1c7b0"
   end
 
   resource "alabaster" do
@@ -45,8 +45,8 @@ class Sphinx < Formula
   end
 
   resource "Babel" do
-    url "https://files.pythonhosted.org/packages/b0/91/c521fa4102ef9afc8c9f64d1828993d39b7e99944d40a76d4ef94f6321b2/Babel-2.10.2.tar.gz"
-    sha256 "7aed055f0c04c9e7f51a2f75261e41e1c804efa724cb65b60a970dd4448d469d"
+    url "https://files.pythonhosted.org/packages/51/27/81e9cf804a34a550a47cc2f0f57fe4935281d479ae3a0ac093d69476f221/Babel-2.10.3.tar.gz"
+    sha256 "7614553711ee97490f732126dc077f8d0ae084ebc6a96e23db1482afabdb2c51"
   end
 
   resource "certifi" do
@@ -60,8 +60,8 @@ class Sphinx < Formula
   end
 
   resource "colorama" do
-    url "https://files.pythonhosted.org/packages/1f/bb/5d3246097ab77fa083a61bd8d3d527b7ae063c7d8e8671b1cf8c4ec10cbe/colorama-0.4.4.tar.gz"
-    sha256 "5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b"
+    url "https://files.pythonhosted.org/packages/2b/65/24d033a9325ce42ccbfa3ca2d0866c7e89cc68e5b9d92ecaba9feef631df/colorama-0.4.5.tar.gz"
+    sha256 "e6c6b4334fc50988a639d9b98aa429a0b57da6e17b9a44f0451f930b6967b7a4"
   end
 
   resource "docutils" do
@@ -115,8 +115,8 @@ class Sphinx < Formula
   end
 
   resource "Sphinx" do
-    url "https://files.pythonhosted.org/packages/9c/4e/a1a978d4b4f0de4632e2f00e67472a6135346b35c142dea873e8e92803c1/Sphinx-5.0.1.tar.gz"
-    sha256 "f4da1187785a5bc7312cc271b0e867a93946c319d106363e102936a3d9857306"
+    url "https://files.pythonhosted.org/packages/83/5f/0ebf0c94dffd7a848ebfeafc0d3147a784afffb44e2c6fcaeab7eadd67ad/Sphinx-5.0.2.tar.gz"
+    sha256 "b18e978ea7565720f26019c702cd85c84376e948370f1cd43d60265010e1c7b0"
   end
 
   resource "sphinx-autobuild" do
