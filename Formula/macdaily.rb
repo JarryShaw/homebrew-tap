@@ -19,8 +19,8 @@ class Macdaily < Formula
   depends_on "homebrew/core/lolcat" => :optional
 
   resource "ConfigUpdater" do
-    url "https://files.pythonhosted.org/packages/f4/46/700f2ecf8e4b5ff7d207a2772d30d35eebfc7aaae770d761b63c75cb489d/ConfigUpdater-3.1.tar.gz"
-    sha256 "ddcc5250f508b9131c45fd1dbceae3f112907ddd7597da1cff30c51bf7c87edb"
+    url "https://files.pythonhosted.org/packages/1a/3e/3dc189e7127ddc594540146c79244a471fdb27362ebe35626c6760c10e6f/ConfigUpdater-3.1.1.tar.gz"
+    sha256 "46f0c74d73efa723776764b43c9739f68052495dd3d734319c1d0eb58511f15b"
   end
 
   resource "dictdumper" do
