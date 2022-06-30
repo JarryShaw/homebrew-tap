@@ -4,7 +4,7 @@ class Pydl < Formula
   desc "Video downloader powered by jarryshaw.me"
   homepage "https://jarryshaw.me"
   url "https://github.com/JarryShaw/pydl.git"
-  version "2022.6.29"
+  version "2022.6.30"
 
   depends_on "homebrew/core/aria2"
   depends_on "homebrew/core/python@3.9"
@@ -15,8 +15,8 @@ class Pydl < Formula
   end
 
   resource "charset-normalizer" do
-    url "https://pypi.tuna.tsinghua.edu.cn/packages/56/31/7bcaf657fafb3c6db8c787a865434290b726653c912085fbd371e9b92e1c/charset-normalizer-2.0.12.tar.gz"
-    sha256 "2857e29ff0d34db842cd7ca3230549d1a697f96ee6d3fb071cfa6c7393832597"
+    url "https://pypi.tuna.tsinghua.edu.cn/packages/93/1d/d9392056df6670ae2a29fcb04cfa5cee9f6fbde7311a1bb511d4115e9b7a/charset-normalizer-2.1.0.tar.gz"
+    sha256 "575e708016ff3a5e3681541cb9d79312c416835686d054a23accb873b254f413"
   end
 
   resource "idna" do
@@ -30,8 +30,8 @@ class Pydl < Formula
   end
 
   resource "charset-normalizer" do
-    url "https://pypi.tuna.tsinghua.edu.cn/packages/56/31/7bcaf657fafb3c6db8c787a865434290b726653c912085fbd371e9b92e1c/charset-normalizer-2.0.12.tar.gz"
-    sha256 "2857e29ff0d34db842cd7ca3230549d1a697f96ee6d3fb071cfa6c7393832597"
+    url "https://pypi.tuna.tsinghua.edu.cn/packages/93/1d/d9392056df6670ae2a29fcb04cfa5cee9f6fbde7311a1bb511d4115e9b7a/charset-normalizer-2.1.0.tar.gz"
+    sha256 "575e708016ff3a5e3681541cb9d79312c416835686d054a23accb873b254f413"
   end
 
   resource "idna" do
@@ -40,8 +40,8 @@ class Pydl < Formula
   end
 
   resource "requests" do
-    url "https://pypi.tuna.tsinghua.edu.cn/packages/e9/23/384d9953bb968731212dc37af87cb75a885dc48e0615bd6a303577c4dc4b/requests-2.28.0.tar.gz"
-    sha256 "d568723a7ebd25875d8d1eaf5dfa068cd2fc8194b2e483d7b1f7c81918dbec6b"
+    url "https://pypi.tuna.tsinghua.edu.cn/packages/a5/61/a867851fd5ab77277495a8709ddda0861b28163c4613b011bc00228cc724/requests-2.28.1.tar.gz"
+    sha256 "7c5599b102feddaa661c826c56ab4fee28bfd17f5abca1ebbe3e7f19d7c97983"
   end
 
   resource "urllib3" do
