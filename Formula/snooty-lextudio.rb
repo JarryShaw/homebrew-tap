@@ -76,8 +76,8 @@ class SnootyLextudio < Formula
   end
 
   resource "ujson" do
-    url "https://files.pythonhosted.org/packages/92/38/a8c8d8cdacd586e0e66673ca60daf295a79cd5b4fae72a25f1bfa482554d/ujson-5.3.0.tar.gz"
-    sha256 "ab938777b3ac0372231ee654a7f6a13787e587b1ca268d8aa7e6fb6846e477d0"
+    url "https://files.pythonhosted.org/packages/fb/94/44fbbb059fe5d295f1f73e731a0b9c2e1b5073c2c6b58bb9c068715e9b72/ujson-5.4.0.tar.gz"
+    sha256 "6b953e09441e307504130755e5bd6b15850178d591f66292bba4608c4f7f9b00"
   end
 
   resource "urllib3" do
