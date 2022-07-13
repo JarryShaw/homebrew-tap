@@ -9,9 +9,9 @@ class Basher < Formula
   depends_on "homebrew/core/coreutils"
 
   def install
-    ENV["BASHER_ROOT"] = prefix.to_s
+    ENV["BASHER_ROOT"] = "#{prefix}"
 
-    inreplace libexec/"basher", "$HOME/.basher", prefix.to_s
+    inreplace libexec/"basher", "$HOME/.basher", "#{prefix}"
     inreplace libexec/"basher", "$BASHER_ROOT/cellar", "#{HOMEBREW_PREFIX}/lib/basher/cellar"
 
     Dir["*"].each do |f|
