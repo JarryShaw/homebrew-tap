@@ -4,7 +4,7 @@ import hashlib
 import os
 import re
 import subprocess  # nosec: B404
-import typing
+from typing import TYPE_CHECKING
 
 # import bs4
 import requests
@@ -17,9 +17,10 @@ import requests
 #         VERSION = match.groups()[0]
 #         break
 # # print(VERSION)
-if typing.TYPE_CHECKING:
-    VERSION = ''
-for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec: B603,B607
+if TYPE_CHECKING:
+    VERSION: str
+
+for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec: B603 B607
     match = re.match(r"bandit==(.*)", line, re.IGNORECASE)
     if match is not None:
         VERSION = match.groups()[0]
@@ -63,13 +64,13 @@ MACDAILY_SHA = hashlib.sha256(requests.get(MACDAILY_URL).content).hexdigest()
 # print(DEVEL_URL)
 # print(DEVEL_SHA)
 
-CONFIGUPDATER = subprocess.check_output(['poet', 'configupdater']).decode().strip()  # nosec: B603,B607
-DICTDUMPER = subprocess.check_output(['poet', 'dictdumper']).decode().strip()  # nosec: B603,B607
-PSUTIL = subprocess.check_output(['poet', 'psutil']).decode().strip()  # nosec: B603,B607
-PTYNG = subprocess.check_output(['poet', 'ptyng']).decode().strip()  # nosec: B603,B607
-PATHLIB2 = subprocess.check_output(['poet', 'pathlib2']).decode().strip()  # nosec: B603,B607
-SUBPROCESS32 = subprocess.check_output(['poet', 'subprocess32']).decode().strip()  # nosec: B603,B607
-TBTRIM = subprocess.check_output(['poet', 'tbtrim']).decode().strip()  # nosec: B603,B607
+CONFIGUPDATER = subprocess.check_output(['poet', 'configupdater']).decode().strip()  # nosec: B603 B607
+DICTDUMPER = subprocess.check_output(['poet', 'dictdumper']).decode().strip()  # nosec: B603 B607
+PSUTIL = subprocess.check_output(['poet', 'psutil']).decode().strip()  # nosec: B603 B607
+PTYNG = subprocess.check_output(['poet', 'ptyng']).decode().strip()  # nosec: B603 B607
+PATHLIB2 = subprocess.check_output(['poet', 'pathlib2']).decode().strip()  # nosec: B603 B607
+SUBPROCESS32 = subprocess.check_output(['poet', 'subprocess32']).decode().strip()  # nosec: B603 B607
+TBTRIM = subprocess.check_output(['poet', 'tbtrim']).decode().strip()  # nosec: B603 B607
 # print(CONFIGUPDATER)
 # print(DICTDUMPER)
 # print(PSUTIL)
@@ -202,11 +203,11 @@ end
 '''
 
 if os.path.basename(__file__) == 'setup-formula.py':
-    repo_root = subprocess.check_output(['brew', '--repository', 'jarryshaw/tap'],   # nosec: B603,B607
+    repo_root = subprocess.check_output(['brew', '--repository', 'jarryshaw/tap'],   # nosec: B603 B607
                                         encoding='utf-8').strip()
     formula = os.path.join(repo_root, 'Formula', 'macdaily.rb')
 else:
     formula = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'Formula',
                            f'{os.path.splitext(os.path.basename(__file__))[0]}.rb')
-with open(formula, 'w') as file:
+with open(formula, 'w', encoding='utf-8') as file:
     file.write(FORMULA)

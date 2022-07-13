@@ -4,7 +4,7 @@ import hashlib
 import os
 import re
 import subprocess  # nosec: B404
-import typing
+from typing import TYPE_CHECKING
 
 import requests
 
@@ -16,9 +16,10 @@ import requests
 #         VERSION = match.groups()[0]
 #         break
 # # print(VERSION)
-if typing.TYPE_CHECKING:
-    VERSION = ''
-for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec: B603,B607
+if TYPE_CHECKING:
+    VERSION: str
+
+for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec: B603 B607
     match = re.match(r"bandit==(.*)", line, re.IGNORECASE)
     if match is not None:
         VERSION = match.groups()[0]
@@ -28,9 +29,9 @@ WALRUS_SHA = hashlib.sha256(requests.get(WALRUS_URL).content).hexdigest()
 # print(WALRUS_URL)
 # print(WALRUS_SHA)
 
-PARSO = subprocess.check_output(['poet', 'parso']).decode().strip()  # nosec: B603,B607
-TBTRIM = subprocess.check_output(['poet', 'tbtrim']).decode().strip()  # nosec: B603,B607
-BPC_UTILS = subprocess.check_output(['poet', 'bpc-utils']).decode().strip()  # nosec: B603,B607
+PARSO = subprocess.check_output(['poet', 'parso']).decode().strip()  # nosec: B603 B607
+TBTRIM = subprocess.check_output(['poet', 'tbtrim']).decode().strip()  # nosec: B603 B607
+BPC_UTILS = subprocess.check_output(['poet', 'bpc-utils']).decode().strip()  # nosec: B603 B607
 # print(PARSO)
 # print(TBTRIM)
 
@@ -88,11 +89,11 @@ end
 '''
 
 if os.path.basename(__file__) == 'setup-formula.py':
-    repo_root = subprocess.check_output(['brew', '--repository', 'jarryshaw/tap'],   # nosec: B603,B607
+    repo_root = subprocess.check_output(['brew', '--repository', 'jarryshaw/tap'],   # nosec: B603 B607
                                         encoding='utf-8').strip()
     formula = os.path.join(repo_root, 'Formula', 'walrus.rb')
 else:
     formula = os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'Formula',
                            f'{os.path.splitext(os.path.basename(__file__))[0]}.rb')
-with open(formula, 'w') as file:
+with open(formula, 'w', encoding='utf-8') as file:
     file.write(FORMULA)

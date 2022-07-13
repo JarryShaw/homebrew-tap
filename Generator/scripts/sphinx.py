@@ -5,14 +5,15 @@ import os
 import re
 import subprocess  # nosec: B404
 import sys
-import typing
+from typing import TYPE_CHECKING
 
 # import bs4
 import requests
 
-if typing.TYPE_CHECKING:
-    VERSION = ''
-for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec: B603,B607
+if TYPE_CHECKING:
+    VERSION: str
+
+for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec: B603 B607
     match = re.match(r"Sphinx==(.*)", line, re.IGNORECASE)
     if match is not None:
         VERSION = match.groups()[0]
@@ -32,11 +33,11 @@ SPHINX_SHA = hashlib.sha256(requests.get(SPHINX_URL).content).hexdigest()
 #         SPHINX_SHA = hashlib.sha256(requests.get(SPHINX_URL).content).hexdigest()
 #         break
 
-bottle = list()
+bottle = []
 bottle_flag = False
 
-formula = subprocess.check_output(['brew', 'formula', 'sphinx-doc']).decode().strip()  # nosec: B603,B607
-with open(formula) as file:
+formula = subprocess.check_output(['brew', 'formula', 'sphinx-doc']).decode().strip()  # nosec: B603 B607
+with open(formula, encoding='utf-8') as file:
     for line in file:
         if bottle_flag:
             bottle.append(line)
@@ -47,19 +48,19 @@ with open(formula) as file:
             bottle_flag = True
 BOTTLE = ''.join(bottle).strip()
 
-_data_pkgs = dict()  # type: typing.Dict[str, str]
+_data_pkgs = {}  # type: dict[str, dict]
 
 
-def _fetch_dependency(package):
+def _fetch_dependency(package: 'str') -> 'dict[str, dict]':
     dependencies = _data_pkgs.get(package)
     if dependencies is not None:
         return dependencies
 
     argv = [sys.executable, '-m', 'pip', 'show', package]
 
-    _deps_pkgs = dict()
-    requirements = set()
-    for line in subprocess.check_output(argv).decode().strip().splitlines():  # nosec: B603,B607; pylint: disable=redefined-outer-name
+    _deps_pkgs = {}
+    requirements = set()  # type: set[str]
+    for line in subprocess.check_output(argv).decode().strip().splitlines():  # nosec: B603 B607; pylint: disable=redefined-outer-name
         match = re.match(r"Requires: (.*)", line)  # pylint: disable=redefined-outer-name
         if match is not None:
             requirements = set(match.groups()[0].split(', '))
@@ -72,8 +73,8 @@ def _fetch_dependency(package):
     return _deps_pkgs
 
 
-def _list_dependency(dependencies):
-    _list_pkgs = list()
+def _list_dependency(dependencies: 'dict[str, dict]') -> 'list[str]':
+    _list_pkgs = []
     for package, deps_pkgs in dependencies.items():
         _list_pkgs.append(package)
         _list_pkgs.extend(_list_dependency(deps_pkgs))
@@ -88,7 +89,7 @@ _deps_list.extend(_list_dependency(_fetch_dependency('sphinx-autodoc-typehints')
 
 args = ['poet', '--single']
 args.extend(sorted(set(_deps_list)))
-temp = subprocess.check_output(args).decode().strip()  # nosec: B603,B607
+temp = subprocess.check_output(args).decode().strip()  # nosec: B603 B607
 
 st_flag = False
 SPHINX = ''
@@ -135,5 +136,5 @@ end
 '''
 
 with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'Formula',
-                       f'{os.path.splitext(os.path.basename(__file__))[0]}.rb'), 'w') as file:
+                       f'{os.path.splitext(os.path.basename(__file__))[0]}.rb'), 'w', encoding='utf-8') as file:
     file.write(FORMULA)

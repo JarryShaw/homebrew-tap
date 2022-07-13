@@ -61,6 +61,10 @@ appdmg: pipenv
 	pipenv run python scripts/appdmg.py
 	FORMULA="appdmg" $(MAKE) brew-audit
 
+bandit: pipenv
+	pipenv run python scripts/bandit.py
+	FORMULA="bandit" $(MAKE) brew-audit
+
 basher: pipenv
 	pipenv run python scripts/basher.py
 	FORMULA="basher" $(MAKE) brew-audit
@@ -100,13 +104,11 @@ f2format: pipenv
 	FORMULA="f2format" $(MAKE) brew-audit
 
 git-hg:
-	git submodule init ../Submodules/cosmin-git-hg
 	git submodule update ../Submodules/cosmin-git-hg
 	git -C ../Submodules/cosmin-git-hg checkout master
 	git -C ../Submodules/cosmin-git-hg pull
 	pipenv run python scripts/git-hg.py
 	FORMULA="git-hg" $(MAKE) brew-audit
-	git submodule deinit ../Submodules/cosmin-git-hg
 
 jshint: pipenv
 	pipenv run python scripts/jshint.py

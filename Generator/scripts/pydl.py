@@ -8,15 +8,16 @@ import pkg_resources
 
 VERSION = pkg_resources.parse_version(time.strftime(r'%Y.%m.%d'))
 
-CERTIFI = subprocess.check_output(['poet', 'certifi']).decode().strip().replace(  # nosec: B603,B607
+CERTIFI = subprocess.check_output(['poet', 'certifi']).decode().strip().replace(  # nosec: B603 B607
     'https://files.pythonhosted.org', 'https://pypi.tuna.tsinghua.edu.cn')
-CHARSET_NORMALIZER = subprocess.check_output(['poet', 'charset-normalizer']).decode().strip().replace(  # nosec: B603,B607
+CHARSET_NORMALIZER = subprocess.check_output(  # nosec: B603 B607
+    ['poet', 'charset-normalizer']).decode().strip().replace(
     'https://files.pythonhosted.org', 'https://pypi.tuna.tsinghua.edu.cn')
-IDNA = subprocess.check_output(['poet', 'idna']).decode().strip().replace(  # nosec: B603,B607
+IDNA = subprocess.check_output(['poet', 'idna']).decode().strip().replace(  # nosec: B603 B607
     'https://files.pythonhosted.org', 'https://pypi.tuna.tsinghua.edu.cn')
-REQUESTS = subprocess.check_output(['poet', 'requests']).decode().strip().replace(  # nosec: B603,B607
+REQUESTS = subprocess.check_output(['poet', 'requests']).decode().strip().replace(  # nosec: B603 B607
     'https://files.pythonhosted.org', 'https://pypi.tuna.tsinghua.edu.cn')
-URLLIB3 = subprocess.check_output(['poet', 'urllib3']).decode().strip().replace(  # nosec: B603,B607
+URLLIB3 = subprocess.check_output(['poet', 'urllib3']).decode().strip().replace(  # nosec: B603 B607
     'https://files.pythonhosted.org', 'https://pypi.tuna.tsinghua.edu.cn')
 
 FORMULA = f'''\
@@ -52,5 +53,5 @@ end
 '''
 
 with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'Formula',
-                       f'{os.path.splitext(os.path.basename(__file__))[0]}.rb'), 'w') as file:
+                       f'{os.path.splitext(os.path.basename(__file__))[0]}.rb'), 'w', encoding='utf-8') as file:
     file.write(FORMULA)

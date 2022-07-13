@@ -7,7 +7,7 @@ import time
 import pkg_resources
 
 VERSION = pkg_resources.parse_version(time.strftime('%Y.%m.%d'))
-REVISION = subprocess.check_output(['git', 'rev-parse', 'HEAD'], encoding='utf-8',  # nosec: B603,B607
+REVISION = subprocess.check_output(['git', 'rev-parse', 'HEAD'], encoding='utf-8',  # nosec: B603 B607
                                    cwd='../Submodules/basherpm-basher').strip()
 
 FORMULA = f'''\
@@ -53,5 +53,5 @@ end
 '''
 
 with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'Formula',
-                       f'{os.path.splitext(os.path.basename(__file__))[0]}.rb'), 'w') as file:
+                       f'{os.path.splitext(os.path.basename(__file__))[0]}.rb'), 'w', encoding='utf-8') as file:
     file.write(FORMULA)

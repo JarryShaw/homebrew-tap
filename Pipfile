@@ -31,12 +31,14 @@ subprocess32 = "*"
 
 pyinstaller = "*"
 
+#pyxll = "*"
+
 vermin = "*"
 
-sherlock = "*"
-pylibmc = {version = "*",install_options = ["--with-libmemcached=/usr/local/opt/libmemcached"]}  # brew install libmemcached
+#sherlock = "*"
+#pylibmc = {version = "*",install_options = ["--with-libmemcached=/usr/local/opt/libmemcached"]}  # brew install libmemcached
 
-pyxll = "*"
+snooty-lextudio = "*"
 
 Sphinx = "*"
 sphinx-autobuild = "*"
@@ -58,6 +60,9 @@ esbonio = "*"
 flake8 = "*"
 mypy = "*"
 pylint = "*"
+
+types-requests = "*"
+types-setuptools = "*"
 
 [requires]
 python_version = "3"

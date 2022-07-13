@@ -7,7 +7,7 @@ import requests
 
 source = requests.get('https://raw.githubusercontent.com/sass/homebrew-sass/master/sass.rb').text.strip()
 
-context = list()
+context = []
 for line in source.splitlines():
     if line.strip().startswith('class Sass'):
         line = line.replace('Sass', 'DartSass')
@@ -22,5 +22,5 @@ for line in source.splitlines():
 FORMULA = os.linesep.join(context).strip()
 
 with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'Formula',
-                       f'{os.path.splitext(os.path.basename(__file__))[0]}.rb'), 'w') as file:
+                       f'{os.path.splitext(os.path.basename(__file__))[0]}.rb'), 'w', encoding='utf-8') as file:
     print(FORMULA, file=file)

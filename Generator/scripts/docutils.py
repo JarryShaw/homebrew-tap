@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
 
-
 import hashlib
 import os
 import re
 import subprocess  # nosec: B404
-import typing
+from typing import TYPE_CHECKING
 
 import requests
 
-if typing.TYPE_CHECKING:
-    VERSION = ''
-    VERSION_PILLOW = ''
-for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec: B603,B607
+if TYPE_CHECKING:
+    VERSION: str
+    VERSION_PILLOW: str
+
+for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec: B603 B607
     match = re.match(r"docutils==(.*)", line, re.IGNORECASE)
     if match is not None:
         VERSION = match.groups()[0]
@@ -25,9 +25,11 @@ for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  #
 DOCUTILS_URL = f'https://downloads.sourceforge.net/project/docutils/docutils/{VERSION}/docutils-{VERSION}.tar.gz'
 DOCUTILS_SHA = hashlib.sha256(requests.get(DOCUTILS_URL).content).hexdigest()
 
-if typing.TYPE_CHECKING:
+if TYPE_CHECKING:
     ARCHIVE = ''
-install_raqm_cmake = requests.get(f'https://raw.githubusercontent.com/python-pillow/Pillow/{VERSION_PILLOW}/depends/install_raqm_cmake.sh')
+
+install_raqm_cmake = requests.get(f'https://raw.githubusercontent.com/python-pillow/Pillow/'
+                                  f'{VERSION_PILLOW}/depends/install_raqm_cmake.sh')
 for line in install_raqm_cmake.text.splitlines():
     match = re.match(r"archive=(.*)", line, re.IGNORECASE)
     if match is not None:
@@ -36,8 +38,8 @@ for line in install_raqm_cmake.text.splitlines():
 RAQM_URL = f'https://raw.githubusercontent.com/python-pillow/pillow-depends/master/{ARCHIVE}.tar.gz'
 RAQM_SHA = hashlib.sha256(requests.get(RAQM_URL).content).hexdigest()
 
-PILLOW = subprocess.check_output(['poet', 'Pillow']).decode().strip()  # nosec: B603,B607
-PYGMENTS = subprocess.check_output(['poet', 'Pygments']).decode().strip()  # nosec: B603,B607
+PILLOW = subprocess.check_output(['poet', 'Pillow']).decode().strip()  # nosec: B603 B607
+PYGMENTS = subprocess.check_output(['poet', 'Pygments']).decode().strip()  # nosec: B603 B607
 
 FORMULA = f'''\
 class Docutils < Formula
@@ -111,5 +113,5 @@ end
 '''
 
 with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'Formula',
-                       f'{os.path.splitext(os.path.basename(__file__))[0]}.rb'), 'w') as file:
+                       f'{os.path.splitext(os.path.basename(__file__))[0]}.rb'), 'w', encoding='utf-8') as file:
     file.write(FORMULA)

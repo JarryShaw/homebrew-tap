@@ -3,15 +3,17 @@
 
 import os
 import re
-import typing
+from typing import TYPE_CHECKING
 
 import requests
 
 TAG_REGEX = re.compile(r'\s*:tag\s*=>\s*"(?P<tag>.*?)",\s*', re.IGNORECASE)
 REVISION_REGEX = re.compile(r'\s*:revision\s*=>\s*"(?P<revision>.*?)",\s*', re.IGNORECASE)
 
-if typing.TYPE_CHECKING:
-    TAG = REVISION = ''
+if TYPE_CHECKING:
+    TAG: str
+    REVISION: str
+
 url = 'https://raw.githubusercontent.com/alexaubry/homebrew-formulas/master/Formula/uti.rb'
 page = requests.get(url).text
 for line in page.splitlines():
@@ -45,5 +47,5 @@ end
 '''
 
 with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'Formula',
-                       f'{os.path.splitext(os.path.basename(__file__))[0]}.rb'), 'w') as file:
+                       f'{os.path.splitext(os.path.basename(__file__))[0]}.rb'), 'w', encoding='utf-8') as file:
     file.write(FORMULA)
