@@ -33,7 +33,10 @@ pyinstaller = "*"
 
 vermin = "*"
 
-snooty-lextudio = "*"
+sherlock = "*"
+pylibmc = {version = "*",install_options = ["--with-libmemcached=/usr/local/opt/libmemcached"]}  # brew install libmemcached
+
+pyxll = "*"
 
 Sphinx = "*"
 sphinx-autobuild = "*"
@@ -51,6 +54,7 @@ requests = {extras = ["socks"],version = "*"}
 
 autopep8 = "*"
 bandit = "*"
+esbonio = "*"
 flake8 = "*"
 mypy = "*"
 pylint = "*"
@@ -59,4 +63,4 @@ pylint = "*"
 python_version = "3"
 
 [pipenv]
-allow_prereleases = true
+#allow_prereleases = true
