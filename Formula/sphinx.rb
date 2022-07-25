@@ -3,8 +3,8 @@ class Sphinx < Formula
 
   desc "Tool to create intelligent and beautiful documentation"
   homepage "https://www.sphinx-doc.org/"
-  url "https://github.com/sphinx-doc/sphinx/archive/v5.0.2.tar.gz"
-  sha256 "f57b1831b5ea1eb1d06b1c39c964eae125867a1889b3eed96f17f6edc07da671"
+  url "https://github.com/sphinx-doc/sphinx/archive/v5.1.0.tar.gz"
+  sha256 "20e5c9b371b35153300a838a62e1e6097ec9f6c188cad1c829ed6654209de1f4"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "6ba4e760041a84471e6db7c86d422e9aa00d2dec472099a2f70d0deb2a1df699"
