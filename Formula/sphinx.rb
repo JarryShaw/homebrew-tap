@@ -95,8 +95,8 @@ class Sphinx < Formula
   end
 
   resource "pytz" do
-    url "https://files.pythonhosted.org/packages/cf/80/8246892889a36f4a12f719da27c72faea1c2bdb6998afbfffc4284dcd457/pytz-2022.2.tar.gz"
-    sha256 "bc824559e43e8ab983426a49525079d186b25372ff63aa3430ccd527d95edc3a"
+    url "https://files.pythonhosted.org/packages/24/0c/401283bb1499768e33ddd2e1a35817c775405c1f047a9dc088a29ce2ea5d/pytz-2022.2.1.tar.gz"
+    sha256 "cea221417204f2d1a2aa03ddae3e867921971d0d76f14d87abb4414415bbdcf5"
   end
 
   resource "requests" do
