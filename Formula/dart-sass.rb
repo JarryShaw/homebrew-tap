@@ -8,8 +8,8 @@ class DartSass < Formula
   desc "Dart implementation of a Sass compiler"
   homepage "https://sass-lang.com"
 
-  url "https://github.com/sass/dart-sass/archive/1.54.6.tar.gz"
-  sha256 "091e8853482ab00f2c32375144c3a89c09a5cc44f54ebea9b94b31d4147dacb0"
+  url "https://github.com/sass/dart-sass/archive/1.54.7.tar.gz"
+  sha256 "0a0725f16d96a4aa72572cf4af2c43911adcf3791101aaabb270b640b78774aa"
 
   depends_on "jarryshaw/tap/dart" => :build
 
