@@ -3,8 +3,8 @@ class Sphinx < Formula
 
   desc "Tool to create intelligent and beautiful documentation"
   homepage "https://www.sphinx-doc.org/"
-  url "https://github.com/sphinx-doc/sphinx/archive/v5.1.1.tar.gz"
-  sha256 "8860a6b5e05d2ebe9ce99804eeaec3f5c6723c3e1156c611076d2da9244a5283"
+  url "https://github.com/sphinx-doc/sphinx/archive/v5.2.0.post0.tar.gz"
+  sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_monterey: "f5ffd34fa6ff52a0f80dc17465747145268c397a40c20ff537fe575bc6ac05d7"
@@ -35,8 +35,8 @@ class Sphinx < Formula
   end
 
   resource "Sphinx" do
-    url "https://files.pythonhosted.org/packages/3a/30/ac07935542607c876f3fcee1c1ab043d253332567009994a1bf71d9b55cd/Sphinx-5.1.1.tar.gz"
-    sha256 "ba3224a4e206e1fbdecf98a4fae4992ef9b24b85ebf7b584bb340156eaf08d89"
+    url "https://files.pythonhosted.org/packages/0f/0b/fa3b6a952a1559dce4e695c3edf9cb784ac3b83984e5c98cb14ee67f427e/Sphinx-5.2.0.post0.tar.gz"
+    sha256 "68e7833263a961521f45302fa87285f9395ecf385f1eefd85cd61ddff0b15bc1"
   end
 
   resource "alabaster" do
@@ -50,8 +50,8 @@ class Sphinx < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/ca/48/88ec470f8b68319b6782ca3a0570789886ad5ca24c1af2f3771699135baa/certifi-2022.9.14.tar.gz"
-    sha256 "36973885b9542e6bd01dea287b2b4b3b21236307c56324fcc3f1160f2d655ed5"
+    url "https://files.pythonhosted.org/packages/cb/a4/7de7cd59e429bd0ee6521ba58a75adaec136d32f91a761b28a11d8088d44/certifi-2022.9.24.tar.gz"
+    sha256 "0d9c601124e5a6ba9712dbc60d9c53c21e34f5f641fe83002317394311bdce14"
   end
 
   resource "charset-normalizer" do
@@ -115,8 +115,8 @@ class Sphinx < Formula
   end
 
   resource "Sphinx" do
-    url "https://files.pythonhosted.org/packages/3a/30/ac07935542607c876f3fcee1c1ab043d253332567009994a1bf71d9b55cd/Sphinx-5.1.1.tar.gz"
-    sha256 "ba3224a4e206e1fbdecf98a4fae4992ef9b24b85ebf7b584bb340156eaf08d89"
+    url "https://files.pythonhosted.org/packages/0f/0b/fa3b6a952a1559dce4e695c3edf9cb784ac3b83984e5c98cb14ee67f427e/Sphinx-5.2.0.post0.tar.gz"
+    sha256 "68e7833263a961521f45302fa87285f9395ecf385f1eefd85cd61ddff0b15bc1"
   end
 
   resource "sphinx-autobuild" do
