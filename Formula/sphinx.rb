@@ -3,16 +3,16 @@ class Sphinx < Formula
 
   desc "Tool to create intelligent and beautiful documentation"
   homepage "https://www.sphinx-doc.org/"
-  url "https://github.com/sphinx-doc/sphinx/archive/v5.2.1.tar.gz"
-  sha256 "dc823e2d2cbf71b7a2041f907f7539bcdecf0c81512d71ef35f54622e9f60961"
+  url "https://github.com/sphinx-doc/sphinx/archive/v5.2.2.tar.gz"
+  sha256 "f35a47b57c6568fb5e2ad9032ecdb29d2946d90ebcd542dfcd10fa59c2dbc288"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f5ffd34fa6ff52a0f80dc17465747145268c397a40c20ff537fe575bc6ac05d7"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "63aab3acd8bcf4ab0380d3cc58121781b305f144465b764b08caf16785be935f"
-    sha256 cellar: :any_skip_relocation, monterey:       "7e2fb09476272c3820dd96fc60257f6aaa1fe186136d8176b1821c586949b0c0"
-    sha256 cellar: :any_skip_relocation, big_sur:        "2e5ff94b002d67d6ff753596c335a1624649c0d7f80b278b42451af3942b3376"
-    sha256 cellar: :any_skip_relocation, catalina:       "d50d6bded84db6b5581b3182cbcd92c2442bfc6a5cb591ea86fbfab45357db15"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "eceaa7e00125247a200039d5bf06b5d47cb6503e9f7e1fb35bb80747e750ae0a"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "d68ab10e077057062f85cad92dc3421b887ff616bf4d9eda2cc71f6798fc31b7"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "d9285da506a0b7e0dfde62a1d3c77d23e1de99b93e260066d1b1c4f616044e76"
+    sha256 cellar: :any_skip_relocation, monterey:       "a9f0caed5008ff7b2d81039b1f1b3a055acff24c7e998805b03a3ed6cb9c59c3"
+    sha256 cellar: :any_skip_relocation, big_sur:        "a4c379cd26e815ba1733a25e470c38c5675d87a95f346957e560a36c0f905609"
+    sha256 cellar: :any_skip_relocation, catalina:       "4b958251e893fbed413ba2301bc1895abd4180cecf02f3c9b5b7835e12947145"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "4f037a1a020db86458a6ace5846cfd2812e8b77492112b4943fa625346093242"
   end
 
   depends_on "homebrew/core/python@3.9"
@@ -110,8 +110,8 @@ class Sphinx < Formula
   end
 
   resource "Sphinx" do
-    url "https://files.pythonhosted.org/packages/7d/da/7622fe6a44aeb5ee49371cb0f2c6bf99e7e703ffa3e08dda2d8cf70c218c/Sphinx-5.2.1.tar.gz"
-    sha256 "c009bb2e9ac5db487bcf53f015504005a330ff7c631bb6ab2604e0d65bae8b54"
+    url "https://files.pythonhosted.org/packages/7e/79/78be8beb3a0d39431e2c29d837f85fe3df77d31c92216ce22d7961607ef3/Sphinx-5.2.2.tar.gz"
+    sha256 "7225c104dc06169eb73b061582c4bc84a9594042acae6c1582564de274b7df2f"
   end
 
   resource "sphinx-autobuild" do
