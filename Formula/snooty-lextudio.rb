@@ -16,8 +16,8 @@ class SnootyLextudio < Formula
   end
 
   resource "charset-normalizer" do
-    url "https://files.pythonhosted.org/packages/a1/34/44964211e5410b051e4b8d2869c470ae8a68ae274953b1c7de6d98bbcf94/charset-normalizer-2.1.1.tar.gz"
-    sha256 "5a3d016c7c547f69d6f81fb0db9449ce888b418b5b9952cc5e6e66843e9dd845"
+    url "https://files.pythonhosted.org/packages/fe/77/6d5d367b7cfee812a88573e80bbe25cea2d015ed2c3490e4464951ff3232/charset-normalizer-3.0.0.tar.gz"
+    sha256 "b27d10ad15740b45fd55f76e6901a4391e6dca3917ef48ecdcf17edf6e00d770"
   end
 
   resource "docopt" do
@@ -46,8 +46,8 @@ class SnootyLextudio < Formula
   end
 
   resource "pymongo" do
-    url "https://files.pythonhosted.org/packages/16/5c/def5ee5112e834ce41a86feb37d076b586e51f5ff7acce072073fc616147/pymongo-4.2.0.tar.gz"
-    sha256 "72f338f6aabd37d343bd9d1fdd3de921104d395766bcc5cdc4039e4c2dd97766"
+    url "https://files.pythonhosted.org/packages/d3/ad/6f6f80e0da1f7d18f1505c32dbc4a01cd4c5e712b1d4f5637186409b8da7/pymongo-4.3.2.tar.gz"
+    sha256 "95913659d6c5fc714e662533d014836c988cc1561684f07b6a0a8343651afa66"
   end
 
   resource "python-jsonrpc-server" do
