@@ -8,8 +8,8 @@ class DartSass < Formula
   desc "Dart implementation of a Sass compiler"
   homepage "https://sass-lang.com"
 
-  url "https://github.com/sass/dart-sass/archive/1.55.0.tar.gz"
-  sha256 "01cf3f859e5f2187777db930a666ba3f86aba7ce4a1c7997f9f262a564f8ce53"
+  url "https://github.com/sass/dart-sass/archive/1.62.0.tar.gz"
+  sha256 "6f3ddedf0e9db237fe9c6a16a835c6ad815906c5ccd5836f82ff5ffbefe336c9"
 
   depends_on "jarryshaw/tap/dart" => :build
 
@@ -55,17 +55,17 @@ class DartSass < Formula
     system _dart/"dart", "compile", "jit-snapshot",
            "-Dversion=#{_version}",
            "-o", "sass.dart.app.snapshot",
-           "bin/sass.dart", "tool/app-snapshot-input.scss"
-    lib.install "sass.dart.app.snapshot"
+           "bin/sass.dart", "--version"
+    libexec.install "sass.dart.app.snapshot"
 
     # Copy the version of the Dart VM we used into our lib directory so that if
     # the user upgrades their Dart VM version it doesn't break Sass's snapshot,
     # which was compiled with an older version.
-    cp _dart/"dart", lib
+    cp _dart/"dart", libexec
 
     (bin/"sass").write <<~SH
       #!/bin/sh
-      exec "#{lib}/dart" "#{lib}/sass.dart.app.snapshot" "$@"
+      exec "#{libexec}/dart" "#{libexec}/sass.dart.app.snapshot" "$@"
     SH
   end
 end
