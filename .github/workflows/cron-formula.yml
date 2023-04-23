@@ -30,18 +30,10 @@ jobs:
           git submodule foreach git checkout master
           git submodule foreach git pull
 
-      - name: make formula (Python)
+      - name: make formula
         working-directory: Generator
         run: |
-          for name in bandit dmgbuild docutils f2format macdaily poseur pydl snooty-lextudio sphinx vermin walrus zkg; do
-            echo "+ make ${name}"
-            python scripts/${name}.py
-          done
-
-      - name: make formula (Others)
-        working-directory: Generator
-        run: |
-          for name in appdmg basher dmgbuild git-hg jshint mirror-config-china node-sass noob sloc; do
+          for name in appdmg bandit basher dmgbuild docutils f2format git-hg jshint macdaily mirror-config-china node-sass noob poseur pydl sloc snooty-lextudio sphinx vermin walrus zkg; do
             echo "+ make ${name}"
             python scripts/${name}.py
           done

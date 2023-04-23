@@ -22,7 +22,7 @@ if TYPE_CHECKING:
 subprocess.check_call(['pip', 'install', 'bpc-f2format'])  # nosec: B603 B607
 
 for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec
-    match = re.match(r"f2format==(.*)", line, re.IGNORECASE)
+    match = re.match(r"bpc-f2format==(.*)", line, re.IGNORECASE)
     if match is not None:
         VERSION = match.groups()[0]
 
