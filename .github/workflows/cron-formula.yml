@@ -41,7 +41,7 @@ jobs:
             python scripts/${name}.py
 
             echo "+ pip uninstall ${name}"
-            python -m pip-autoremove -y ${name}
+            pip-autoremove -y ${name}
           done
 
       - name: make formula (Others)
