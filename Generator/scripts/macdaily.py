@@ -20,7 +20,7 @@ import requests
 if TYPE_CHECKING:
     VERSION: str
 
-subprocess.check_call(['pip', 'install', 'macdaily'])  # nosec: B603 B607
+subprocess.check_call(['pip', 'install', 'macdaily[all]'])  # nosec: B603 B607
 
 for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec: B603 B607
     match = re.match(r"macdaily==(.*)", line, re.IGNORECASE)
@@ -214,4 +214,4 @@ else:
 with open(formula, 'w', encoding='utf-8') as file:
     file.write(FORMULA)
 
-subprocess.check_call(['pip-autoremove', '-y', 'macdaily'])  # nosec: B603 B607
+subprocess.check_call(['pip-autoremove', '-y', 'macdaily', 'subprocess32', 'pathlib2', 'psutil'])  # nosec: B603 B607

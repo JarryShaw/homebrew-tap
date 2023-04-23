@@ -14,39 +14,6 @@ url = "https://mirrors.sjtug.sjtu.edu.cn/pypi/web/simple"
 verify_ssl = true
 
 [dev-packages]
-docutils = "*"
-Pillow = "*"
-pygments = "*"
-
-dmgbuild = "*"
-
-bpc-f2format = "*"
-poseur = "*"
-bpc-walrus = "*"
-
-macdaily = {extras = ["all"],version = "*",sys_platform = "== 'darwin'"}
-pathlib2 = "*"
-psutil = "*"
-subprocess32 = "*"
-
-pyinstaller = "*"
-
-#pyxll = "*"
-
-vermin = "*"
-
-#sherlock = "*"
-#pylibmc = {version = "*",install_options = ["--with-libmemcached=/usr/local/opt/libmemcached"]}  # brew install libmemcached
-
-snooty-lextudio = "*"
-
-Sphinx = "*"
-sphinx-autobuild = "*"
-sphinx-autodoc-typehints = "*"
-
-zkg = "*"
-
-[packages]
 homebrew-pypi-poet = "*"
 homebrew-npm-noob = "*"
 pypi-simple = "*"
@@ -56,6 +23,7 @@ pip-autoremove = "*"
 beautifulsoup4 = {extras = ["html5lib"],version = "*"}
 requests = {extras = ["socks"],version = "*"}
 
+[packages]
 autopep8 = "*"
 bandit = "*"
 esbonio = "*"
