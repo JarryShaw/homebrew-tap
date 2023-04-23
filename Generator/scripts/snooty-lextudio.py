@@ -19,11 +19,11 @@ for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  #
         VERSION = match.groups()[0]
 
 with pypi_simple.PyPISimple() as client:
-    snooty_page = client.get_project_page('snooty-lextudio')  # type: pypi_simple.ProjectPage # type: ignore[assignment]
+    snooty_page = client.get_project_page('snooty-lextudio')  # type: pypi_simple.ProjectPage
 snooty_pkg = snooty_page.packages[0]
 
 SNOOTY_URL = snooty_pkg.url
-SNOOTY_SHA = snooty_pkg.get_digests()['sha256']
+SNOOTY_SHA = snooty_pkg.digests['sha256']
 
 _data_pkgs = {}  # type: dict[str, dict]
 
