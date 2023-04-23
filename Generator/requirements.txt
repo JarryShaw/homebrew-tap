@@ -1,0 +1,9 @@
+# build essentials
+homebrew-pypi-poet
+homebrew-npm-noob
+pypi-simple
+
+beautifulsoup4[html5lib]
+requests[socks]
+
+pip-autoremove

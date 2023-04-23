@@ -11,53 +11,58 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Set up Git repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           submodules: true
-      - name: Setup Pipenv
-        #working-directory: Generator
-        run: |
-          brew install pipenv
+          fetch-depth: 0
 
-          export PIPENV_SKIP_LOCK=1
-          export PIPENV_VENV_IN_PROJECT=1
-          pipenv install --dev --python $(brew --prefix pipenv)/libexec/bin/python --skip-lock
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
 
-          pipenv run pip install -U pip setuptools wheel
-          while true; do
-            echo '+ pipenv install --dev'
-            pipenv install --dev && break
-            echo -e 'exit: $?'
-          done
-          echo -e 'exit: 0'
-      - name: Update submodules
+      - name: Setup requirements & Update submodules
         run: |
+          set -x
+
+          python -m pip install -r Generator/requirements.txt
+
           git submodule update --init --recursive
           git submodule foreach git checkout master
           git submodule foreach git pull
+
       - name: make formula
         working-directory: Generator
         run: |
           for name in appdmg bandit basher dmgbuild docutils f2format git-hg jshint macdaily mirror-config-china node-sass noob poseur pydl sloc snooty-lextudio sphinx vermin walrus zkg; do
+            echo "+ pip install ${name}"
+            python -m pip install ${name}
+
             echo "+ make ${name}"
-            pipenv run python scripts/${name}.py
+            python scripts/${name}.py
+
+            echo "+ pip uninstall ${name}"
+            python -m pip-autoremove -y ${name}
           done
+
       - name: make fetch
         working-directory: Generator
         run: |
           for name in amass dart dart-beta dart-sass pyinstaller nlohmann-json ssh-askpass uti; do
             echo "+ make ${name}"
-            pipenv run python scripts/${name}.py
+            python scripts/${name}.py
           done
+
       - name: make link
         working-directory: Generator
         run: |
           make link
+
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git commit -m "Regular update at $(date)" -a
+
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
