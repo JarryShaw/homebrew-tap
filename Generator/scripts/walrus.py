@@ -19,8 +19,10 @@ import requests
 if TYPE_CHECKING:
     VERSION: str
 
+subprocess.check_call(['pip', 'install', 'bpc-walrus'])  # nosec: B603 B607
+
 for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec: B603 B607
-    match = re.match(r"bandit==(.*)", line, re.IGNORECASE)
+    match = re.match(r"bpc-walrus==(.*)", line, re.IGNORECASE)
     if match is not None:
         VERSION = match.groups()[0]
 
@@ -97,3 +99,5 @@ else:
                            f'{os.path.splitext(os.path.basename(__file__))[0]}.rb')
 with open(formula, 'w', encoding='utf-8') as file:
     file.write(FORMULA)
+
+subprocess.check_call(['pip-autoremove', '-y', 'bpc-walrus'])  # nosec: B603 B607

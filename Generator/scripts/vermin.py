@@ -11,6 +11,8 @@ import requests
 if TYPE_CHECKING:
     VERSION: str
 
+subprocess.check_call(['pip', 'install', 'vermin'])  # nosec: B603 B607
+
 for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec: B603 B607
     match = re.match(r"vermin==(.*)", line, re.IGNORECASE)
     if match is not None:
@@ -47,3 +49,5 @@ end
 with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'Formula',
                        f'{os.path.splitext(os.path.basename(__file__))[0]}.rb'), 'w', encoding='utf-8') as file:
     file.write(FORMULA)
+
+subprocess.check_call(['pip-autoremove', '-y', 'vermin'])  # nosec: B603 B607

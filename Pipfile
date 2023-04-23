@@ -20,9 +20,9 @@ pygments = "*"
 
 dmgbuild = "*"
 
-f2format = "*"
+bpc-f2format = "*"
 poseur = "*"
-walrus = "*"
+bpc-walrus = "*"
 
 macdaily = {extras = ["all"],version = "*",sys_platform = "== 'darwin'"}
 pathlib2 = "*"
@@ -50,6 +50,8 @@ zkg = "*"
 homebrew-pypi-poet = "*"
 homebrew-npm-noob = "*"
 pypi-simple = "*"
+
+pip-autoremove = "*"
 
 beautifulsoup4 = {extras = ["html5lib"],version = "*"}
 requests = {extras = ["socks"],version = "*"}

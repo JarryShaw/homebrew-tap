@@ -12,6 +12,8 @@ if TYPE_CHECKING:
     VERSION: str
     VERSION_PILLOW: str
 
+subprocess.check_call(['pip', 'install', 'docutils', 'pillow', 'pygments'])  # nosec: B603 B607
+
 for line in subprocess.check_output(['pip', 'freeze']).decode().splitlines():  # nosec: B603 B607
     match = re.match(r"docutils==(.*)", line, re.IGNORECASE)
     if match is not None:
@@ -115,3 +117,5 @@ end
 with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', '..', 'Formula',
                        f'{os.path.splitext(os.path.basename(__file__))[0]}.rb'), 'w', encoding='utf-8') as file:
     file.write(FORMULA)
+
+subprocess.check_call(['pip-autoremove', '-y', 'docutils', 'pillow', 'pygments'])  # nosec: B603 B607

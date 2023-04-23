@@ -33,15 +33,9 @@ jobs:
       - name: make formula (Python)
         working-directory: Generator
         run: |
-          for name in bandit dmgbuild docutils f2format jshint macdaily poseur pydl snooty-lextudio sphinx vermin walrus zkg; do
-            echo "+ pip install ${name}"
-            python -m pip install ${name}
-
+          for name in bandit dmgbuild docutils f2format macdaily poseur pydl snooty-lextudio sphinx vermin walrus zkg; do
             echo "+ make ${name}"
             python scripts/${name}.py
-
-            echo "+ pip uninstall ${name}"
-            pip-autoremove -y ${name}
           done
 
       - name: make formula (Others)
