@@ -8,7 +8,7 @@ on:
 
 jobs:
   update:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v3
