@@ -8,7 +8,7 @@ on:
 
 jobs:
   update:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v3
@@ -52,8 +52,18 @@ jobs:
           make link
 
       - name: Verify Changed files
-        uses: tj-actions/verify-changed-files@v14
         id: verify-changed-files
+        run: |
+          set -x
+
+          GIT_DIFF=$(git diff --name-only | xargs)
+
+          echo "changed_files=${GIT_DIFF}" >> $GITHUB_OUTPUT
+          if [[ -n ${GIT_DIFF} ]]; then
+              echo "files_changed=true" >> $GITHUB_OUTPUT
+          else
+              echo "files_changed=false" >> $GITHUB_OUTPUT
+          fi
 
       - name: Commit changes
         if: steps.verify-changed-files.outputs.files_changed == 'true'
