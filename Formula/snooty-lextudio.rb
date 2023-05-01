@@ -81,8 +81,8 @@ class SnootyLextudio < Formula
   end
 
   resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/aa/52/078c46565a4b4983e15d862cb7461e5c63a2e7b3c8436e8622a601120ea0/urllib3-2.0.0.tar.gz"
-    sha256 "da21131828d290d6331d0d93a18f062ead1ec4fe0cfebbcefc95ee5368f7188a"
+    url "https://files.pythonhosted.org/packages/7e/19/2a88626e71557cd989afee0985df3808a546d54d00b0b5853f3b6c334dbd/urllib3-2.0.1.tar.gz"
+    sha256 "2ce66a68134be469f5df5d46d724237489b3cd85b2bba2223dbbee1746548826"
   end
 
   resource "watchdog" do
