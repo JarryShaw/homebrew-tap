@@ -7,13 +7,13 @@ class Sphinx < Formula
   sha256 "f03b9a788520239c54a94c7875954bca057bea0d283839078c67e5be24955c2d"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "dea60caf19dd1b9e9926c70301363079175fe4e3a915cd26533d456a6febbb85"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "38dc453df69e567a256b7200f57687d6405b4d511a4969d3264f4e0297f2dd82"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2b81244f7ed7e71bff72504c80c4d15aa548fdd4406637f9d9dc6cd7cc2b2575"
-    sha256 cellar: :any_skip_relocation, ventura:        "0a5a6466c8dc04da17dc0eac2f318da0c81a5a264b56cf0b6197cafc700b78a7"
-    sha256 cellar: :any_skip_relocation, monterey:       "dbf62fb7c7559a2fce848278e4a1cf6f6c02889b8c3fc3fd9be7ccdd4782ba63"
-    sha256 cellar: :any_skip_relocation, big_sur:        "97b175d0f4f7ecc3d6caa16a5c17c73a635596ffdc098fe7e4dfb03a6e45892a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "558088c22cf2336bb7d2c6c644ef6e4f45a925fdef0ccff04700492ad46ca7e0"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "08105c709af12d2f34dbace33399fb8dbd0659f98585cf66253f3e64ea0e946e"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b49b5ef1d70f8b3830847ecb47e819116784cadcfbf3f6fbd04625a72e2f934c"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b0080d797f2e496827d6c6423d24ec8d524f09d663266482d79558e760da0454"
+    sha256 cellar: :any_skip_relocation, ventura:        "4e2c3be15dd1567c8fa2cdf7ef912b2e7580ca45f1b65caf50c25442898a25a2"
+    sha256 cellar: :any_skip_relocation, monterey:       "e26dc5d74104fe3ad9538f8d7ad6007b8f657935c8681df24f9ceca4cb9d4068"
+    sha256 cellar: :any_skip_relocation, big_sur:        "96e6796571e34e1e00bd615f9dde73814ed41ba649d09796a93de98d95a0ec86"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "e62db6f70574d42d0de3c9782b4defc6c544832a00ec9adfcf693cff98f60ce6"
   end
 
   depends_on "homebrew/core/python@3.9"
@@ -46,8 +46,8 @@ class Sphinx < Formula
   end
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/37/f7/2b1b0ec44fdc30a3d31dfebe52226be9ddc40cd6c0f34ffc8923ba423b69/certifi-2022.12.7.tar.gz"
-    sha256 "35824b4c3a97115964b408844d64aa14db1cc518f6562e8d7261699d1350a9e3"
+    url "https://files.pythonhosted.org/packages/93/71/752f7a4dd4c20d6b12341ed1732368546bc0ca9866139fe812f6009d9ac7/certifi-2023.5.7.tar.gz"
+    sha256 "0f0d56dc5a6ad56fd4ba36484d6cc34451e1c6548c61daad8c320169f91eddc7"
   end
 
   resource "charset-normalizer" do
