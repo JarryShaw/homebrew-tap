@@ -21,8 +21,8 @@ class F2format < Formula
   end
 
   resource "typing-extensions" do
-    url "https://files.pythonhosted.org/packages/e4/03/4670b4c206e1dc869f2f0120c3d0a2b17d42526ab2b5a8f66d4cd8642ef3/typing_extensions-4.6.0.tar.gz"
-    sha256 "ff6b238610c747e44c268aa4bb23c8c735d665a63726df3f9431ce707f2aa768"
+    url "https://files.pythonhosted.org/packages/aa/67/f4e6ae6998b0c86ab10f8e96339f00afaf30bef11f63a81c63977c2b89d7/typing_extensions-4.6.1.tar.gz"
+    sha256 "558bc0c4145f01e6405f4a5fdbd82050bd221b119f4bf72a961a1cfd471349d6"
   end
 
   resource "parso" do
