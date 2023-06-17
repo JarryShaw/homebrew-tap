@@ -7,14 +7,13 @@ class Sphinx < Formula
   sha256 "07615442c34dbbf1844d4b514c659c27a8fa14819d6999b920773aed798d00c9"
 
   bottle do
-    rebuild 1
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "d188b5bd724a435849475bc904388b427bb674b2eda679010c5605c639a6753f"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "5fcc4390e78268f5475fe0352e5bbf50d4f9170afd5f5e1224c8b3c2b981016a"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "2aa23455fd8fe634bff86a20d54c5cc6f17317989229e72b4ffd49f5792b4c1b"
-    sha256 cellar: :any_skip_relocation, ventura:        "05d401f76cd402e6524cc3941c972dd88f3ab17c22ea27f4e2ee27416b854112"
-    sha256 cellar: :any_skip_relocation, monterey:       "956ff93383d8f2da3103a32eec6d8b7177f698137e7108d13bb922e148f3e7da"
-    sha256 cellar: :any_skip_relocation, big_sur:        "a8a14ff80394220b248f426aaf6d5df5ad43e3c81d7575ce05d67d8e8ca38a17"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "fdc6dffdb1d961db5f5baaaf998a146fb5c91bf707a87a282bd53f6de9780b23"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "c105d1ba8a264453c09e626c4ae5dcec3edc27d593aacdc846a8975ce3ebb713"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "59fc07550b2d6d1566e1d05b742e5b7d63635316b71531f71ffbee442aea539a"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "956298eb86cfd7f4de8f027ac805e862c4587f16de6d40df6e0e4a97140d87b3"
+    sha256 cellar: :any_skip_relocation, ventura:        "78d5aa2464a15584e80b20e584bd5cadb96a1d82ed4818ce21836f108c4b31e8"
+    sha256 cellar: :any_skip_relocation, monterey:       "ec0d62ee70340b82fbac5287fb0d1527ba3bfb2feb15b6b3238423fa3b29cf97"
+    sha256 cellar: :any_skip_relocation, big_sur:        "483978d8b7d25793c0490776fe1aa9c977af59f08f3090bf0f1b5d90e0d21b92"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "7759f178a0a8ca33b63c9eb1628de2d2f3ac475fab5d091307fa1fce3f246b68"
   end
 
   depends_on "homebrew/core/python@3.9"
