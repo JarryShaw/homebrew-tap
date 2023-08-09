@@ -35,7 +35,7 @@ jobs:
         run: |
           for name in appdmg bandit basher dmgbuild docutils f2format git-hg jshint macdaily mirror-config-china node-sass noob poseur pydl sloc snooty-lextudio sphinx vermin walrus zkg; do
             echo "+ make ${name}"
-            python scripts/${name}.py
+            python scripts/${name}.py || echo "::warning::command failed: ``make ${name}``"
           done
 
       - name: make fetch
@@ -43,7 +43,7 @@ jobs:
         run: |
           for name in amass dart dart-beta dart-sass pyinstaller nlohmann-json ssh-askpass uti; do
             echo "+ make ${name}"
-            python scripts/${name}.py
+            python scripts/${name}.py || echo "::warning::command failed: ``make ${name}``"
           done
 
       - name: make link
