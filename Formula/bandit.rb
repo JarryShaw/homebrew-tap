@@ -41,8 +41,8 @@ class Bandit < Formula
   end
 
   resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/d6/f7/4d461ddf9c2bcd6a4d7b2b139267ca32a69439387cc1f02a924ff8883825/Pygments-2.16.1.tar.gz"
-    sha256 "1daff0494820c69bc8941e407aa20f577374ee88364ee10a98fdbe0aece96e29"
+    url "https://files.pythonhosted.org/packages/e1/d8/a025e9be97bb9066e011b3d5e37bf67678002c03598d0781830e5660a43a/pygments-2.17.0.tar.gz"
+    sha256 "edaa0fa2453d055d0ac94449d1f73ec7bc52c5e318204da1377c1392978c4a8d"
   end
 
   resource "rich" do
