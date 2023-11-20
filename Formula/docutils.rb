@@ -31,8 +31,8 @@ class Docutils < Formula
   end
 
   resource "Pygments" do
-    url "https://files.pythonhosted.org/packages/e1/d8/a025e9be97bb9066e011b3d5e37bf67678002c03598d0781830e5660a43a/pygments-2.17.0.tar.gz"
-    sha256 "edaa0fa2453d055d0ac94449d1f73ec7bc52c5e318204da1377c1392978c4a8d"
+    url "https://files.pythonhosted.org/packages/22/04/097cdb7d5c6faee58e31a8a2b63cba2222a52066f734b3fdc713c6f40575/pygments-2.17.1.tar.gz"
+    sha256 "e45a0e74bf9c530f564ca81b8952343be986a29f6afe7f5ad95c5f06b7bdf5e8"
   end
 
   def install
