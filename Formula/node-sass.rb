@@ -3,24 +3,21 @@ class NodeSass < Formula
 
   desc "JavaScript implementation of a Sass compiler"
   homepage "https://github.com/sass/dart-sass"
-  url "https://registry.npmjs.org/sass/-/sass-1.69.3.tgz"
-  sha256 "6877924bede69b9f2f51fa178625181adfa6c8cf7d28d11d180713d4bf371a06"
+  url "https://registry.npmjs.org/sass/-/sass-1.69.5.tgz"
+  sha256 "fb60ea78083749eb37934faecba877370aec2793a197d18a3e3486457d236e40"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "e014f99baa14ce08be230f5e8430d5604debd29b03cbb39cee3e51e47115472a"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "e014f99baa14ce08be230f5e8430d5604debd29b03cbb39cee3e51e47115472a"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "e014f99baa14ce08be230f5e8430d5604debd29b03cbb39cee3e51e47115472a"
-    sha256 cellar: :any_skip_relocation, sonoma:         "e014f99baa14ce08be230f5e8430d5604debd29b03cbb39cee3e51e47115472a"
-    sha256 cellar: :any_skip_relocation, ventura:        "e014f99baa14ce08be230f5e8430d5604debd29b03cbb39cee3e51e47115472a"
-    sha256 cellar: :any_skip_relocation, monterey:       "e014f99baa14ce08be230f5e8430d5604debd29b03cbb39cee3e51e47115472a"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "d57cfde8b7d7d8bdcb72773a1bf72651c3633fe8802689b3354968fcbb14b42d"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "93e35946bc0b230272eab8760d014f6af4eca09a4356d9a91c759f7ebcd8a8d7"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "93e35946bc0b230272eab8760d014f6af4eca09a4356d9a91c759f7ebcd8a8d7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "93e35946bc0b230272eab8760d014f6af4eca09a4356d9a91c759f7ebcd8a8d7"
+    sha256 cellar: :any_skip_relocation, sonoma:         "93e35946bc0b230272eab8760d014f6af4eca09a4356d9a91c759f7ebcd8a8d7"
+    sha256 cellar: :any_skip_relocation, ventura:        "93e35946bc0b230272eab8760d014f6af4eca09a4356d9a91c759f7ebcd8a8d7"
+    sha256 cellar: :any_skip_relocation, monterey:       "93e35946bc0b230272eab8760d014f6af4eca09a4356d9a91c759f7ebcd8a8d7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cf217e3d6ecd47328b11fa22aa2cf43de1dbf7d6c9845850317b22cdbfea953c"
   end
 
-  depends_on "homebrew/core/node"
-
-  conflicts_with "homebrew/core/node-sass", because: "it is now integrated with homebrew-core"
-  conflicts_with "jarryshaw/tap/dart-sass", because: "both install a `sass` binary"
+  depends_on "node@20"
 
   def install
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
@@ -28,6 +25,8 @@ class NodeSass < Formula
   end
 
   test do
+    ENV.prepend_path "PATH", Formula["node@20"].bin
+
     (testpath/"test.scss").write <<~EOS
       div {
         img {
