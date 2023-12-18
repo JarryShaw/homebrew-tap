@@ -3,7 +3,7 @@ class GitHg < Formula
   homepage "https://github.com/cosmin/git-hg"
   url "https://github.com/cosmin/git-hg.git",
     revision: "16b573ed0567e89348ba1d066e6afe5bb48b916c"
-  version "2023.12.17"
+  version "2023.12.18"
 
   depends_on "homebrew/core/mercurial"
   depends_on "homebrew/core/python@2"
