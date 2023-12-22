@@ -17,7 +17,10 @@ class NodeSass < Formula
     sha256 cellar: :any_skip_relocation, x86_64_linux:   "cf217e3d6ecd47328b11fa22aa2cf43de1dbf7d6c9845850317b22cdbfea953c"
   end
 
-  depends_on "node@20"
+  depends_on "homebrew/core/node"
+
+  conflicts_with "homebrew/core/node-sass", because: "it is now integrated with homebrew-core"
+  conflicts_with "jarryshaw/tap/dart-sass", because: "both install a `sass` binary"
 
   def install
     system "npm", "install", *Language::Node.std_npm_install_args(libexec)
@@ -25,8 +28,6 @@ class NodeSass < Formula
   end
 
   test do
-    ENV.prepend_path "PATH", Formula["node@20"].bin
-
     (testpath/"test.scss").write <<~EOS
       div {
         img {
