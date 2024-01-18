@@ -3,18 +3,18 @@ class NodeSass < Formula
 
   desc "JavaScript implementation of a Sass compiler"
   homepage "https://github.com/sass/dart-sass"
-  url "https://registry.npmjs.org/sass/-/sass-1.69.5.tgz"
-  sha256 "fb60ea78083749eb37934faecba877370aec2793a197d18a3e3486457d236e40"
+  url "https://registry.npmjs.org/sass/-/sass-1.69.7.tgz"
+  sha256 "809f9bd24d4f8c72b047561edd6fb33ad5a5d2c96bbf0e4f104fa5d1257ee534"
   license "MIT"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "93e35946bc0b230272eab8760d014f6af4eca09a4356d9a91c759f7ebcd8a8d7"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "93e35946bc0b230272eab8760d014f6af4eca09a4356d9a91c759f7ebcd8a8d7"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "93e35946bc0b230272eab8760d014f6af4eca09a4356d9a91c759f7ebcd8a8d7"
-    sha256 cellar: :any_skip_relocation, sonoma:         "93e35946bc0b230272eab8760d014f6af4eca09a4356d9a91c759f7ebcd8a8d7"
-    sha256 cellar: :any_skip_relocation, ventura:        "93e35946bc0b230272eab8760d014f6af4eca09a4356d9a91c759f7ebcd8a8d7"
-    sha256 cellar: :any_skip_relocation, monterey:       "93e35946bc0b230272eab8760d014f6af4eca09a4356d9a91c759f7ebcd8a8d7"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "cf217e3d6ecd47328b11fa22aa2cf43de1dbf7d6c9845850317b22cdbfea953c"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "b474aaa6e48bb507c827e51d1198386276c9b34514a5c5b861b469464a7d66f7"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b474aaa6e48bb507c827e51d1198386276c9b34514a5c5b861b469464a7d66f7"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b474aaa6e48bb507c827e51d1198386276c9b34514a5c5b861b469464a7d66f7"
+    sha256 cellar: :any_skip_relocation, sonoma:         "b474aaa6e48bb507c827e51d1198386276c9b34514a5c5b861b469464a7d66f7"
+    sha256 cellar: :any_skip_relocation, ventura:        "b474aaa6e48bb507c827e51d1198386276c9b34514a5c5b861b469464a7d66f7"
+    sha256 cellar: :any_skip_relocation, monterey:       "b474aaa6e48bb507c827e51d1198386276c9b34514a5c5b861b469464a7d66f7"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "288901d763a9ca2f28991a9de1eb73228e62011468a845c8d0c04cc2ab403fa2"
   end
 
   depends_on "homebrew/core/node"
