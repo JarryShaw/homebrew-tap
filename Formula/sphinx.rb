@@ -7,14 +7,14 @@ class Sphinx < Formula
   sha256 "b41c04543148937b887097f396d7b2b54ae49d0597b68625f06ffdf702d4d917"
 
   bottle do
-    rebuild 2
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "177956d656c65fd2707922c6b38ee42876a1e18b62de2010ce86d0c5255e85d2"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "bee3a179f2884143b5e4ee9807ce09614b09b154d8aefb76e18d7fabe844836e"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "cebe319d67591959def7e226ccf5ec544b768cad38b711faa49a0dbd62d36e88"
-    sha256 cellar: :any_skip_relocation, sonoma:         "145eaab366a5a5e4eaaba8f012e52243633e2140bd122f8737463bca6a31ed3f"
-    sha256 cellar: :any_skip_relocation, ventura:        "aee421b1cae0313d14739c347c6b2fa624dd1f160ddfd1ac6dfac31e9bd2d7a6"
-    sha256 cellar: :any_skip_relocation, monterey:       "93c2da5439e176aa9241ada1bde6c75eec86c1ad0683f8b833da8572a426e333"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "89cfdcdccfd43fa3db4209ebbdb068b70a9a0c4e013f5f7fe8c53ebefbd22bef"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "2171ba9ede008e512555c413a5e381c120874c257be6d7a359b6034918289afd"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "1fd2654b3c221c3a8eb60ee6de80f244e257e4b38ab2a0920b839e754e3526cc"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "8d5b3c72f428e2ead5e470ebc5ebed8d793277a9602b16741a66a77d681229e0"
+    sha256 cellar: :any_skip_relocation, sonoma:         "019a933ef7744730b2893184dbf31dd3cd8e6143d353cbf3ad5607b2b81f8256"
+    sha256 cellar: :any_skip_relocation, ventura:        "1521a640ea8f77b09938e50d831936fd8ac4e05baf01804b42a94f1b8d886679"
+    sha256 cellar: :any_skip_relocation, monterey:       "d7f2d33fa1d4993009e9846ddb27c6062e93b5ef7186d6762aad2878516b256b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "b8318354364f8c1c6dd874dba5ceacdbab9892012d9cdb608e02b2ab30e2d92b"
   end
 
   depends_on "homebrew/core/python@3.9"
@@ -107,8 +107,8 @@ class Sphinx < Formula
   end
 
   resource "sphinx-autobuild" do
-    url "https://files.pythonhosted.org/packages/df/a5/2ed1b81e398bc14533743be41bf0ceaa49d671675f131c4d9ce74897c9c1/sphinx-autobuild-2021.3.14.tar.gz"
-    sha256 "de1ca3b66e271d2b5b5140c35034c89e47f263f2cd5db302c9217065f7443f05"
+    url "https://files.pythonhosted.org/packages/06/31/47bbd8d10b673aa5abba794c4424e58b245d1c5b0d016081913555c24357/sphinx_autobuild-2024.2.4.tar.gz"
+    sha256 "cb9d2121a176d62d45471624872afc5fad7755ad662738abe400ecf4a7954303"
   end
 
   resource "sphinxcontrib-applehelp" do
