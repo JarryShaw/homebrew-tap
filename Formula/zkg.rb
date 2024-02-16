@@ -3,8 +3,8 @@ class Zkg < Formula
 
   desc "Package manager for Zeek"
   homepage "https://docs.zeek.org/projects/package-manager"
-  url "https://github.com/zeek/package-manager/archive/v2.14.0.tar.gz"
-  sha256 "a4c3d4a122f45e23247ffa26d36e585c5a0e6e5ac1de5cdcfdd58c3818a4d2eb"
+  url "https://github.com/zeek/package-manager/archive/v3.0.0.tar.gz"
+  sha256 "2c77a54445de5736e83b7f462850edd2f2ad5a21ad8348e36344525c1a249979"
 
   head "https://github.com/zeek/package-manager.git", branch: "master"
 
@@ -22,8 +22,8 @@ class Zkg < Formula
   end
 
   resource "GitPython" do
-    url "https://files.pythonhosted.org/packages/e5/c2/6e3a26945a7ff7cf2854b8825026cf3f22ac8e18285bc11b6b1ceeb8dc3f/GitPython-3.1.41.tar.gz"
-    sha256 "ed66e624884f76df22c8e16066d567aaa5a37d5b5fa19db2c6df6f7156db9048"
+    url "https://files.pythonhosted.org/packages/8f/12/71a40ffce4aae431c69c45a191e5f03aca2304639264faf5666c2767acc4/GitPython-3.1.42.tar.gz"
+    sha256 "2d99869e0fef71a73cbd242528105af1d6c1b108c60dfabd994bf292f76c3ceb"
   end
 
   resource "semantic-version" do
