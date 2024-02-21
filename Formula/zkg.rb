@@ -3,8 +3,8 @@ class Zkg < Formula
 
   desc "Package manager for Zeek"
   homepage "https://docs.zeek.org/projects/package-manager"
-  url "https://github.com/zeek/package-manager/archive/v3.0.0.tar.gz"
-  sha256 "2c77a54445de5736e83b7f462850edd2f2ad5a21ad8348e36344525c1a249979"
+  url "https://github.com/zeek/package-manager/archive/v3.0.1.tar.gz"
+  sha256 "838f7e0022376cc58251603a072082e3603f73c051273ddaa41b711bcb9dfc40"
 
   head "https://github.com/zeek/package-manager.git", branch: "master"
 
