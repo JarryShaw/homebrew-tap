@@ -3,7 +3,7 @@ class Basher < Formula
   homepage "https://github.com/basherpm/basher"
   url "https://github.com/basherpm/basher.git",
     revision: "1e53053b0e0dfb2b2e4bd66e822e81637b1eca93"
-  version "2024.3.16"
+  version "2024.3.17"
 
   depends_on "homebrew/core/bash"
   depends_on "homebrew/core/coreutils"
