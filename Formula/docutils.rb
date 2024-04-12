@@ -3,8 +3,8 @@ class Docutils < Formula
 
   desc "Text processing system for reStructuredText"
   homepage "https://docutils.sourceforge.io"
-  url "https://downloads.sourceforge.net/project/docutils/docutils/0.21/docutils-0.21.tar.gz"
-  sha256 "8cf5ce27d21490c24eedf91e0ac2bc4a748ba8f4eb20cb7c1fc9442d2d580008"
+  url "https://downloads.sourceforge.net/project/docutils/docutils/0.21.1/docutils-0.21.1.tar.gz"
+  sha256 "65249d8a5345bc95e0f40f280ba63c98eb24de35c6c8f5b662e3e8948adea83f"
 
   option "without-pil", "build without Python Image Library support"
   option "without-pygments", "build without code syntax highlighting support"
