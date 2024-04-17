@@ -3,8 +3,8 @@ class Sphinx < Formula
 
   desc "Tool to create intelligent and beautiful documentation"
   homepage "https://www.sphinx-doc.org/"
-  url "https://github.com/sphinx-doc/sphinx/archive/v7.2.6.tar.gz"
-  sha256 "b41c04543148937b887097f396d7b2b54ae49d0597b68625f06ffdf702d4d917"
+  url "https://github.com/sphinx-doc/sphinx/archive/v7.3.1.tar.gz"
+  sha256 "71652cdd4871e429c10b941b86d44a4147b7f94620e77e15b958212ecdf91778"
 
   bottle do
     rebuild 3
@@ -112,13 +112,13 @@ class Sphinx < Formula
   end
 
   resource "Sphinx" do
-    url "https://files.pythonhosted.org/packages/73/8e/6e51da4b26665b4b92b1944ea18b2d9c825e753e19180cc5bdc818d0ed3b/sphinx-7.2.6.tar.gz"
-    sha256 "9a5160e1ea90688d5963ba09a2dcd8bdd526620edbb65c328728f1b2228d5ab5"
+    url "https://files.pythonhosted.org/packages/df/8d/6caed45a985cf0a285124e66418b77095158ed4a1a8d1bb93c385db8f4fd/sphinx-7.3.1.tar.gz"
+    sha256 "9d9e436f536620e13cea3becf107cd5b2fe65922c9fc24d1945543b6657f3468"
   end
 
   resource "sphinx-autobuild" do
-    url "https://files.pythonhosted.org/packages/a1/4e/77c2f38f3fa862583e1f86fa4e9020f7c9f32199b06de46d7e3e09e3107f/sphinx_autobuild-2024.4.13.tar.gz"
-    sha256 "1d023b3a11866a094cd55c8e5a68c155430c033d560f649c1c2bde818f1d8f1b"
+    url "https://files.pythonhosted.org/packages/d2/bc/8016eee9ffb86069ae7e658c136bad31a9854b476a212492b5aab4d4d5f6/sphinx_autobuild-2024.4.16.tar.gz"
+    sha256 "1c0ed37a1970eed197f9c5a66d65759e7c4e4cba7b5a5d77940752bf1a59f2c7"
   end
 
   resource "sphinxcontrib-applehelp" do
@@ -164,6 +164,11 @@ class Sphinx < Formula
   resource "uvicorn" do
     url "https://files.pythonhosted.org/packages/49/8d/5005d39cd79c9ae87baf7d7aafdcdfe0b13aa69d9a1e3b7f1c984a2ac6d2/uvicorn-0.29.0.tar.gz"
     sha256 "6a69214c0b6a087462412670b3ef21224fa48cae0e452b5883e8e8bdfdd11dd0"
+  end
+
+  resource "watchfiles" do
+    url "https://files.pythonhosted.org/packages/66/79/0ee412e1228aaf6f9568aa180b43cb482472de52560fbd7c283c786534af/watchfiles-0.21.0.tar.gz"
+    sha256 "c76c635fabf542bb78524905718c39f736a98e5ab25b23ec6d4abede1a85a6a3"
   end
 
   resource "websockets" do
