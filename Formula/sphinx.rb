@@ -7,13 +7,13 @@ class Sphinx < Formula
   sha256 "43c4cdb796b41dc1645117efbc74655d41ccea49fe34170a2b5bb88eee6f83a5"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "022f66c695afc969866a4089c730c3a0819165fc07d0035512a9e760e96da2f7"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "b2bac7d045434efe88d8145b316c7b44e6d0dbaeda6abf41445f72f25df46187"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "58b64d71e8d98e35815c38fdff25b538e466b88339d75ed152347a3e48a7564a"
-    sha256 cellar: :any_skip_relocation, sonoma:         "6978da95ff0918618eadaefb114f026c31ea7e1f16252945e8f8a8b97124da2e"
-    sha256 cellar: :any_skip_relocation, ventura:        "39b34fd064913fffdc07582aa327c6fe0b04773266f94d695c7afde15b024c30"
-    sha256 cellar: :any_skip_relocation, monterey:       "b845851390d59d3a7515f769028d31624fefecd63cbf7546d0dcff121a62bc1c"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "631735645fa5bc69afd34bf656db80c541204e7738a753fdca7c9702223a9700"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "48f9add3a85c1a56485192ae5bc3a0273002c5aa002fb9a0ab266ba54839e234"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "7510d9cc7402f251d607b640e930b9aa427eb76b6a13fe18ae7fd0fc509af42d"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "ec7994aa88f304fecbbf50232c3fecaf918896631521faf5754e235075c8ddee"
+    sha256 cellar: :any_skip_relocation, sonoma:         "8bd577657867a31fe01d80d0c042a83de54022da4892060d1bd0cfd7589045e2"
+    sha256 cellar: :any_skip_relocation, ventura:        "83cf6cc9da26829f5d652e80d34eaa521c542f34990a76cb47b58bd94083fa90"
+    sha256 cellar: :any_skip_relocation, monterey:       "e1347bab6b2a5a289013017540bac056fe84c1e454d00993ed2c016a55670172"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "2666598ef4ab7764401772b326ea25bd0c6539c0060349fff429f2644745433a"
   end
 
   depends_on "homebrew/core/python@3.9"
@@ -161,8 +161,8 @@ class Sphinx < Formula
   end
 
   resource "uvicorn" do
-    url "https://files.pythonhosted.org/packages/49/8d/5005d39cd79c9ae87baf7d7aafdcdfe0b13aa69d9a1e3b7f1c984a2ac6d2/uvicorn-0.29.0.tar.gz"
-    sha256 "6a69214c0b6a087462412670b3ef21224fa48cae0e452b5883e8e8bdfdd11dd0"
+    url "https://files.pythonhosted.org/packages/d3/f7/4ad826703a49b320a4adf2470fdd2a3481ea13f4460cb615ad12c75be003/uvicorn-0.30.0.tar.gz"
+    sha256 "f678dec4fa3a39706bbf49b9ec5fc40049d42418716cea52b53f07828a60aa37"
   end
 
   resource "watchfiles" do
