@@ -3,8 +3,8 @@ class Sphinx < Formula
 
   desc "Tool to create intelligent and beautiful documentation"
   homepage "https://www.sphinx-doc.org/"
-  url "https://github.com/sphinx-doc/sphinx/archive/v7.4.6.tar.gz"
-  sha256 "797f8e79c4c32daa5b76531faaf3e7976a1fadc7b9eae82ed0ab65ea91468f89"
+  url "https://github.com/sphinx-doc/sphinx/archive/v7.4.7.tar.gz"
+  sha256 "cded0d98c23983e536e938ac3dc0eca53660fd6de86708e2aca4e006812a8de4"
 
   bottle do
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "7186d6921a44384f9f45dfcd9548e2b0fd31f8c4716c30ce4fff3e12fc1bbcea"
@@ -111,8 +111,8 @@ class Sphinx < Formula
   end
 
   resource "Sphinx" do
-    url "https://files.pythonhosted.org/packages/c6/81/8ef210d47c9df9c184c5c1b832e92b50eea11e2463ed7254a3661c0b3e83/sphinx-7.4.6.tar.gz"
-    sha256 "116918d455c493fff3178edea12b4fe1c1e4894680fd81e7b7431ea21d47ca52"
+    url "https://files.pythonhosted.org/packages/5b/be/50e50cb4f2eff47df05673d361095cafd95521d2a22521b920c67a372dcb/sphinx-7.4.7.tar.gz"
+    sha256 "242f92a7ea7e6c5b406fdc2615413890ba9f699114a9c09192d7dfead2ee9cfe"
   end
 
   resource "sphinx-autobuild" do
@@ -131,8 +131,8 @@ class Sphinx < Formula
   end
 
   resource "sphinxcontrib-htmlhelp" do
-    url "https://files.pythonhosted.org/packages/8a/03/2f9d699fbfdf03ecb3b6d0e2a268a8998d009f2a9f699c2dcc936899257d/sphinxcontrib_htmlhelp-2.0.5.tar.gz"
-    sha256 "0dc87637d5de53dd5eec3a6a01753b1ccf99494bd756aafecd74b4fa9e729015"
+    url "https://files.pythonhosted.org/packages/92/d9/a1c50c8a7b5e12f34bf4d63300a1e2629c29b71603115d900c0fa7c79219/sphinxcontrib_htmlhelp-2.0.6.tar.gz"
+    sha256 "c6597da06185f0e3b4dc952777a04200611ef563882e0c244d27a15ee22afa73"
   end
 
   resource "sphinxcontrib-jsmath" do
@@ -141,8 +141,8 @@ class Sphinx < Formula
   end
 
   resource "sphinxcontrib-qthelp" do
-    url "https://files.pythonhosted.org/packages/ac/29/705cd4e93e98a8473d62b5c32288e6de3f0c9660d3c97d4e80d3dbbad82b/sphinxcontrib_qthelp-1.0.7.tar.gz"
-    sha256 "053dedc38823a80a7209a80860b16b722e9e0209e32fea98c90e4e6624588ed6"
+    url "https://files.pythonhosted.org/packages/a6/67/f5c7df6457315877202f370450acb28626d033822eec1e8163600612b4ef/sphinxcontrib_qthelp-1.0.8.tar.gz"
+    sha256 "db3f8fa10789c7a8e76d173c23364bdf0ebcd9449969a9e6a3dd31b8b7469f03"
   end
 
   resource "sphinxcontrib-serializinghtml" do
@@ -151,8 +151,8 @@ class Sphinx < Formula
   end
 
   resource "starlette" do
-    url "https://files.pythonhosted.org/packages/61/b5/6bceb93ff20bd7ca36e6f7c540581abb18f53130fabb30ba526e26fd819b/starlette-0.37.2.tar.gz"
-    sha256 "9af890290133b79fc3db55474ade20f6220a364a0402e0b556e7cd5e1e093823"
+    url "https://files.pythonhosted.org/packages/13/1c/a0005d1b8e775823b4aa2c4b4ce1b540833c6364ed5de55b6a8754bdc17c/starlette-0.38.0.tar.gz"
+    sha256 "1ac2291e946a56bb5ca929dbb2332fc0dfd1e609c7e4d4f2056925cc0442874e"
   end
 
   resource "urllib3" do
@@ -161,8 +161,8 @@ class Sphinx < Formula
   end
 
   resource "uvicorn" do
-    url "https://files.pythonhosted.org/packages/37/16/9f5ccaa1a76e5bfbaa0c67640e2db8a5214ca08d92a1b427fa1677b3da88/uvicorn-0.30.1.tar.gz"
-    sha256 "d46cd8e0fd80240baffbcd9ec1012a712938754afcf81bce56c024c1656aece8"
+    url "https://files.pythonhosted.org/packages/77/40/b650be95700dc83d14c5f2b9eac9deb23cbca757a12ee20e473b5ef1ac48/uvicorn-0.30.3.tar.gz"
+    sha256 "0d114d0831ff1adbf231d358cbf42f17333413042552a624ea6a9b4c33dcfd81"
   end
 
   resource "watchfiles" do
