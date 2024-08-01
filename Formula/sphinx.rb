@@ -161,8 +161,8 @@ class Sphinx < Formula
   end
 
   resource "uvicorn" do
-    url "https://files.pythonhosted.org/packages/77/40/b650be95700dc83d14c5f2b9eac9deb23cbca757a12ee20e473b5ef1ac48/uvicorn-0.30.3.tar.gz"
-    sha256 "0d114d0831ff1adbf231d358cbf42f17333413042552a624ea6a9b4c33dcfd81"
+    url "https://files.pythonhosted.org/packages/b3/c7/210ee32ac2ab2017dfd914c189d9f78c2d9250626048efce3d9810e54da5/uvicorn-0.30.4.tar.gz"
+    sha256 "00db9a9e3711a5fa59866e2b02fac69d8dc70ce0814aaec9a66d1d9e5c832a30"
   end
 
   resource "watchfiles" do
