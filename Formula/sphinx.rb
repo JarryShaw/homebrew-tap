@@ -7,13 +7,13 @@ class Sphinx < Formula
   sha256 "fd9d2e1893ab1f1d3c654056b802862487063b5301bf2b8bec90f8a023ed30a0"
 
   bottle do
-    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "f73a7740702da0c6ceb8a8000320b9f03f8efcbb122a3f9286a56107dfa26d19"
-    sha256 cellar: :any_skip_relocation, arm64_ventura:  "fa8ca76d17b4e2b6bbe326aed85603b47dc62d2de73924c1d756b8034edde3e9"
-    sha256 cellar: :any_skip_relocation, arm64_monterey: "f4ee3c378ba5560e0d6178c6dedc8c2a541b3711aa77021747f775ca0b766172"
-    sha256 cellar: :any_skip_relocation, sonoma:         "6eb723650525b69d10509bae4861d0df6ccb4d3a4cd9f7396944129314dd68b3"
-    sha256 cellar: :any_skip_relocation, ventura:        "3f3350c3b41c736a031b3dad08aaefb06a076e39ace4f1f79e2978d6b72ab601"
-    sha256 cellar: :any_skip_relocation, monterey:       "fde3e40f99c97c96c7a4839946b071f9b591e5da2eb0b195085baee616a6d27e"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:   "5793e829496419b1b71bd7f8d40b93382dd2c14bb332ba6c0f2ddaf772a4499a"
+    sha256 cellar: :any_skip_relocation, arm64_sonoma:   "3b263baa798a9799c4c78286e1174904861cd263eb5a1ec282884b08e6de3cf0"
+    sha256 cellar: :any_skip_relocation, arm64_ventura:  "35c973c30e3218d3450cc786fa9242d17007c8dd62bf0d6ad187fae28f67ae47"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "6b3f66ff32427695f7f25b11da4e6915078510ad1b2deb360f6ce3cd7532f28d"
+    sha256 cellar: :any_skip_relocation, sonoma:         "284f504dd7f04262fc97053e0c2c3f3920f976e0174a3b3eefddc1cec7ada3d7"
+    sha256 cellar: :any_skip_relocation, ventura:        "3daf37becd7a0299a6ef506d8130e11e679a5180f63d718d720287fd85eecdaa"
+    sha256 cellar: :any_skip_relocation, monterey:       "50a2305e915b9f05e3679b9c6e0c373f2e0bf625ab385ba375b88996caa29141"
+    sha256 cellar: :any_skip_relocation, x86_64_linux:   "830571265fb5995769d6a533031221f79ef5afcc4f743a371517f8c238b0f262"
   end
 
   depends_on "homebrew/core/python@3.9"
@@ -45,9 +45,9 @@ class Sphinx < Formula
     sha256 "5aadc6a1bbb7cdb0bede386cac5e2940f5e2ff3aa20277e991cf028e0585ce94"
   end
 
-  resource "Babel" do
-    url "https://files.pythonhosted.org/packages/15/d2/9671b93d623300f0aef82cde40e25357f11330bdde91743891b22a555bed/babel-2.15.0.tar.gz"
-    sha256 "8daf0e265d05768bc6c7a314cf1321e9a123afc328cc635c18622a2f30a04413"
+  resource "babel" do
+    url "https://files.pythonhosted.org/packages/2a/74/f1bc80f23eeba13393b7222b11d95ca3af2c1e28edca18af487137eefed9/babel-2.16.0.tar.gz"
+    sha256 "d1f3554ca26605fe173f3de0c65f750f5a42f924499bf134de6423582298e316"
   end
 
   resource "certifi" do
