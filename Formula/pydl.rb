@@ -4,7 +4,7 @@ class Pydl < Formula
   desc "Video downloader powered by jarryshaw.me"
   homepage "https://jarryshaw.me"
   url "https://github.com/JarryShaw/pydl.git"
-  version "2024.8.23"
+  version "2024.8.24"
 
   depends_on "homebrew/core/aria2"
   depends_on "homebrew/core/python@3.9"
@@ -20,8 +20,8 @@ class Pydl < Formula
   end
 
   resource "idna" do
-    url "https://pypi.tuna.tsinghua.edu.cn/packages/21/ed/f86a79a07470cb07819390452f178b3bef1d375f2ec021ecfc709fc7cf07/idna-3.7.tar.gz"
-    sha256 "028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc"
+    url "https://pypi.tuna.tsinghua.edu.cn/packages/e8/ac/e349c5e6d4543326c6883ee9491e3921e0d07b55fdf3cce184b40d63e72a/idna-3.8.tar.gz"
+    sha256 "d838c2c0ed6fced7693d5e8ab8e734d5f8fda53a039c0164afb0b82e771e3603"
   end
 
   resource "certifi" do
@@ -35,8 +35,8 @@ class Pydl < Formula
   end
 
   resource "idna" do
-    url "https://pypi.tuna.tsinghua.edu.cn/packages/21/ed/f86a79a07470cb07819390452f178b3bef1d375f2ec021ecfc709fc7cf07/idna-3.7.tar.gz"
-    sha256 "028ff3aadf0609c1fd278d8ea3089299412a7a8b9bd005dd08b9f8285bcb5cfc"
+    url "https://pypi.tuna.tsinghua.edu.cn/packages/e8/ac/e349c5e6d4543326c6883ee9491e3921e0d07b55fdf3cce184b40d63e72a/idna-3.8.tar.gz"
+    sha256 "d838c2c0ed6fced7693d5e8ab8e734d5f8fda53a039c0164afb0b82e771e3603"
   end
 
   resource "requests" do
