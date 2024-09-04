@@ -116,8 +116,8 @@ class Sphinx < Formula
   end
 
   resource "sphinx-autobuild" do
-    url "https://files.pythonhosted.org/packages/d2/bc/8016eee9ffb86069ae7e658c136bad31a9854b476a212492b5aab4d4d5f6/sphinx_autobuild-2024.4.16.tar.gz"
-    sha256 "1c0ed37a1970eed197f9c5a66d65759e7c4e4cba7b5a5d77940752bf1a59f2c7"
+    url "https://files.pythonhosted.org/packages/5d/99/9d1712eb73a08a39d86f0f4c177ea1298af3d9aa2d6a0619accc03f1e5ec/sphinx_autobuild-2024.9.3.tar.gz"
+    sha256 "75929a5a92b932da8d29837406d6d973a927c456f30986a27f1f20b067897892"
   end
 
   resource "sphinxcontrib-applehelp" do
