@@ -151,8 +151,8 @@ class Sphinx < Formula
   end
 
   resource "starlette" do
-    url "https://files.pythonhosted.org/packages/b4/9c/d85721508122ae927aa7064e10a3f47f8dabcd4fd162222afcecd0d8d7b7/starlette-0.38.4.tar.gz"
-    sha256 "53a7439060304a208fea17ed407e998f46da5e5d9b1addfea3040094512a6379"
+    url "https://files.pythonhosted.org/packages/13/aa/57975da16ca0c368bbb5687daa6ad79561c2328a44667a1d6802e94df3e5/starlette-0.38.5.tar.gz"
+    sha256 "04a92830a9b6eb1442c766199d62260c3d4dc9c4f9188360626b1e0273cb7077"
   end
 
   resource "urllib3" do
