@@ -36,8 +36,8 @@ class Bandit < Formula
   end
 
   resource "rich" do
-    url "https://files.pythonhosted.org/packages/cf/60/5959113cae0ce512cf246a6871c623117330105a0d5f59b4e26138f2c9cc/rich-13.8.0.tar.gz"
-    sha256 "a5ac1f1cd448ade0d59cc3356f7db7a7ccda2c8cbae9c7a90c28ff463d3e91f4"
+    url "https://files.pythonhosted.org/packages/92/76/40f084cb7db51c9d1fa29a7120717892aeda9a7711f6225692c957a93535/rich-13.8.1.tar.gz"
+    sha256 "8260cda28e3db6bf04d2d1ef4dbc03ba80a824c88b0e7668a0f23126a424844a"
   end
 
   resource "stevedore" do
