@@ -7,6 +7,7 @@ class Sphinx < Formula
   sha256 "fd9d2e1893ab1f1d3c654056b802862487063b5301bf2b8bec90f8a023ed30a0"
 
   bottle do
+    sha256 cellar: :any_skip_relocation, arm64_sequoia:  "816de3b456310b6fff675f598ac99fe1ebc0eee6c437807ce2039579527e4acf"
     sha256 cellar: :any_skip_relocation, arm64_sonoma:   "3b263baa798a9799c4c78286e1174904861cd263eb5a1ec282884b08e6de3cf0"
     sha256 cellar: :any_skip_relocation, arm64_ventura:  "35c973c30e3218d3450cc786fa9242d17007c8dd62bf0d6ad187fae28f67ae47"
     sha256 cellar: :any_skip_relocation, arm64_monterey: "6b3f66ff32427695f7f25b11da4e6915078510ad1b2deb360f6ce3cd7532f28d"
@@ -81,8 +82,8 @@ class Sphinx < Formula
   end
 
   resource "idna" do
-    url "https://files.pythonhosted.org/packages/e8/ac/e349c5e6d4543326c6883ee9491e3921e0d07b55fdf3cce184b40d63e72a/idna-3.8.tar.gz"
-    sha256 "d838c2c0ed6fced7693d5e8ab8e734d5f8fda53a039c0164afb0b82e771e3603"
+    url "https://files.pythonhosted.org/packages/00/6f/93e724eafe34e860d15d37a4f72a1511dd37c43a76a8671b22a15029d545/idna-3.9.tar.gz"
+    sha256 "e5c5dafde284f26e9e0f28f6ea2d6400abd5ca099864a67f576f3981c6476124"
   end
 
   resource "imagesize" do
