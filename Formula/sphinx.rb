@@ -42,8 +42,8 @@ class Sphinx < Formula
   end
 
   resource "anyio" do
-    url "https://files.pythonhosted.org/packages/f0/be/7dee9e9d755e896c81cf210b37a727995da6e31b459c1182ad4937c08490/anyio-4.6.2.tar.gz"
-    sha256 "f72a7bb3dd0752b3bd8b17a844a019d7fbf6ae218c588f4f9ba1b2f600b12347"
+    url "https://files.pythonhosted.org/packages/9f/09/45b9b7a6d4e45c6bcb5bf61d19e3ab87df68e0601fa8c5293de3542546cc/anyio-4.6.2.post1.tar.gz"
+    sha256 "4c8bc31ccdb51c7f7bd251f51c609e038d63e34219b44aa86e47576389880b4c"
   end
 
   resource "babel" do
