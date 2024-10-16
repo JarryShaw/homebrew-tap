@@ -152,8 +152,8 @@ class Sphinx < Formula
   end
 
   resource "starlette" do
-    url "https://files.pythonhosted.org/packages/02/0a/62fbd5697f6174041f9b4e2e377b6f383f9189b77dbb7d73d24624caca1d/starlette-0.39.2.tar.gz"
-    sha256 "caaa3b87ef8518ef913dac4f073dea44e85f73343ad2bdc17941931835b2a26a"
+    url "https://files.pythonhosted.org/packages/78/53/c3a36690a923706e7ac841f649c64f5108889ab1ec44218dac45771f252a/starlette-0.41.0.tar.gz"
+    sha256 "39cbd8768b107d68bfe1ff1672b38a2c38b49777de46d2a592841d58e3bf7c2a"
   end
 
   resource "urllib3" do
@@ -162,8 +162,8 @@ class Sphinx < Formula
   end
 
   resource "uvicorn" do
-    url "https://files.pythonhosted.org/packages/76/87/a886eda9ed495a3a4506d5a125cd07c54524280718c4969bde88f075fe98/uvicorn-0.31.1.tar.gz"
-    sha256 "f5167919867b161b7bcaf32646c6a94cdbd4c3aa2eb5c17d36bb9aa5cfd8c493"
+    url "https://files.pythonhosted.org/packages/e0/fc/1d785078eefd6945f3e5bab5c076e4230698046231eb0f3747bc5c8fa992/uvicorn-0.32.0.tar.gz"
+    sha256 "f78b36b143c16f54ccdb8190d0a26b5f1901fe5a3c777e1ab29f26391af8551e"
   end
 
   resource "watchfiles" do
