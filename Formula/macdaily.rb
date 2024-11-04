@@ -24,8 +24,8 @@ class Macdaily < Formula
   end
 
   resource "dictdumper" do
-    url "https://files.pythonhosted.org/packages/0f/5f/c9c3c056f1a625bc57ead30bedaf971cac52f71d27f61544c3cb2046501f/dictdumper-0.8.4.post3.tar.gz"
-    sha256 "6b43a720564f7ddf4fa1d2d3b5d74dacd372b5b4d758089626ed7ad674ea2fd4"
+    url "https://files.pythonhosted.org/packages/9d/79/516e17cb2445d79daa4f7f4dd6330cc014e997a4bf0e0d8b2817f2c150a5/dictdumper-0.8.4.post6.tar.gz"
+    sha256 "7826615acb3db3e9bbd493a950d7a06edc033a091ce9da8b65c69fa940f495b0"
   end
 
   resource "psutil" do
