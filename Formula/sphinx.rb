@@ -170,8 +170,8 @@ class Sphinx < Formula
   end
 
   resource "websockets" do
-    url "https://files.pythonhosted.org/packages/e2/73/9223dbc7be3dcaf2a7bbf756c351ec8da04b1fa573edaf545b95f6b0c7fd/websockets-13.1.tar.gz"
-    sha256 "a3b3366087c1bc0a2795111edcadddb8b3b59509d5db5d7ea3fdd69f954a8878"
+    url "https://files.pythonhosted.org/packages/d5/95/9ec3ef89770eaf437ec3a6aa18d07aa29215419009e3330fd1031ff2f162/websockets-14.0.tar.gz"
+    sha256 "be90aa6dab180fed523c0c10a6729ad16c9ba79067402d01a4d8aa7ce48d4084"
   end
 
   def install
