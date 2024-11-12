@@ -20,12 +20,12 @@ class Sloc < Formula
   end
 
   test do
-    (testpath/"test.c").write <<~C
+    (testpath/"test.c").write <<~EOS
       #include <stdio.h>
       int main(void) {
         return 0;
       }
-    C
+    EOS
 
     std_output = <<~EOS
       Path,Physical,Source,Comment,Single-line comment,Block comment,Mixed,Empty block comment,Empty,To Do
