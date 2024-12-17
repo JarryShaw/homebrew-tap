@@ -12,8 +12,13 @@ class Zkg < Formula
   depends_on "homebrew/core/zeek"
 
   resource "btest" do
-    url "https://files.pythonhosted.org/packages/72/9e/a52550373fac3cc7bf639f400bb894830630322d8a3ad19ddc75f27f6c40/btest-1.1.tar.gz"
-    sha256 "312eef873aabda0a39ce6e716c1553e03478eaa0686456f63270205e049fa6bb"
+    url "https://files.pythonhosted.org/packages/c9/16/fb673331fcb1cc667bed0a47c582d44ee4a4cec244951b402f629db7d9cc/btest-1.2.tar.gz"
+    sha256 "1d68141e13f8880f042f7066ccc7742f3d085d2c0af52355f670797029ac8d78"
+  end
+
+  resource "dill" do
+    url "https://files.pythonhosted.org/packages/70/43/86fe3f9e130c4137b0f1b50784dd70a5087b911fe07fa81e53e0c4c47fea/dill-0.3.9.tar.gz"
+    sha256 "81aa267dddf68cbfe8029c42ca9ec6a4ab3b22371d1c450abc54422577b4512c"
   end
 
   resource "gitdb" do
@@ -24,6 +29,11 @@ class Zkg < Formula
   resource "GitPython" do
     url "https://files.pythonhosted.org/packages/b6/a1/106fd9fa2dd989b6fb36e5893961f82992cf676381707253e0bf93eb1662/GitPython-3.1.43.tar.gz"
     sha256 "35f314a9f878467f5453cc1fee295c3e18e52f1b99f10f6cf5b1682e968a9e7c"
+  end
+
+  resource "multiprocess" do
+    url "https://files.pythonhosted.org/packages/e9/34/1acca6e18697017ad5c8b45279b59305d660ecf2fbed13e5f406f69890e4/multiprocess-0.70.17.tar.gz"
+    sha256 "4ae2f11a3416809ebc9a48abfc8b14ecce0652a0944731a1493a3c1ba44ff57a"
   end
 
   resource "semantic-version" do
