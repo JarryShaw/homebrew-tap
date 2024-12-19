@@ -4,14 +4,14 @@ class Pydl < Formula
   desc "Video downloader powered by jarryshaw.me"
   homepage "https://jarryshaw.me"
   url "https://github.com/JarryShaw/pydl.git"
-  version "2024.12.18"
+  version "2024.12.19"
 
   depends_on "homebrew/core/aria2"
   depends_on "homebrew/core/python@3.9"
 
   resource "certifi" do
-    url "https://pypi.tuna.tsinghua.edu.cn/packages/b0/ee/9b19140fe824b367c04c5e1b369942dd754c4c5462d5674002f75c4dedc1/certifi-2024.8.30.tar.gz"
-    sha256 "bec941d2aa8195e248a60b31ff9f0558284cf01a52591ceda73ea9afffd69fd9"
+    url "https://pypi.tuna.tsinghua.edu.cn/packages/0f/bd/1d41ee578ce09523c81a15426705dd20969f5abf006d1afe8aeff0dd776a/certifi-2024.12.14.tar.gz"
+    sha256 "b650d30f370c2b724812bee08008be0c4163b163ddaec3f2546c1caf65f191db"
   end
 
   resource "charset-normalizer" do
@@ -25,8 +25,8 @@ class Pydl < Formula
   end
 
   resource "certifi" do
-    url "https://pypi.tuna.tsinghua.edu.cn/packages/b0/ee/9b19140fe824b367c04c5e1b369942dd754c4c5462d5674002f75c4dedc1/certifi-2024.8.30.tar.gz"
-    sha256 "bec941d2aa8195e248a60b31ff9f0558284cf01a52591ceda73ea9afffd69fd9"
+    url "https://pypi.tuna.tsinghua.edu.cn/packages/0f/bd/1d41ee578ce09523c81a15426705dd20969f5abf006d1afe8aeff0dd776a/certifi-2024.12.14.tar.gz"
+    sha256 "b650d30f370c2b724812bee08008be0c4163b163ddaec3f2546c1caf65f191db"
   end
 
   resource "charset-normalizer" do
