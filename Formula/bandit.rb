@@ -41,8 +41,8 @@ class Bandit < Formula
   end
 
   resource "setuptools" do
-    url "https://files.pythonhosted.org/packages/ea/df/9f719dc48f64284be8bd99e2e0bb0dd6e9f8e2c2c3c7bf7a685bc5adf2c7/setuptools-77.0.1.tar.gz"
-    sha256 "a1246a1b4178c66d7cf50c9fc6d530fac3f89bc284cf803c7fa878c41b1a03b2"
+    url "https://files.pythonhosted.org/packages/81/ed/7101d53811fd359333583330ff976e5177c5e871ca8b909d1d6c30553aa3/setuptools-77.0.3.tar.gz"
+    sha256 "583b361c8da8de57403743e756609670de6fb2345920e36dc5c2d914c319c945"
   end
 
   resource "stevedore" do
