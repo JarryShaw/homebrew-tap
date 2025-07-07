@@ -3,8 +3,8 @@ class Bandit < Formula
 
   desc "Package manager for Zeek"
   homepage "https://bandit.readthedocs.io/"
-  url "https://github.com/PyCQA/bandit/archive/1.8.5.tar.gz"
-  sha256 "138740fb461a2b86ba6b7667e3cc2c7f75d50561d1438e15f17ec362346af7ed"
+  url "https://github.com/PyCQA/bandit/archive/1.8.6.tar.gz"
+  sha256 "4eeafac5425f1c2a2945987cc5d0023b6b1ed8742bccb7c4148ea72d9009ec8d"
 
   head "https://github.com/PyCQA/bandit.git", branch: "master"
 
