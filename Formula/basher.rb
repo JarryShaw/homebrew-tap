@@ -2,8 +2,8 @@ class Basher < Formula
   desc "Package manager for shell scripts"
   homepage "https://github.com/basherpm/basher"
   url "https://github.com/basherpm/basher.git",
-    revision: "686f436722dadbf33d4603e7cc0733796001db7e"
-  version "2025.7.10"
+    revision: "1efe62e944af5290d6816de88dbc19b77f40d37a"
+  version "2025.7.11"
 
   depends_on "homebrew/core/bash"
   depends_on "homebrew/core/coreutils"
