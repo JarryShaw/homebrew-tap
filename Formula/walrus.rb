@@ -4,7 +4,7 @@ class Walrus < Formula
   desc "Backport compiler for Python 3.8 assignment expressions"
   homepage "https://github.com/pybpc/walrus#walrus"
   url "https://github.com/pybpc/walrus/archive/v0.1.5.tar.gz"
-  sha256 "3590bcb90a75c32ba8b10d692d26838caedbc267a57db23931694abc9598c873"
+  sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
 
   head "https://github.com/pybpc/walrus.git", branch: "master"
 
